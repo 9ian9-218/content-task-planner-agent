@@ -1,0 +1,6 @@
+test_confirmed_model_decision_is_replayed_after_crash_without_another_model_request (tests.test_hardening.HardeningTests.test_confirmed_model_decision_is_replayed_after_crash_without_another_model_request) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.265s
+
+OK

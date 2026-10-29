@@ -1,0 +1,6 @@
+test_cli_loads_gateway_config_without_key_and_records_port_without_credentials (tests.test_gateway.GatewayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.188s
+
+OK

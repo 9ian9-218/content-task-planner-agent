@@ -1,0 +1,36 @@
+{
+  "problem_number": 2,
+  "project_name": "content-task-planner-agent",
+  "github_url": null,
+  "visibility": null,
+  "reviewer_access_confirmed": null,
+  "final_commit_source": "git rev-parse HEAD in the final submitted repository; do not embed a self-referential SHA in this file",
+  "candidate": {
+    "planned_work_days": 1.5,
+    "planned_work_hours": 12,
+    "actual_work_hours": null,
+    "actual_time_status": "not_yet_reported; planned duration is not a verified actual duration",
+    "personal_verification_recorded": false,
+    "verification_disclosure": "Tests and live evaluations were executed by AI tools; candidate-independent manual execution has not been recorded. This is a disclosure, not a claim of personal execution.",
+    "verified_participation": [
+      "Provided the exam, selected problem 2, and requested requirements, research, PRD and implementation plan",
+      "Required Matt Pocock TDD, strict boundary checks, live evaluation and industrial assessment",
+      "Provided and configured the authorized model gateway",
+      "Chose single-host CLI first and replaced long online testing with bounded short-term acceptance"
+    ],
+    "personal_code_changes": "No independently verifiable manual code change has been recorded",
+    "participation_guide": "docs/17-candidate-participation.md",
+    "automated_execution_recording": {
+      "first_reliable_environment_check": "2026-10-28T12:13:33+08:00",
+      "recorded_until": "2026-10-29T00:08:22.017497+08:00",
+      "elapsed_wall_hours": 11.914,
+      "scope": "Recorded automation and waiting span, not personal work hours; earlier research was not reliably timed."
+    }
+  },
+  "ai_assistance": {
+    "scope": "AI-assisted source, tests, synthetic data, evaluation scripts and documentation; AI tool-executed validation",
+    "disclosure": "docs/04-ai-usage.md",
+    "mock_boundary": "Synthetic business tools and offline decisions do not prove real model decisions"
+  },
+  "delivery_scope": "Exam problem 2 CLI submission with bounded local validation; not a production SLA"
+}

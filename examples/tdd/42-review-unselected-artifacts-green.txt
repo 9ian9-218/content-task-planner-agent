@@ -1,0 +1,6 @@
+test_replanned_artifacts_mark_old_success_as_unselected (tests.test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.074s
+
+OK

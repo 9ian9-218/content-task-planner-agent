@@ -1,0 +1,25 @@
+test_calls_in_one_model_response_do_not_claim_to_observe_each_other (tests.test_guards.GuardTests) ... FAIL
+
+======================================================================
+FAIL: test_calls_in_one_model_response_do_not_claim_to_observe_each_other (tests.test_guards.GuardTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 166, in test_calls_in_one_model_response_do_not_claim_to_observe_each_other
+    self.assertEqual([e["observed_after_step"] for e in result["trace"][:2]], [None, None])
+AssertionError: Lists differ: [None, 1] != [None, None]
+
+First differing element 1:
+1
+None
+
+- [None, 1]
+?        ^
+
++ [None, None]
+?        ^^^^
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.107s
+
+FAILED (failures=1)

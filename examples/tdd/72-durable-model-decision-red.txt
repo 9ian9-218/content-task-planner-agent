@@ -1,0 +1,19 @@
+test_confirmed_model_decision_is_replayed_after_crash_without_another_model_request (tests.test_hardening.HardeningTests.test_confirmed_model_decision_is_replayed_after_crash_without_another_model_request) ... FAIL
+
+======================================================================
+FAIL: test_confirmed_model_decision_is_replayed_after_crash_without_another_model_request (tests.test_hardening.HardeningTests.test_confirmed_model_decision_is_replayed_after_crash_without_another_model_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 368, in test_confirmed_model_decision_is_replayed_after_crash_without_another_model_request
+    self.assertTrue(ready.exists(), process.stderr.read() if process.poll() is not None else 'no committed decision event')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Traceback (most recent call last):
+  File "/mnt/d/xy/tests/hardening_worker.py", line 36, in <module>
+    planner = Planner(sys.argv[1], as_of="2026-11-01T10:00:00+08:00", lease_seconds=0.6, heartbeat_interval=0.1, **options)
+TypeError: Planner.__init__() got an unexpected keyword argument 'event_sink'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.369s
+
+FAILED (failures=1)

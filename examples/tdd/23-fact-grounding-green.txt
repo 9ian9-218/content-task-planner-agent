@@ -1,0 +1,6 @@
+test_script_does_not_claim_features_from_unselected_materials (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.111s
+
+OK

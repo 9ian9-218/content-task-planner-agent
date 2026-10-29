@@ -1,0 +1,22 @@
+test_heartbeat_prevents_takeover_and_killed_worker_can_resume_confirmed_work (tests.test_hardening.HardeningTests.test_heartbeat_prevents_takeover_and_killed_worker_can_resume_confirmed_work) ... FAIL
+
+======================================================================
+FAIL: test_heartbeat_prevents_takeover_and_killed_worker_can_resume_confirmed_work (tests.test_hardening.HardeningTests.test_heartbeat_prevents_takeover_and_killed_worker_can_resume_confirmed_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 177, in test_heartbeat_prevents_takeover_and_killed_worker_can_resume_confirmed_work
+    process, database, release = self.start_waiting_worker(root)
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/mnt/d/xy/tests/test_hardening.py", line 170, in start_waiting_worker
+    self.assertTrue(ready.exists(), process.stderr.read() if process.poll() is not None else 'worker did not reach model seam')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Traceback (most recent call last):
+  File "/mnt/d/xy/tests/hardening_worker.py", line 27, in <module>
+    planner = Planner(sys.argv[1], as_of="2026-11-01T10:00:00+08:00", lease_seconds=0.6, heartbeat_interval=0.1)
+TypeError: Planner.__init__() got an unexpected keyword argument 'lease_seconds'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.338s
+
+FAILED (failures=1)

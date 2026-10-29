@@ -1,0 +1,6 @@
+test_http_loop_completes_and_counts_only_each_runs_requests (tests.test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.134s
+
+OK

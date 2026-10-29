@@ -1,0 +1,6 @@
+test_cli_rejects_negative_synthetic_fees_instead_of_reducing_spent (tests.test_cli.CLITests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.357s
+
+OK

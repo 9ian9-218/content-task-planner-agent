@@ -1,0 +1,6 @@
+test_request_id_can_be_derived_from_normalized_business_input (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.063s
+
+OK

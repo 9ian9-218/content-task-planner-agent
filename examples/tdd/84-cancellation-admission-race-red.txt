@@ -1,0 +1,15 @@
+test_cancel_wins_when_accepted_between_last_check_and_durable_action_admission (tests.test_hardening.HardeningTests.test_cancel_wins_when_accepted_between_last_check_and_durable_action_admission) ... FAIL
+
+======================================================================
+FAIL: test_cancel_wins_when_accepted_between_last_check_and_durable_action_admission (tests.test_hardening.HardeningTests.test_cancel_wins_when_accepted_between_last_check_and_durable_action_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 663, in test_cancel_wins_when_accepted_between_last_check_and_durable_action_admission
+    self.assertEqual(result['cost']['spent_units'], 0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 8 != 0
+
+----------------------------------------------------------------------
+Ran 1 test in 0.165s
+
+FAILED (failures=1)

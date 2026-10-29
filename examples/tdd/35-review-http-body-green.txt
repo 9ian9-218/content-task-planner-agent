@@ -1,0 +1,6 @@
+test_incomplete_http_body_is_a_model_error_and_preserves_progress (tests.test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.034s
+
+OK

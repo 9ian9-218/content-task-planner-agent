@@ -1,0 +1,14 @@
+test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline (tests.test_short_validation.ShortValidationTests.test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline) ... ERROR
+
+======================================================================
+ERROR: test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline (tests.test_short_validation.ShortValidationTests.test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 141, in test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline
+    planner = Planner(Path(directory) / 'state.sqlite3', as_of=AS_OF, model_timeout_seconds=45, wall_timeout_seconds=90)
+TypeError: Planner.__init__() got an unexpected keyword argument 'model_timeout_seconds'. Did you mean 'wall_timeout_seconds'?
+
+----------------------------------------------------------------------
+Ran 1 test in 0.151s
+
+FAILED (errors=1)

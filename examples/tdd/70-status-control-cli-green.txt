@@ -1,0 +1,6 @@
+test_cli_status_is_read_only_and_late_cancel_retains_the_saved_receipt (tests.test_hardening.HardeningTests.test_cli_status_is_read_only_and_late_cancel_retains_the_saved_receipt) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.182s
+
+OK

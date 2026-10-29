@@ -1,0 +1,468 @@
+{
+  "generated_at": "2026-10-28T04:52:03.266207+00:00",
+  "mode": "mock",
+  "source_sha256": "869e86013fb615519c408270e9e621666c5378d693c5e5f61511a9bc78dc8714",
+  "python": "3.10.12",
+  "cases_total": 18,
+  "cases_passed": 18,
+  "expected_behavior_match_rate": 1.0,
+  "status_counts": {
+    "completed": 7,
+    "needs_input": 3,
+    "incomplete": 7,
+    "invalid_request": 1
+  },
+  "constraint_violations": 0,
+  "false_saved": 0,
+  "model_requests_sent": 0,
+  "comparisons": {
+    "replanning": {
+      "initial_rejected_quote_units": 12,
+      "final_spent_units": 8,
+      "reduction_against_rejected_quote_percent": 33.33,
+      "remaining_budget_units": 2,
+      "decision_evidence_mode": "mock"
+    },
+    "repeat": {
+      "stored_plans": 1,
+      "additional_cost_units": 0,
+      "new_model_decisions": 0,
+      "new_tool_attempts": 0
+    },
+    "resume": {
+      "additional_cost_units": 0,
+      "new_tool_attempts": 1,
+      "new_model_decisions": 1,
+      "script_ids_unchanged": true
+    }
+  },
+  "cases": [
+    {
+      "case_id": "C01-normal",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 0.059816,
+      "model_requests_sent": 0,
+      "evidence": "mock/C01-normal/output.json"
+    },
+    {
+      "case_id": "C02a-missing-budget",
+      "expected_status": "needs_input",
+      "actual_status": "needs_input",
+      "reason_code": "MISSING_INFORMATION",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 1.8e-05,
+      "model_requests_sent": 0,
+      "evidence": "mock/C02a-missing-budget/output.json"
+    },
+    {
+      "case_id": "C02b-missing-deadline",
+      "expected_status": "needs_input",
+      "actual_status": "needs_input",
+      "reason_code": "MISSING_INFORMATION",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 1.4e-05,
+      "model_requests_sent": 0,
+      "evidence": "mock/C02b-missing-deadline/output.json"
+    },
+    {
+      "case_id": "C03-save-failure",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "SAVE_FAILED",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "successful_script_retained": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 0.044629,
+      "model_requests_sent": 0,
+      "evidence": "mock/C03-save-failure/output.json"
+    },
+    {
+      "case_id": "C04-replan-budget",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "observed_replan": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 0.0506,
+      "model_requests_sent": 0,
+      "evidence": "mock/C04-replan-budget/output.json"
+    },
+    {
+      "case_id": "C05-no-feasible-plan",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "BUDGET_EXCEEDED",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.033789,
+      "model_requests_sent": 0,
+      "evidence": "mock/C05-no-feasible-plan/output.json"
+    },
+    {
+      "case_id": "C06-repeat",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "reused_same_plan": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 0.001013,
+      "model_requests_sent": 0,
+      "evidence": "mock/C06-repeat/output.json"
+    },
+    {
+      "case_id": "C07-deadline",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "DEADLINE_EXCEEDED",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.034573,
+      "model_requests_sent": 0,
+      "evidence": "mock/C07-deadline/output.json"
+    },
+    {
+      "case_id": "C08-step-limit",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "STEP_LIMIT",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.024066,
+      "model_requests_sent": 0,
+      "evidence": "mock/C08-step-limit/output.json"
+    },
+    {
+      "case_id": "C10-empty-materials",
+      "expected_status": "needs_input",
+      "actual_status": "needs_input",
+      "reason_code": "MATERIALS_MISSING",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.016865,
+      "model_requests_sent": 0,
+      "evidence": "mock/C10-empty-materials/output.json"
+    },
+    {
+      "case_id": "C11a-budget-boundary",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 0.041274,
+      "model_requests_sent": 0,
+      "evidence": "mock/C11a-budget-boundary/output.json"
+    },
+    {
+      "case_id": "C11b-deadline-boundary",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 0.03778,
+      "model_requests_sent": 0,
+      "evidence": "mock/C11b-deadline-boundary/output.json"
+    },
+    {
+      "case_id": "C12-model-failure",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "MODEL_UNAVAILABLE",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.012759,
+      "model_requests_sent": 0,
+      "evidence": "mock/C12-model-failure/output.json"
+    },
+    {
+      "case_id": "C13-id-conflict",
+      "expected_status": "invalid_request",
+      "actual_status": "invalid_request",
+      "reason_code": "REQUEST_ID_CONFLICT",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.000437,
+      "model_requests_sent": 0,
+      "evidence": "mock/C13-id-conflict/output.json"
+    },
+    {
+      "case_id": "C14-resume",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "script_reused": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 0.032397,
+      "model_requests_sent": 0,
+      "evidence": "mock/C14-resume/output.json"
+    },
+    {
+      "case_id": "C15-search-failure",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "SEARCH_FAILED",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.021582,
+      "model_requests_sent": 0,
+      "evidence": "mock/C15-search-failure/output.json"
+    },
+    {
+      "case_id": "C16-generation-failure",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "GENERATION_FAILED",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.05882,
+      "model_requests_sent": 0,
+      "evidence": "mock/C16-generation-failure/output.json"
+    },
+    {
+      "case_id": "C17-cost-first",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 0.055367,
+      "model_requests_sent": 0,
+      "evidence": "mock/C17-cost-first/output.json"
+    }
+  ],
+  "limitations": [
+    "Synthetic materials, prices and business durations",
+    "Mock decisions do not prove LLM capabilities",
+    "Quote reduction is not measured real-world spending savings"
+  ],
+  "latency_benchmark": {
+    "mode": "mock",
+    "scope": "Planner.run wall time on a local temporary SQLite database; no LLM/network calls, no process startup or constructor time",
+    "fresh": {
+      "n": 20,
+      "median_ms": 49.714,
+      "p95_ms": 64.357,
+      "samples_ms": [
+        64.357,
+        51.707,
+        52.358,
+        51.376,
+        49.78,
+        46.845,
+        45.676,
+        53.721,
+        47.213,
+        50.116,
+        47.122,
+        47.432,
+        46.63,
+        47.537,
+        49.101,
+        50.472,
+        48.525,
+        49.648,
+        57.055,
+        66.833
+      ]
+    },
+    "cached": {
+      "n": 20,
+      "median_ms": 0.409,
+      "p95_ms": 0.73,
+      "samples_ms": [
+        0.38,
+        0.674,
+        0.378,
+        0.438,
+        0.532,
+        0.548,
+        0.419,
+        0.372,
+        0.352,
+        0.392,
+        0.377,
+        0.553,
+        0.398,
+        0.589,
+        0.342,
+        0.575,
+        0.358,
+        0.73,
+        0.379,
+        0.884
+      ]
+    }
+  }
+}

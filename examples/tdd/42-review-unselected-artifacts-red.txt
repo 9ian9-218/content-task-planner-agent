@@ -1,0 +1,14 @@
+test_replanned_artifacts_mark_old_success_as_unselected (tests.test_review.ReviewTests) ... ERROR
+
+======================================================================
+ERROR: test_replanned_artifacts_mark_old_success_as_unselected (tests.test_review.ReviewTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 61, in test_replanned_artifacts_mark_old_success_as_unselected
+    self.assertFalse(old["selected"])
+KeyError: 'selected'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.279s
+
+FAILED (errors=1)

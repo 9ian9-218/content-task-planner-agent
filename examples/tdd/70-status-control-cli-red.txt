@@ -1,0 +1,54 @@
+test_cli_status_is_read_only_and_late_cancel_retains_the_saved_receipt (tests.test_hardening.HardeningTests.test_cli_status_is_read_only_and_late_cancel_retains_the_saved_receipt) ... ERROR
+
+======================================================================
+ERROR: test_cli_status_is_read_only_and_late_cancel_retains_the_saved_receipt (tests.test_hardening.HardeningTests.test_cli_status_is_read_only_and_late_cancel_retains_the_saved_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2047, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2279, in _parse_known_args
+    positionals_end_index = consume_positionals(start_index)
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2254, in consume_positionals
+    take_action(action, args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2108, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2634, in _get_values
+    self._check_value(action, value[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2696, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'status' (choose from 'doctor', 'backup', 'restore', 'run')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 320, in test_cli_status_is_read_only_and_late_cancel_retains_the_saved_receipt
+    code, status = invoke('status', '--db', str(database), '--request-id', BRIEF['request_id'])
+                   ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/tests/test_hardening.py", line 24, in invoke
+    code = main(list(arguments))
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 83, in main
+    args = parser.parse_args(argv)
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2008, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2018, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2049, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2785, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2772, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+----------------------------------------------------------------------
+Ran 1 test in 0.150s
+
+FAILED (errors=1)

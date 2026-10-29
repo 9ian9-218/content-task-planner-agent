@@ -1,0 +1,21 @@
+test_script_does_not_claim_features_from_unselected_materials (tests.test_acceptance.AcceptanceTests) ... 
+======================================================================
+FAIL: test_script_does_not_claim_features_from_unselected_materials (tests.test_acceptance.AcceptanceTests) (topic='P01 字幕介绍')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 172, in test_script_does_not_claim_features_from_unselected_materials
+    self.assertNotIn(unsupported, result["saved_plan"]["script"]["text"])
+AssertionError: '模板' unexpectedly found in '今天介绍以下已核验功能：支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。 操作建议：选择素材后编辑字幕或模板。'
+
+======================================================================
+FAIL: test_script_does_not_claim_features_from_unselected_materials (tests.test_acceptance.AcceptanceTests) (topic='P02 旅行模板介绍')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 172, in test_script_does_not_claim_features_from_unselected_materials
+    self.assertNotIn(unsupported, result["saved_plan"]["script"]["text"])
+AssertionError: '字幕' unexpectedly found in '今天介绍以下已核验功能：提供旅行主题视频模板；支持替换模板内的图片。欢迎根据实际需要编辑内容。 操作建议：选择素材后编辑字幕或模板。'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.122s
+
+FAILED (failures=2)

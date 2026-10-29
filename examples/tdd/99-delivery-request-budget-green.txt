@@ -1,0 +1,6 @@
+test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 6.591s
+
+OK

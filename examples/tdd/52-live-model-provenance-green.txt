@@ -1,0 +1,6 @@
+test_live_report_records_gateway_and_actual_response_models (tests.test_live_evaluation.LiveEvaluationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.226s
+
+OK

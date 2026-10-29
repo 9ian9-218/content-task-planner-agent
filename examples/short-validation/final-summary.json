@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-10-29T01:41:38.888411+00:00",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "tests_sha256": "72aece05207290cddf33262d30d55f7e0a6681e3e4fd9948b923eca18dc85bb5",
+  "scope": "Problem 2 campus CLI submission and bounded short-term robustness, not a production SLA",
+  "local_validation_passed": true,
+  "formal_submission_ready": false,
+  "tests": {
+    "passed": 103,
+    "total": 103,
+    "skipped": 0,
+    "seconds": 87.581058,
+    "evidence": "../test-summary.json"
+  },
+  "offline": {
+    "passed": 18,
+    "total": 18,
+    "evidence": "../evaluation-summary.json"
+  },
+  "live_matrix": {
+    "passed": 18,
+    "total": 18,
+    "requests": 68,
+    "tokens": 129357,
+    "request_cap": 100,
+    "evidence": "../live-evaluation-summary.json"
+  },
+  "adversarial": {
+    "passed": 2,
+    "total": 2,
+    "requests": 10,
+    "tokens": 20944,
+    "request_cap": 24,
+    "evidence": "../live/adversarial-summary.json"
+  },
+  "replanning_repeats": {
+    "passed": 3,
+    "total": 3,
+    "requests": 15,
+    "tokens": 28188,
+    "request_cap": 20,
+    "evidence": "replanning/summary.json"
+  },
+  "final_model_validation": {
+    "requested_model": "wb/hy3",
+    "response_models": [
+      "wb/hy3"
+    ],
+    "endpoint": "http://127.0.0.1:4000/v1",
+    "request_cap_sum": 144,
+    "requests": 93,
+    "reported_usage": {
+      "prompt_tokens": 161866,
+      "completion_tokens": 16623,
+      "total_tokens": 178489,
+      "reported_responses": 93,
+      "accepted_responses": 93,
+      "unreported_request_attempts": 0
+    },
+    "note": "Final current-source 18+2+3 batches only; excludes initial smoke, old providers and failed runs."
+  },
+  "short_load": {
+    "seconds": 300.001,
+    "clients": 8,
+    "request_interval_per_client_seconds": 2,
+    "offered_new_demands_per_second_upper_bound": 4,
+    "checked_cases": 1200,
+    "unexpected_results": 0,
+    "saved_plans": 515,
+    "capacity_rejections": 1276,
+    "busy_rejections": 3,
+    "resource_checks": {
+      "no_thread_leaks": true,
+      "no_fd_leaks": true,
+      "peak_worker_rss_under_128_mib": true,
+      "rss_growth_after_warmup_under_16_mib": true
+    },
+    "peak_worker_rss_kib": 25788,
+    "max_warmed_rss_growth_kib": 308,
+    "median_task_seconds": 0.259011,
+    "p95_task_seconds": 0.643822,
+    "journal_mode": "wal",
+    "evidence": "load/summary.json"
+  },
+  "contention": {
+    "passed_rounds": 20,
+    "clients_per_round": 16,
+    "client_runs": 320,
+    "evidence": "../hardening/concurrency.json"
+  },
+  "recovery": {
+    "passed": 80,
+    "fault_positions": 8,
+    "rounds_per_position": 10,
+    "remote_model_calls": 0,
+    "evidence": "../hardening/recovery/summary.json"
+  },
+  "tdd": {
+    "paired_slices": 99,
+    "command_records": 206,
+    "note": "Includes three real process/load integration pairs; red setup errors and reruns remain visible."
+  },
+  "known_limits": [
+    "Short steady load and burst tests do not establish a long-term SLA",
+    "Synthetic business tools, prices and durations; no paid remote operation reconciliation",
+    "No independently held-out user study or actual campaign business benefit measurement",
+    "Hosted GitHub CI not executed yet",
+    "Mounted project runtime install failed; native Linux installation route verified",
+    "Remote repository and actual candidate work/verification fields await user facts"
+  ],
+  "clean_room": {
+    "passed": true,
+    "tests_passed": 103,
+    "tests_skipped": 0,
+    "private_env_absent": true,
+    "archive_extracted_before_execution": true,
+    "current_test_revision_verified": true,
+    "evidence": "clean-room-check.json"
+  },
+  "release_audit_hardening": {
+    "scope": "Delivery tools and tests only; business src unchanged",
+    "new_behavior": "Reject live/adversarial/replanning reports whose request cap, actual count or remaining quota is inconsistent or wrongly typed",
+    "tdd_evidence": [
+      "../tdd/99-delivery-request-budget-red.txt",
+      "../tdd/99-delivery-request-budget-green.txt"
+    ],
+    "new_remote_requests": 0
+  },
+  "quality_assessment": {
+    "campus_technical_reference_score": 93.8,
+    "industrial_same_target_weighted_score": 75.16,
+    "official_grade": false,
+    "production_ready": false,
+    "evidence": "final-scorecard.json"
+  }
+}

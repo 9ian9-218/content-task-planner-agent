@@ -1,0 +1,6 @@
+test_calls_in_one_model_response_do_not_claim_to_observe_each_other (tests.test_guards.GuardTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.071s
+
+OK

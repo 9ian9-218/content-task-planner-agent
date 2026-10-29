@@ -1,0 +1,46 @@
+{"elapsed_seconds": 15.0, "target_seconds": 300.0}
+{"elapsed_seconds": 30.0, "target_seconds": 300.0}
+{"elapsed_seconds": 45.0, "target_seconds": 300.0}
+{"elapsed_seconds": 60.0, "target_seconds": 300.0}
+{"elapsed_seconds": 75.0, "target_seconds": 300.0}
+{"elapsed_seconds": 90.0, "target_seconds": 300.0}
+{"elapsed_seconds": 105.0, "target_seconds": 300.0}
+{"elapsed_seconds": 120.0, "target_seconds": 300.0}
+{"elapsed_seconds": 135.1, "target_seconds": 300.0}
+{"elapsed_seconds": 150.1, "target_seconds": 300.0}
+{"elapsed_seconds": 165.1, "target_seconds": 300.0}
+{"elapsed_seconds": 180.1, "target_seconds": 300.0}
+{"elapsed_seconds": 195.1, "target_seconds": 300.0}
+{"elapsed_seconds": 210.2, "target_seconds": 300.0}
+{"elapsed_seconds": 225.2, "target_seconds": 300.0}
+{"elapsed_seconds": 240.2, "target_seconds": 300.0}
+{"elapsed_seconds": 255.2, "target_seconds": 300.0}
+{"elapsed_seconds": 270.2, "target_seconds": 300.0}
+{"elapsed_seconds": 285.3, "target_seconds": 300.0}
+{"elapsed_seconds": 300.3, "target_seconds": 300.0}
+Traceback (most recent call last):
+  File "/mnt/d/xy/tools/check_short_run.py", line 235, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/mnt/d/xy/tools/check_short_run.py", line 180, in main
+    raise RuntimeError(f"worker {index} failed: " + error[-1000:])
+RuntimeError: worker 0 failed: Traceback (most recent call last):
+  File "/mnt/d/xy/tools/check_short_run.py", line 235, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/mnt/d/xy/tools/check_short_run.py", line 134, in main
+    worker(*sys.argv[2:])
+    ~~~~~~^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/tools/check_short_run.py", line 80, in worker
+    result = planner.run(brief, MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 107, in run
+    return self._run(brief, model, resume)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/src/content_planner/agent.py", line 223, in _run
+    if not self.store.claim(context, resume=bool(existing)):
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/src/content_planner/state.py", line 215, in claim
+    self.connection.execute("BEGIN IMMEDIATE")
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+

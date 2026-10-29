@@ -1,0 +1,6 @@
+test_live_adapter_round_trips_actual_tool_observations_over_http (tests.test_model.ModelTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK

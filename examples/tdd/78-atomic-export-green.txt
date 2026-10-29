@@ -1,0 +1,6 @@
+test_interrupted_export_keeps_previous_committed_generation_verifiable (tests.test_hardening.HardeningTests.test_interrupted_export_keeps_previous_committed_generation_verifiable) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.350s
+
+OK

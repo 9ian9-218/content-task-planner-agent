@@ -1,0 +1,6 @@
+test_unaffordable_request_stops_without_charging (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.053s
+
+OK

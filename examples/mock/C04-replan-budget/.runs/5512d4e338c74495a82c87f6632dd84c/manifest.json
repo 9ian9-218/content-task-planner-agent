@@ -1,0 +1,52 @@
+{
+  "executed_at": "2026-10-28T14:09:58.576873+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "mock"
+  ],
+  "case_id": "C04-replan-budget",
+  "mode": "mock",
+  "python": "3.14.10",
+  "source_sha256": "e67aefae347f6b9cc797fe09981ddf16b161782b46b5fa384bbe39150f94ef25",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {
+    "profiles": {
+      "standard": {
+        "units": 12
+      }
+    }
+  },
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "deterministic_mock",
+  "model_endpoint": "",
+  "action_source": "mock_policy",
+  "actual_result_mode": "mock",
+  "model_requests_sent": 0,
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "01540cb2dffd50f45681cb41453a8e67530d2610a8739dc2259159e75df25dd7",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "reported_responses": 0,
+    "accepted_responses": 0,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [],
+  "export_id": "5512d4e338c74495a82c87f6632dd84c",
+  "artifacts_sha256": {
+    "decisions.jsonl": "f0a30bb0ef58ce3fedda11449936f5f60c19a5709231192488e9e896d83ffbaf",
+    "input.json": "889123ebd81e4f56e844c1bb796ee6822d9a9747262dc2684c6ac44f7cc01b26",
+    "output.json": "94b49f46db17735f37455f44f027b3e4cf9a1a422d94d550f54f12ba8d51e2f4",
+    "plan.md": "8d4f00b21b0e91e4c9a17f80439b2eb3ce1ed912ae32979640d5fffa29d7741f",
+    "trace.jsonl": "f26d78d92a07d05ea7a90430aea44309775d86509127f8ff0be5cde1d5f30b77",
+    "trace.md": "320b5a839af5951e58e87ce0ea28cee2b1718875e171921496d9088057b71d1c"
+  }
+}

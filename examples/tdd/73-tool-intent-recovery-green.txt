@@ -1,0 +1,6 @@
+test_local_tool_result_lost_before_commit_replays_once_and_preserves_attempt_budget (tests.test_hardening.HardeningTests.test_local_tool_result_lost_before_commit_replays_once_and_preserves_attempt_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.306s
+
+OK

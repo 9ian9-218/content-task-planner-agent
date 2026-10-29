@@ -1,0 +1,6 @@
+test_transport_failure_and_malformed_response_return_incomplete (tests.test_model.ModelTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.073s
+
+OK

@@ -1,0 +1,18 @@
+test_cli_reports_busy_initialization_as_retryable_without_model_requests (tests.test_short_validation.ShortValidationTests.test_cli_reports_busy_initialization_as_retryable_without_model_requests) ... FAIL
+
+======================================================================
+FAIL: test_cli_reports_busy_initialization_as_retryable_without_model_requests (tests.test_short_validation.ShortValidationTests.test_cli_reports_busy_initialization_as_retryable_without_model_requests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 227, in test_cli_reports_busy_initialization_as_retryable_without_model_requests
+    self.assertEqual(result['reason_code'], 'STATE_BUSY')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PERSISTENCE_FAILED' != 'STATE_BUSY'
+- PERSISTENCE_FAILED
++ STATE_BUSY
+
+
+----------------------------------------------------------------------
+Ran 1 test in 5.370s
+
+FAILED (failures=1)

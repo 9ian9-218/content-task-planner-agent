@@ -1,0 +1,43 @@
+{
+  "executed_at": "2026-10-28T08:53:41.632341+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C16-generation-failure",
+  "mode": "live",
+  "python": "3.10.12",
+  "source_sha256": "07626ea699d913154adc9b7080789a49130b219e53d261e367ce507608f2ece3",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {
+    "failures": {
+      "generate_script": "always"
+    }
+  },
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "claude-opus-4-6-thinking",
+  "model_endpoint": "http://100.73.185.103:8045/v1",
+  "action_source": "remote_model",
+  "actual_result_mode": "live",
+  "model_requests_sent": 10,
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "8f76b147d94be4c27cadd1c5abe8ea53a10f758330fb1d93a56f8b0ca2ce4086",
+  "token_usage": {
+    "prompt_tokens": 39828,
+    "completion_tokens": 2070,
+    "total_tokens": 41898,
+    "reported_responses": 10,
+    "accepted_responses": 10,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [
+    "claude-opus-4-6-thinking"
+  ]
+}

@@ -1,0 +1,6 @@
+test_doctor_blocks_unsupported_release_runtime_without_reading_credentials_or_network (tests.test_hardening.HardeningTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+OK

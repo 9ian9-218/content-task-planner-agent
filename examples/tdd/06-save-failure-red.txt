@@ -1,0 +1,19 @@
+test_failed_save_preserves_script_and_reports_incomplete (tests.test_acceptance.AcceptanceTests) ... FAIL
+
+======================================================================
+FAIL: test_failed_save_preserves_script_and_reports_incomplete (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 76, in test_failed_save_preserves_script_and_reports_incomplete
+    self.assertEqual(result["status"], "incomplete")
+AssertionError: 'completed' != 'incomplete'
+- completed
+?         -
++ incomplete
+? ++
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.065s
+
+FAILED (failures=1)

@@ -1,0 +1,6 @@
+test_missing_required_information_does_not_execute_tools (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.023s
+
+OK

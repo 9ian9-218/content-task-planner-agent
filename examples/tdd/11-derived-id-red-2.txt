@@ -1,0 +1,16 @@
+test_request_id_can_be_derived_from_normalized_business_input (tests.test_acceptance.AcceptanceTests) ... ERROR
+
+======================================================================
+ERROR: test_request_id_can_be_derived_from_normalized_business_input (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 72, in test_request_id_can_be_derived_from_normalized_business_input
+    first = planner.run(brief, model=MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 65, in run
+    existing = self.store.get_request(brief["request_id"])
+KeyError: 'request_id'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.030s
+
+FAILED (errors=1)

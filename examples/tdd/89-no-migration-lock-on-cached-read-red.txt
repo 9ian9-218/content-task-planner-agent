@@ -1,0 +1,20 @@
+test_initialized_database_cached_read_does_not_need_the_writer_lock (tests.test_short_validation.ShortValidationTests.test_initialized_database_cached_read_does_not_need_the_writer_lock) ... ERROR
+
+======================================================================
+ERROR: test_initialized_database_cached_read_does_not_need_the_writer_lock (tests.test_short_validation.ShortValidationTests.test_initialized_database_cached_read_does_not_need_the_writer_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 94, in test_initialized_database_cached_read_does_not_need_the_writer_lock
+    reader = Planner(database, as_of=AS_OF)
+  File "/mnt/d/xy/src/content_planner/agent.py", line 53, in __init__
+    self.store = Store(db_path, lease_seconds, heartbeat_interval, max_active_tasks, read_only)
+                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/src/content_planner/state.py", line 91, in __init__
+    self.connection.execute("BEGIN IMMEDIATE")
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+----------------------------------------------------------------------
+Ran 1 test in 5.253s
+
+FAILED (errors=1)

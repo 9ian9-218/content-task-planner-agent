@@ -1,0 +1,15 @@
+test_cancel_stops_new_work_and_cannot_be_undone_by_resume (tests.test_hardening.HardeningTests.test_cancel_stops_new_work_and_cannot_be_undone_by_resume) ... ERROR
+
+======================================================================
+ERROR: test_cancel_stops_new_work_and_cannot_be_undone_by_resume (tests.test_hardening.HardeningTests.test_cancel_stops_new_work_and_cannot_be_undone_by_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 292, in test_cancel_stops_new_work_and_cannot_be_undone_by_resume
+    receipt = planner.cancel(BRIEF['request_id'])
+              ^^^^^^^^^^^^^^
+AttributeError: 'Planner' object has no attribute 'cancel'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.471s
+
+FAILED (errors=1)

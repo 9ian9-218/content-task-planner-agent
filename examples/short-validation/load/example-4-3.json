@@ -1,0 +1,59 @@
+{
+  "input": {
+    "request_id": "short-4-6",
+    "topic": "P01 字幕功能介绍",
+    "budget_units": 10,
+    "preference": "quality_first"
+  },
+  "scenario": {},
+  "actual_output": {
+    "request_id": "short-4-6",
+    "status": "needs_input",
+    "reason_code": "MISSING_INFORMATION",
+    "summary": "",
+    "missing_fields": [
+      "deadline"
+    ],
+    "invalid_fields": [],
+    "steps": [],
+    "task_plan": [],
+    "trace": [],
+    "decisions": [],
+    "operations": [],
+    "scripts": {},
+    "quotes": {},
+    "materials": [],
+    "plan_id": null,
+    "saved_plan": null,
+    "save_status": "not_attempted",
+    "model_mode": "mock",
+    "model_decisions": 0,
+    "model_requests_sent": 0,
+    "tool_attempts": 0,
+    "errors": [
+      "MISSING_INFORMATION"
+    ],
+    "elapsed_seconds": 3.9e-05,
+    "estimated_finish_at": null,
+    "business_now": null,
+    "cached": false,
+    "cost": {
+      "spent_units": 0,
+      "remaining_units": 0,
+      "projected_total_units": 0,
+      "budget_units": 10
+    }
+  },
+  "checks": {
+    "model_protocol_valid": true,
+    "nonnegative_integer_costs": true,
+    "ledger_cost_consistent": true,
+    "projected_total_consistent": true,
+    "step_states_consistent": true,
+    "save_evidence_consistent": true,
+    "completion_constraints": true,
+    "status": true,
+    "reason": true,
+    "spent": true
+  }
+}

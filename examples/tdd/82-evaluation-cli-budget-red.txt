@@ -1,0 +1,15 @@
+test_live_evaluation_requires_an_explicit_positive_request_cap (tests.test_hardening.HardeningTests.test_live_evaluation_requires_an_explicit_positive_request_cap) ... FAIL
+
+======================================================================
+FAIL: test_live_evaluation_requires_an_explicit_positive_request_cap (tests.test_hardening.HardeningTests.test_live_evaluation_requires_an_explicit_positive_request_cap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 635, in test_live_evaluation_requires_an_explicit_positive_request_cap
+    self.assertEqual(process.returncode, 2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2
+
+----------------------------------------------------------------------
+Ran 1 test in 1.963s
+
+FAILED (failures=1)

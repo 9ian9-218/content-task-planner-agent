@@ -1,0 +1,37 @@
+{
+  "executed_at": "2026-10-28T15:34:07.128000+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C06-repeat",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "wb/hy3",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "action_source": "remote_model",
+  "model_requests_sent": 4,
+  "token_usage": {
+    "prompt_tokens": 6539,
+    "completion_tokens": 569,
+    "total_tokens": 7108,
+    "reported_responses": 4,
+    "accepted_responses": 4,
+    "unreported_request_attempts": 0
+  },
+  "export_id": "5947a9344761449b94c07da8c6822454",
+  "artifacts_sha256": {
+    "decisions.jsonl": "5bbae4e03852130c753ed8fe62af7da6810dde95a9874c0e85f46502df0a213c",
+    "input.json": "889123ebd81e4f56e844c1bb796ee6822d9a9747262dc2684c6ac44f7cc01b26",
+    "output.json": "36e52199bd46b8120011f3505d4ca02cda47f9dbed4b9aad69e6eb047a320d4f",
+    "plan.md": "9c2281fec3ec8d1322df3de451cc599d86f07b4f86502be27eafaabc38ac2fd8",
+    "trace.jsonl": "bb3add968284dccc414f290d283ffd2039f2941a080007a89bde61ccd31a6eaf",
+    "trace.md": "09d67301450edc00dbb8d2b2f08e41627019b8d1969a2caab12054d91729d286"
+  }
+}

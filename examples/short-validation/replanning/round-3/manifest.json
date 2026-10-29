@@ -1,0 +1,52 @@
+{
+  "executed_at": "2026-10-28T15:44:50.752623+00:00",
+  "python": "3.14.10",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate_replanning.py",
+    "--rounds",
+    "3",
+    "--max-model-requests",
+    "20",
+    "--model-timeout",
+    "60"
+  ],
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "mode": "live",
+  "action_source": "remote_model",
+  "scenario": {
+    "profiles": {
+      "standard": {
+        "units": 12
+      }
+    }
+  },
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "model_name": "wb/hy3",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "model_requests_sent": 5,
+  "token_usage": {
+    "prompt_tokens": 8701,
+    "completion_tokens": 710,
+    "total_tokens": 9411,
+    "reported_responses": 5,
+    "accepted_responses": 5,
+    "unreported_request_attempts": 0
+  },
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "01540cb2dffd50f45681cb41453a8e67530d2610a8739dc2259159e75df25dd7",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "export_id": "b55c066a660c4907b1579965103914f0",
+  "artifacts_sha256": {
+    "decisions.jsonl": "bd45c13a4886001a75c2aa8ade43926c2a32b19af6ee6e5bef405e2eb17ba70e",
+    "input.json": "47f9da7b8681ef16d10872547f482cbaed09ac06a88408519326852d7507ef77",
+    "output.json": "46fc7f46a5f50b57e4682968807db833582f0df939c13f7ec208ae3b4d6312b4",
+    "plan.md": "91fd4308f54219e0c0a0070a965c7aa29083cb8a4b0e48447e4736c16bec224c",
+    "trace.jsonl": "baabb33761779bd21397fe759921d7efff8c578977576d930985b645092e5125",
+    "trace.md": "8c1ff77dc4dbcab4bc89f97244f9a5fe5b9e5a377ad0f885d5ebac8f6ee08805"
+  }
+}

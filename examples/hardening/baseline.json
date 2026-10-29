@@ -1,0 +1,64 @@
+{
+  "recorded_at": "2026-10-28T10:27:06.875572+00:00",
+  "purpose": "Freeze evidence for the industrial hardening plan; not a new functional or live evaluation run",
+  "source_sha256": "42fff7eb6c739b91750b5433b2a3337d5dba7d692886f417bc6f645156be57eb",
+  "baseline_test_methods_passed": 63,
+  "baseline_test_skips": 0,
+  "baseline_live_cases_passed": 18,
+  "baseline_adversarial_cases_passed": 2,
+  "baseline_final_model_requests": 79,
+  "new_model_requests_this_planning_turn": 0,
+  "current_runtime": {
+    "python": "3.10.12",
+    "sqlite": "3.37.2",
+    "temporary_file_database_defaults": {
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "busy_timeout": 5000
+    },
+    "probe_scope": "New disposable local SQLite file only; no assertion about existing user databases"
+  },
+  "runtime_findings": [
+    {
+      "code": "PYTHON_BRANCH_END_OF_LIFE",
+      "status": "release_blocker",
+      "branch": "3.10",
+      "official_end_of_life": "2026-10-01",
+      "source": "https://devguide.python.org/versions/"
+    },
+    {
+      "code": "WAL_PATCH_LEVEL_NOT_VERIFIED",
+      "status": "block_WAL_opt_in_until_verified",
+      "note": "Do not infer vendor patch status from sqlite_version alone; current implementation does not explicitly enable WAL. Verify upstream fix or distribution backport before opting into concurrent WAL.",
+      "source": "https://sqlite.org/wal.html"
+    }
+  ],
+  "files_sha256": {
+    "src/content_planner/__init__.py": "be0e78680041680284a762a42f021f82ef84b83815418d3b34f2cb3c70c650a8",
+    "src/content_planner/__main__.py": "0262cedcb0b36fc360886a499bce5d16d9806ff5f22c06f59c965052978fb063",
+    "src/content_planner/agent.py": "44af87e668ba9490534ddc1d0f3f233c0edf82c7ecb0027d0e0687d2ea5d337c",
+    "src/content_planner/model.py": "cbbaef5bfdceeec2d7ca8a5f517b593e8ddeedfc6e73f3fdb2b990d2f14d3cc7",
+    "src/content_planner/state.py": "510ac3f6eaff65b6227d3a0fd9c9cd423f52206f11da10f41cb09c6524183d31",
+    "src/content_planner/tools.py": "1792358f452bdc9c62ce839e259a66c8dcd16d13453f7b66ade75646f99159d9",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/provider_fixture.py": "fcb2984189c2e3e52dfed410c4c204a1fc0e2107d99f76b9a9c6c6f909c8027a",
+    "tests/test_acceptance.py": "647f017f4f106b55a07315887bb10d9fc517801d29204f87040f84f360b93ba0",
+    "tests/test_cli.py": "65d4cceea92471234150c6d628ba3eeaa327797e23b0e0b00eb20d023c4d02a4",
+    "tests/test_gateway.py": "a5374db7f513375dc354ab2fb5f2006e85e09da4138a9641ae7e75429323cc28",
+    "tests/test_guards.py": "e1174540083074bb773d801b8a7e4149fe8aa5cdcad3e8ef023225d4a63ff68c",
+    "tests/test_live_evaluation.py": "b77166ad4b8bae61213c2603230b8ac8f532dcf9d855de8e7526593fef0bd0fc",
+    "tests/test_model.py": "37c304a11b1c14a14bdd7bf9b17135a324abcfaabf65a3df58388603b35ff078",
+    "tests/test_review.py": "f5d63cfbbdba15aa259f6443652a3e5b5149f1c1ebfd908d99221d44c2799fd2",
+    "tools/evaluate.py": "e499818b8e854cc4d2ed58405ada7e30a00b8fb7494ccc866b7e08223d66e017",
+    "tools/evaluate_adversarial.py": "5945299758620a712638759a6f2498fa3046c4adc37c5b4de709b0cfd15d12ec",
+    "tools/tdd_check.py": "25fdf30d96dfa131e18188b1fee96189a38a1b3e00d6b77c46f563a5829d9e33",
+    "tools/verify.py": "65681c0c41cf3d4fea4460c01a43f360c5b45b929ca9f69c9519304337a9cbe8",
+    "data/materials.json": "98120947da3a9e1f10a6b03bbbcb5740fde0394b749a654a543e3084c010a764",
+    "data/scenarios/normal.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "data/scenarios/over-budget.json": "08dbc5efcbdff9a3f69b8547ad15fb3f8ef68b496d05b70d258ff84cba0ff9fb",
+    "data/scenarios/save-failure.json": "a239877b2b7ef42c3720910e215799c80cf46ed9547789f7b80ccdc4d959dc1f",
+    "data/tool_catalog.json": "dbb2da341e6b38f1db640b12b1ec0cb6149b6874b23839d4ca3b509d269272d3"
+  },
+  "git_snapshot_created": false,
+  "git_note": "Current .git/HEAD is absent; file digests do not substitute for a final commit SHA."
+}

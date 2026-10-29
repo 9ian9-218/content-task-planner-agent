@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-10-28T15:44:51.215446+00:00",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "rounds": 3,
+  "rounds_passed": 3,
+  "passed": true,
+  "model_requests_sent": 15,
+  "request_cap": 20,
+  "request_budget_remaining": 5,
+  "model_name": "wb/hy3",
+  "results": [
+    {
+      "round": 1,
+      "checks": {
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "completed": true,
+        "quotes_observed": true,
+        "expected_cost": true,
+        "economy_selected": true,
+        "actual_remote_actions": true
+      },
+      "passed": true,
+      "observed_quote_units": [
+        12,
+        8
+      ],
+      "model_requests_sent": 5,
+      "token_usage": {
+        "prompt_tokens": 8759,
+        "completion_tokens": 703,
+        "total_tokens": 9462,
+        "reported_responses": 5,
+        "accepted_responses": 5,
+        "unreported_request_attempts": 0
+      },
+      "elapsed_seconds": 51.467891,
+      "evidence": "round-1/output.json"
+    },
+    {
+      "round": 2,
+      "checks": {
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "completed": true,
+        "quotes_observed": true,
+        "expected_cost": true,
+        "economy_selected": true,
+        "actual_remote_actions": true
+      },
+      "passed": true,
+      "observed_quote_units": [
+        12,
+        8
+      ],
+      "model_requests_sent": 5,
+      "token_usage": {
+        "prompt_tokens": 8714,
+        "completion_tokens": 601,
+        "total_tokens": 9315,
+        "reported_responses": 5,
+        "accepted_responses": 5,
+        "unreported_request_attempts": 0
+      },
+      "elapsed_seconds": 10.232111,
+      "evidence": "round-2/output.json"
+    },
+    {
+      "round": 3,
+      "checks": {
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "completed": true,
+        "quotes_observed": true,
+        "expected_cost": true,
+        "economy_selected": true,
+        "actual_remote_actions": true
+      },
+      "passed": true,
+      "observed_quote_units": [
+        12,
+        8
+      ],
+      "model_requests_sent": 5,
+      "token_usage": {
+        "prompt_tokens": 8701,
+        "completion_tokens": 710,
+        "total_tokens": 9411,
+        "reported_responses": 5,
+        "accepted_responses": 5,
+        "unreported_request_attempts": 0
+      },
+      "elapsed_seconds": 43.007976,
+      "evidence": "round-3/output.json"
+    }
+  ],
+  "scope": "Same input/scenario repeated on isolated databases. Three repeats do not establish a general model success rate or independent held-out evaluation."
+}

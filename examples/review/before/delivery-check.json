@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-28T05:01:42.097057+00:00",
+  "markdown_files": 10,
+  "local_links": 67,
+  "json_files": 107,
+  "tdd_command_records": 66,
+  "source_sha256": "869e86013fb615519c408270e9e621666c5378d693c5e5f61511a9bc78dc8714",
+  "readme_command_status": "completed",
+  "issues": [],
+  "scope": "Document/artifact consistency and README CLI smoke; unit and case results remain separately recorded."
+}

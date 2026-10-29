@@ -1,0 +1,3 @@
+# Standard library only; no third-party runtime dependencies.
+# Verified release runtime: Python 3.14.10 / SQLite 3.53.1, pinned in runtime.lock.json.
+# Legacy Python 3.10 is for compatibility checks only; it fails the production preflight.

@@ -1,0 +1,111 @@
+test_configuration_shapes_are_rejected_without_running_business_tools (tests.test_review.ReviewTests) ... 
+======================================================================
+FAIL: test_configuration_shapes_are_rejected_without_running_business_tools (tests.test_review.ReviewTests) (scenario=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 35, in test_configuration_shapes_are_rejected_without_running_business_tools
+    self.assertEqual(process.returncode, 2, process.stderr)
+AssertionError: 0 != 2 : 
+
+======================================================================
+FAIL: test_configuration_shapes_are_rejected_without_running_business_tools (tests.test_review.ReviewTests) (scenario=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 35, in test_configuration_shapes_are_rejected_without_running_business_tools
+    self.assertEqual(process.returncode, 2, process.stderr)
+AssertionError: 0 != 2 : 
+
+======================================================================
+FAIL: test_configuration_shapes_are_rejected_without_running_business_tools (tests.test_review.ReviewTests) (scenario={'profiles': []})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 35, in test_configuration_shapes_are_rejected_without_running_business_tools
+    self.assertEqual(process.returncode, 2, process.stderr)
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 115, in <module>
+    raise SystemExit(main())
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 88, in main
+    result = planner.run(original_input, model=model, resume=args.resume)
+  File "/mnt/d/xy/src/content_planner/agent.py", line 118, in run
+    tools = Tools(context, self.scenario)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 53, in __init__
+    for profile, values in (scenario or {}).get("profiles", {}).items():
+AttributeError: 'list' object has no attribute 'items'
+
+
+======================================================================
+FAIL: test_configuration_shapes_are_rejected_without_running_business_tools (tests.test_review.ReviewTests) (scenario={'profiles': None})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 35, in test_configuration_shapes_are_rejected_without_running_business_tools
+    self.assertEqual(process.returncode, 2, process.stderr)
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 115, in <module>
+    raise SystemExit(main())
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 88, in main
+    result = planner.run(original_input, model=model, resume=args.resume)
+  File "/mnt/d/xy/src/content_planner/agent.py", line 118, in run
+    tools = Tools(context, self.scenario)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 53, in __init__
+    for profile, values in (scenario or {}).get("profiles", {}).items():
+AttributeError: 'NoneType' object has no attribute 'items'
+
+
+======================================================================
+FAIL: test_configuration_shapes_are_rejected_without_running_business_tools (tests.test_review.ReviewTests) (scenario={'failures': []})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 35, in test_configuration_shapes_are_rejected_without_running_business_tools
+    self.assertEqual(process.returncode, 2, process.stderr)
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 115, in <module>
+    raise SystemExit(main())
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 88, in main
+    result = planner.run(original_input, model=model, resume=args.resume)
+  File "/mnt/d/xy/src/content_planner/agent.py", line 178, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 113, in execute
+    elif self.scenario.get("failures", {}).get(name):
+AttributeError: 'list' object has no attribute 'get'
+
+
+======================================================================
+FAIL: test_configuration_shapes_are_rejected_without_running_business_tools (tests.test_review.ReviewTests) (scenario={'failures': {'unknown_tool': 'always'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 35, in test_configuration_shapes_are_rejected_without_running_business_tools
+    self.assertEqual(process.returncode, 2, process.stderr)
+AssertionError: 0 != 2 : 
+
+======================================================================
+FAIL: test_configuration_shapes_are_rejected_without_running_business_tools (tests.test_review.ReviewTests) (scenario={'failures': {'save_plan': 'once'}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 35, in test_configuration_shapes_are_rejected_without_running_business_tools
+    self.assertEqual(process.returncode, 2, process.stderr)
+AssertionError: 3 != 2 : 
+
+======================================================================
+FAIL: test_configuration_shapes_are_rejected_without_running_business_tools (tests.test_review.ReviewTests) (scenario={'unexpected': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 35, in test_configuration_shapes_are_rejected_without_running_business_tools
+    self.assertEqual(process.returncode, 2, process.stderr)
+AssertionError: 0 != 2 : 
+
+----------------------------------------------------------------------
+Ran 1 test in 3.625s
+
+FAILED (failures=8)

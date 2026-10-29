@@ -1,0 +1,15 @@
+test_cli_exports_the_actual_result_and_trace (tests.test_cli.CLITests) ... FAIL
+
+======================================================================
+FAIL: test_cli_exports_the_actual_result_and_trace (tests.test_cli.CLITests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_cli.py", line 27, in test_cli_exports_the_actual_result_and_trace
+    self.assertEqual(result.returncode, 0, result.stderr)
+AssertionError: 1 != 0 : /usr/bin/python3: No module named content_planner.__main__; 'content_planner' is a package and cannot be directly executed
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.385s
+
+FAILED (failures=1)

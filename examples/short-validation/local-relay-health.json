@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-28T15:20:23.479360+00:00",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "requested_model": "wb/hy3",
+  "key_configured": true,
+  "http_status": 200,
+  "requested_model_listed": true,
+  "elapsed_seconds": 0.039
+}

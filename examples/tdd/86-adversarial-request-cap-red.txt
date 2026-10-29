@@ -1,0 +1,23 @@
+test_adversarial_evaluation_requires_a_request_cap_before_configuration_or_network (tests.test_short_validation.ShortValidationTests.test_adversarial_evaluation_requires_a_request_cap_before_configuration_or_network) ... ERROR
+
+======================================================================
+ERROR: test_adversarial_evaluation_requires_a_request_cap_before_configuration_or_network (tests.test_short_validation.ShortValidationTests.test_adversarial_evaluation_requires_a_request_cap_before_configuration_or_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 36, in test_adversarial_evaluation_requires_a_request_cap_before_configuration_or_network
+    self.assertEqual(json.loads(process.stdout)['reason_code'], 'REQUEST_CAP_REQUIRED')
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.426s
+
+FAILED (errors=1)

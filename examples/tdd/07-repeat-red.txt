@@ -1,0 +1,18 @@
+test_repeated_execution_after_reopening_reuses_the_saved_result (tests.test_acceptance.AcceptanceTests) ... ERROR
+
+======================================================================
+ERROR: test_repeated_execution_after_reopening_reuses_the_saved_result (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 87, in test_repeated_execution_after_reopening_reuses_the_saved_result
+    second = planner.run(BRIEF, model=MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 79, in run
+    self.store.persist(context, context["saved_plan"] if name == "save_plan" and result["ok"] else None)
+  File "/mnt/d/xy/src/content_planner/state.py", line 32, in persist
+    self.connection.execute("INSERT INTO plans VALUES (?, ?, ?)",
+sqlite3.IntegrityError: UNIQUE constraint failed: plans.request_id
+
+----------------------------------------------------------------------
+Ran 1 test in 0.159s
+
+FAILED (errors=1)

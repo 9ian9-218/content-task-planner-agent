@@ -1,0 +1,6 @@
+test_delivery_audit_rejects_claimed_completion_without_a_saved_plan (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_claimed_completion_without_a_saved_plan) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.794s
+
+OK

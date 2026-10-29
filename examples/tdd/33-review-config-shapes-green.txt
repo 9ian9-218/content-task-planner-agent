@@ -1,0 +1,6 @@
+test_configuration_shapes_are_rejected_without_running_business_tools (tests.test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.855s
+
+OK

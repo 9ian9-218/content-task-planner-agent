@@ -1,0 +1,37 @@
+{
+  "executed_at": "2026-10-28T14:49:30.256105+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C13-id-conflict",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "e67aefae347f6b9cc797fe09981ddf16b161782b46b5fa384bbe39150f94ef25",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "claude-opus-4-6-thinking",
+  "model_endpoint": "http://100.73.185.103:8045/v1",
+  "action_source": "remote_model",
+  "model_requests_sent": 4,
+  "token_usage": {
+    "prompt_tokens": 14438,
+    "completion_tokens": 1134,
+    "total_tokens": 15572,
+    "reported_responses": 4,
+    "accepted_responses": 4,
+    "unreported_request_attempts": 0
+  },
+  "export_id": "ef6bd882a0004666b88d6ce8412891f9",
+  "artifacts_sha256": {
+    "decisions.jsonl": "46466f22916aea7b98e6639e45b482cbf1b9f5d06355fa98acbf5f94244c0059",
+    "input.json": "889123ebd81e4f56e844c1bb796ee6822d9a9747262dc2684c6ac44f7cc01b26",
+    "output.json": "2dfa773862965371b3b292e1f78e3b8f50ee1622ec49730195ed7f9d07d4512f",
+    "plan.md": "ff708d327d9b80586173ea4f30957e54bef1e7d2bd29c99df1208e7209330109",
+    "trace.jsonl": "d283023bbc20ee4dfda43d90a1a40ca1563ac9646f00d9671e36005db89e386d",
+    "trace.md": "cc9450dd125b8c65b44151c4a1a2eb64f8fb51272eae91bde891ff4060613504"
+  }
+}

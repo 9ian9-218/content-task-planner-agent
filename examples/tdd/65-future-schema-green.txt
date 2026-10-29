@@ -1,0 +1,6 @@
+test_unknown_database_versions_fail_closed_without_changing_files (tests.test_hardening.HardeningTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.079s
+
+OK

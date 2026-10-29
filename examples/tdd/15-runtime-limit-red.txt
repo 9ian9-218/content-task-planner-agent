@@ -1,0 +1,14 @@
+test_elapsed_runtime_limit_prevents_tools_after_a_slow_model_response (tests.test_guards.GuardTests) ... ERROR
+
+======================================================================
+ERROR: test_elapsed_runtime_limit_prevents_tools_after_a_slow_model_response (tests.test_guards.GuardTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 64, in test_elapsed_runtime_limit_prevents_tools_after_a_slow_model_response
+    planner = Planner(Path(temp) / "state.sqlite3", as_of=AS_OF, wall_timeout_seconds=0.02)
+TypeError: Planner.__init__() got an unexpected keyword argument 'wall_timeout_seconds'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.013s
+
+FAILED (errors=1)

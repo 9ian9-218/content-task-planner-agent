@@ -1,0 +1,77 @@
+test_truncated_or_invalid_tool_call_responses_never_execute (tests.test_review.ReviewTests) ... 
+======================================================================
+ERROR: test_truncated_or_invalid_tool_call_responses_never_execute (tests.test_review.ReviewTests) (reason='length', calls=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 83, in test_truncated_or_invalid_tool_call_responses_never_execute
+    result = planner.run(BRIEF, LiveModel(api_key="test-only-key"))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 144, in run
+    decision = model.decide(messages, definitions(), timeout=min(30, remaining_seconds))
+  File "/mnt/d/xy/src/content_planner/model.py", line 36, in decide
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+ValueError: I/O operation on closed file.
+
+======================================================================
+ERROR: test_truncated_or_invalid_tool_call_responses_never_execute (tests.test_review.ReviewTests) (reason='content_filter', calls=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 83, in test_truncated_or_invalid_tool_call_responses_never_execute
+    result = planner.run(BRIEF, LiveModel(api_key="test-only-key"))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 144, in run
+    decision = model.decide(messages, definitions(), timeout=min(30, remaining_seconds))
+  File "/mnt/d/xy/src/content_planner/model.py", line 36, in decide
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+ValueError: I/O operation on closed file.
+
+======================================================================
+ERROR: test_truncated_or_invalid_tool_call_responses_never_execute (tests.test_review.ReviewTests) (reason='tool_calls', calls=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 83, in test_truncated_or_invalid_tool_call_responses_never_execute
+    result = planner.run(BRIEF, LiveModel(api_key="test-only-key"))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 144, in run
+    decision = model.decide(messages, definitions(), timeout=min(30, remaining_seconds))
+  File "/mnt/d/xy/src/content_planner/model.py", line 36, in decide
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+ValueError: I/O operation on closed file.
+
+======================================================================
+ERROR: test_truncated_or_invalid_tool_call_responses_never_execute (tests.test_review.ReviewTests) (reason='tool_calls', calls=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 83, in test_truncated_or_invalid_tool_call_responses_never_execute
+    result = planner.run(BRIEF, LiveModel(api_key="test-only-key"))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 144, in run
+    decision = model.decide(messages, definitions(), timeout=min(30, remaining_seconds))
+  File "/mnt/d/xy/src/content_planner/model.py", line 36, in decide
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+ValueError: I/O operation on closed file.
+
+======================================================================
+ERROR: test_truncated_or_invalid_tool_call_responses_never_execute (tests.test_review.ReviewTests) (reason='tool_calls', calls=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 83, in test_truncated_or_invalid_tool_call_responses_never_execute
+    result = planner.run(BRIEF, LiveModel(api_key="test-only-key"))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 144, in run
+    decision = model.decide(messages, definitions(), timeout=min(30, remaining_seconds))
+  File "/mnt/d/xy/src/content_planner/model.py", line 36, in decide
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+ValueError: I/O operation on closed file.
+
+======================================================================
+ERROR: test_truncated_or_invalid_tool_call_responses_never_execute (tests.test_review.ReviewTests) (reason='stop', calls=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 83, in test_truncated_or_invalid_tool_call_responses_never_execute
+    result = planner.run(BRIEF, LiveModel(api_key="test-only-key"))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 144, in run
+    decision = model.decide(messages, definitions(), timeout=min(30, remaining_seconds))
+  File "/mnt/d/xy/src/content_planner/model.py", line 36, in decide
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+ValueError: I/O operation on closed file.
+
+----------------------------------------------------------------------
+Ran 1 test in 0.300s
+
+FAILED (errors=6)

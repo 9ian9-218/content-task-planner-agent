@@ -1,0 +1,37 @@
+test_legacy_text_finish_obeys_the_same_state_and_reason_contract (tests.test_gateway.GatewayTests) ... 
+======================================================================
+FAIL: test_legacy_text_finish_obeys_the_same_state_and_reason_contract (tests.test_gateway.GatewayTests) (value={'status': 'completed', 'reason_code': 'SAVE_FAILED', 'summary': '未保存不能完成。'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 162, in test_legacy_text_finish_obeys_the_same_state_and_reason_contract
+    with self.assertRaises(ModelError):
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_legacy_text_finish_obeys_the_same_state_and_reason_contract (tests.test_gateway.GatewayTests) (value={'status': 'needs_input', 'reason_code': 'BUDGET_EXCEEDED', 'summary': '预算不可行。'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 162, in test_legacy_text_finish_obeys_the_same_state_and_reason_contract
+    with self.assertRaises(ModelError):
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_legacy_text_finish_obeys_the_same_state_and_reason_contract (tests.test_gateway.GatewayTests) (value={'status': 'incomplete', 'reason_code': 'budget_exceeded', 'summary': '非标准错误码。'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 162, in test_legacy_text_finish_obeys_the_same_state_and_reason_contract
+    with self.assertRaises(ModelError):
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_legacy_text_finish_obeys_the_same_state_and_reason_contract (tests.test_gateway.GatewayTests) (value={'status': 'incomplete'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 162, in test_legacy_text_finish_obeys_the_same_state_and_reason_contract
+    with self.assertRaises(ModelError):
+AssertionError: ModelError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.012s
+
+FAILED (failures=4)

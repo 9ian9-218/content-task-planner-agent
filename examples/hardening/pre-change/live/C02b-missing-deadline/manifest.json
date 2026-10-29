@@ -1,0 +1,32 @@
+{
+  "executed_at": "2026-10-28T08:58:08.894423+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C02b-missing-deadline",
+  "mode": "live",
+  "python": "3.10.12",
+  "source_sha256": "42fff7eb6c739b91750b5433b2a3337d5dba7d692886f417bc6f645156be57eb",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "claude-opus-4-6-thinking",
+  "model_endpoint": "http://100.73.185.103:8045/v1",
+  "action_source": "remote_model",
+  "actual_result_mode": "live",
+  "model_requests_sent": 0,
+  "data_versions": null,
+  "prompt_sha256": null,
+  "token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "reported_responses": 0,
+    "accepted_responses": 0,
+    "unreported_request_attempts": 0
+  },
+  "response_models": []
+}

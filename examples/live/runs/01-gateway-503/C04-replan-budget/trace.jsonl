@@ -1,0 +1,1 @@
+{"event_type": "terminal_without_tool", "action_source": "runtime", "tool": null, "status": "incomplete", "reason_code": "MODEL_UNAVAILABLE", "missing_fields": [], "note": "本次未执行业务工具，该事件是程序终态记录。"}

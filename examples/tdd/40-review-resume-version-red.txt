@@ -1,0 +1,19 @@
+test_resume_rejects_a_changed_prompt_instead_of_misreporting_its_version (tests.test_review.ReviewTests) ... FAIL
+
+======================================================================
+FAIL: test_resume_rejects_a_changed_prompt_instead_of_misreporting_its_version (tests.test_review.ReviewTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 191, in test_resume_rejects_a_changed_prompt_instead_of_misreporting_its_version
+    self.assertEqual(result["status"], "incomplete")
+AssertionError: 'completed' != 'incomplete'
+- completed
+?         -
++ incomplete
+? ++
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.109s
+
+FAILED (failures=1)

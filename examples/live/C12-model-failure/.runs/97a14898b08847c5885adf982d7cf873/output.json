@@ -1,0 +1,147 @@
+{
+  "run_id": "6fb98aa93b6b4913a47484d2bb4e3f20",
+  "request_id": "evaluation-001",
+  "brief": {
+    "request_id": "evaluation-001",
+    "topic": "P01 字幕功能介绍",
+    "budget_units": 10,
+    "deadline": "2026-11-01T11:00:00+08:00",
+    "preference": "quality_first"
+  },
+  "input_fingerprint": "a69a6a71cf717e2feb917becc6b64f52a2fa2b6eb812b23af6b8ef6198fde1a0",
+  "as_of": "2026-11-01T10:00:00+08:00",
+  "operations": [],
+  "trace": [],
+  "materials": [],
+  "quotes": {},
+  "scripts": {},
+  "plan_id": null,
+  "saved_plan": null,
+  "status": "incomplete",
+  "reason_code": "MODEL_UNAVAILABLE",
+  "model_mode": "live",
+  "model_decisions": 1,
+  "errors": [
+    "MODEL_UNAVAILABLE"
+  ],
+  "cached": false,
+  "replayed_decisions": 0,
+  "task_limits": {
+    "max_model_attempts": 12,
+    "max_tool_attempts": 12
+  },
+  "task_counters": {
+    "model_attempts": 1,
+    "tool_attempts": 0
+  },
+  "missing_fields": [],
+  "invalid_fields": [],
+  "decisions": [],
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "executed_at": "2026-10-28T15:37:01.530596+00:00",
+  "catalog_snapshot": {
+    "version": "synthetic-tools-v1",
+    "free_tool_minutes": 1,
+    "failure_units": 0,
+    "failure_minutes": 1,
+    "profiles": {
+      "standard": {
+        "units": 8,
+        "minutes": 40,
+        "description": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价"
+      },
+      "economy": {
+        "units": 8,
+        "minutes": 20,
+        "description": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+      }
+    }
+  },
+  "materials_snapshot": {
+    "version": "synthetic-materials-v1",
+    "materials": [
+      {
+        "id": "P01",
+        "title": "合成产品 P01 字幕功能",
+        "keywords": [
+          "P01",
+          "字幕",
+          "短视频",
+          "新手"
+        ],
+        "facts": [
+          "支持为视频添加字幕",
+          "字幕内容可以编辑"
+        ]
+      },
+      {
+        "id": "P02",
+        "title": "合成产品 P02 模板功能",
+        "keywords": [
+          "P02",
+          "模板",
+          "旅行"
+        ],
+        "facts": [
+          "提供旅行主题视频模板",
+          "支持替换模板内的图片"
+        ]
+      }
+    ]
+  },
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "lease_generation": 1,
+  "model_inflight": null,
+  "summary": "未配置 MODEL_API_KEY；live 模式不会切换到 Mock。",
+  "elapsed_seconds": 0.019521,
+  "runtime_limit_seconds": 180,
+  "model_timeout_seconds": 60.0,
+  "runtime_limit_exceeded": false,
+  "finished_at": "2026-10-28T15:37:01.549919+00:00",
+  "model_requests_sent": 0,
+  "tool_attempts": 0,
+  "cost": {
+    "spent_units": 0,
+    "remaining_units": 0,
+    "projected_total_units": 0,
+    "budget_units": 10,
+    "budget_gap_units": 0
+  },
+  "business_now": "2026-11-01T10:00:00+08:00",
+  "estimated_finish_at": null,
+  "steps": [],
+  "task_plan": [
+    {
+      "task": "search_materials",
+      "depends_on": [],
+      "status": "pending"
+    },
+    {
+      "task": "estimate_cost",
+      "depends_on": [
+        "search_materials"
+      ],
+      "status": "pending"
+    },
+    {
+      "task": "generate_script",
+      "depends_on": [
+        "estimate_cost"
+      ],
+      "status": "pending"
+    },
+    {
+      "task": "save_plan",
+      "depends_on": [
+        "generate_script"
+      ],
+      "status": "pending"
+    }
+  ],
+  "save_status": "not_attempted"
+}

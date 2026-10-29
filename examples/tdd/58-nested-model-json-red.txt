@@ -1,0 +1,39 @@
+test_excessively_nested_model_json_cannot_crash_or_poison_the_request (tests.test_gateway.GatewayTests) ... 
+======================================================================
+ERROR: test_excessively_nested_model_json_cannot_crash_or_poison_the_request (tests.test_gateway.GatewayTests) (expected='MODEL_RESPONSE_INVALID')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 126, in test_excessively_nested_model_json_cannot_crash_or_poison_the_request
+    result = planner.run(BRIEF, LiveModel(api_key="test-only-key"))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 189, in run
+    decision = model.decide(messages, definitions(), timeout=min(30, remaining_seconds))
+  File "/mnt/d/xy/src/content_planner/model.py", line 61, in decide
+    result = json.loads(raw)
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+
+======================================================================
+ERROR: test_excessively_nested_model_json_cannot_crash_or_poison_the_request (tests.test_gateway.GatewayTests) (expected='INVALID_ARGUMENTS')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 126, in test_excessively_nested_model_json_cannot_crash_or_poison_the_request
+    result = planner.run(BRIEF, LiveModel(api_key="test-only-key"))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 220, in run
+    args = json.loads(call["function"]["arguments"])
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+RecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string
+
+----------------------------------------------------------------------
+Ran 1 test in 0.092s
+
+FAILED (errors=2)

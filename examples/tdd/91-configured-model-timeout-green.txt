@@ -1,0 +1,6 @@
+test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline (tests.test_short_validation.ShortValidationTests.test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.283s
+
+OK

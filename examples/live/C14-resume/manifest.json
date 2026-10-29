@@ -1,0 +1,48 @@
+{
+  "executed_at": "2026-10-28T15:37:11.346161+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C14-resume",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "wb/hy3",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "action_source": "remote_model",
+  "actual_result_mode": "live",
+  "model_requests_sent": 1,
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "token_usage": {
+    "prompt_tokens": 2038,
+    "completion_tokens": 200,
+    "total_tokens": 2238,
+    "reported_responses": 1,
+    "accepted_responses": 1,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [
+    "wb/hy3"
+  ],
+  "export_id": "5284adb3ab1340e2a59c4a1e86e174ca",
+  "artifacts_sha256": {
+    "decisions.jsonl": "bdfa69a600747fcfb69f660313918dfbc34e3ebf51f75bd252fda0ce0bbb370d",
+    "input.json": "889123ebd81e4f56e844c1bb796ee6822d9a9747262dc2684c6ac44f7cc01b26",
+    "output.json": "c5fce7fe79099e2826f9b307b3870ad1a50ee4df21b9a9ea99ae197daef8a956",
+    "plan.md": "df66adf23c896d788b17d626fbe45348c5b1f689267bcbdd0fcccc1a6c1087cc",
+    "trace.jsonl": "01ebd6628f3783199dd905cd61a792cf71af5090c9dd200b54ab64e3bc999c57",
+    "trace.md": "62c97fcdb6ec21ad06a40a6f3f79ed17f9be621ab49183bd41c947460b251505"
+  }
+}

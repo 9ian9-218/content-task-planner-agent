@@ -1,0 +1,266 @@
+{
+  "run_id": "d261f9793ee2474eaffbb14a28b2395b",
+  "request_id": "evaluation-001",
+  "brief": {
+    "request_id": "evaluation-001",
+    "topic": "不存在的合成产品 Z99",
+    "budget_units": 10,
+    "deadline": "2026-11-01T11:00:00+08:00",
+    "preference": "quality_first"
+  },
+  "input_fingerprint": "4ca984c849d96ae18f6c92a4966eb3a5d2122670f406dfb87154aa107b104629",
+  "as_of": "2026-11-01T10:00:00+08:00",
+  "operations": [
+    {
+      "operation_id": "d3a0d2ac04a7467880f401f1b9eaec1f",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "合成产品 Z99"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "d3a0d2ac04a7467880f401f1b9eaec1f"
+      },
+      "selected": false
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "model_mode": "live",
+      "run_id": "d261f9793ee2474eaffbb14a28b2395b",
+      "tool_call_id": "toolu_vrtx_01PVEDzCFbup8zBpFNs9RFfp",
+      "decision_index": 1,
+      "recorded_at": "2026-10-28T09:00:56.465104+00:00",
+      "action_source": "remote_model",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "合成产品 Z99",
+        "decision_summary": "按任务主题检索\"合成产品 Z99\"的相关素材，确认是否存在可引用的事实资料。"
+      },
+      "decision_summary": "按任务主题检索\"合成产品 Z99\"的相关素材，确认是否存在可引用的事实资料。",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "d3a0d2ac04a7467880f401f1b9eaec1f"
+      },
+      "observed_after_step": null
+    }
+  ],
+  "materials": [],
+  "quotes": {},
+  "scripts": {},
+  "plan_id": null,
+  "saved_plan": null,
+  "status": "needs_input",
+  "reason_code": "MATERIALS_MISSING",
+  "model_mode": "live",
+  "model_decisions": 2,
+  "errors": [],
+  "cached": false,
+  "missing_fields": [],
+  "invalid_fields": [],
+  "decisions": [
+    {
+      "run_id": "d261f9793ee2474eaffbb14a28b2395b",
+      "decision_index": 1,
+      "recorded_at": "2026-10-28T09:00:56.464938+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": null,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_01PVEDzCFbup8zBpFNs9RFfp",
+          "type": "function",
+          "function": {
+            "name": "search_materials",
+            "arguments": "{\"query\":\"合成产品 Z99\",\"decision_summary\":\"按任务主题检索\\\"合成产品 Z99\\\"的相关素材，确认是否存在可引用的事实资料。\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 2926,
+        "completion_tokens": 287,
+        "total_tokens": 3213
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "d261f9793ee2474eaffbb14a28b2395b",
+      "decision_index": 2,
+      "recorded_at": "2026-10-28T09:01:02.035186+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 1,
+      "tool_calls": [],
+      "finish": {
+        "status": "needs_input",
+        "reason_code": "MATERIALS_MISSING",
+        "summary": "检索\"合成产品 Z99\"未返回任何素材，系统中无可引用的事实资料。请确认产品名称是否正确，或提供可用的素材/关键词以便重新检索。"
+      },
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 3328,
+        "completion_tokens": 238,
+        "total_tokens": 3566
+      },
+      "system_fingerprint": null
+    }
+  ],
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "executed_at": "2026-10-28T09:00:49.526758+00:00",
+  "catalog_snapshot": {
+    "version": "synthetic-tools-v1",
+    "free_tool_minutes": 1,
+    "failure_units": 0,
+    "failure_minutes": 1,
+    "profiles": {
+      "standard": {
+        "units": 8,
+        "minutes": 40,
+        "description": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价"
+      },
+      "economy": {
+        "units": 8,
+        "minutes": 20,
+        "description": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+      }
+    }
+  },
+  "materials_snapshot": {
+    "version": "synthetic-materials-v1",
+    "materials": [
+      {
+        "id": "P01",
+        "title": "合成产品 P01 字幕功能",
+        "keywords": [
+          "P01",
+          "字幕",
+          "短视频",
+          "新手"
+        ],
+        "facts": [
+          "支持为视频添加字幕",
+          "字幕内容可以编辑"
+        ]
+      },
+      {
+        "id": "P02",
+        "title": "合成产品 P02 模板功能",
+        "keywords": [
+          "P02",
+          "模板",
+          "旅行"
+        ],
+        "facts": [
+          "提供旅行主题视频模板",
+          "支持替换模板内的图片"
+        ]
+      }
+    ]
+  },
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "summary": "检索\"合成产品 Z99\"未返回任何素材，系统中无可引用的事实资料。请确认产品名称是否正确，或提供可用的素材/关键词以便重新检索。",
+  "elapsed_seconds": 12.508815,
+  "runtime_limit_seconds": 180,
+  "runtime_limit_exceeded": false,
+  "finished_at": "2026-10-28T09:01:02.035217+00:00",
+  "model_requests_sent": 2,
+  "tool_attempts": 1,
+  "cost": {
+    "spent_units": 0,
+    "remaining_units": 0,
+    "projected_total_units": 0,
+    "budget_units": 10,
+    "budget_gap_units": 0
+  },
+  "business_now": "2026-11-01T10:01:00+08:00",
+  "estimated_finish_at": null,
+  "steps": [
+    {
+      "operation_id": "d3a0d2ac04a7467880f401f1b9eaec1f",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "合成产品 Z99"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "d3a0d2ac04a7467880f401f1b9eaec1f"
+      },
+      "selected": false
+    }
+  ],
+  "task_plan": [
+    {
+      "task": "search_materials",
+      "depends_on": [],
+      "status": "succeeded"
+    },
+    {
+      "task": "estimate_cost",
+      "depends_on": [
+        "search_materials"
+      ],
+      "status": "pending"
+    },
+    {
+      "task": "generate_script",
+      "depends_on": [
+        "estimate_cost"
+      ],
+      "status": "pending"
+    },
+    {
+      "task": "save_plan",
+      "depends_on": [
+        "generate_script"
+      ],
+      "status": "pending"
+    }
+  ],
+  "save_status": "not_attempted"
+}

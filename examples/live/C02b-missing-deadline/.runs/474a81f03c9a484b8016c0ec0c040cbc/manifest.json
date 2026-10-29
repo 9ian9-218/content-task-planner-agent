@@ -1,0 +1,40 @@
+{
+  "executed_at": "2026-10-28T15:32:26.393751+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C02b-missing-deadline",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "wb/hy3",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "action_source": "remote_model",
+  "actual_result_mode": "live",
+  "model_requests_sent": 0,
+  "data_versions": null,
+  "prompt_sha256": null,
+  "token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "reported_responses": 0,
+    "accepted_responses": 0,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [],
+  "export_id": "474a81f03c9a484b8016c0ec0c040cbc",
+  "artifacts_sha256": {
+    "decisions.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.json": "78c1777621fef3a2990d297e3f8daf6f745e147d5f71ead818f94f7473b7e4fb",
+    "output.json": "d2fd44fb36beb73ceaab3e4614e3e16e1e9b059e041a9588d6a9faf0ce16e59a",
+    "trace.jsonl": "893dbef4714dce706302436aba9d10f0cb2135e27085ad8542ceaa2f31b3c2fd",
+    "trace.md": "abd1e1a3f99730548b3800b58d86a295e2533c88a14d154202e210bdcceb794d"
+  }
+}

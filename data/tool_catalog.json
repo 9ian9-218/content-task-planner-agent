@@ -1,0 +1,10 @@
+{
+  "version": "synthetic-tools-v1",
+  "free_tool_minutes": 1,
+  "failure_units": 0,
+  "failure_minutes": 1,
+  "profiles": {
+    "standard": {"units": 8, "minutes": 40, "description": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价"},
+    "economy": {"units": 8, "minutes": 20, "description": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"}
+  }
+}

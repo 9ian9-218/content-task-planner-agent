@@ -1,0 +1,14 @@
+test_task_plan_reports_dependencies_and_actual_step_states (tests.test_acceptance.AcceptanceTests) ... ERROR
+
+======================================================================
+ERROR: test_task_plan_reports_dependencies_and_actual_step_states (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 176, in test_task_plan_reports_dependencies_and_actual_step_states
+    self.assertEqual([t["status"] for t in result["saved_plan"]["tasks"]], ["succeeded"] * 4)
+KeyError: 'tasks'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.068s
+
+FAILED (errors=1)

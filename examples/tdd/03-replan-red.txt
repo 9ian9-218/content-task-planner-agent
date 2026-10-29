@@ -1,0 +1,17 @@
+test_observed_over_budget_quote_changes_the_selected_profile (tests.test_acceptance.AcceptanceTests) ... FAIL
+
+======================================================================
+FAIL: test_observed_over_budget_quote_changes_the_selected_profile (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 49, in test_observed_over_budget_quote_changes_the_selected_profile
+    self.assertEqual(result["saved_plan"]["script"]["profile"], "economy")
+AssertionError: 'standard' != 'economy'
+- standard
++ economy
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.065s
+
+FAILED (failures=1)

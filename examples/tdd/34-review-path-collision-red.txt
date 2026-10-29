@@ -1,0 +1,21 @@
+test_export_cannot_overwrite_the_database_or_input_files (tests.test_review.ReviewTests) ... 
+======================================================================
+FAIL: test_export_cannot_overwrite_the_database_or_input_files (tests.test_review.ReviewTests) (destination='/tmp/tmp8ek89rxs/out')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 54, in test_export_cannot_overwrite_the_database_or_input_files
+    self.assertEqual(process.returncode, 2, process.stderr)
+AssertionError: 0 != 2 : 
+
+======================================================================
+FAIL: test_export_cannot_overwrite_the_database_or_input_files (tests.test_review.ReviewTests) (destination='/tmp/tmp8ek89rxs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 54, in test_export_cannot_overwrite_the_database_or_input_files
+    self.assertEqual(process.returncode, 2, process.stderr)
+AssertionError: 0 != 2 : 
+
+----------------------------------------------------------------------
+Ran 1 test in 0.771s
+
+FAILED (failures=2)

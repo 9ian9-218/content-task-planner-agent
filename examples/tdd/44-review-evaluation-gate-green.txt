@@ -1,0 +1,6 @@
+test_evaluation_gate_rejects_budget_violations_and_inconsistent_ledgers (tests.test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.130s
+
+OK

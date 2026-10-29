@@ -1,0 +1,6 @@
+test_live_evaluation_requires_an_explicit_positive_request_cap (tests.test_hardening.HardeningTests.test_live_evaluation_requires_an_explicit_positive_request_cap) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.223s
+
+OK

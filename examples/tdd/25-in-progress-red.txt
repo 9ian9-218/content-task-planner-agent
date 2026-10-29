@@ -1,0 +1,17 @@
+test_in_progress_request_is_not_executed_by_a_second_runner (tests.test_guards.GuardTests) ... FAIL
+
+======================================================================
+FAIL: test_in_progress_request_is_not_executed_by_a_second_runner (tests.test_guards.GuardTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 143, in test_in_progress_request_is_not_executed_by_a_second_runner
+    self.assertEqual(second["status"], "incomplete")
+AssertionError: 'running' != 'incomplete'
+- running
++ incomplete
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.110s
+
+FAILED (failures=1)

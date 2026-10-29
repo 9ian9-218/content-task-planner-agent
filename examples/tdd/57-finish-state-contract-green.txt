@@ -1,0 +1,6 @@
+test_finish_contract_distinguishes_missing_materials_from_infeasible_constraints (tests.test_gateway.GatewayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+OK

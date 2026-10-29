@@ -1,0 +1,6 @@
+test_model_can_end_through_a_native_finish_action_with_an_explicit_reason (tests.test_gateway.GatewayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK

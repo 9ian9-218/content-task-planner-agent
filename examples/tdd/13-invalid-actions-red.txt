@@ -1,0 +1,73 @@
+test_invalid_model_actions_are_observable_errors_without_side_effects (tests.test_guards.GuardTests) ... 
+======================================================================
+ERROR: test_invalid_model_actions_are_observable_errors_without_side_effects (tests.test_guards.GuardTests) (name='__class__', arguments='{}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 34, in test_invalid_model_actions_are_observable_errors_without_side_effects
+    result = planner.run(BRIEF, model=InvalidActionModel(name, arguments))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 105, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 70, in execute
+    data, charged, minutes = getattr(self, name)(**args)
+TypeError: Tools.__init__() missing 1 required positional argument: 'context'
+
+======================================================================
+ERROR: test_invalid_model_actions_are_observable_errors_without_side_effects (tests.test_guards.GuardTests) (name='generate_script', arguments='{')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 34, in test_invalid_model_actions_are_observable_errors_without_side_effects
+    result = planner.run(BRIEF, model=InvalidActionModel(name, arguments))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 103, in run
+    args = json.loads(call["function"]["arguments"])
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+======================================================================
+ERROR: test_invalid_model_actions_are_observable_errors_without_side_effects (tests.test_guards.GuardTests) (name='generate_script', arguments='{}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 34, in test_invalid_model_actions_are_observable_errors_without_side_effects
+    result = planner.run(BRIEF, model=InvalidActionModel(name, arguments))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 105, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 69, in execute
+    self.guard(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 83, in guard
+    quote = self.context["quotes"].get(args["quote_id"])
+KeyError: 'quote_id'
+
+======================================================================
+ERROR: test_invalid_model_actions_are_observable_errors_without_side_effects (tests.test_guards.GuardTests) (name='search_materials', arguments='{"query":42}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 34, in test_invalid_model_actions_are_observable_errors_without_side_effects
+    result = planner.run(BRIEF, model=InvalidActionModel(name, arguments))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 105, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 70, in execute
+    data, charged, minutes = getattr(self, name)(**args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 110, in search_materials
+    found = [m for m in self.materials["materials"] if any(k.lower() in query.lower() for k in m["keywords"])]
+  File "/mnt/d/xy/src/content_planner/tools.py", line 110, in <listcomp>
+    found = [m for m in self.materials["materials"] if any(k.lower() in query.lower() for k in m["keywords"])]
+  File "/mnt/d/xy/src/content_planner/tools.py", line 110, in <genexpr>
+    found = [m for m in self.materials["materials"] if any(k.lower() in query.lower() for k in m["keywords"])]
+AttributeError: 'int' object has no attribute 'lower'
+
+======================================================================
+FAIL: test_invalid_model_actions_are_observable_errors_without_side_effects (tests.test_guards.GuardTests) (name='estimate_cost', arguments='{"material_ids":["Z99"],"profile":"standard","decision_summary":"测试未知资料"}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 36, in test_invalid_model_actions_are_observable_errors_without_side_effects
+    self.assertTrue(result["errors"])
+AssertionError: [] is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.220s
+
+FAILED (failures=1, errors=4)

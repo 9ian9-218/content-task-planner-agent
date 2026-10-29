@@ -1,0 +1,14 @@
+test_model_can_end_through_a_native_finish_action_with_an_explicit_reason (tests.test_gateway.GatewayTests) ... ERROR
+
+======================================================================
+ERROR: test_model_can_end_through_a_native_finish_action_with_an_explicit_reason (tests.test_gateway.GatewayTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 110, in test_model_can_end_through_a_native_finish_action_with_an_explicit_reason
+    self.assertEqual(decision["finish"], finish)
+KeyError: 'finish'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (errors=1)

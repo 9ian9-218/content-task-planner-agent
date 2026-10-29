@@ -1,0 +1,29 @@
+test_finish_contract_distinguishes_missing_materials_from_infeasible_constraints (tests.test_gateway.GatewayTests) ... 
+======================================================================
+FAIL: test_finish_contract_distinguishes_missing_materials_from_infeasible_constraints (tests.test_gateway.GatewayTests) (status='needs_input', reason='BUDGET_EXCEEDED')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 113, in test_finish_contract_distinguishes_missing_materials_from_infeasible_constraints
+    with self.assertRaises(ModelError):
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_finish_contract_distinguishes_missing_materials_from_infeasible_constraints (tests.test_gateway.GatewayTests) (status='incomplete', reason='budget_exceeded')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 113, in test_finish_contract_distinguishes_missing_materials_from_infeasible_constraints
+    with self.assertRaises(ModelError):
+AssertionError: ModelError not raised
+
+======================================================================
+FAIL: test_finish_contract_distinguishes_missing_materials_from_infeasible_constraints (tests.test_gateway.GatewayTests) (status='needs_input', reason='NO_MATERIALS_FOUND')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 113, in test_finish_contract_distinguishes_missing_materials_from_infeasible_constraints
+    with self.assertRaises(ModelError):
+AssertionError: ModelError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.026s
+
+FAILED (failures=3)

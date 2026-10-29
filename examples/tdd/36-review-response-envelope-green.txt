@@ -1,0 +1,6 @@
+test_truncated_or_invalid_tool_call_responses_never_execute (tests.test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.287s
+
+OK

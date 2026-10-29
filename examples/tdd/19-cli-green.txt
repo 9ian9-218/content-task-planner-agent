@@ -1,0 +1,6 @@
+test_cli_exports_the_actual_result_and_trace (tests.test_cli.CLITests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.457s
+
+OK

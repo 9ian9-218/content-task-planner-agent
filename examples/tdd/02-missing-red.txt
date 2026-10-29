@@ -1,0 +1,45 @@
+test_missing_required_information_does_not_execute_tools (tests.test_acceptance.AcceptanceTests) ... 
+======================================================================
+ERROR: test_missing_required_information_does_not_execute_tools (tests.test_acceptance.AcceptanceTests) (field='topic')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 39, in test_missing_required_information_does_not_execute_tools
+    result = planner.run(brief, model=MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 47, in run
+    decision = model.decide(messages, definitions())
+  File "/mnt/d/xy/src/content_planner/model.py", line 14, in decide
+    name, arguments, why = "search_materials", {"query": brief["topic"]}, "先获取可引用的素材事实。"
+KeyError: 'topic'
+
+======================================================================
+ERROR: test_missing_required_information_does_not_execute_tools (tests.test_acceptance.AcceptanceTests) (field='budget_units')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 39, in test_missing_required_information_does_not_execute_tools
+    result = planner.run(brief, model=MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 53, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 55, in execute
+    data, charged, minutes = getattr(self, name)(**args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 74, in estimate_cost
+    "estimated_finish_at": finish.isoformat(), "budget_gap_units": max(0, total - self.context["brief"]["budget_units"]),
+KeyError: 'budget_units'
+
+======================================================================
+ERROR: test_missing_required_information_does_not_execute_tools (tests.test_acceptance.AcceptanceTests) (field='deadline')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 39, in test_missing_required_information_does_not_execute_tools
+    result = planner.run(brief, model=MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 53, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 55, in execute
+    data, charged, minutes = getattr(self, name)(**args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 75, in estimate_cost
+    "deadline_gap_minutes": max(0, (finish - parse_time(self.context["brief"]["deadline"])).total_seconds() / 60)}
+KeyError: 'deadline'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.104s
+
+FAILED (errors=3)

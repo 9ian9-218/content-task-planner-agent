@@ -1,0 +1,14 @@
+# 实际执行 Trace
+
+模式：live；状态：incomplete；缓存：False
+
+| 步骤 | 动作来源及已观察步骤 | 工具和参数 | 返回摘要 | 实际后续执行或终止 | 公开依据 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | remote_model / 已观察 None | search_materials {"query": "P01 字幕功能 介绍 特性", "decision_summary": "quality_first 流程先从资料检索开始，为字幕功能介绍寻找事实素材"} | {"ok": true, "error_code": null, "data": {"materials": [{"id": "P01", "title": "合成产品 P01 字幕功能", "keywords": ["P01", "字幕", "短视频", "新手"], "facts": ["支持为视频添加字幕", "字幕内容可以编辑"]}], "profiles": {"standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价", "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"}}} | estimate_cost | quality_first 流程先从资料检索开始，为字幕功能介绍寻找事实素材 |
+| 2 | remote_model / 已观察 1 | estimate_cost {"material_ids": ["P01"], "profile": "standard", "decision_summary": "quality_first 优先询价 standard 档位"} | {"ok": true, "error_code": null, "data": {"quote_id": "q-639812bb6e3e92a9", "material_ids": ["P01"], "profile": "standard", "remaining_units": 8, "projected_total_units": 8, "estimated_finish_at": "2026-11-01T10:43:00+08:00", "budget_gap_units": 0, "deadline_gap_minutes": 0, "feasible": true, "selected": true}} | generate_script | quality_first 优先询价 standard 档位 |
+| 3 | remote_model / 已观察 2 | generate_script {"quote_id": "q-639812bb6e3e92a9", "material_ids": ["P01"], "profile": "standard", "decision_summary": "standard 报价可行，生成完整结构草稿"} | {"ok": true, "error_code": null, "data": {"script_id": "s-639812bb6e3e92a9", "quote_id": "q-639812bb6e3e92a9", "profile": "standard", "source_ids": ["P01"], "title": "P01 字幕功能介绍", "text": "今天介绍以下已核验功能：支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。 建议使用前核对素材，并按需修改脚本。", "generator": "local_template", "selected": true}} | save_plan | standard 报价可行，生成完整结构草稿 |
+| 4 | remote_model / 已观察 3 | save_plan {"quote_id": "q-639812bb6e3e92a9", "script_id": "s-639812bb6e3e92a9", "outline": "P01 字幕功能介绍：开场说明已核验功能，事实说明支持为视频添加字幕、字幕内容可编辑，操作建议使用前核对素材并按需修改，结尾欢迎根据实际需要编辑内容。", "decision_summary": "脚本生成成功，保存方案与提纲"} | {"ok": false, "error_code": "SAVE_FAILED", "data": {}} | save_plan | 脚本生成成功，保存方案与提纲 |
+| 5 | remote_model / 已观察 4 | save_plan {"quote_id": "q-639812bb6e3e92a9", "script_id": "s-639812bb6e3e92a9", "outline": "P01 字幕功能介绍：开场说明已核验功能，事实说明支持为视频添加字幕、字幕内容可编辑，操作建议使用前核对素材并按需修改，结尾欢迎根据实际需要编辑内容。", "decision_summary": "保存失败可重试，复用同一报价与脚本再次保存"} | {"ok": false, "error_code": "SAVE_FAILED", "data": {}} | save_plan | 保存失败可重试，复用同一报价与脚本再次保存 |
+| 6 | remote_model / 已观察 5 | save_plan {"quote_id": "q-639812bb6e3e92a9", "script_id": "s-639812bb6e3e92a9", "outline": "P01 字幕功能介绍：开场说明已核验功能，事实说明支持为视频添加字幕、字幕内容可编辑，操作建议使用前核对素材并按需修改，结尾欢迎根据实际需要编辑内容。", "decision_summary": "保存再次失败，第三次重试同一报价与脚本"} | {"ok": false, "error_code": "SAVE_FAILED", "data": {}} | 结束：SAVE_FAILED | 保存再次失败，第三次重试同一报价与脚本 |
+
+终止原因：SAVE_FAILED。已完成资料检索(P01)、standard档位询价(q-639812bb6e3e92a9，预算8/10，截止2026-11-01T10:43:00，可行)与脚本生成(s-639812bb6e3e92a9)，但 save_plan 连续三次返回 SAVE_FAILED，方案未能保存成功，任务未完成。

@@ -1,0 +1,14 @@
+test_deepseek_v1_alias_disables_thinking_in_tool_requests (tests.test_review.ReviewTests) ... ERROR
+
+======================================================================
+ERROR: test_deepseek_v1_alias_disables_thinking_in_tool_requests (tests.test_review.ReviewTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 328, in test_deepseek_v1_alias_disables_thinking_in_tool_requests
+    self.assertEqual(seen[0]["thinking"], {"type": "disabled"})
+KeyError: 'thinking'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.014s
+
+FAILED (errors=1)

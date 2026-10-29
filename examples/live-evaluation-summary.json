@@ -1,0 +1,781 @@
+{
+  "generated_at": "2026-10-28T15:41:03.307280+00:00",
+  "mode": "live",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "python": "3.14.10",
+  "cases_total": 18,
+  "cases_passed": 18,
+  "selected_cases_total": 18,
+  "not_run_cases": [],
+  "batch_stop_reason": null,
+  "expected_behavior_match_rate": 1.0,
+  "status_counts": {
+    "completed": 7,
+    "needs_input": 3,
+    "incomplete": 7,
+    "invalid_request": 1
+  },
+  "constraint_violations": 0,
+  "false_saved": 0,
+  "model_requests_sent": 68,
+  "comparisons": {
+    "replanning": {
+      "initial_rejected_quote_units": 12,
+      "final_spent_units": 8,
+      "reduction_against_rejected_quote_percent": 33.33,
+      "remaining_budget_units": 2,
+      "decision_evidence_mode": "live"
+    },
+    "repeat": {
+      "stored_plans": 1,
+      "additional_cost_units": 0,
+      "new_model_decisions": 0,
+      "new_tool_attempts": 0
+    },
+    "resume": {
+      "additional_cost_units": 0,
+      "new_tool_attempts": 1,
+      "new_model_decisions": 1,
+      "script_ids_unchanged": true
+    }
+  },
+  "cases": [
+    {
+      "case_id": "C01-normal",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 14.198345,
+      "model_requests_sent": 4,
+      "evidence": "live/C01-normal/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 4,
+      "token_usage": {
+        "prompt_tokens": 6503,
+        "completion_tokens": 627,
+        "total_tokens": 7130,
+        "reported_responses": 4,
+        "accepted_responses": 4,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C02a-missing-budget",
+      "expected_status": "needs_input",
+      "actual_status": "needs_input",
+      "reason_code": "MISSING_INFORMATION",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 3.3e-05,
+      "model_requests_sent": 0,
+      "evidence": "live/C02a-missing-budget/output.json",
+      "response_models": [],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "reported_responses": 0,
+        "accepted_responses": 0,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C02b-missing-deadline",
+      "expected_status": "needs_input",
+      "actual_status": "needs_input",
+      "reason_code": "MISSING_INFORMATION",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 5.3e-05,
+      "model_requests_sent": 0,
+      "evidence": "live/C02b-missing-deadline/output.json",
+      "response_models": [],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "reported_responses": 0,
+        "accepted_responses": 0,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C03-save-failure",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "SAVE_FAILED",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "successful_script_retained": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 46.447367,
+      "model_requests_sent": 7,
+      "evidence": "live/C03-save-failure/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 7,
+      "token_usage": {
+        "prompt_tokens": 13753,
+        "completion_tokens": 1064,
+        "total_tokens": 14817,
+        "reported_responses": 7,
+        "accepted_responses": 7,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C04-replan-budget",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "observed_replan": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 42.699826,
+      "model_requests_sent": 5,
+      "evidence": "live/C04-replan-budget/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 5,
+      "token_usage": {
+        "prompt_tokens": 8720,
+        "completion_tokens": 739,
+        "total_tokens": 9459,
+        "reported_responses": 5,
+        "accepted_responses": 5,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C05-no-feasible-plan",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "BUDGET_EXCEEDED",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 10.370559,
+      "model_requests_sent": 4,
+      "evidence": "live/C05-no-feasible-plan/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 4,
+      "token_usage": {
+        "prompt_tokens": 6473,
+        "completion_tokens": 699,
+        "total_tokens": 7172,
+        "reported_responses": 4,
+        "accepted_responses": 4,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C06-repeat",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "reused_same_plan": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 0.000543,
+      "model_requests_sent": 0,
+      "evidence": "live/C06-repeat/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 4,
+      "total_model_requests_sent": 4,
+      "token_usage": {
+        "prompt_tokens": 6539,
+        "completion_tokens": 569,
+        "total_tokens": 7108,
+        "reported_responses": 4,
+        "accepted_responses": 4,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C07-deadline",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "DEADLINE_EXCEEDED",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 42.835261,
+      "model_requests_sent": 4,
+      "evidence": "live/C07-deadline/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 4,
+      "token_usage": {
+        "prompt_tokens": 6466,
+        "completion_tokens": 1145,
+        "total_tokens": 7611,
+        "reported_responses": 4,
+        "accepted_responses": 4,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C08-step-limit",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "STEP_LIMIT",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 4.315904,
+      "model_requests_sent": 2,
+      "evidence": "live/C08-step-limit/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 2,
+      "token_usage": {
+        "prompt_tokens": 2758,
+        "completion_tokens": 260,
+        "total_tokens": 3018,
+        "reported_responses": 2,
+        "accepted_responses": 2,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C10-empty-materials",
+      "expected_status": "needs_input",
+      "actual_status": "needs_input",
+      "reason_code": "MATERIALS_MISSING",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 36.115613,
+      "model_requests_sent": 2,
+      "evidence": "live/C10-empty-materials/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 2,
+      "token_usage": {
+        "prompt_tokens": 2702,
+        "completion_tokens": 407,
+        "total_tokens": 3109,
+        "reported_responses": 2,
+        "accepted_responses": 2,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C11a-budget-boundary",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 9.225245,
+      "model_requests_sent": 4,
+      "evidence": "live/C11a-budget-boundary/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 4,
+      "token_usage": {
+        "prompt_tokens": 6533,
+        "completion_tokens": 607,
+        "total_tokens": 7140,
+        "reported_responses": 4,
+        "accepted_responses": 4,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C11b-deadline-boundary",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 40.934588,
+      "model_requests_sent": 4,
+      "evidence": "live/C11b-deadline-boundary/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 4,
+      "token_usage": {
+        "prompt_tokens": 6540,
+        "completion_tokens": 543,
+        "total_tokens": 7083,
+        "reported_responses": 4,
+        "accepted_responses": 4,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C12-model-failure",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "MODEL_UNAVAILABLE",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.019521,
+      "model_requests_sent": 0,
+      "evidence": "live/C12-model-failure/output.json",
+      "response_models": [],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 0,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "reported_responses": 0,
+        "accepted_responses": 0,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C13-id-conflict",
+      "expected_status": "invalid_request",
+      "actual_status": "invalid_request",
+      "reason_code": "REQUEST_ID_CONFLICT",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0,
+      "model_requests_sent": 0,
+      "evidence": "live/C13-id-conflict/output.json",
+      "response_models": [],
+      "setup_model_requests_sent": 4,
+      "total_model_requests_sent": 4,
+      "token_usage": {
+        "prompt_tokens": 6496,
+        "completion_tokens": 498,
+        "total_tokens": 6994,
+        "reported_responses": 4,
+        "accepted_responses": 4,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C14-resume",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "script_reused": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 2.831019,
+      "model_requests_sent": 1,
+      "evidence": "live/C14-resume/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 6,
+      "total_model_requests_sent": 7,
+      "token_usage": {
+        "prompt_tokens": 13223,
+        "completion_tokens": 1049,
+        "total_tokens": 14272,
+        "reported_responses": 7,
+        "accepted_responses": 7,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C15-search-failure",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "SEARCH_FAILED",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 42.841205,
+      "model_requests_sent": 4,
+      "evidence": "live/C15-search-failure/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 4,
+      "token_usage": {
+        "prompt_tokens": 5852,
+        "completion_tokens": 763,
+        "total_tokens": 6615,
+        "reported_responses": 4,
+        "accepted_responses": 4,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C16-generation-failure",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "GENERATION_FAILED",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 95.119248,
+      "model_requests_sent": 9,
+      "evidence": "live/C16-generation-failure/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 9,
+      "token_usage": {
+        "prompt_tokens": 18800,
+        "completion_tokens": 1877,
+        "total_tokens": 20677,
+        "reported_responses": 9,
+        "accepted_responses": 9,
+        "unreported_request_attempts": 0
+      }
+    },
+    {
+      "case_id": "C17-cost-first",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 39.952939,
+      "model_requests_sent": 4,
+      "evidence": "live/C17-cost-first/output.json",
+      "response_models": [
+        "wb/hy3"
+      ],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 4,
+      "token_usage": {
+        "prompt_tokens": 6534,
+        "completion_tokens": 618,
+        "total_tokens": 7152,
+        "reported_responses": 4,
+        "accepted_responses": 4,
+        "unreported_request_attempts": 0
+      }
+    }
+  ],
+  "request_cap": 100,
+  "model_timeout_seconds": 60.0,
+  "request_budget_remaining": 32,
+  "token_usage": {
+    "prompt_tokens": 117892,
+    "completion_tokens": 11465,
+    "total_tokens": 129357,
+    "reported_responses": 68,
+    "accepted_responses": 68,
+    "unreported_request_attempts": 0
+  },
+  "model_name": "wb/hy3",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "response_models": [
+    "wb/hy3"
+  ],
+  "limitations": [
+    "Synthetic materials, prices and business durations",
+    "Mock decisions do not prove LLM capabilities",
+    "Quote reduction is not measured real-world spending savings"
+  ]
+}

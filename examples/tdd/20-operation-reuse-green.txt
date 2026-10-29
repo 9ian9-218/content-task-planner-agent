@@ -1,0 +1,6 @@
+test_repeated_successful_script_operation_is_reused_without_charging (tests.test_guards.GuardTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.104s
+
+OK

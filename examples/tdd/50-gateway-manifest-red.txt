@@ -1,0 +1,29 @@
+test_cli_loads_gateway_config_without_key_and_records_port_without_credentials (tests.test_gateway.GatewayTests) ... 
+======================================================================
+FAIL: test_cli_loads_gateway_config_without_key_and_records_port_without_credentials (tests.test_gateway.GatewayTests) (endpoint='http://100.73.185.103:8045/v1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 62, in test_cli_loads_gateway_config_without_key_and_records_port_without_credentials
+    self.assertEqual(manifest["model_endpoint"], "http://100.73.185.103:8045/v1")
+AssertionError: 'http://100.73.185.103/v1' != 'http://100.73.185.103:8045/v1'
+- http://100.73.185.103/v1
++ http://100.73.185.103:8045/v1
+?                      +++++
+
+
+======================================================================
+FAIL: test_cli_loads_gateway_config_without_key_and_records_port_without_credentials (tests.test_gateway.GatewayTests) (endpoint='http://operator:removed@100.73.185.103:8045/v1?credential=removed#secret')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 62, in test_cli_loads_gateway_config_without_key_and_records_port_without_credentials
+    self.assertEqual(manifest["model_endpoint"], "http://100.73.185.103:8045/v1")
+AssertionError: 'http://100.73.185.103/v1' != 'http://100.73.185.103:8045/v1'
+- http://100.73.185.103/v1
++ http://100.73.185.103:8045/v1
+?                      +++++
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.192s
+
+FAILED (failures=2)

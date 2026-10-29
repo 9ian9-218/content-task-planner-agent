@@ -1,0 +1,1053 @@
+{
+  "run_id": "0669c8a4c10d436d905407f239250584",
+  "request_id": "evaluation-001",
+  "brief": {
+    "request_id": "evaluation-001",
+    "topic": "P01 字幕功能介绍",
+    "budget_units": 10,
+    "deadline": "2026-11-01T11:00:00+08:00",
+    "preference": "quality_first"
+  },
+  "input_fingerprint": "a69a6a71cf717e2feb917becc6b64f52a2fa2b6eb812b23af6b8ef6198fde1a0",
+  "as_of": "2026-11-01T10:00:00+08:00",
+  "operations": [
+    {
+      "operation_id": "db3968a978a0423196c14afbb2a4ac61",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "db3968a978a0423196c14afbb2a4ac61"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "3079c895d0ee41e08f0fdb838e7f4c49",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": false
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "3079c895d0ee41e08f0fdb838e7f4c49"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "1972db082e5f426ba170181ae1b55f47",
+      "tool": "generate_script",
+      "parameters": {
+        "quote_id": "q-639812bb6e3e92a9",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard"
+      },
+      "status": "failed",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "1972db082e5f426ba170181ae1b55f47"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "43531d2e524c46c6be6302be290fd739",
+      "tool": "generate_script",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard",
+        "quote_id": "q-639812bb6e3e92a9"
+      },
+      "status": "failed",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "43531d2e524c46c6be6302be290fd739"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "671d022e91664dbbb3cc492cd81b46f0",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-15e11b2447113518",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "economy",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:26:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "671d022e91664dbbb3cc492cd81b46f0"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "a29a171c2e364e34a072767fc365f00f",
+      "tool": "generate_script",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy",
+        "quote_id": "q-15e11b2447113518"
+      },
+      "status": "failed",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "a29a171c2e364e34a072767fc365f00f"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "17d820d46ad2433ea7d84f8daff14e0e",
+      "tool": "generate_script",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy",
+        "quote_id": "q-15e11b2447113518"
+      },
+      "status": "failed",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "17d820d46ad2433ea7d84f8daff14e0e"
+      },
+      "selected": false
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "model_mode": "live",
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "tool_call_id": "toolu_vrtx_01KGi9UBUwEkg6uQ3qoKjhai",
+      "decision_index": 1,
+      "recorded_at": "2026-10-28T09:03:32.513748+00:00",
+      "action_source": "remote_model",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍",
+        "decision_summary": "根据任务主题检索P01字幕功能的相关素材资料，确保内容基于真实资料。"
+      },
+      "decision_summary": "根据任务主题检索P01字幕功能的相关素材资料，确保内容基于真实资料。",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "db3968a978a0423196c14afbb2a4ac61"
+      },
+      "observed_after_step": null
+    },
+    {
+      "step": 2,
+      "model_mode": "live",
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "tool_call_id": "toolu_vrtx_01UrQUAmCCgn7yAxqLpimfnA",
+      "decision_index": 2,
+      "recorded_at": "2026-10-28T09:03:37.850668+00:00",
+      "action_source": "remote_model",
+      "tool": "estimate_cost",
+      "parameters": {
+        "decision_summary": "quality_first策略优先询价standard档位，确认预算10单位内是否可行。",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard"
+      },
+      "decision_summary": "quality_first策略优先询价standard档位，确认预算10单位内是否可行。",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": false
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "3079c895d0ee41e08f0fdb838e7f4c49"
+      },
+      "observed_after_step": 1
+    },
+    {
+      "step": 3,
+      "model_mode": "live",
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "tool_call_id": "toolu_vrtx_01Dtfyr2rn845GHKHNw3iriA",
+      "decision_index": 3,
+      "recorded_at": "2026-10-28T09:03:42.032051+00:00",
+      "action_source": "remote_model",
+      "tool": "generate_script",
+      "parameters": {
+        "quote_id": "q-639812bb6e3e92a9",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard",
+        "decision_summary": "standard档位报价8单位，在预算和截止时间内可行，使用有效报价生成脚本草稿。"
+      },
+      "decision_summary": "standard档位报价8单位，在预算和截止时间内可行，使用有效报价生成脚本草稿。",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "1972db082e5f426ba170181ae1b55f47"
+      },
+      "observed_after_step": 2
+    },
+    {
+      "step": 4,
+      "model_mode": "live",
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "tool_call_id": "toolu_vrtx_015oo1vPjchiKYHkckWEkoPf",
+      "decision_index": 4,
+      "recorded_at": "2026-10-28T09:03:45.669427+00:00",
+      "action_source": "remote_model",
+      "tool": "generate_script",
+      "parameters": {
+        "decision_summary": "首次生成失败且标记可重试，使用同一有效报价再次尝试生成脚本。",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard",
+        "quote_id": "q-639812bb6e3e92a9"
+      },
+      "decision_summary": "首次生成失败且标记可重试，使用同一有效报价再次尝试生成脚本。",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "43531d2e524c46c6be6302be290fd739"
+      },
+      "observed_after_step": 3
+    },
+    {
+      "step": 5,
+      "model_mode": "live",
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "tool_call_id": "toolu_vrtx_01NT5UeHaMsZzJiWsaowgyM4",
+      "decision_index": 5,
+      "recorded_at": "2026-10-28T09:03:49.686711+00:00",
+      "action_source": "remote_model",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy",
+        "decision_summary": "standard脚本生成连续失败，尝试economy档位作为备选方案，先询价确认可行性。"
+      },
+      "decision_summary": "standard脚本生成连续失败，尝试economy档位作为备选方案，先询价确认可行性。",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-15e11b2447113518",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "economy",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:26:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "671d022e91664dbbb3cc492cd81b46f0"
+      },
+      "observed_after_step": 4
+    },
+    {
+      "step": 6,
+      "model_mode": "live",
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "tool_call_id": "toolu_vrtx_0185DstjTgmVwtzE8mwLAzvM",
+      "decision_index": 6,
+      "recorded_at": "2026-10-28T09:03:54.279512+00:00",
+      "action_source": "remote_model",
+      "tool": "generate_script",
+      "parameters": {
+        "decision_summary": "standard档位生成连续失败，改用economy档位尝试生成脚本，报价8单位在预算内。",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy",
+        "quote_id": "q-15e11b2447113518"
+      },
+      "decision_summary": "standard档位生成连续失败，改用economy档位尝试生成脚本，报价8单位在预算内。",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "a29a171c2e364e34a072767fc365f00f"
+      },
+      "observed_after_step": 5
+    },
+    {
+      "step": 7,
+      "model_mode": "live",
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "tool_call_id": "toolu_vrtx_01RwF3rVitpQLbSesi8zFQBf",
+      "decision_index": 7,
+      "recorded_at": "2026-10-28T09:03:57.432168+00:00",
+      "action_source": "remote_model",
+      "tool": "generate_script",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy",
+        "quote_id": "q-15e11b2447113518",
+        "decision_summary": "economy档位生成也失败但标记可重试，再次尝试一次。"
+      },
+      "decision_summary": "economy档位生成也失败但标记可重试，再次尝试一次。",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "17d820d46ad2433ea7d84f8daff14e0e"
+      },
+      "observed_after_step": 6
+    }
+  ],
+  "materials": [
+    {
+      "id": "P01",
+      "title": "合成产品 P01 字幕功能",
+      "keywords": [
+        "P01",
+        "字幕",
+        "短视频",
+        "新手"
+      ],
+      "facts": [
+        "支持为视频添加字幕",
+        "字幕内容可以编辑"
+      ]
+    }
+  ],
+  "quotes": {
+    "q-639812bb6e3e92a9": {
+      "quote_id": "q-639812bb6e3e92a9",
+      "material_ids": [
+        "P01"
+      ],
+      "profile": "standard",
+      "remaining_units": 8,
+      "projected_total_units": 8,
+      "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+      "budget_gap_units": 0,
+      "deadline_gap_minutes": 0,
+      "feasible": true,
+      "selected": false
+    },
+    "q-15e11b2447113518": {
+      "quote_id": "q-15e11b2447113518",
+      "material_ids": [
+        "P01"
+      ],
+      "profile": "economy",
+      "remaining_units": 8,
+      "projected_total_units": 8,
+      "estimated_finish_at": "2026-11-01T10:26:00+08:00",
+      "budget_gap_units": 0,
+      "deadline_gap_minutes": 0,
+      "feasible": true,
+      "selected": true
+    }
+  },
+  "scripts": {},
+  "plan_id": null,
+  "saved_plan": null,
+  "status": "incomplete",
+  "reason_code": "GENERATION_FAILED",
+  "model_mode": "live",
+  "model_decisions": 8,
+  "errors": [
+    "GENERATION_FAILED",
+    "GENERATION_FAILED",
+    "GENERATION_FAILED",
+    "GENERATION_FAILED"
+  ],
+  "cached": false,
+  "missing_fields": [],
+  "invalid_fields": [],
+  "decisions": [
+    {
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "decision_index": 1,
+      "recorded_at": "2026-10-28T09:03:32.513565+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": null,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_01KGi9UBUwEkg6uQ3qoKjhai",
+          "type": "function",
+          "function": {
+            "name": "search_materials",
+            "arguments": "{\"query\":\"P01 字幕功能介绍\",\"decision_summary\":\"根据任务主题检索P01字幕功能的相关素材资料，确保内容基于真实资料。\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 2926,
+        "completion_tokens": 285,
+        "total_tokens": 3211
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "decision_index": 2,
+      "recorded_at": "2026-10-28T09:03:37.850415+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 1,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_01UrQUAmCCgn7yAxqLpimfnA",
+          "type": "function",
+          "function": {
+            "name": "estimate_cost",
+            "arguments": "{\"decision_summary\":\"quality_first策略优先询价standard档位，确认预算10单位内是否可行。\",\"material_ids\":[\"P01\"],\"profile\":\"standard\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 3440,
+        "completion_tokens": 177,
+        "total_tokens": 3617
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "decision_index": 3,
+      "recorded_at": "2026-10-28T09:03:42.031561+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 2,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_01Dtfyr2rn845GHKHNw3iriA",
+          "type": "function",
+          "function": {
+            "name": "generate_script",
+            "arguments": "{\"quote_id\":\"q-639812bb6e3e92a9\",\"material_ids\":[\"P01\"],\"profile\":\"standard\",\"decision_summary\":\"standard档位报价8单位，在预算和截止时间内可行，使用有效报价生成脚本草稿。\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 3781,
+        "completion_tokens": 206,
+        "total_tokens": 3987
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "decision_index": 4,
+      "recorded_at": "2026-10-28T09:03:45.669095+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 3,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_015oo1vPjchiKYHkckWEkoPf",
+          "type": "function",
+          "function": {
+            "name": "generate_script",
+            "arguments": "{\"decision_summary\":\"首次生成失败且标记可重试，使用同一有效报价再次尝试生成脚本。\",\"material_ids\":[\"P01\"],\"profile\":\"standard\",\"quote_id\":\"q-639812bb6e3e92a9\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 4048,
+        "completion_tokens": 178,
+        "total_tokens": 4226
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "decision_index": 5,
+      "recorded_at": "2026-10-28T09:03:49.686157+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 4,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_01NT5UeHaMsZzJiWsaowgyM4",
+          "type": "function",
+          "function": {
+            "name": "estimate_cost",
+            "arguments": "{\"material_ids\":[\"P01\"],\"profile\":\"economy\",\"decision_summary\":\"standard脚本生成连续失败，尝试economy档位作为备选方案，先询价确认可行性。\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 4311,
+        "completion_tokens": 175,
+        "total_tokens": 4486
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "decision_index": 6,
+      "recorded_at": "2026-10-28T09:03:54.279062+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 5,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_0185DstjTgmVwtzE8mwLAzvM",
+          "type": "function",
+          "function": {
+            "name": "generate_script",
+            "arguments": "{\"decision_summary\":\"standard档位生成连续失败，改用economy档位尝试生成脚本，报价8单位在预算内。\",\"material_ids\":[\"P01\"],\"profile\":\"economy\",\"quote_id\":\"q-15e11b2447113518\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 4653,
+        "completion_tokens": 155,
+        "total_tokens": 4808,
+        "prompt_tokens_details": {
+          "cached_tokens": 4203
+        }
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "decision_index": 7,
+      "recorded_at": "2026-10-28T09:03:57.431590+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 6,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_01RwF3rVitpQLbSesi8zFQBf",
+          "type": "function",
+          "function": {
+            "name": "generate_script",
+            "arguments": "{\"material_ids\":[\"P01\"],\"profile\":\"economy\",\"quote_id\":\"q-15e11b2447113518\",\"decision_summary\":\"economy档位生成也失败但标记可重试，再次尝试一次。\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 4917,
+        "completion_tokens": 144,
+        "total_tokens": 5061,
+        "prompt_tokens_details": {
+          "cached_tokens": 4437
+        }
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "0669c8a4c10d436d905407f239250584",
+      "decision_index": 8,
+      "recorded_at": "2026-10-28T09:04:03.922109+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 7,
+      "tool_calls": [],
+      "finish": {
+        "reason_code": "GENERATION_FAILED",
+        "summary": "任务 evaluation-001（P01 字幕功能介绍）：素材检索成功（P01），standard 和 economy 两个档位均已获得有效报价（各8单位，预算内），但脚本生成工具在 standard（2次）和 economy（2次）共4次调用中均返回 GENERATION_FAILED，无法生成脚本草稿，任务无法继续。",
+        "status": "incomplete"
+      },
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 5172,
+        "completion_tokens": 248,
+        "total_tokens": 5420,
+        "prompt_tokens_details": {
+          "cached_tokens": 4808
+        }
+      },
+      "system_fingerprint": null
+    }
+  ],
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "executed_at": "2026-10-28T09:03:26.899563+00:00",
+  "catalog_snapshot": {
+    "version": "synthetic-tools-v1",
+    "free_tool_minutes": 1,
+    "failure_units": 0,
+    "failure_minutes": 1,
+    "profiles": {
+      "standard": {
+        "units": 8,
+        "minutes": 40,
+        "description": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价"
+      },
+      "economy": {
+        "units": 8,
+        "minutes": 20,
+        "description": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+      }
+    }
+  },
+  "materials_snapshot": {
+    "version": "synthetic-materials-v1",
+    "materials": [
+      {
+        "id": "P01",
+        "title": "合成产品 P01 字幕功能",
+        "keywords": [
+          "P01",
+          "字幕",
+          "短视频",
+          "新手"
+        ],
+        "facts": [
+          "支持为视频添加字幕",
+          "字幕内容可以编辑"
+        ]
+      },
+      {
+        "id": "P02",
+        "title": "合成产品 P02 模板功能",
+        "keywords": [
+          "P02",
+          "模板",
+          "旅行"
+        ],
+        "facts": [
+          "提供旅行主题视频模板",
+          "支持替换模板内的图片"
+        ]
+      }
+    ]
+  },
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "summary": "任务 evaluation-001（P01 字幕功能介绍）：素材检索成功（P01），standard 和 economy 两个档位均已获得有效报价（各8单位，预算内），但脚本生成工具在 standard（2次）和 economy（2次）共4次调用中均返回 GENERATION_FAILED，无法生成脚本草稿，任务无法继续。",
+  "elapsed_seconds": 35.747441,
+  "runtime_limit_seconds": 180,
+  "runtime_limit_exceeded": false,
+  "finished_at": "2026-10-28T09:04:03.922133+00:00",
+  "model_requests_sent": 8,
+  "tool_attempts": 7,
+  "cost": {
+    "spent_units": 0,
+    "remaining_units": 8,
+    "projected_total_units": 8,
+    "budget_units": 10,
+    "budget_gap_units": 0
+  },
+  "business_now": "2026-11-01T10:07:00+08:00",
+  "estimated_finish_at": "2026-11-01T10:28:00+08:00",
+  "steps": [
+    {
+      "operation_id": "db3968a978a0423196c14afbb2a4ac61",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "db3968a978a0423196c14afbb2a4ac61"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "3079c895d0ee41e08f0fdb838e7f4c49",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": false
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "3079c895d0ee41e08f0fdb838e7f4c49"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "1972db082e5f426ba170181ae1b55f47",
+      "tool": "generate_script",
+      "parameters": {
+        "quote_id": "q-639812bb6e3e92a9",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard"
+      },
+      "status": "failed",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "1972db082e5f426ba170181ae1b55f47"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "43531d2e524c46c6be6302be290fd739",
+      "tool": "generate_script",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard",
+        "quote_id": "q-639812bb6e3e92a9"
+      },
+      "status": "failed",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "43531d2e524c46c6be6302be290fd739"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "671d022e91664dbbb3cc492cd81b46f0",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-15e11b2447113518",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "economy",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:26:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "671d022e91664dbbb3cc492cd81b46f0"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "a29a171c2e364e34a072767fc365f00f",
+      "tool": "generate_script",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy",
+        "quote_id": "q-15e11b2447113518"
+      },
+      "status": "failed",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "a29a171c2e364e34a072767fc365f00f"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "17d820d46ad2433ea7d84f8daff14e0e",
+      "tool": "generate_script",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy",
+        "quote_id": "q-15e11b2447113518"
+      },
+      "status": "failed",
+      "result": {
+        "ok": false,
+        "tool_name": "generate_script",
+        "data": {},
+        "error_code": "GENERATION_FAILED",
+        "retryable": true,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "17d820d46ad2433ea7d84f8daff14e0e"
+      },
+      "selected": false
+    }
+  ],
+  "task_plan": [
+    {
+      "task": "search_materials",
+      "depends_on": [],
+      "status": "succeeded"
+    },
+    {
+      "task": "estimate_cost",
+      "depends_on": [
+        "search_materials"
+      ],
+      "status": "succeeded"
+    },
+    {
+      "task": "generate_script",
+      "depends_on": [
+        "estimate_cost"
+      ],
+      "status": "failed"
+    },
+    {
+      "task": "save_plan",
+      "depends_on": [
+        "generate_script"
+      ],
+      "status": "pending"
+    }
+  ],
+  "save_status": "not_attempted"
+}

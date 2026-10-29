@@ -1,0 +1,142 @@
+{
+  "assessed_at": "2026-10-29T01:38:58.184609+00:00",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "assessment_type": "Evidence-based engineering self-assessment; not official grades, certification or independent candidate-ability measurement",
+  "industrial_target": "Unchanged from historical assessment: long-term shared use with possible real paid tools",
+  "industrial_dimensions": [
+    {
+      "dimension": "业务适配",
+      "weight": 12,
+      "score": 75,
+      "weighted_points": 9.0,
+      "evidence_basis": "题面闭环、费用/时限/失败状态均可逐项复核",
+      "remaining_gap": "没有实际运营验收或真实业务系统接入"
+    },
+    {
+      "dimension": "Agent动态决策",
+      "weight": 10,
+      "score": 83,
+      "weighted_points": 8.3,
+      "evidence_basis": "当前源码18点真实矩阵与3次重规划，12→8路径可追溯",
+      "remaining_gap": "仅两个候选档位；开发集重复不证明独立泛化"
+    },
+    {
+      "dimension": "约束与状态正确性",
+      "weight": 12,
+      "score": 91,
+      "weighted_points": 10.92,
+      "evidence_basis": "硬约束、依赖、累计限额、原子保存、取消顺序与幂等有断言",
+      "remaining_gap": "真实远端副作用和实际账单尚无对账能力"
+    },
+    {
+      "dimension": "架构与可维护性",
+      "weight": 10,
+      "score": 75,
+      "weighted_points": 7.5,
+      "evidence_basis": "标准库、明确的公开CLI/Planner接口、低依赖",
+      "remaining_gap": "_run控制流和动态状态字典复杂；后续修改须谨慎"
+    },
+    {
+      "dimension": "测试与AI效果评估",
+      "weight": 14,
+      "score": 86,
+      "weighted_points": 12.04,
+      "evidence_basis": "103项回归、完整18+2真实、3次重复、并发与强杀原始证据",
+      "remaining_gap": "没有独立留出用户需求或人工业务效果实验；无覆盖率测量"
+    },
+    {
+      "dimension": "可靠性与恢复",
+      "weight": 12,
+      "score": 77,
+      "weighted_points": 9.24,
+      "evidence_basis": "租约隔离、决定重放、忙锁/容量防护、80次强杀检查",
+      "remaining_gap": "无掉电证明、真实远端结果查询、生产规模恢复；冻结写锁需人工处置"
+    },
+    {
+      "dimension": "安全与权限",
+      "weight": 12,
+      "score": 52,
+      "weighted_points": 6.24,
+      "evidence_basis": "配置排除、已知密钥扫描、受限输入、最小工具面、未知结果阻断",
+      "remaining_gap": "无共享身份/租户隔离、生产ACL、完整日志留存与部署传输验证"
+    },
+    {
+      "dimension": "性能、成本与扩展",
+      "weight": 8,
+      "score": 68,
+      "weighted_points": 5.44,
+      "evidence_basis": "300秒/8客户端/1200场景和RSS/FD/线程测量；批次请求上限",
+      "remaining_gap": "仅约4新需求/秒的声明负载；无长期SLA、Token阈值或货币预算保证"
+    },
+    {
+      "dimension": "可观测性与运维",
+      "weight": 6,
+      "score": 60,
+      "weighted_points": 3.6,
+      "evidence_basis": "结构化Trace/status/在途意图、故障说明与短时资源记录",
+      "remaining_gap": "无持续指标、告警、自动备份或值守演练"
+    },
+    {
+      "dimension": "发布与交付",
+      "weight": 4,
+      "score": 72,
+      "weighted_points": 2.88,
+      "evidence_basis": "固定运行时、清洁ZIP复现流程、逐条题面对照、文件摘要和额度审计",
+      "remaining_gap": "GitHub未提供/托管CI未运行；实际人工时未登记；挂载盘安装限制未定位"
+    }
+  ],
+  "industrial_weights_total": 100,
+  "industrial_weighted_score": 75.16,
+  "industrial_display_score": 75,
+  "historical_industrial_score": 72.26,
+  "production_ready": false,
+  "current_delivery_target": "Exam problem 2, single-host CLI with bounded short validation",
+  "campus_technical_weighted_score": 93.8,
+  "campus_technical_display_score": 94,
+  "campus_rubric": [
+    {
+      "dimension": "需求与范围",
+      "weight": 15,
+      "score": 97
+    },
+    {
+      "dimension": "模型驱动决策",
+      "weight": 25,
+      "score": 94
+    },
+    {
+      "dimension": "约束与失败正确性",
+      "weight": 20,
+      "score": 96
+    },
+    {
+      "dimension": "测试与量化证据",
+      "weight": 20,
+      "score": 92
+    },
+    {
+      "dimension": "材料可审查性",
+      "weight": 15,
+      "score": 91
+    },
+    {
+      "dimension": "运行可复制性",
+      "weight": 5,
+      "score": 90
+    }
+  ],
+  "formal_submission_complete": false,
+  "formal_gate_note": "An artifact score cannot override missing repository URL/final remote commit/visibility and actual human-time facts.",
+  "new_remote_requests_for_this_assessment": 0,
+  "evidence": {
+    "test": "../test-summary.json",
+    "live": "../live-evaluation-summary.json",
+    "adversarial": "../live/adversarial-summary.json",
+    "replanning": "replanning/summary.json",
+    "load": "load/summary.json",
+    "recovery": "../hardening/recovery/summary.json",
+    "clean_room": "clean-room-check.json",
+    "delivery": "../delivery-check.json"
+  },
+  "method": "sum(weight*score/100); rubric and scores are reviewer judgment rather than externally calibrated measurements. No industrial points awarded merely for reducing the delivery scope."
+}

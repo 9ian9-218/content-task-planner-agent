@@ -1,0 +1,28 @@
+test_production_run_refuses_unsupported_runtime_before_creating_state (tests.test_hardening.HardeningTests.test_production_run_refuses_unsupported_runtime_before_creating_state) ... ERROR
+
+======================================================================
+ERROR: test_production_run_refuses_unsupported_runtime_before_creating_state (tests.test_hardening.HardeningTests.test_production_run_refuses_unsupported_runtime_before_creating_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 549, in test_production_run_refuses_unsupported_runtime_before_creating_state
+    code, result = invoke('run', '--input', str(source), '--db', str(database), '--mode', 'live', '--production')
+                   ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/tests/test_hardening.py", line 24, in invoke
+    code = main(list(arguments))
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 146, in main
+    args = parser.parse_args(argv)
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2012, in parse_args
+    self.error(msg)
+    ~~~~~~~~~~^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2785, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/argparse.py", line 2772, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+----------------------------------------------------------------------
+Ran 1 test in 0.017s
+
+FAILED (errors=1)

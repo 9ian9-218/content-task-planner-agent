@@ -1,0 +1,14 @@
+{
+  "scope": "runtime_prerequisites_only; not a production-readiness certification",
+  "runtime": {
+    "python": "3.14.10",
+    "sqlite": "3.53.1"
+  },
+  "checks": {
+    "python_supported_by_project": true,
+    "sqlite_fix_level_confirmed": true
+  },
+  "release_ready": true,
+  "journal_policy": "rollback journal; WAL is not enabled automatically",
+  "note": "旧发行版的补丁状态需要额外证明；本检查不凭版本字符串认定数据已损坏。"
+}

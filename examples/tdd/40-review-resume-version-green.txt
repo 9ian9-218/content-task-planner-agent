@@ -1,0 +1,6 @@
+test_resume_rejects_a_changed_prompt_instead_of_misreporting_its_version (tests.test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.165s
+
+OK

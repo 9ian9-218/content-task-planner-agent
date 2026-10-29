@@ -1,0 +1,6 @@
+test_production_run_refuses_unsupported_runtime_before_creating_state (tests.test_hardening.HardeningTests.test_production_run_refuses_unsupported_runtime_before_creating_state) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.005s
+
+OK

@@ -1,0 +1,16 @@
+test_package_command_excludes_credentials_databases_caches_and_links (tests.test_short_validation.ShortValidationTests.test_package_command_excludes_credentials_databases_caches_and_links) ... FAIL
+
+======================================================================
+FAIL: test_package_command_excludes_credentials_databases_caches_and_links (tests.test_short_validation.ShortValidationTests.test_package_command_excludes_credentials_databases_caches_and_links)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 170, in test_package_command_excludes_credentials_databases_caches_and_links
+    self.assertEqual(process.returncode, 0, process.stdout + process.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /tmp/content-planner-runtime-70_9y6wx/python/bin/python3: can't open file '/mnt/d/xy/tools/package_submission.py': [Errno 2] No such file or directory
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.043s
+
+FAILED (failures=1)

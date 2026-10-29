@@ -1,0 +1,7 @@
+{
+  "initial_report_cases_passed": 3,
+  "strict_review": "C03 terminated with MODEL_RESPONSE_INVALID; initial gate incorrectly accepted a prior SAVE_FAILED as sufficient",
+  "valid_protocol_cases": 2,
+  "invalid_protocol_cases": 1,
+  "model_id_used": "claude-opus-4-6-thinking"
+}

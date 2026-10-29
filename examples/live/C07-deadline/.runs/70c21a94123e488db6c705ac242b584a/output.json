@@ -1,0 +1,653 @@
+{
+  "run_id": "3733824b089f4ea188404081d8a1815c",
+  "request_id": "evaluation-001",
+  "brief": {
+    "request_id": "evaluation-001",
+    "topic": "P01 字幕功能介绍",
+    "budget_units": 10,
+    "deadline": "2026-11-01T10:10:00+08:00",
+    "preference": "quality_first"
+  },
+  "input_fingerprint": "1dd68d4fe7805f7b0930855a9d7fff5d459cc762ed443680b1c39f76bef3da28",
+  "as_of": "2026-11-01T10:00:00+08:00",
+  "operations": [
+    {
+      "operation_id": "13b5b922502342038a5753529ebf7d08",
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "13b5b922502342038a5753529ebf7d08"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "bc6bc1b0407d4c53b30b5cfd3419df84",
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "tool": "estimate_cost",
+      "parameters": {
+        "profile": "standard",
+        "material_ids": [
+          "P01"
+        ]
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 33.0,
+          "feasible": false,
+          "selected": false
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "bc6bc1b0407d4c53b30b5cfd3419df84"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "8ff8009492e145d29004673595311ce9",
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-15e11b2447113518",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "economy",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:24:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 14.0,
+          "feasible": false,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "8ff8009492e145d29004673595311ce9"
+      },
+      "selected": true
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "model_mode": "live",
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "tool_call_id": "toolu_vrtx_01XsevR7EtavAPTADwJEYYw6",
+      "decision_index": 1,
+      "decision_run_id": "3733824b089f4ea188404081d8a1815c",
+      "recorded_at": "2026-10-28T14:47:51.516226+00:00",
+      "action_source": "remote_model",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍",
+        "decision_summary": "按任务主题检索P01字幕功能相关素材，为后续脚本生成提供事实依据。"
+      },
+      "decision_summary": "按任务主题检索P01字幕功能相关素材，为后续脚本生成提供事实依据。",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "13b5b922502342038a5753529ebf7d08"
+      },
+      "observed_after_step": null
+    },
+    {
+      "step": 2,
+      "model_mode": "live",
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "tool_call_id": "toolu_vrtx_01PETpparBGspzjjcgL2beiT",
+      "decision_index": 2,
+      "decision_run_id": "3733824b089f4ea188404081d8a1815c",
+      "recorded_at": "2026-10-28T14:47:56.860271+00:00",
+      "action_source": "remote_model",
+      "tool": "estimate_cost",
+      "parameters": {
+        "profile": "standard",
+        "decision_summary": "quality_first偏好，优先为standard档位询价，预算上限10单位。",
+        "material_ids": [
+          "P01"
+        ]
+      },
+      "decision_summary": "quality_first偏好，优先为standard档位询价，预算上限10单位。",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 33.0,
+          "feasible": false,
+          "selected": false
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "bc6bc1b0407d4c53b30b5cfd3419df84"
+      },
+      "observed_after_step": 1
+    },
+    {
+      "step": 3,
+      "model_mode": "live",
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "tool_call_id": "toolu_vrtx_01WEszouYQ1euzQ2axvwkhbe",
+      "decision_index": 3,
+      "decision_run_id": "3733824b089f4ea188404081d8a1815c",
+      "recorded_at": "2026-10-28T14:48:02.130425+00:00",
+      "action_source": "remote_model",
+      "tool": "estimate_cost",
+      "parameters": {
+        "decision_summary": "standard超截止时间，改为economy档位询价以检查是否可在截止前完成。",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy"
+      },
+      "decision_summary": "standard超截止时间，改为economy档位询价以检查是否可在截止前完成。",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-15e11b2447113518",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "economy",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:24:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 14.0,
+          "feasible": false,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "8ff8009492e145d29004673595311ce9"
+      },
+      "observed_after_step": 2
+    }
+  ],
+  "materials": [
+    {
+      "id": "P01",
+      "title": "合成产品 P01 字幕功能",
+      "keywords": [
+        "P01",
+        "字幕",
+        "短视频",
+        "新手"
+      ],
+      "facts": [
+        "支持为视频添加字幕",
+        "字幕内容可以编辑"
+      ]
+    }
+  ],
+  "quotes": {
+    "q-639812bb6e3e92a9": {
+      "quote_id": "q-639812bb6e3e92a9",
+      "material_ids": [
+        "P01"
+      ],
+      "profile": "standard",
+      "remaining_units": 8,
+      "projected_total_units": 8,
+      "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+      "budget_gap_units": 0,
+      "deadline_gap_minutes": 33.0,
+      "feasible": false,
+      "selected": false
+    },
+    "q-15e11b2447113518": {
+      "quote_id": "q-15e11b2447113518",
+      "material_ids": [
+        "P01"
+      ],
+      "profile": "economy",
+      "remaining_units": 8,
+      "projected_total_units": 8,
+      "estimated_finish_at": "2026-11-01T10:24:00+08:00",
+      "budget_gap_units": 0,
+      "deadline_gap_minutes": 14.0,
+      "feasible": false,
+      "selected": true
+    }
+  },
+  "scripts": {},
+  "plan_id": null,
+  "saved_plan": null,
+  "status": "incomplete",
+  "reason_code": "DEADLINE_EXCEEDED",
+  "model_mode": "live",
+  "model_decisions": 4,
+  "errors": [],
+  "cached": false,
+  "replayed_decisions": 0,
+  "task_limits": {
+    "max_model_attempts": 12,
+    "max_tool_attempts": 12
+  },
+  "task_counters": {
+    "model_attempts": 4,
+    "tool_attempts": 3
+  },
+  "missing_fields": [],
+  "invalid_fields": [],
+  "decisions": [
+    {
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "decision_index": 1,
+      "recorded_at": "2026-10-28T14:47:51.478380+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": null,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_01XsevR7EtavAPTADwJEYYw6",
+          "type": "function",
+          "function": {
+            "name": "search_materials",
+            "arguments": "{\"query\":\"P01 字幕功能介绍\",\"decision_summary\":\"按任务主题检索P01字幕功能相关素材，为后续脚本生成提供事实依据。\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 2926,
+        "completion_tokens": 417,
+        "total_tokens": 3343
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "decision_index": 2,
+      "recorded_at": "2026-10-28T14:47:56.828978+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 1,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_01PETpparBGspzjjcgL2beiT",
+          "type": "function",
+          "function": {
+            "name": "estimate_cost",
+            "arguments": "{\"profile\":\"standard\",\"decision_summary\":\"quality_first偏好，优先为standard档位询价，预算上限10单位。\",\"material_ids\":[\"P01\"]}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 3453,
+        "completion_tokens": 189,
+        "total_tokens": 3642
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "decision_index": 3,
+      "recorded_at": "2026-10-28T14:48:02.084930+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 2,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_01WEszouYQ1euzQ2axvwkhbe",
+          "type": "function",
+          "function": {
+            "name": "estimate_cost",
+            "arguments": "{\"decision_summary\":\"standard超截止时间，改为economy档位询价以检查是否可在截止前完成。\",\"material_ids\":[\"P01\"],\"profile\":\"economy\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 3794,
+        "completion_tokens": 192,
+        "total_tokens": 3986
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "decision_index": 4,
+      "recorded_at": "2026-10-28T14:48:09.332348+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 3,
+      "tool_calls": [],
+      "finish": {
+        "reason_code": "DEADLINE_EXCEEDED",
+        "summary": "standard档预计10:43完成（超截止33分钟），economy档预计10:24完成（超截止14分钟），两个档位均无法在截止时间2026-11-01T10:10前交付，预算充足但时间不可行。",
+        "status": "incomplete"
+      },
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 4130,
+        "completion_tokens": 363,
+        "total_tokens": 4493
+      },
+      "system_fingerprint": null
+    }
+  ],
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "executed_at": "2026-10-28T14:47:43.691294+00:00",
+  "catalog_snapshot": {
+    "version": "synthetic-tools-v1",
+    "free_tool_minutes": 1,
+    "failure_units": 0,
+    "failure_minutes": 1,
+    "profiles": {
+      "standard": {
+        "units": 8,
+        "minutes": 40,
+        "description": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价"
+      },
+      "economy": {
+        "units": 8,
+        "minutes": 20,
+        "description": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+      }
+    }
+  },
+  "materials_snapshot": {
+    "version": "synthetic-materials-v1",
+    "materials": [
+      {
+        "id": "P01",
+        "title": "合成产品 P01 字幕功能",
+        "keywords": [
+          "P01",
+          "字幕",
+          "短视频",
+          "新手"
+        ],
+        "facts": [
+          "支持为视频添加字幕",
+          "字幕内容可以编辑"
+        ]
+      },
+      {
+        "id": "P02",
+        "title": "合成产品 P02 模板功能",
+        "keywords": [
+          "P02",
+          "模板",
+          "旅行"
+        ],
+        "facts": [
+          "提供旅行主题视频模板",
+          "支持替换模板内的图片"
+        ]
+      }
+    ]
+  },
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "lease_generation": 1,
+  "model_inflight": null,
+  "pending_decision": null,
+  "tool_inflight": null,
+  "summary": "standard档预计10:43完成（超截止33分钟），economy档预计10:24完成（超截止14分钟），两个档位均无法在截止时间2026-11-01T10:10前交付，预算充足但时间不可行。",
+  "elapsed_seconds": 25.660059,
+  "runtime_limit_seconds": 180,
+  "runtime_limit_exceeded": false,
+  "finished_at": "2026-10-28T14:48:09.350922+00:00",
+  "model_requests_sent": 4,
+  "tool_attempts": 3,
+  "cost": {
+    "spent_units": 0,
+    "remaining_units": 8,
+    "projected_total_units": 8,
+    "budget_units": 10,
+    "budget_gap_units": 0
+  },
+  "business_now": "2026-11-01T10:03:00+08:00",
+  "estimated_finish_at": "2026-11-01T10:24:00+08:00",
+  "steps": [
+    {
+      "operation_id": "13b5b922502342038a5753529ebf7d08",
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "13b5b922502342038a5753529ebf7d08"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "bc6bc1b0407d4c53b30b5cfd3419df84",
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "tool": "estimate_cost",
+      "parameters": {
+        "profile": "standard",
+        "material_ids": [
+          "P01"
+        ]
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 33.0,
+          "feasible": false,
+          "selected": false
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "bc6bc1b0407d4c53b30b5cfd3419df84"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "8ff8009492e145d29004673595311ce9",
+      "run_id": "3733824b089f4ea188404081d8a1815c",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-15e11b2447113518",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "economy",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:24:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 14.0,
+          "feasible": false,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "8ff8009492e145d29004673595311ce9"
+      },
+      "selected": true
+    }
+  ],
+  "task_plan": [
+    {
+      "task": "search_materials",
+      "depends_on": [],
+      "status": "succeeded"
+    },
+    {
+      "task": "estimate_cost",
+      "depends_on": [
+        "search_materials"
+      ],
+      "status": "succeeded"
+    },
+    {
+      "task": "generate_script",
+      "depends_on": [
+        "estimate_cost"
+      ],
+      "status": "pending"
+    },
+    {
+      "task": "save_plan",
+      "depends_on": [
+        "generate_script"
+      ],
+      "status": "pending"
+    }
+  ],
+  "save_status": "not_attempted"
+}

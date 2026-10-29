@@ -1,0 +1,112 @@
+{
+  "generated_at": "2026-10-28T08:40:49.882054+00:00",
+  "mode": "live",
+  "source_sha256": "7620870acf9e671183a8522ad9c4aebcc3b3c354d101592528539fd0a39d1217",
+  "python": "3.10.12",
+  "cases_total": 3,
+  "cases_passed": 3,
+  "expected_behavior_match_rate": 1.0,
+  "status_counts": {
+    "completed": 2,
+    "incomplete": 1
+  },
+  "constraint_violations": 0,
+  "false_saved": 0,
+  "model_requests_sent": 16,
+  "comparisons": {
+    "replanning": {
+      "initial_rejected_quote_units": 12,
+      "final_spent_units": 8,
+      "reduction_against_rejected_quote_percent": 33.33,
+      "remaining_budget_units": 2,
+      "decision_evidence_mode": "live"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "C01-normal",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 26.11013,
+      "model_requests_sent": 4,
+      "evidence": "live/C01-normal/output.json"
+    },
+    {
+      "case_id": "C03-save-failure",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "MODEL_RESPONSE_INVALID",
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "successful_script_retained": true
+      },
+      "passed": true,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 51.214725,
+      "model_requests_sent": 7,
+      "evidence": "live/C03-save-failure/output.json"
+    },
+    {
+      "case_id": "C04-replan-budget",
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "reason_code": null,
+      "checks": {
+        "status": true,
+        "reason": true,
+        "spent": true,
+        "saved_consistently": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "observed_replan": true
+      },
+      "passed": true,
+      "stored_plan_count": 1,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 8,
+      "elapsed_seconds": 30.550814,
+      "model_requests_sent": 5,
+      "evidence": "live/C04-replan-budget/output.json"
+    }
+  ],
+  "limitations": [
+    "Synthetic materials, prices and business durations",
+    "Mock decisions do not prove LLM capabilities",
+    "Quote reduction is not measured real-world spending savings"
+  ]
+}

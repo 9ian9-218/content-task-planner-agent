@@ -1,0 +1,18 @@
+test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume (tests.test_hardening.HardeningTests.test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume) ... FAIL
+
+======================================================================
+FAIL: test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume (tests.test_hardening.HardeningTests.test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 461, in test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume
+    self.assertEqual(failed['reason_code'], 'RETRY_EXHAUSTED')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'STEP_LIMIT' != 'RETRY_EXHAUSTED'
+- STEP_LIMIT
++ RETRY_EXHAUSTED
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.825s
+
+FAILED (failures=1)

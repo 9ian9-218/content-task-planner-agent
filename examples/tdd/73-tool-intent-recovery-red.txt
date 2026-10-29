@@ -1,0 +1,15 @@
+test_local_tool_result_lost_before_commit_replays_once_and_preserves_attempt_budget (tests.test_hardening.HardeningTests.test_local_tool_result_lost_before_commit_replays_once_and_preserves_attempt_budget) ... FAIL
+
+======================================================================
+FAIL: test_local_tool_result_lost_before_commit_replays_once_and_preserves_attempt_budget (tests.test_hardening.HardeningTests.test_local_tool_result_lost_before_commit_replays_once_and_preserves_attempt_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 408, in test_local_tool_result_lost_before_commit_replays_once_and_preserves_attempt_budget
+    self.assertTrue(ready.exists(), process.stderr.read() if process.poll() is not None else 'no uncommitted tool event')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : 
+
+----------------------------------------------------------------------
+Ran 1 test in 0.502s
+
+FAILED (failures=1)

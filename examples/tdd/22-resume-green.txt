@@ -1,0 +1,6 @@
+test_explicit_resume_reuses_script_after_save_failure (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.097s
+
+OK

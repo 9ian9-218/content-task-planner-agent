@@ -1,0 +1,41 @@
+test_business_time_overflow_is_incomplete_without_poisoning_the_request (tests.test_review.ReviewTests) ... 
+======================================================================
+ERROR: test_business_time_overflow_is_incomplete_without_poisoning_the_request (tests.test_review.ReviewTests) (as_of='2026-11-01T10:00:00+08:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 339, in test_business_time_overflow_is_incomplete_without_poisoning_the_request
+    result = planner.run(brief, MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 209, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 155, in execute
+    data, charged, minutes = getattr(self, name)(**args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 207, in estimate_cost
+    "profile": profile, **self.projection(material_ids, profile, self.free_minutes)}
+  File "/mnt/d/xy/src/content_planner/tools.py", line 192, in projection
+    finish = self.now(extra_minutes + (0 if reusable else settings["minutes"]) + self.free_minutes)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 83, in now
+    return parse_time(self.context["as_of"]) + timedelta(minutes=elapsed + extra_minutes)
+OverflowError: Python int too large to convert to C int
+
+======================================================================
+ERROR: test_business_time_overflow_is_incomplete_without_poisoning_the_request (tests.test_review.ReviewTests) (as_of='9999-12-31T23:59:00+08:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 339, in test_business_time_overflow_is_incomplete_without_poisoning_the_request
+    result = planner.run(brief, MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 209, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 155, in execute
+    data, charged, minutes = getattr(self, name)(**args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 207, in estimate_cost
+    "profile": profile, **self.projection(material_ids, profile, self.free_minutes)}
+  File "/mnt/d/xy/src/content_planner/tools.py", line 192, in projection
+    finish = self.now(extra_minutes + (0 if reusable else settings["minutes"]) + self.free_minutes)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 83, in now
+    return parse_time(self.context["as_of"]) + timedelta(minutes=elapsed + extra_minutes)
+OverflowError: date value out of range
+
+----------------------------------------------------------------------
+Ran 1 test in 0.143s
+
+FAILED (errors=2)

@@ -1,0 +1,40 @@
+{
+  "executed_at": "2026-10-28T15:37:11.346161+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C14-resume",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {
+    "failures": {
+      "save_plan": "always"
+    }
+  },
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "wb/hy3",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "action_source": "remote_model",
+  "model_requests_sent": 6,
+  "token_usage": {
+    "prompt_tokens": 11185,
+    "completion_tokens": 849,
+    "total_tokens": 12034,
+    "reported_responses": 6,
+    "accepted_responses": 6,
+    "unreported_request_attempts": 0
+  },
+  "export_id": "c894a3cc72464b7a8524528e5f94be42",
+  "artifacts_sha256": {
+    "decisions.jsonl": "778cfed08feb68c948e0dc7270f7e50f03771c744908d863d8c527fc8dd8f5fb",
+    "input.json": "889123ebd81e4f56e844c1bb796ee6822d9a9747262dc2684c6ac44f7cc01b26",
+    "output.json": "633e1dd627b9ac25a71ff79a1f2f3f11ce114e2319422fa6c025041fa043a777",
+    "trace.jsonl": "038c324348fc3bc18b0c0ccbc673f96c2a6aad28c728d352f52593ff9cbf0ddf",
+    "trace.md": "14cf88a66778aa9bebbc58022044da05441fdc96e60d97383a6c4c0b17470dd3"
+  }
+}

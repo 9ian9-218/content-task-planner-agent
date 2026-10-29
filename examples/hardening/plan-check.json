@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-28T10:33:37.740268+00:00",
+  "scope": "Plan and baseline integrity only; not an implementation, regression or model quality test",
+  "work_packages": 14,
+  "quality_gates": 10,
+  "topological_order": [
+    "STAB-00",
+    "STAB-01",
+    "STAB-02",
+    "STAB-03",
+    "STAB-04",
+    "STAB-05",
+    "STAB-06",
+    "STAB-07",
+    "STAB-08",
+    "STAB-09",
+    "STAB-10",
+    "STAB-11",
+    "STAB-12",
+    "STAB-13"
+  ],
+  "baseline_files_verified": 24,
+  "source_sha256": "42fff7eb6c739b91750b5433b2a3337d5dba7d692886f417bc6f645156be57eb",
+  "new_model_requests": 0,
+  "planned_gates_passed": 0,
+  "all_hardening_features_still_unimplemented": true,
+  "markdown_files": 15,
+  "local_links": 159,
+  "problems": []
+}

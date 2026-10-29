@@ -1,0 +1,37 @@
+{
+  "executed_at": "2026-10-28T14:10:07.697952+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "mock"
+  ],
+  "case_id": "C13-id-conflict",
+  "mode": "mock",
+  "python": "3.14.10",
+  "source_sha256": "e67aefae347f6b9cc797fe09981ddf16b161782b46b5fa384bbe39150f94ef25",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "deterministic_mock",
+  "model_endpoint": "",
+  "action_source": "mock_policy",
+  "model_requests_sent": 0,
+  "token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "reported_responses": 0,
+    "accepted_responses": 0,
+    "unreported_request_attempts": 0
+  },
+  "export_id": "d5cab5c349844d658bf772ec43ec0dfd",
+  "artifacts_sha256": {
+    "decisions.jsonl": "2406610570f6cfe6f6764d1d4bca6997cc2c43985ca5675c1ca85248c88e886c",
+    "input.json": "889123ebd81e4f56e844c1bb796ee6822d9a9747262dc2684c6ac44f7cc01b26",
+    "output.json": "21d0f7a5e7f9e9d2fadd3c691885e2445009d7d6058abe139b3386a80b28a029",
+    "plan.md": "86080b903923dcb22f0059c2106cdf721b1077aeb697be2a8e2ff0d52d0694b7",
+    "trace.jsonl": "53e223103f942057b78e2a0095762af5b79937aaacfa67b6537838a29f724f26",
+    "trace.md": "819537e29a7213ba4891edf335b56320e361d5cfd9138a0499c2bf564da6f358"
+  }
+}

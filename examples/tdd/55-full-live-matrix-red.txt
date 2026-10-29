@@ -1,0 +1,24 @@
+test_full_live_matrix_includes_missing_information_repeat_and_resume (tests.test_live_evaluation.LiveEvaluationTests) ... usage: evaluate.py [-h] [--mode {mock,live}] [--samples SAMPLES]
+evaluate.py: error: unrecognized arguments: --all-cases
+ERROR
+
+======================================================================
+ERROR: test_full_live_matrix_includes_missing_information_repeat_and_resume (tests.test_live_evaluation.LiveEvaluationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_live_evaluation.py", line 58, in test_full_live_matrix_includes_missing_information_repeat_and_resume
+    evaluate.main()
+  File "/mnt/d/xy/tools/evaluate.py", line 102, in main
+    args = parser.parse_args()
+  File "/usr/lib/python3.10/argparse.py", line 1848, in parse_args
+    self.error(msg % ' '.join(argv))
+  File "/usr/lib/python3.10/argparse.py", line 2606, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "/usr/lib/python3.10/argparse.py", line 2593, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+----------------------------------------------------------------------
+Ran 1 test in 0.014s
+
+FAILED (errors=1)

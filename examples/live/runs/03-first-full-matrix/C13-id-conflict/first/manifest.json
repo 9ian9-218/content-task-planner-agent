@@ -1,0 +1,28 @@
+{
+  "executed_at": "2026-10-28T08:51:51.136130+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C13-id-conflict",
+  "mode": "live",
+  "python": "3.10.12",
+  "source_sha256": "07626ea699d913154adc9b7080789a49130b219e53d261e367ce507608f2ece3",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "claude-opus-4-6-thinking",
+  "model_endpoint": "http://100.73.185.103:8045/v1",
+  "action_source": "remote_model",
+  "model_requests_sent": 4,
+  "token_usage": {
+    "prompt_tokens": 12508,
+    "completion_tokens": 1076,
+    "total_tokens": 13584,
+    "reported_responses": 4,
+    "accepted_responses": 4,
+    "unreported_request_attempts": 0
+  }
+}

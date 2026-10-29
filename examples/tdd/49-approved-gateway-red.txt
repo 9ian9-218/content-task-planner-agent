@@ -1,0 +1,17 @@
+test_approved_gateway_is_the_default_and_uses_chat_completions_tools (tests.test_gateway.GatewayTests) ... FAIL
+
+======================================================================
+FAIL: test_approved_gateway_is_the_default_and_uses_chat_completions_tools (tests.test_gateway.GatewayTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 27, in test_approved_gateway_is_the_default_and_uses_chat_completions_tools
+    self.assertEqual(url, "http://100.73.185.103:8045/v1/chat/completions")
+AssertionError: 'https://api.deepseek.com/chat/completions' != 'http://100.73.185.103:8045/v1/chat/completions'
+- https://api.deepseek.com/chat/completions
++ http://100.73.185.103:8045/v1/chat/completions
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+FAILED (failures=1)

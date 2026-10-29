@@ -1,0 +1,6 @@
+test_prior_sources_remain_available_after_an_empty_supplementary_search (tests.test_guards.GuardTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.071s
+
+OK

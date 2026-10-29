@@ -1,0 +1,36 @@
+{
+  "request_id": "evaluation-001",
+  "status": "invalid_request",
+  "reason_code": "REQUEST_ID_CONFLICT",
+  "summary": "",
+  "missing_fields": [],
+  "invalid_fields": [],
+  "steps": [],
+  "task_plan": [],
+  "trace": [],
+  "decisions": [],
+  "operations": [],
+  "scripts": {},
+  "quotes": {},
+  "materials": [],
+  "plan_id": null,
+  "saved_plan": null,
+  "save_status": "not_attempted",
+  "model_mode": "live",
+  "model_decisions": 0,
+  "model_requests_sent": 0,
+  "tool_attempts": 0,
+  "errors": [
+    "REQUEST_ID_CONFLICT"
+  ],
+  "elapsed_seconds": 0,
+  "estimated_finish_at": null,
+  "business_now": null,
+  "cached": false,
+  "cost": {
+    "spent_units": 0,
+    "remaining_units": 0,
+    "projected_total_units": 0,
+    "budget_units": 20
+  }
+}

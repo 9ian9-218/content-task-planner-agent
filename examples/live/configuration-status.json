@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-28T15:53:37.788199+00:00",
+  "status": "current_source_full_matrix_and_adversarial_and_repeated_replanning_evaluated",
+  "key_configured": true,
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "model_name": "wb/hy3",
+  "response_models": [
+    "wb/hy3"
+  ],
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "requests_sent": 93,
+  "request_cap_sum": 144,
+  "reported_tokens": 178489,
+  "cases_passed": 18,
+  "cases_total": 18,
+  "adversarial_passed": 2,
+  "replanning_rounds_passed": 3,
+  "success_rate": null,
+  "note": "Expectation matching is not an unrestricted task success rate; no credentials included."
+}

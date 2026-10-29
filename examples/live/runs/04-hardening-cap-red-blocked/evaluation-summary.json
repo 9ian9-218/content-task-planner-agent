@@ -1,0 +1,150 @@
+{
+  "generated_at": "2026-10-28T13:59:27.560762+00:00",
+  "mode": "live",
+  "source_sha256": "244773ca66163cb5d4ff6299a6c9091ddd92fe20a50c5e9f1112d4e85def72cf",
+  "python": "3.14.10",
+  "cases_total": 3,
+  "cases_passed": 0,
+  "expected_behavior_match_rate": 0.0,
+  "status_counts": {
+    "incomplete": 3
+  },
+  "constraint_violations": 0,
+  "false_saved": 0,
+  "model_requests_sent": 3,
+  "comparisons": {},
+  "cases": [
+    {
+      "case_id": "C01-normal",
+      "expected_status": "completed",
+      "actual_status": "incomplete",
+      "reason_code": "MODEL_UNAVAILABLE",
+      "checks": {
+        "status": false,
+        "reason": false,
+        "spent": false,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true
+      },
+      "passed": false,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.050639,
+      "model_requests_sent": 1,
+      "evidence": "live/C01-normal/output.json",
+      "response_models": [],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 1,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "reported_responses": 0,
+        "accepted_responses": 0,
+        "unreported_request_attempts": 1
+      }
+    },
+    {
+      "case_id": "C03-save-failure",
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "reason_code": "MODEL_UNAVAILABLE",
+      "checks": {
+        "status": true,
+        "reason": false,
+        "spent": false,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "successful_script_retained": false
+      },
+      "passed": false,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.02749,
+      "model_requests_sent": 1,
+      "evidence": "live/C03-save-failure/output.json",
+      "response_models": [],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 1,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "reported_responses": 0,
+        "accepted_responses": 0,
+        "unreported_request_attempts": 1
+      }
+    },
+    {
+      "case_id": "C04-replan-budget",
+      "expected_status": "completed",
+      "actual_status": "incomplete",
+      "reason_code": "MODEL_UNAVAILABLE",
+      "checks": {
+        "status": false,
+        "reason": false,
+        "spent": false,
+        "saved_consistently": true,
+        "model_protocol_valid": true,
+        "nonnegative_integer_costs": true,
+        "ledger_cost_consistent": true,
+        "projected_total_consistent": true,
+        "step_states_consistent": true,
+        "save_evidence_consistent": true,
+        "completion_constraints": true,
+        "observed_replan": false
+      },
+      "passed": false,
+      "stored_plan_count": 0,
+      "constraint_violation": false,
+      "false_saved": false,
+      "spent_units": 0,
+      "elapsed_seconds": 0.026588,
+      "model_requests_sent": 1,
+      "evidence": "live/C04-replan-budget/output.json",
+      "response_models": [],
+      "setup_model_requests_sent": 0,
+      "total_model_requests_sent": 1,
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "reported_responses": 0,
+        "accepted_responses": 0,
+        "unreported_request_attempts": 1
+      }
+    }
+  ],
+  "token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "reported_responses": 0,
+    "accepted_responses": 0,
+    "unreported_request_attempts": 3
+  },
+  "model_name": "claude-opus-4-6-thinking",
+  "model_endpoint": "http://100.73.185.103:8045/v1",
+  "response_models": [],
+  "limitations": [
+    "Synthetic materials, prices and business durations",
+    "Mock decisions do not prove LLM capabilities",
+    "Quote reduction is not measured real-world spending savings"
+  ]
+}

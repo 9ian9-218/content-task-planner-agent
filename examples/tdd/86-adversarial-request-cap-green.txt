@@ -1,0 +1,6 @@
+test_adversarial_evaluation_requires_a_request_cap_before_configuration_or_network (tests.test_short_validation.ShortValidationTests.test_adversarial_evaluation_requires_a_request_cap_before_configuration_or_network) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.575s
+
+OK

@@ -1,0 +1,14 @@
+test_cli_rejects_negative_synthetic_fees_instead_of_reducing_spent (tests.test_cli.CLITests) ... FAIL
+
+======================================================================
+FAIL: test_cli_rejects_negative_synthetic_fees_instead_of_reducing_spent (tests.test_cli.CLITests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_cli.py", line 59, in test_cli_rejects_negative_synthetic_fees_instead_of_reducing_spent
+    self.assertEqual(result.returncode, 2, result.stderr)
+AssertionError: 0 != 2 : 
+
+----------------------------------------------------------------------
+Ran 1 test in 0.364s
+
+FAILED (failures=1)

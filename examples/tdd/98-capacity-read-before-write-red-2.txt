@@ -1,0 +1,18 @@
+test_full_capacity_refusal_does_not_compete_for_the_database_writer_lock (tests.test_short_validation.ShortValidationTests.test_full_capacity_refusal_does_not_compete_for_the_database_writer_lock) ... FAIL
+
+======================================================================
+FAIL: test_full_capacity_refusal_does_not_compete_for_the_database_writer_lock (tests.test_short_validation.ShortValidationTests.test_full_capacity_refusal_does_not_compete_for_the_database_writer_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 293, in test_full_capacity_refusal_does_not_compete_for_the_database_writer_lock
+    self.assertEqual(result['reason_code'], 'CAPACITY_EXCEEDED')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'STATE_BUSY' != 'CAPACITY_EXCEEDED'
+- STATE_BUSY
++ CAPACITY_EXCEEDED
+
+
+----------------------------------------------------------------------
+Ran 1 test in 5.617s
+
+FAILED (failures=1)

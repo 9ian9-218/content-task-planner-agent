@@ -1,0 +1,24 @@
+test_live_usage_includes_setup_runs_without_recounting_cached_history (tests.test_live_evaluation.LiveEvaluationTests) ... {"case_id": "C01-normal", "passed": true, "status": "completed", "reason": null, "requests": 4}
+{"case_id": "C02a-missing-budget", "passed": true, "status": "needs_input", "reason": "MISSING_INFORMATION", "requests": 0}
+{"case_id": "C02b-missing-deadline", "passed": true, "status": "needs_input", "reason": "MISSING_INFORMATION", "requests": 0}
+{"case_id": "C03-save-failure", "passed": true, "status": "incomplete", "reason": "SAVE_FAILED", "requests": 5}
+{"case_id": "C04-replan-budget", "passed": true, "status": "completed", "reason": null, "requests": 5}
+{"case_id": "C05-no-feasible-plan", "passed": false, "status": "incomplete", "reason": "STEP_LIMIT", "requests": 12}
+{"case_id": "C06-repeat", "passed": true, "status": "completed", "reason": null, "requests": 0}
+{"case_id": "C07-deadline", "passed": false, "status": "incomplete", "reason": "STEP_LIMIT", "requests": 12}
+{"case_id": "C08-step-limit", "passed": true, "status": "incomplete", "reason": "STEP_LIMIT", "requests": 2}
+{"case_id": "C10-empty-materials", "passed": false, "status": "completed", "reason": null, "requests": 4}
+{"case_id": "C11a-budget-boundary", "passed": true, "status": "completed", "reason": null, "requests": 4}
+{"case_id": "C11b-deadline-boundary", "passed": true, "status": "completed", "reason": null, "requests": 4}
+{"case_id": "C12-model-failure", "passed": true, "status": "incomplete", "reason": "MODEL_UNAVAILABLE", "requests": 0}
+{"case_id": "C13-id-conflict", "passed": true, "status": "invalid_request", "reason": "REQUEST_ID_CONFLICT", "requests": 0}
+{"case_id": "C14-resume", "passed": true, "status": "completed", "reason": null, "requests": 1}
+{"case_id": "C15-search-failure", "passed": true, "status": "incomplete", "reason": "SEARCH_FAILED", "requests": 2}
+{"case_id": "C16-generation-failure", "passed": true, "status": "incomplete", "reason": "GENERATION_FAILED", "requests": 4}
+{"case_id": "C17-cost-first", "passed": true, "status": "completed", "reason": null, "requests": 4}
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.201s
+
+OK

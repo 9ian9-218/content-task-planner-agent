@@ -1,0 +1,43 @@
+{
+  "executed_at": "2026-10-28T15:42:14.002708+00:00",
+  "mode": "live",
+  "action_source": "remote_model",
+  "python": "3.14.10",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate_adversarial.py",
+    "--max-model-requests",
+    "24",
+    "--model-timeout",
+    "60"
+  ],
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "model_name": "wb/hy3",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "model_requests_sent": 4,
+  "token_usage": {
+    "prompt_tokens": 6589,
+    "completion_tokens": 1546,
+    "total_tokens": 8135,
+    "reported_responses": 4,
+    "accepted_responses": 4,
+    "unreported_request_attempts": 0
+  },
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "export_id": "a221c31e1b8e4a9983be4a30d537834f",
+  "artifacts_sha256": {
+    "decisions.jsonl": "90b604d9b5aaf09e98bc545e71c6b98cb90eeb93a8cbc9c6c55533c0f17ed2fd",
+    "input.json": "d4644c07054ebddcda2e83beaee28b12200cc3a023630e06f2be38a137682811",
+    "output.json": "e16b027cce13c0987e1e932ea9a65729a4eb068c6a3355baafaaa93e97057384",
+    "trace.jsonl": "db43102bd1e86d10b39cecdc31bfaae6cf11eb3009651e3f8cf7372c84219712",
+    "trace.md": "a5533d302bd4704559e6ef73f1d2c078772e03555a2c56ed8ae766d692549e64"
+  }
+}

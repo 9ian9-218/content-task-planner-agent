@@ -1,0 +1,6 @@
+test_report_rejects_a_protocol_failure_even_after_an_actual_save_failure (tests.test_live_evaluation.LiveEvaluationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.086s
+
+OK

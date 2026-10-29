@@ -1,0 +1,6 @@
+test_replanning_repeat_command_records_each_actual_observation_and_a_shared_cap (tests.test_short_validation.ShortValidationTests.test_replanning_repeat_command_records_each_actual_observation_and_a_shared_cap) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.635s
+
+OK

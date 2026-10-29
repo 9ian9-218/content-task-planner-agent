@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-10-28T08:08:39.335517+00:00",
+  "conclusion": "offline_verified_not_submission_ready",
+  "baseline_snapshot_sha256": "2e0a416d537e35d63ff402465425380a19d3e164b7b48a1e23f7e505716c7340",
+  "before_test_count": 32,
+  "after_test_count": 51,
+  "after_passed": 51,
+  "skipped": 0,
+  "source_sha256": "a7f3c171daf26c95bc868272d9f1dd7ae40fb843a7454a1e03380a4eb44b3374",
+  "expected_cases_passed": 18,
+  "expected_cases_total": 18,
+  "adversarial_matrix_combinations": 36,
+  "source_fingerprints_match": true,
+  "independent_reviews": {
+    "standards_findings_before": 8,
+    "spec_findings_before": 5,
+    "overlap_exists": true
+  },
+  "defensive_areas": 16,
+  "remaining": [
+    "two real-model decision paths",
+    "GitHub URL and final commit SHA",
+    "candidate contributions and complete time record"
+  ],
+  "limits": [
+    "soft dispatch deadline, not hard transaction preemption",
+    "local deterministic tools only",
+    "no arbitrary legacy database migration"
+  ]
+}

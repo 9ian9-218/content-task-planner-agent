@@ -1,0 +1,24 @@
+{"stage": "model_decision_committed", "tool": "search_materials", "passed": 8, "rounds": 10}
+{"stage": "model_decision_committed", "tool": "estimate_cost", "passed": 10, "rounds": 10}
+{"stage": "model_decision_committed", "tool": "generate_script", "passed": 10, "rounds": 10}
+{"stage": "model_decision_committed", "tool": "save_plan", "passed": 10, "rounds": 10}
+{"stage": "tool_result_uncommitted", "tool": "search_materials", "passed": 10, "rounds": 10}
+{"stage": "tool_result_uncommitted", "tool": "estimate_cost", "passed": 10, "rounds": 10}
+{"stage": "tool_result_uncommitted", "tool": "generate_script", "passed": 10, "rounds": 10}
+{"stage": "tool_result_uncommitted", "tool": "save_plan", "passed": 10, "rounds": 10}
+{
+  "started_at": "2026-10-28T15:18:48.830139+00:00",
+  "finished_at": "2026-10-28T15:20:31.203367+00:00",
+  "mode": "controlled_model_fixture",
+  "remote_requests": 0,
+  "python": "3.14.10",
+  "sqlite": "3.53.1",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "source_sha256": "909349a1fc35ff6dc2ef8a7534e98e05a9649e9e88bebb951d9c6266261fd10e",
+  "fault_positions": 8,
+  "rounds_per_position": 10,
+  "checks_total": 80,
+  "checks_passed": 78,
+  "passed": false,
+  "scope": "Real subprocess SIGKILL on native local temporary filesystem; four committed model decisions and four uncommitted local tool results. This does not prove remote side-effect reconciliation or power-loss durability."
+}

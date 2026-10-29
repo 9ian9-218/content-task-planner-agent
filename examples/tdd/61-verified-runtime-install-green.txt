@@ -1,0 +1,6 @@
+test_runtime_installer_rejects_unverified_bytes_before_creating_destination (tests.test_hardening.HardeningTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.202s
+
+OK

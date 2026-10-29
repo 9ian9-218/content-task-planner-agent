@@ -1,0 +1,72 @@
+Command: /usr/bin/python3 -m unittest discover -s tests -v
+PYTHONPATH=src
+Started: 2026-10-28T08:57:41.410735+00:00
+
+test_cost_first_preference_can_finish_before_the_standard_deadline (test_acceptance.AcceptanceTests) ... ok
+test_decision_limit_returns_incomplete_without_saving (test_acceptance.AcceptanceTests) ... ok
+test_empty_materials_request_more_information_without_generating (test_acceptance.AcceptanceTests) ... ok
+test_explicit_resume_reuses_script_after_save_failure (test_acceptance.AcceptanceTests) ... ok
+test_failed_save_preserves_script_and_reports_incomplete (test_acceptance.AcceptanceTests) ... ok
+test_invalid_input_is_rejected_before_tools (test_acceptance.AcceptanceTests) ... ok
+test_missing_required_information_does_not_execute_tools (test_acceptance.AcceptanceTests) ... ok
+test_model_cannot_bypass_the_budget_guard (test_acceptance.AcceptanceTests) ... ok
+test_normal_request_produces_a_retrievable_saved_plan (test_acceptance.AcceptanceTests) ... ok
+test_observed_over_budget_quote_changes_the_selected_profile (test_acceptance.AcceptanceTests) ... ok
+test_repeated_execution_after_reopening_reuses_the_saved_result (test_acceptance.AcceptanceTests) ... ok
+test_request_id_can_be_derived_from_normalized_business_input (test_acceptance.AcceptanceTests) ... ok
+test_same_request_id_with_changed_budget_is_a_conflict (test_acceptance.AcceptanceTests) ... ok
+test_script_does_not_claim_features_from_unselected_materials (test_acceptance.AcceptanceTests) ... ok
+test_task_plan_reports_dependencies_and_actual_step_states (test_acceptance.AcceptanceTests) ... ok
+test_unaffordable_request_stops_without_charging (test_acceptance.AcceptanceTests) ... ok
+test_cli_exports_the_actual_result_and_trace (test_cli.CLITests) ... ok
+test_cli_rejects_negative_synthetic_fees_instead_of_reducing_spent (test_cli.CLITests) ... ok
+test_cli_reports_invalid_input_and_unwritable_storage_as_json (test_cli.CLITests) ... ok
+test_approved_gateway_is_the_default_and_uses_chat_completions_tools (test_gateway.GatewayTests) ... ok
+test_cli_loads_gateway_config_without_key_and_records_port_without_credentials (test_gateway.GatewayTests) ... ok
+test_excessively_nested_model_json_cannot_crash_or_poison_the_request (test_gateway.GatewayTests) ... ok
+test_finish_contract_distinguishes_missing_materials_from_infeasible_constraints (test_gateway.GatewayTests) ... ok
+test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets (test_gateway.GatewayTests) ... ok
+test_invalid_or_mixed_finish_actions_cannot_execute_tools_or_claim_saved (test_gateway.GatewayTests) ... ok
+test_legacy_text_finish_obeys_the_same_state_and_reason_contract (test_gateway.GatewayTests) ... ok
+test_model_can_end_through_a_native_finish_action_with_an_explicit_reason (test_gateway.GatewayTests) ... ok
+test_calls_in_one_model_response_do_not_claim_to_observe_each_other (test_guards.GuardTests) ... ok
+test_changing_plan_after_paid_work_keeps_the_spent_cost (test_guards.GuardTests) ... ok
+test_elapsed_runtime_limit_prevents_tools_after_a_slow_model_response (test_guards.GuardTests) ... ok
+test_in_progress_request_is_not_executed_by_a_second_runner (test_guards.GuardTests) ... ok
+test_invalid_model_actions_are_observable_errors_without_side_effects (test_guards.GuardTests) ... ok
+test_model_cannot_execute_paid_work_after_an_infeasible_deadline_quote (test_guards.GuardTests) ... ok
+test_prior_sources_remain_available_after_an_empty_supplementary_search (test_guards.GuardTests) ... ok
+test_real_storage_failure_preserves_success_and_never_reports_saved (test_guards.GuardTests) ... ok
+test_repeated_successful_script_operation_is_reused_without_charging (test_guards.GuardTests) ... ok
+test_tool_limit_counts_each_action_in_a_multi_call_response (test_guards.GuardTests) ... ok
+test_full_live_matrix_includes_missing_information_repeat_and_resume (test_live_evaluation.LiveEvaluationTests) ... ok
+test_live_report_records_gateway_and_actual_response_models (test_live_evaluation.LiveEvaluationTests) ... ok
+test_live_usage_includes_setup_runs_without_recounting_cached_history (test_live_evaluation.LiveEvaluationTests) ... ok
+test_report_rejects_a_protocol_failure_even_after_an_actual_save_failure (test_live_evaluation.LiveEvaluationTests) ... ok
+test_live_adapter_round_trips_actual_tool_observations_over_http (test_model.ModelTests) ... ok
+test_live_without_credentials_returns_incomplete_and_never_falls_back (test_model.ModelTests) ... ok
+test_transport_failure_and_malformed_response_return_incomplete (test_model.ModelTests) ... ok
+test_authorization_is_not_forwarded_to_a_redirect_target (test_review.ReviewTests) ... ok
+test_budget_and_deadline_guard_holds_for_36_adversarial_combinations (test_review.ReviewTests) ... ok
+test_business_time_overflow_is_incomplete_without_poisoning_the_request (test_review.ReviewTests) ... ok
+test_commit_overshoot_is_reported_without_hiding_an_actually_saved_plan (test_review.ReviewTests) ... ok
+test_configuration_shapes_are_rejected_without_running_business_tools (test_review.ReviewTests) ... ok
+test_deepseek_v1_alias_disables_thinking_in_tool_requests (test_review.ReviewTests) ... ok
+test_error_results_preserve_identity_and_a_consistent_public_shape (test_review.ReviewTests) ... ok
+test_evaluation_gate_rejects_budget_violations_and_inconsistent_ledgers (test_review.ReviewTests) ... ok
+test_export_cannot_overwrite_the_database_or_input_files (test_review.ReviewTests) ... ok
+test_http_failure_after_paid_generation_preserves_the_script_and_cost (test_review.ReviewTests) ... ok
+test_http_loop_completes_and_counts_only_each_runs_requests (test_review.ReviewTests) ... ok
+test_incomplete_http_body_is_a_model_error_and_preserves_progress (test_review.ReviewTests) ... ok
+test_invalid_failure_configuration_does_not_poison_a_retry (test_review.ReviewTests) ... ok
+test_material_permutations_reuse_one_paid_script (test_review.ReviewTests) ... ok
+test_non_finite_runtime_limits_are_invalid_before_storage_is_created (test_review.ReviewTests) ... ok
+test_replanned_artifacts_mark_old_success_as_unselected (test_review.ReviewTests) ... ok
+test_resume_rejects_a_changed_prompt_instead_of_misreporting_its_version (test_review.ReviewTests) ... ok
+test_saved_plan_remains_complete_when_the_final_snapshot_write_fails (test_review.ReviewTests) ... ok
+test_truncated_or_invalid_tool_call_responses_never_execute (test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 63 tests in 17.519s
+
+OK

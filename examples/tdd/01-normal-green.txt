@@ -1,0 +1,6 @@
+test_normal_request_produces_a_retrievable_saved_plan (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.089s
+
+OK

@@ -1,0 +1,6 @@
+test_transport_timeout_is_recorded_as_unknown_and_resume_cannot_purchase_it_again (tests.test_hardening.HardeningTests.test_transport_timeout_is_recorded_as_unknown_and_resume_cannot_purchase_it_again) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.122s
+
+OK

@@ -1,0 +1,6 @@
+test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume (tests.test_hardening.HardeningTests.test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.770s
+
+OK

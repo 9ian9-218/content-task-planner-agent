@@ -1,0 +1,6 @@
+test_initialized_database_cached_read_does_not_need_the_writer_lock (tests.test_short_validation.ShortValidationTests.test_initialized_database_cached_read_does_not_need_the_writer_lock) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.302s
+
+OK

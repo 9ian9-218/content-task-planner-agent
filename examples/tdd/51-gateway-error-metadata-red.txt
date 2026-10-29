@@ -1,0 +1,37 @@
+test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets (tests.test_gateway.GatewayTests) ... 
+======================================================================
+ERROR: test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets (tests.test_gateway.GatewayTests) (status=503, retry_after='26')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 89, in test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets
+    self.assertEqual(result["model_error"], {"http_status": status, "retry_after_seconds": expected})
+KeyError: 'model_error'
+
+======================================================================
+ERROR: test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets (tests.test_gateway.GatewayTests) (status=429, retry_after='10')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 89, in test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets
+    self.assertEqual(result["model_error"], {"http_status": status, "retry_after_seconds": expected})
+KeyError: 'model_error'
+
+======================================================================
+ERROR: test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets (tests.test_gateway.GatewayTests) (status=401, retry_after=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 89, in test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets
+    self.assertEqual(result["model_error"], {"http_status": status, "retry_after_seconds": expected})
+KeyError: 'model_error'
+
+======================================================================
+ERROR: test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets (tests.test_gateway.GatewayTests) (status=503, retry_after='invalid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_gateway.py", line 89, in test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets
+    self.assertEqual(result["model_error"], {"http_status": status, "retry_after_seconds": expected})
+KeyError: 'model_error'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.276s
+
+FAILED (errors=4)

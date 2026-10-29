@@ -1,0 +1,40 @@
+{
+  "executed_at": "2026-10-28T15:31:58.852290+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "mock"
+  ],
+  "case_id": "C02a-missing-budget",
+  "mode": "mock",
+  "python": "3.14.10",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "deterministic_mock",
+  "model_endpoint": "",
+  "action_source": "mock_policy",
+  "actual_result_mode": "mock",
+  "model_requests_sent": 0,
+  "data_versions": null,
+  "prompt_sha256": null,
+  "token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "reported_responses": 0,
+    "accepted_responses": 0,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [],
+  "export_id": "5165929aef044d6dafe34bf71a144a1a",
+  "artifacts_sha256": {
+    "decisions.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.json": "887f183c9a7574636609f5fee467cb7e8c72da5f5f0cfe95dd4a93fb0c235acd",
+    "output.json": "d4ee50921a1ae3527fd314da9e3f9004acc3596cc73153866d644fad317a1044",
+    "trace.jsonl": "d2f3a8459b0b0873b937713ae0eab7f4b38422248d7c071210810530438fcee3",
+    "trace.md": "c6c352b238f90f75bc83a6d2d2cad9e3a00c89698f0b599b277d9253ed77c6ca"
+  }
+}

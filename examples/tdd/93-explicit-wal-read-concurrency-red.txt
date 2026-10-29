@@ -1,0 +1,14 @@
+test_explicit_wal_database_preserves_cached_reads_during_an_exclusive_writer (tests.test_short_validation.ShortValidationTests.test_explicit_wal_database_preserves_cached_reads_during_an_exclusive_writer) ... ERROR
+
+======================================================================
+ERROR: test_explicit_wal_database_preserves_cached_reads_during_an_exclusive_writer (tests.test_short_validation.ShortValidationTests.test_explicit_wal_database_preserves_cached_reads_during_an_exclusive_writer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 189, in test_explicit_wal_database_preserves_cached_reads_during_an_exclusive_writer
+    planner = Planner(database, as_of=AS_OF, journal_mode='wal')
+TypeError: Planner.__init__() got an unexpected keyword argument 'journal_mode'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.133s
+
+FAILED (errors=1)

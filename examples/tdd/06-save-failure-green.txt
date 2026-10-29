@@ -1,0 +1,6 @@
+test_failed_save_preserves_script_and_reports_incomplete (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.087s
+
+OK

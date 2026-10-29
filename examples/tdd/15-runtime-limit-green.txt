@@ -1,0 +1,6 @@
+test_elapsed_runtime_limit_prevents_tools_after_a_slow_model_response (tests.test_guards.GuardTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.072s
+
+OK

@@ -1,0 +1,23 @@
+{
+  "started_at": "2026-10-28T04:54:05.365710+00:00",
+  "finished_at": "2026-10-28T04:54:08.496567+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "PYTHONPATH": "src",
+  "python": "3.10.12",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "exit_code": 0,
+  "tests_run": 32,
+  "skipped": 0,
+  "passed": 32,
+  "wall_seconds": 3.130523,
+  "source_sha256": "869e86013fb615519c408270e9e621666c5378d693c5e5f61511a9bc78dc8714",
+  "tests_sha256": "bce66de1fc15c24ea2ad1d122ebea1dd9fa0deeb15e62a85d799764376e796b9"
+}

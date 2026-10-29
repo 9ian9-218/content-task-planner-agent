@@ -1,0 +1,6 @@
+test_cli_reports_busy_initialization_as_retryable_without_model_requests (tests.test_short_validation.ShortValidationTests.test_cli_reports_busy_initialization_as_retryable_without_model_requests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 5.415s
+
+OK

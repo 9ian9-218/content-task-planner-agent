@@ -1,0 +1,19 @@
+test_model_cannot_bypass_the_budget_guard (tests.test_acceptance.AcceptanceTests) ... FAIL
+
+======================================================================
+FAIL: test_model_cannot_bypass_the_budget_guard (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 52, in test_model_cannot_bypass_the_budget_guard
+    self.assertEqual(result["status"], "incomplete")
+AssertionError: 'completed' != 'incomplete'
+- completed
+?         -
++ incomplete
+? ++
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.078s
+
+FAILED (failures=1)

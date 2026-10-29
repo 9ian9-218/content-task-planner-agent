@@ -1,0 +1,133 @@
+{
+  "assessed_at": "2026-10-28T10:01:46.672594+00:00",
+  "assessment_type": "Evidence-based self-assessment, not certification or independent audit",
+  "target_context": "Enterprise internal shared use over time, with possible real paid business tools; only save plans, no real publishing",
+  "scope_note": "CLI, SQLite and a native agent loop are acceptable technologies; missing production capabilities are judged for the target context, not automatically defects of the campus MVP.",
+  "source_sha256": "42fff7eb6c739b91750b5433b2a3337d5dba7d692886f417bc6f645156be57eb",
+  "weights_total": 100,
+  "weighted_score": 66.18,
+  "display_score": 66,
+  "production_ready": false,
+  "campus_technical_artifact_reference_score": 90,
+  "campus_score_note": "Subjective reference for the technical artifact only, not an official exam grade or evidence of independent candidate ability. Mandatory GitHub submission remains incomplete.",
+  "dimensions": [
+    {
+      "dimension": "业务适配",
+      "weight": 12,
+      "score": 75,
+      "strength": "题面核心闭环和全部必须验收有证据",
+      "gap": "只有两个合成产品、两档方案和模板生成，尚无真实运营验收",
+      "weighted_points": 9.0
+    },
+    {
+      "dimension": "Agent 动态决策",
+      "weight": 10,
+      "score": 80,
+      "strength": "真实工具观察后重规划、重试或结构化停止",
+      "gap": "策略空间小，未知任务组合和长期泛化效果未验证",
+      "weighted_points": 8.0
+    },
+    {
+      "dimension": "约束与状态正确性",
+      "weight": 12,
+      "score": 88,
+      "strength": "预算/时间/依赖守卫、事务保存、防重复、已有费用保留",
+      "gap": "费用与耗时是合成值，尚未覆盖真实远端副作用和账单确认",
+      "weighted_points": 10.56
+    },
+    {
+      "dimension": "架构与可维护性",
+      "weight": 10,
+      "score": 78,
+      "strength": "标准库、小模块和公开接口测试，范围控制较好",
+      "gap": "Planner.run 跨 203 行，状态字典与循环、恢复、存储处理耦合",
+      "weighted_points": 7.8
+    },
+    {
+      "dimension": "测试与 AI 效果评估",
+      "weight": 14,
+      "score": 78,
+      "strength": "63 测试、36 组组合子用例、18+2 真实场景，失败归档",
+      "gap": "最终矩阵每场景一轮；缺少规模充分的独立留出集和重复采样",
+      "weighted_points": 10.92
+    },
+    {
+      "dimension": "可靠性与恢复",
+      "weight": 12,
+      "score": 50,
+      "strength": "有限循环、明确失败、保留成功结果、正常失败后的显式续跑",
+      "gap": "强杀后 running 不接管，未验证备份恢复/迁移或远端不确定结果对账",
+      "weighted_points": 6.0
+    },
+    {
+      "dimension": "安全与权限",
+      "weight": 12,
+      "score": 45,
+      "strength": "密钥忽略与扫描、参数校验、认证头不随重定向发送",
+      "gap": "未验证部署传输保护和安全边界，共享服务身份/授权/数据隔离尚未实现",
+      "weighted_points": 5.4
+    },
+    {
+      "dimension": "性能、成本与扩展",
+      "weight": 8,
+      "score": 45,
+      "strength": "有真实请求与 Token 统计、缓存避免新调用",
+      "gap": "正常单样本 27.252 秒；无模型货币预算、并发容量和重复 P95/P99 数据",
+      "weighted_points": 3.6
+    },
+    {
+      "dimension": "可观测性与运维",
+      "weight": 6,
+      "score": 45,
+      "strength": "JSONL、run_id、模型/资料版本、usage 和源码指纹",
+      "gap": "未见持续指标、告警、SLO 或运维处置演练",
+      "weighted_points": 2.7
+    },
+    {
+      "dimension": "发布与交付",
+      "weight": 4,
+      "score": 55,
+      "strength": "CLI 命令、依赖说明、PRD、测试与真实证据齐备",
+      "gap": "GitHub URL/最终 SHA/CI 与版本发布流程尚未完成，个人贡献和完整工时未补齐",
+      "weighted_points": 2.2
+    }
+  ],
+  "framework_references": [
+    {
+      "name": "ISO/IEC 25010:2023",
+      "url": "https://www.iso.org/standard/78176.html",
+      "use": "Product quality reference; no full conformance evaluation performed"
+    },
+    {
+      "name": "NIST AI RMF Core / Measure",
+      "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "use": "AI measurement, uncertainty and operational reevaluation"
+    },
+    {
+      "name": "Google SRE Production Readiness Review",
+      "url": "https://sre.google/sre-book/evolving-sre-engagement-model/",
+      "use": "Production and operational readiness"
+    },
+    {
+      "name": "OWASP ASVS 5.0",
+      "url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "use": "Relevant controls if the CLI is extended into a shared network service; not an ASVS certification"
+    }
+  ],
+  "method": "Each dimension 0-100. Total = sum(weight * score / 100). Weights and scores are reviewer judgments, not weights prescribed by the cited frameworks.",
+  "evidence": {
+    "tests": "examples/test-summary.json",
+    "live_matrix": "examples/live-evaluation-summary.json",
+    "adversarial": "examples/live/adversarial-summary.json",
+    "credential_scan": "examples/credential-check.json",
+    "failed_runs": "examples/live/run-inventory.json"
+  },
+  "new_model_gateway_requests_for_this_assessment": 0,
+  "verification_note": "Existing test/trace evidence reused after checking current source fingerprint; no new regression or live inference run is claimed.",
+  "release_gates_not_met": [
+    "Validated recovery and reconciliation for interrupted runs and uncertain paid tool results",
+    "Independent repeated evaluations and business acceptance for a defined operational scope",
+    "Deployment security boundaries and access controls appropriate to shared use",
+    "Versioned release, automated regression, backup/restore and operational monitoring"
+  ]
+}

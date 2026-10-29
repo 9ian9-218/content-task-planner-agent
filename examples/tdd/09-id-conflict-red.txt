@@ -1,0 +1,17 @@
+test_same_request_id_with_changed_budget_is_a_conflict (tests.test_acceptance.AcceptanceTests) ... FAIL
+
+======================================================================
+FAIL: test_same_request_id_with_changed_budget_is_a_conflict (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 122, in test_same_request_id_with_changed_budget_is_a_conflict
+    self.assertEqual(result["status"], "invalid_request")
+AssertionError: 'completed' != 'invalid_request'
+- completed
++ invalid_request
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.074s
+
+FAILED (failures=1)

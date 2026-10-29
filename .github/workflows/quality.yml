@@ -1,0 +1,40 @@
+name: Offline quality gates
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONPATH: src
+      MODEL_API_KEY: ""
+      PLANNER_RUNTIME: ${{ runner.temp }}/content-planner-runtime/python/bin/python3
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install checksum-pinned Python runtime
+        run: python3 tools/bootstrap_runtime.py --destination "$RUNNER_TEMP/content-planner-runtime/python"
+      - name: Enforce runtime prerequisites
+        run: '"$PLANNER_RUNTIME" -m content_planner doctor --production'
+      - name: Regression suite
+        run: '"$PLANNER_RUNTIME" tools/verify.py'
+      - name: Offline acceptance matrix
+        run: '"$PLANNER_RUNTIME" tools/evaluate.py --mode mock --samples 20'
+      - name: CLI process contention
+        run: '"$PLANNER_RUNTIME" tools/check_stability.py --rounds 20 --clients 16'
+      - name: Process kill and recovery smoke matrix
+        run: '"$PLANNER_RUNTIME" tools/check_recovery.py --rounds 1'
+      - name: Bounded mixed-task resource smoke
+        run: '"$PLANNER_RUNTIME" tools/check_short_run.py --duration-seconds 30 --clients 8 --minimum-completed 20 --output .local/ci-short-run'

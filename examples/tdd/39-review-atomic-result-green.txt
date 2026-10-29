@@ -1,0 +1,6 @@
+test_saved_plan_remains_complete_when_the_final_snapshot_write_fails (tests.test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.060s
+
+OK

@@ -1,0 +1,6 @@
+test_task_plan_reports_dependencies_and_actual_step_states (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.103s
+
+OK

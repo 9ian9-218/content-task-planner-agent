@@ -1,0 +1,15 @@
+test_live_batch_stops_dispatching_after_provider_cooldown_instead_of_repeating_requests (tests.test_short_validation.ShortValidationTests.test_live_batch_stops_dispatching_after_provider_cooldown_instead_of_repeating_requests) ... FAIL
+
+======================================================================
+FAIL: test_live_batch_stops_dispatching_after_provider_cooldown_instead_of_repeating_requests (tests.test_short_validation.ShortValidationTests.test_live_batch_stops_dispatching_after_provider_cooldown_instead_of_repeating_requests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 258, in test_live_batch_stops_dispatching_after_provider_cooldown_instead_of_repeating_requests
+    self.assertEqual(transport.call_count, 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 16 != 1
+
+----------------------------------------------------------------------
+Ran 1 test in 1.620s
+
+FAILED (failures=1)

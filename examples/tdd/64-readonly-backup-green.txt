@@ -1,0 +1,6 @@
+test_backing_up_a_legacy_database_does_not_migrate_or_modify_its_source (tests.test_hardening.HardeningTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.161s
+
+OK

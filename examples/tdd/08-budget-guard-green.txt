@@ -1,0 +1,6 @@
+test_model_cannot_bypass_the_budget_guard (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.060s
+
+OK

@@ -1,0 +1,6 @@
+test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget (tests.test_hardening.HardeningTests.test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.293s
+
+OK

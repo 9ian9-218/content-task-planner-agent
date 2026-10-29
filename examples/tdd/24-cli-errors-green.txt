@@ -1,0 +1,6 @@
+test_cli_reports_invalid_input_and_unwritable_storage_as_json (tests.test_cli.CLITests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.719s
+
+OK

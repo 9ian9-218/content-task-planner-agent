@@ -1,0 +1,17 @@
+test_cost_first_preference_can_finish_before_the_standard_deadline (tests.test_acceptance.AcceptanceTests) ... FAIL
+
+======================================================================
+FAIL: test_cost_first_preference_can_finish_before_the_standard_deadline (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 189, in test_cost_first_preference_can_finish_before_the_standard_deadline
+    self.assertEqual(result["saved_plan"]["script"]["profile"], "economy")
+AssertionError: 'standard' != 'economy'
+- standard
++ economy
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.070s
+
+FAILED (failures=1)

@@ -1,0 +1,16 @@
+test_decision_limit_returns_incomplete_without_saving (tests.test_acceptance.AcceptanceTests) ... ERROR
+
+======================================================================
+ERROR: test_decision_limit_returns_incomplete_without_saving (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 56, in test_decision_limit_returns_incomplete_without_saving
+    planner = self.planner(max_decisions=2)
+  File "/mnt/d/xy/tests/test_acceptance.py", line 21, in planner
+    planner = Planner(db_path=self.path, as_of=AS_OF, **kwargs)
+TypeError: Planner.__init__() got an unexpected keyword argument 'max_decisions'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+FAILED (errors=1)

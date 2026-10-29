@@ -1,0 +1,6 @@
+test_live_batch_stops_dispatching_after_provider_cooldown_instead_of_repeating_requests (tests.test_short_validation.ShortValidationTests.test_live_batch_stops_dispatching_after_provider_cooldown_instead_of_repeating_requests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.294s
+
+OK

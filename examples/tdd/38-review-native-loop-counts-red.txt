@@ -1,0 +1,14 @@
+test_http_loop_completes_and_counts_only_each_runs_requests (tests.test_review.ReviewTests) ... FAIL
+
+======================================================================
+FAIL: test_http_loop_completes_and_counts_only_each_runs_requests (tests.test_review.ReviewTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 134, in test_http_loop_completes_and_counts_only_each_runs_requests
+    self.assertEqual(second["model_requests_sent"], 5)
+AssertionError: 9 != 5
+
+----------------------------------------------------------------------
+Ran 1 test in 0.168s
+
+FAILED (failures=1)

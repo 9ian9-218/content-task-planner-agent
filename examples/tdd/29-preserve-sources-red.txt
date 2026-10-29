@@ -1,0 +1,19 @@
+test_prior_sources_remain_available_after_an_empty_supplementary_search (tests.test_guards.GuardTests) ... FAIL
+
+======================================================================
+FAIL: test_prior_sources_remain_available_after_an_empty_supplementary_search (tests.test_guards.GuardTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 190, in test_prior_sources_remain_available_after_an_empty_supplementary_search
+    self.assertEqual(result["status"], "completed")
+AssertionError: 'incomplete' != 'completed'
+- incomplete
+? --
++ completed
+?         +
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.062s
+
+FAILED (failures=1)

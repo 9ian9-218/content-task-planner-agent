@@ -1,0 +1,21 @@
+{
+  "status": "failed",
+  "reason_code": "MODEL_UNAVAILABLE",
+  "details": {
+    "http_status": 503,
+    "retry_after_seconds": 299,
+    "category": "transient",
+    "retryable": true,
+    "outcome_unknown": false
+  },
+  "server_error_categories": {
+    "rate_limit_mentioned": true,
+    "cooldown_mentioned": false,
+    "capacity_mentioned": false,
+    "quota_mentioned": false
+  },
+  "checked_at": "2026-10-28T15:03:16.567604+00:00",
+  "request_cap": 1,
+  "model_requests_sent": 1,
+  "elapsed_seconds": 6.829
+}

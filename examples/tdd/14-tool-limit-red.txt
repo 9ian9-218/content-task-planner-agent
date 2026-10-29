@@ -1,0 +1,14 @@
+test_tool_limit_counts_each_action_in_a_multi_call_response (tests.test_guards.GuardTests) ... ERROR
+
+======================================================================
+ERROR: test_tool_limit_counts_each_action_in_a_multi_call_response (tests.test_guards.GuardTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 48, in test_tool_limit_counts_each_action_in_a_multi_call_response
+    planner = Planner(Path(temp) / "state.sqlite3", as_of=AS_OF, max_tool_calls=2)
+TypeError: Planner.__init__() got an unexpected keyword argument 'max_tool_calls'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (errors=1)

@@ -1,0 +1,6 @@
+test_cancel_stops_new_work_and_cannot_be_undone_by_resume (tests.test_hardening.HardeningTests.test_cancel_stops_new_work_and_cannot_be_undone_by_resume) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.448s
+
+OK

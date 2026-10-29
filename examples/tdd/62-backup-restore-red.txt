@@ -1,0 +1,43 @@
+test_verified_backup_can_restore_saved_results_without_reexecuting_the_task (tests.test_hardening.HardeningTests) ... ERROR
+
+======================================================================
+ERROR: test_verified_backup_can_restore_saved_results_without_reexecuting_the_task (tests.test_hardening.HardeningTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/argparse.py", line 1878, in parse_known_args
+    namespace, args = self._parse_known_args(args, namespace)
+  File "/usr/lib/python3.10/argparse.py", line 2073, in _parse_known_args
+    positionals_end_index = consume_positionals(start_index)
+  File "/usr/lib/python3.10/argparse.py", line 2050, in consume_positionals
+    take_action(action, args)
+  File "/usr/lib/python3.10/argparse.py", line 1939, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/usr/lib/python3.10/argparse.py", line 2484, in _get_values
+    self._check_value(action, value[0])
+  File "/usr/lib/python3.10/argparse.py", line 2531, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'backup' (choose from 'doctor', 'run')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 64, in test_verified_backup_can_restore_saved_results_without_reexecuting_the_task
+    code, receipt = invoke("backup", "--db", str(original), "--output", str(backup))
+  File "/mnt/d/xy/tests/test_hardening.py", line 22, in invoke
+    code = main(list(arguments))
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 76, in main
+    args = parser.parse_args(argv)
+  File "/usr/lib/python3.10/argparse.py", line 1845, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+  File "/usr/lib/python3.10/argparse.py", line 1881, in parse_known_args
+    self.error(str(err))
+  File "/usr/lib/python3.10/argparse.py", line 2606, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "/usr/lib/python3.10/argparse.py", line 2593, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+----------------------------------------------------------------------
+Ran 1 test in 0.082s
+
+FAILED (errors=1)

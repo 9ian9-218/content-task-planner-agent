@@ -1,0 +1,6 @@
+test_observed_over_budget_quote_changes_the_selected_profile (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.126s
+
+OK

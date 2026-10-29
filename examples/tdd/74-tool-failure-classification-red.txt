@@ -1,0 +1,15 @@
+test_invalid_tool_arguments_are_not_advertised_as_transient_retries (tests.test_hardening.HardeningTests.test_invalid_tool_arguments_are_not_advertised_as_transient_retries) ... FAIL
+
+======================================================================
+FAIL: test_invalid_tool_arguments_are_not_advertised_as_transient_retries (tests.test_hardening.HardeningTests.test_invalid_tool_arguments_are_not_advertised_as_transient_retries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 446, in test_invalid_tool_arguments_are_not_advertised_as_transient_retries
+    self.assertFalse(rejected['retryable'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.109s
+
+FAILED (failures=1)

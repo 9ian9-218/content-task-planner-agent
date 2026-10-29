@@ -1,0 +1,6 @@
+test_changing_plan_after_paid_work_keeps_the_spent_cost (tests.test_guards.GuardTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.071s
+
+OK

@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-28T16:13:20.245219+00:00",
+  "problem_number": 2,
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "tests_sha256": "fb818eb2648c054600232f05e72e7669beb3b6fb31944325ae16c84157a45c55",
+  "technical_materials_ready": true,
+  "formal_submission_ready": false,
+  "github_url": null,
+  "final_commit_sha": null,
+  "document_local_links_checked": 240,
+  "problems": [],
+  "formal_blockers": [
+    "GITHUB_URL_REQUIRED",
+    "FINAL_COMMIT_REQUIRED",
+    "REPOSITORY_VISIBILITY_UNCONFIRMED",
+    "ACTUAL_PERSONAL_TIME_UNRECORDED"
+  ],
+  "scope": "Exam delivery and declared bounded CLI validation; no assertion of production certification or independent candidate ability."
+}

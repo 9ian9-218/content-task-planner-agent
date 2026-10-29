@@ -1,0 +1,1053 @@
+{
+  "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+  "request_id": "evaluation-001",
+  "brief": {
+    "request_id": "evaluation-001",
+    "topic": "P01 字幕功能介绍",
+    "budget_units": 10,
+    "deadline": "2026-11-01T11:00:00+08:00",
+    "preference": "quality_first"
+  },
+  "input_fingerprint": "a69a6a71cf717e2feb917becc6b64f52a2fa2b6eb812b23af6b8ef6198fde1a0",
+  "as_of": "2026-11-01T10:00:00+08:00",
+  "operations": [
+    {
+      "operation_id": "07f5c024f8df4be187e72884e526f759",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "07f5c024f8df4be187e72884e526f759"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "bcfdb4167c254338be9d37d2a27b6e2c",
+      "tool": "estimate_cost",
+      "parameters": {
+        "profile": "standard",
+        "material_ids": [
+          "P01"
+        ]
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 12,
+          "projected_total_units": 12,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 2,
+          "deadline_gap_minutes": 0,
+          "feasible": false,
+          "selected": false
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "bcfdb4167c254338be9d37d2a27b6e2c"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "536c6a3153714030bd31009875114e29",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-15e11b2447113518",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "economy",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:24:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "536c6a3153714030bd31009875114e29"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "c6d29e3fa87a4e37803c01b6653a834c",
+      "tool": "generate_script",
+      "parameters": {
+        "quote_id": "q-15e11b2447113518",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "generate_script",
+        "data": {
+          "script_id": "s-15e11b2447113518",
+          "quote_id": "q-15e11b2447113518",
+          "profile": "economy",
+          "source_ids": [
+            "P01"
+          ],
+          "title": "P01 字幕功能介绍",
+          "text": "支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。",
+          "generator": "local_template",
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 8,
+        "elapsed_business_minutes": 20,
+        "operation_id": "c6d29e3fa87a4e37803c01b6653a834c"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "5d316e18e03744868975f75cf0becd68",
+      "tool": "save_plan",
+      "parameters": {
+        "quote_id": "q-15e11b2447113518",
+        "script_id": "s-15e11b2447113518",
+        "outline": "主题：P01 字幕功能介绍\\n档位：economy\\n素材：P01（合成产品 P01 字幕功能）\\n核心事实：1. 支持为视频添加字幕；2. 字幕内容可以编辑\\n脚本结构：精简事实说明 + 结尾引导\\n预计费用：8 单位（预算 10 单位内）\\n预计完成：2026-11-01T10:24:00+08:00（截止前）"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "save_plan",
+        "data": {
+          "plan_id": "plan-24519e5d534c4513beba762c4add7273",
+          "request_id": "evaluation-001",
+          "goal": "P01 字幕功能介绍",
+          "outline": "主题：P01 字幕功能介绍\\n档位：economy\\n素材：P01（合成产品 P01 字幕功能）\\n核心事实：1. 支持为视频添加字幕；2. 字幕内容可以编辑\\n脚本结构：精简事实说明 + 结尾引导\\n预计费用：8 单位（预算 10 单位内）\\n预计完成：2026-11-01T10:24:00+08:00（截止前）",
+          "script": {
+            "script_id": "s-15e11b2447113518",
+            "quote_id": "q-15e11b2447113518",
+            "profile": "economy",
+            "source_ids": [
+              "P01"
+            ],
+            "title": "P01 字幕功能介绍",
+            "text": "支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。",
+            "generator": "local_template",
+            "selected": true
+          },
+          "source_ids": [
+            "P01"
+          ],
+          "cost_units": 8,
+          "saved_at": "2026-11-01T10:24:00+08:00",
+          "tasks": [
+            {
+              "task": "search_materials",
+              "depends_on": [],
+              "status": "succeeded"
+            },
+            {
+              "task": "estimate_cost",
+              "depends_on": [
+                "search_materials"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "generate_script",
+              "depends_on": [
+                "estimate_cost"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "save_plan",
+              "depends_on": [
+                "generate_script"
+              ],
+              "status": "succeeded"
+            }
+          ]
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "5d316e18e03744868975f75cf0becd68"
+      },
+      "selected": true
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "model_mode": "live",
+      "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+      "tool_call_id": "toolu_vrtx_011D8BkjDMPeg36g3pyGcMBZ",
+      "decision_index": 1,
+      "recorded_at": "2026-10-28T08:58:55.986822+00:00",
+      "action_source": "remote_model",
+      "tool": "search_materials",
+      "parameters": {
+        "decision_summary": "根据任务主题检索P01字幕功能的相关素材与事实资料。",
+        "query": "P01 字幕功能介绍"
+      },
+      "decision_summary": "根据任务主题检索P01字幕功能的相关素材与事实资料。",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "07f5c024f8df4be187e72884e526f759"
+      },
+      "observed_after_step": null
+    },
+    {
+      "step": 2,
+      "model_mode": "live",
+      "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+      "tool_call_id": "toolu_vrtx_011TuHKs72YsiaCLxVL8EfnE",
+      "decision_index": 2,
+      "recorded_at": "2026-10-28T08:59:01.459658+00:00",
+      "action_source": "remote_model",
+      "tool": "estimate_cost",
+      "parameters": {
+        "profile": "standard",
+        "decision_summary": "quality_first偏好，优先询价standard档位，确认是否在10单位预算内。",
+        "material_ids": [
+          "P01"
+        ]
+      },
+      "decision_summary": "quality_first偏好，优先询价standard档位，确认是否在10单位预算内。",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 12,
+          "projected_total_units": 12,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 2,
+          "deadline_gap_minutes": 0,
+          "feasible": false,
+          "selected": false
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "bcfdb4167c254338be9d37d2a27b6e2c"
+      },
+      "observed_after_step": 1
+    },
+    {
+      "step": 3,
+      "model_mode": "live",
+      "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+      "tool_call_id": "toolu_vrtx_012whD197bFH13FiVRimfGcA",
+      "decision_index": 3,
+      "recorded_at": "2026-10-28T08:59:06.344347+00:00",
+      "action_source": "remote_model",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy",
+        "decision_summary": "standard超预算，改询economy档位以尝试在10单位预算内完成。"
+      },
+      "decision_summary": "standard超预算，改询economy档位以尝试在10单位预算内完成。",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-15e11b2447113518",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "economy",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:24:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "536c6a3153714030bd31009875114e29"
+      },
+      "observed_after_step": 2
+    },
+    {
+      "step": 4,
+      "model_mode": "live",
+      "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+      "tool_call_id": "toolu_vrtx_014ryGjqwiSrFk6hMHt5LSNr",
+      "decision_index": 4,
+      "recorded_at": "2026-10-28T08:59:12.945613+00:00",
+      "action_source": "remote_model",
+      "tool": "generate_script",
+      "parameters": {
+        "decision_summary": "standard超预算，economy可行（8单位），用economy档位生成脚本。",
+        "quote_id": "q-15e11b2447113518",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy"
+      },
+      "decision_summary": "standard超预算，economy可行（8单位），用economy档位生成脚本。",
+      "result": {
+        "ok": true,
+        "tool_name": "generate_script",
+        "data": {
+          "script_id": "s-15e11b2447113518",
+          "quote_id": "q-15e11b2447113518",
+          "profile": "economy",
+          "source_ids": [
+            "P01"
+          ],
+          "title": "P01 字幕功能介绍",
+          "text": "支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。",
+          "generator": "local_template",
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 8,
+        "elapsed_business_minutes": 20,
+        "operation_id": "c6d29e3fa87a4e37803c01b6653a834c"
+      },
+      "observed_after_step": 3
+    },
+    {
+      "step": 5,
+      "model_mode": "live",
+      "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+      "tool_call_id": "toolu_vrtx_013bTCYL7cpQjWDF2GrLKJd5",
+      "decision_index": 5,
+      "recorded_at": "2026-10-28T08:59:20.161066+00:00",
+      "action_source": "remote_model",
+      "tool": "save_plan",
+      "parameters": {
+        "decision_summary": "脚本与报价均已确认，保存economy方案完成任务。",
+        "quote_id": "q-15e11b2447113518",
+        "script_id": "s-15e11b2447113518",
+        "outline": "主题：P01 字幕功能介绍\\n档位：economy\\n素材：P01（合成产品 P01 字幕功能）\\n核心事实：1. 支持为视频添加字幕；2. 字幕内容可以编辑\\n脚本结构：精简事实说明 + 结尾引导\\n预计费用：8 单位（预算 10 单位内）\\n预计完成：2026-11-01T10:24:00+08:00（截止前）"
+      },
+      "decision_summary": "脚本与报价均已确认，保存economy方案完成任务。",
+      "result": {
+        "ok": true,
+        "tool_name": "save_plan",
+        "data": {
+          "plan_id": "plan-24519e5d534c4513beba762c4add7273",
+          "request_id": "evaluation-001",
+          "goal": "P01 字幕功能介绍",
+          "outline": "主题：P01 字幕功能介绍\\n档位：economy\\n素材：P01（合成产品 P01 字幕功能）\\n核心事实：1. 支持为视频添加字幕；2. 字幕内容可以编辑\\n脚本结构：精简事实说明 + 结尾引导\\n预计费用：8 单位（预算 10 单位内）\\n预计完成：2026-11-01T10:24:00+08:00（截止前）",
+          "script": {
+            "script_id": "s-15e11b2447113518",
+            "quote_id": "q-15e11b2447113518",
+            "profile": "economy",
+            "source_ids": [
+              "P01"
+            ],
+            "title": "P01 字幕功能介绍",
+            "text": "支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。",
+            "generator": "local_template",
+            "selected": true
+          },
+          "source_ids": [
+            "P01"
+          ],
+          "cost_units": 8,
+          "saved_at": "2026-11-01T10:24:00+08:00",
+          "tasks": [
+            {
+              "task": "search_materials",
+              "depends_on": [],
+              "status": "succeeded"
+            },
+            {
+              "task": "estimate_cost",
+              "depends_on": [
+                "search_materials"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "generate_script",
+              "depends_on": [
+                "estimate_cost"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "save_plan",
+              "depends_on": [
+                "generate_script"
+              ],
+              "status": "succeeded"
+            }
+          ]
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "5d316e18e03744868975f75cf0becd68"
+      },
+      "observed_after_step": 4
+    }
+  ],
+  "materials": [
+    {
+      "id": "P01",
+      "title": "合成产品 P01 字幕功能",
+      "keywords": [
+        "P01",
+        "字幕",
+        "短视频",
+        "新手"
+      ],
+      "facts": [
+        "支持为视频添加字幕",
+        "字幕内容可以编辑"
+      ]
+    }
+  ],
+  "quotes": {
+    "q-639812bb6e3e92a9": {
+      "quote_id": "q-639812bb6e3e92a9",
+      "material_ids": [
+        "P01"
+      ],
+      "profile": "standard",
+      "remaining_units": 12,
+      "projected_total_units": 12,
+      "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+      "budget_gap_units": 2,
+      "deadline_gap_minutes": 0,
+      "feasible": false,
+      "selected": false
+    },
+    "q-15e11b2447113518": {
+      "quote_id": "q-15e11b2447113518",
+      "material_ids": [
+        "P01"
+      ],
+      "profile": "economy",
+      "remaining_units": 8,
+      "projected_total_units": 8,
+      "estimated_finish_at": "2026-11-01T10:24:00+08:00",
+      "budget_gap_units": 0,
+      "deadline_gap_minutes": 0,
+      "feasible": true,
+      "selected": true
+    }
+  },
+  "scripts": {
+    "s-15e11b2447113518": {
+      "script_id": "s-15e11b2447113518",
+      "quote_id": "q-15e11b2447113518",
+      "profile": "economy",
+      "source_ids": [
+        "P01"
+      ],
+      "title": "P01 字幕功能介绍",
+      "text": "支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。",
+      "generator": "local_template",
+      "selected": true
+    }
+  },
+  "plan_id": "plan-24519e5d534c4513beba762c4add7273",
+  "saved_plan": {
+    "plan_id": "plan-24519e5d534c4513beba762c4add7273",
+    "request_id": "evaluation-001",
+    "goal": "P01 字幕功能介绍",
+    "outline": "主题：P01 字幕功能介绍\\n档位：economy\\n素材：P01（合成产品 P01 字幕功能）\\n核心事实：1. 支持为视频添加字幕；2. 字幕内容可以编辑\\n脚本结构：精简事实说明 + 结尾引导\\n预计费用：8 单位（预算 10 单位内）\\n预计完成：2026-11-01T10:24:00+08:00（截止前）",
+    "script": {
+      "script_id": "s-15e11b2447113518",
+      "quote_id": "q-15e11b2447113518",
+      "profile": "economy",
+      "source_ids": [
+        "P01"
+      ],
+      "title": "P01 字幕功能介绍",
+      "text": "支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。",
+      "generator": "local_template",
+      "selected": true
+    },
+    "source_ids": [
+      "P01"
+    ],
+    "cost_units": 8,
+    "saved_at": "2026-11-01T10:24:00+08:00",
+    "tasks": [
+      {
+        "task": "search_materials",
+        "depends_on": [],
+        "status": "succeeded"
+      },
+      {
+        "task": "estimate_cost",
+        "depends_on": [
+          "search_materials"
+        ],
+        "status": "succeeded"
+      },
+      {
+        "task": "generate_script",
+        "depends_on": [
+          "estimate_cost"
+        ],
+        "status": "succeeded"
+      },
+      {
+        "task": "save_plan",
+        "depends_on": [
+          "generate_script"
+        ],
+        "status": "succeeded"
+      }
+    ]
+  },
+  "status": "completed",
+  "reason_code": null,
+  "model_mode": "live",
+  "model_decisions": 5,
+  "errors": [],
+  "cached": false,
+  "missing_fields": [],
+  "invalid_fields": [],
+  "decisions": [
+    {
+      "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+      "decision_index": 1,
+      "recorded_at": "2026-10-28T08:58:55.986606+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": null,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_011D8BkjDMPeg36g3pyGcMBZ",
+          "type": "function",
+          "function": {
+            "name": "search_materials",
+            "arguments": "{\"decision_summary\":\"根据任务主题检索P01字幕功能的相关素材与事实资料。\",\"query\":\"P01 字幕功能介绍\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 2926,
+        "completion_tokens": 340,
+        "total_tokens": 3266
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+      "decision_index": 2,
+      "recorded_at": "2026-10-28T08:59:01.459266+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 1,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_011TuHKs72YsiaCLxVL8EfnE",
+          "type": "function",
+          "function": {
+            "name": "estimate_cost",
+            "arguments": "{\"profile\":\"standard\",\"decision_summary\":\"quality_first偏好，优先询价standard档位，确认是否在10单位预算内。\",\"material_ids\":[\"P01\"]}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 3435,
+        "completion_tokens": 174,
+        "total_tokens": 3609
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+      "decision_index": 3,
+      "recorded_at": "2026-10-28T08:59:06.344000+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 2,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_012whD197bFH13FiVRimfGcA",
+          "type": "function",
+          "function": {
+            "name": "estimate_cost",
+            "arguments": "{\"material_ids\":[\"P01\"],\"profile\":\"economy\",\"decision_summary\":\"standard超预算，改询economy档位以尝试在10单位预算内完成。\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 3777,
+        "completion_tokens": 167,
+        "total_tokens": 3944
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+      "decision_index": 4,
+      "recorded_at": "2026-10-28T08:59:12.945158+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 3,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_014ryGjqwiSrFk6hMHt5LSNr",
+          "type": "function",
+          "function": {
+            "name": "generate_script",
+            "arguments": "{\"decision_summary\":\"standard超预算，economy可行（8单位），用economy档位生成脚本。\",\"quote_id\":\"q-15e11b2447113518\",\"material_ids\":[\"P01\"],\"profile\":\"economy\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 4108,
+        "completion_tokens": 181,
+        "total_tokens": 4289
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "29bb1c1be0d94dcda071d73758e47de8",
+      "decision_index": 5,
+      "recorded_at": "2026-10-28T08:59:20.159294+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 4,
+      "tool_calls": [
+        {
+          "id": "toolu_vrtx_013bTCYL7cpQjWDF2GrLKJd5",
+          "type": "function",
+          "function": {
+            "name": "save_plan",
+            "arguments": "{\"decision_summary\":\"脚本与报价均已确认，保存economy方案完成任务。\",\"quote_id\":\"q-15e11b2447113518\",\"script_id\":\"s-15e11b2447113518\",\"outline\":\"主题：P01 字幕功能介绍\\\\n档位：economy\\\\n素材：P01（合成产品 P01 字幕功能）\\\\n核心事实：1. 支持为视频添加字幕；2. 字幕内容可以编辑\\\\n脚本结构：精简事实说明 + 结尾引导\\\\n预计费用：8 单位（预算 10 单位内）\\\\n预计完成：2026-11-01T10:24:00+08:00（截止前）\"}"
+          }
+        }
+      ],
+      "finish": null,
+      "response_model": "claude-opus-4-6-thinking",
+      "usage": {
+        "prompt_tokens": 4488,
+        "completion_tokens": 309,
+        "total_tokens": 4797
+      },
+      "system_fingerprint": null
+    }
+  ],
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "executed_at": "2026-10-28T08:58:49.512550+00:00",
+  "catalog_snapshot": {
+    "version": "synthetic-tools-v1",
+    "free_tool_minutes": 1,
+    "failure_units": 0,
+    "failure_minutes": 1,
+    "profiles": {
+      "standard": {
+        "units": 12,
+        "minutes": 40,
+        "description": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价"
+      },
+      "economy": {
+        "units": 8,
+        "minutes": 20,
+        "description": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+      }
+    }
+  },
+  "materials_snapshot": {
+    "version": "synthetic-materials-v1",
+    "materials": [
+      {
+        "id": "P01",
+        "title": "合成产品 P01 字幕功能",
+        "keywords": [
+          "P01",
+          "字幕",
+          "短视频",
+          "新手"
+        ],
+        "facts": [
+          "支持为视频添加字幕",
+          "字幕内容可以编辑"
+        ]
+      },
+      {
+        "id": "P02",
+        "title": "合成产品 P02 模板功能",
+        "keywords": [
+          "P02",
+          "模板",
+          "旅行"
+        ],
+        "facts": [
+          "提供旅行主题视频模板",
+          "支持替换模板内的图片"
+        ]
+      }
+    ]
+  },
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "01540cb2dffd50f45681cb41453a8e67530d2610a8739dc2259159e75df25dd7",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "elapsed_seconds": 29.243322,
+  "runtime_limit_seconds": 180,
+  "runtime_limit_exceeded": false,
+  "finished_at": "2026-10-28T08:59:20.178193+00:00",
+  "model_requests_sent": 5,
+  "tool_attempts": 5,
+  "cost": {
+    "spent_units": 8,
+    "remaining_units": 0,
+    "projected_total_units": 8,
+    "budget_units": 10,
+    "budget_gap_units": 0
+  },
+  "business_now": "2026-11-01T10:24:00+08:00",
+  "estimated_finish_at": "2026-11-01T10:24:00+08:00",
+  "steps": [
+    {
+      "operation_id": "07f5c024f8df4be187e72884e526f759",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "07f5c024f8df4be187e72884e526f759"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "bcfdb4167c254338be9d37d2a27b6e2c",
+      "tool": "estimate_cost",
+      "parameters": {
+        "profile": "standard",
+        "material_ids": [
+          "P01"
+        ]
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 12,
+          "projected_total_units": 12,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 2,
+          "deadline_gap_minutes": 0,
+          "feasible": false,
+          "selected": false
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "bcfdb4167c254338be9d37d2a27b6e2c"
+      },
+      "selected": false
+    },
+    {
+      "operation_id": "536c6a3153714030bd31009875114e29",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-15e11b2447113518",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "economy",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:24:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "536c6a3153714030bd31009875114e29"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "c6d29e3fa87a4e37803c01b6653a834c",
+      "tool": "generate_script",
+      "parameters": {
+        "quote_id": "q-15e11b2447113518",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "economy"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "generate_script",
+        "data": {
+          "script_id": "s-15e11b2447113518",
+          "quote_id": "q-15e11b2447113518",
+          "profile": "economy",
+          "source_ids": [
+            "P01"
+          ],
+          "title": "P01 字幕功能介绍",
+          "text": "支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。",
+          "generator": "local_template",
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 8,
+        "elapsed_business_minutes": 20,
+        "operation_id": "c6d29e3fa87a4e37803c01b6653a834c"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "5d316e18e03744868975f75cf0becd68",
+      "tool": "save_plan",
+      "parameters": {
+        "quote_id": "q-15e11b2447113518",
+        "script_id": "s-15e11b2447113518",
+        "outline": "主题：P01 字幕功能介绍\\n档位：economy\\n素材：P01（合成产品 P01 字幕功能）\\n核心事实：1. 支持为视频添加字幕；2. 字幕内容可以编辑\\n脚本结构：精简事实说明 + 结尾引导\\n预计费用：8 单位（预算 10 单位内）\\n预计完成：2026-11-01T10:24:00+08:00（截止前）"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "save_plan",
+        "data": {
+          "plan_id": "plan-24519e5d534c4513beba762c4add7273",
+          "request_id": "evaluation-001",
+          "goal": "P01 字幕功能介绍",
+          "outline": "主题：P01 字幕功能介绍\\n档位：economy\\n素材：P01（合成产品 P01 字幕功能）\\n核心事实：1. 支持为视频添加字幕；2. 字幕内容可以编辑\\n脚本结构：精简事实说明 + 结尾引导\\n预计费用：8 单位（预算 10 单位内）\\n预计完成：2026-11-01T10:24:00+08:00（截止前）",
+          "script": {
+            "script_id": "s-15e11b2447113518",
+            "quote_id": "q-15e11b2447113518",
+            "profile": "economy",
+            "source_ids": [
+              "P01"
+            ],
+            "title": "P01 字幕功能介绍",
+            "text": "支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。",
+            "generator": "local_template",
+            "selected": true
+          },
+          "source_ids": [
+            "P01"
+          ],
+          "cost_units": 8,
+          "saved_at": "2026-11-01T10:24:00+08:00",
+          "tasks": [
+            {
+              "task": "search_materials",
+              "depends_on": [],
+              "status": "succeeded"
+            },
+            {
+              "task": "estimate_cost",
+              "depends_on": [
+                "search_materials"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "generate_script",
+              "depends_on": [
+                "estimate_cost"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "save_plan",
+              "depends_on": [
+                "generate_script"
+              ],
+              "status": "succeeded"
+            }
+          ]
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "5d316e18e03744868975f75cf0becd68"
+      },
+      "selected": true
+    }
+  ],
+  "task_plan": [
+    {
+      "task": "search_materials",
+      "depends_on": [],
+      "status": "succeeded"
+    },
+    {
+      "task": "estimate_cost",
+      "depends_on": [
+        "search_materials"
+      ],
+      "status": "succeeded"
+    },
+    {
+      "task": "generate_script",
+      "depends_on": [
+        "estimate_cost"
+      ],
+      "status": "succeeded"
+    },
+    {
+      "task": "save_plan",
+      "depends_on": [
+        "generate_script"
+      ],
+      "status": "succeeded"
+    }
+  ],
+  "save_status": "saved"
+}

@@ -1,0 +1,29 @@
+{
+  "executed_at": "2026-10-28T08:39:26.082889+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C03-save-failure",
+  "mode": "live",
+  "python": "3.10.12",
+  "source_sha256": "7620870acf9e671183a8522ad9c4aebcc3b3c354d101592528539fd0a39d1217",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {
+    "failures": {
+      "save_plan": "always"
+    }
+  },
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "actual_result_mode": "live",
+  "model_requests_sent": 7,
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "18fa9336b4c9d6bb1b96813adae74b21c1973f7ca3d50e9b2842eea2e876e48e"
+}

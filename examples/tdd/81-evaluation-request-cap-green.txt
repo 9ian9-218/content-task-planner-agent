@@ -1,0 +1,6 @@
+test_shared_evaluation_budget_stops_network_dispatch_across_model_instances (tests.test_hardening.HardeningTests.test_shared_evaluation_budget_stops_network_dispatch_across_model_instances) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.146s
+
+OK

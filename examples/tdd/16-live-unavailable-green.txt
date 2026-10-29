@@ -1,0 +1,6 @@
+test_live_without_credentials_returns_incomplete_and_never_falls_back (tests.test_model.ModelTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.037s
+
+OK

@@ -1,0 +1,14 @@
+test_changing_plan_after_paid_work_keeps_the_spent_cost (tests.test_guards.GuardTests) ... FAIL
+
+======================================================================
+FAIL: test_changing_plan_after_paid_work_keeps_the_spent_cost (tests.test_guards.GuardTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 111, in test_changing_plan_after_paid_work_keeps_the_spent_cost
+    self.assertEqual(result["cost"]["projected_total_units"], 16)
+AssertionError: 8 != 16
+
+----------------------------------------------------------------------
+Ran 1 test in 0.096s
+
+FAILED (failures=1)

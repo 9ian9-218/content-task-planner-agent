@@ -1,0 +1,147 @@
+{
+  "assessed_at": "2026-10-28T14:26:13.486943+00:00",
+  "assessment_type": "Evidence-based self-assessment, not certification, an independent audit or calibrated probability",
+  "target_context": "Enterprise internal shared use over time, with possible real paid business tools; only save plans, no real publishing",
+  "scope_note": "CLI, SQLite and a native agent loop are acceptable technologies; missing production capabilities are judged for the target context, not automatically defects of the campus MVP.",
+  "source_sha256": "e67aefae347f6b9cc797fe09981ddf16b161782b46b5fa384bbe39150f94ef25",
+  "weights_total": 100,
+  "weighted_score": 72.26,
+  "display_score": 72,
+  "production_ready": false,
+  "campus_technical_artifact_reference_score": 90,
+  "campus_score_note": "Subjective reference for the technical artifact only, not an official exam grade or evidence of independent candidate ability. Mandatory GitHub submission remains incomplete.",
+  "dimensions": [
+    {
+      "dimension": "业务适配",
+      "weight": 12,
+      "score": 75,
+      "strength": "题面闭环和全部必须验收有合成资料证据",
+      "gap": "没有真实运营人员验收、实际素材/费用/交付集成",
+      "weighted_points": 9.0
+    },
+    {
+      "dimension": "Agent 动态决策",
+      "weight": 10,
+      "score": 80,
+      "strength": "真实模型对报价变化重规划，对保存失败重试或停止",
+      "gap": "决策空间只有两档，未有独立重复留出评估",
+      "weighted_points": 8.0
+    },
+    {
+      "dimension": "约束与状态正确性",
+      "weight": 12,
+      "score": 91,
+      "strength": "预算/时间/依赖守卫、原子保存、跨续跑累计限额、取消登记竞态修复",
+      "gap": "尚无真实远端副作用与账单确认",
+      "weighted_points": 10.92
+    },
+    {
+      "dimension": "架构与可维护性",
+      "weight": 10,
+      "score": 76,
+      "strength": "标准库和稳定公开接口，存储/runtime 与业务分开",
+      "gap": "核心 _run 314 行，状态字典和异常路径增加；仍需逐步压缩控制流",
+      "weighted_points": 7.6
+    },
+    {
+      "dimension": "测试与 AI 效果评估",
+      "weight": 14,
+      "score": 81,
+      "strength": "89 测试、320 次 CLI 竞争、80 次强杀，当前 3 组真实复测与历史 18+2",
+      "gap": "没有独立 50 需求组、30x3 真实重复，也未在当前源码重跑完整 18+2",
+      "weighted_points": 11.34
+    },
+    {
+      "dimension": "可靠性与恢复",
+      "weight": 12,
+      "score": 74,
+      "strength": "心跳、代次隔离、已确认决定重放、未知结果阻断、一致备份和恢复",
+      "gap": "远端对账、失败迁移注入、生产规模恢复和持续运行待验证；冻结写锁需人工处置",
+      "weighted_points": 8.88
+    },
+    {
+      "dimension": "安全与权限",
+      "weight": 12,
+      "score": 50,
+      "strength": "受限输入、错误分类、原子导出索引、密钥忽略和扫描",
+      "gap": "本机 ACL/留存和部署传输保护未获证明，共享身份授权尚未实现",
+      "weighted_points": 6.0
+    },
+    {
+      "dimension": "性能、成本与扩展",
+      "weight": 8,
+      "score": 58,
+      "strength": "同库默认两个活跃任务，16x20竞争通过，批次请求硬上限和用量报告",
+      "gap": "没有持续负载、生产 P95/P99、货币成本门槛和 Token 派发阈值",
+      "weighted_points": 4.64
+    },
+    {
+      "dimension": "可观测性与运维",
+      "weight": 6,
+      "score": 58,
+      "strength": "只读 status、持久化取消、在途意图、动作ID与运行手册",
+      "gap": "缺长期指标、告警、备份周期和运维负责人演练",
+      "weighted_points": 3.48
+    },
+    {
+      "dimension": "发布与交付",
+      "weight": 4,
+      "score": 60,
+      "strength": "固定原生 Linux 运行时和摘要，离线 CI 定义、升级/回滚说明已准备",
+      "gap": "CI 尚未在 GitHub 执行；挂载目录安装失败待诊断；GitHub URL/SHA 与个人贡献仍缺",
+      "weighted_points": 2.4
+    }
+  ],
+  "framework_references": [
+    {
+      "name": "ISO/IEC 25010:2023",
+      "url": "https://www.iso.org/standard/78176.html",
+      "use": "Product quality reference; no full conformance evaluation performed"
+    },
+    {
+      "name": "NIST AI RMF Core / Measure",
+      "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "use": "AI measurement, uncertainty and operational reevaluation"
+    },
+    {
+      "name": "Google SRE Production Readiness Review",
+      "url": "https://sre.google/sre-book/evolving-sre-engagement-model/",
+      "use": "Production and operational readiness"
+    },
+    {
+      "name": "OWASP ASVS 5.0",
+      "url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "use": "Relevant controls if the CLI is extended into a shared network service; not an ASVS certification"
+    }
+  ],
+  "method": "Each dimension 0-100. Total = sum(weight * score / 100). Weights and scores are reviewer judgments, not weights prescribed by the cited frameworks.",
+  "evidence": {
+    "tests": "examples/test-summary.json",
+    "offline": "examples/evaluation-summary.json",
+    "live_smoke": "examples/live-evaluation-summary.json",
+    "historical_live_matrix": "examples/hardening/pre-change/live-evaluation-summary.json",
+    "historical_adversarial": "examples/hardening/pre-change/adversarial-summary.json",
+    "contention": "examples/hardening/concurrency.json",
+    "crash_recovery": "examples/hardening/recovery/summary.json",
+    "credential_scan": "examples/credential-check.json",
+    "quality_gates": "docs/stability-backlog.json"
+  },
+  "new_model_gateway_requests_for_this_assessment": 0,
+  "verification_note": "Current source: 89/89 deterministic regressions, 18/18 offline cases, 3/3 bounded live smoke, 16x20 CLI contention, 8x10 process-kill recovery; remaining gates explicit.",
+  "release_gates_not_met": [
+    "Full 18+2 live matrix has historical proof, not a rerun on this revision",
+    "Independent held-out 50 demand groups / 30 live groups x 3 repeats",
+    "24-hour / 10000-task soak and resource trend measurements",
+    "Remote paid-operation reconciliation and validated billing prices",
+    "Full context/policy versioning and failed-migration rollback injection",
+    "Production-scale restore, scheduled backups, permissions and deployment transport proof",
+    "GitHub-hosted CI execution, final repository URL / commit SHA and candidate contribution log"
+  ],
+  "baseline_score": 66.18,
+  "baseline_source_sha256": "42fff7eb6c739b91750b5433b2a3337d5dba7d692886f417bc6f645156be57eb",
+  "baseline_evidence": "examples/hardening/pre-change/industrial-scorecard.json",
+  "is_historical_assessment": true,
+  "current_delivery_source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "current_delivery_report": "docs/19-delivery-report.md",
+  "scope_change_note": "Previous long-term shared-production score retained, not converted into an exam grade or increased by reducing the evaluation scope."
+}

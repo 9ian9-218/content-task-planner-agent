@@ -1,0 +1,54 @@
+{
+  "executed_at": "2026-10-28T15:23:22.146042+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C04-replan-budget",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "909349a1fc35ff6dc2ef8a7534e98e05a9649e9e88bebb951d9c6266261fd10e",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {
+    "profiles": {
+      "standard": {
+        "units": 12
+      }
+    }
+  },
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "wb/hy3",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "action_source": "remote_model",
+  "actual_result_mode": "live",
+  "model_requests_sent": 5,
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "01540cb2dffd50f45681cb41453a8e67530d2610a8739dc2259159e75df25dd7",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "token_usage": {
+    "prompt_tokens": 8655,
+    "completion_tokens": 649,
+    "total_tokens": 9304,
+    "reported_responses": 5,
+    "accepted_responses": 5,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [
+    "wb/hy3"
+  ],
+  "export_id": "4f9f4e6c5f9a4c7dba4f6f8e7074033d",
+  "artifacts_sha256": {
+    "decisions.jsonl": "59bc9952dd0fce6e4a632311243fc3c48b248ef8ff6e770f5f87e6e8846a1adf",
+    "input.json": "889123ebd81e4f56e844c1bb796ee6822d9a9747262dc2684c6ac44f7cc01b26",
+    "output.json": "db8b94b48603c38d4d799a47b562197ac0e151b89787f41a63b067d7e4a5644d",
+    "plan.md": "ae68fbe5904d663b96a1ab3ba6bdba782de1abbb1b18576910c2a2fc6c31706b",
+    "trace.jsonl": "3bf799273e362f23831ad7d25076fcb7a57ddc94b54b21490dc17b12628ee9e5",
+    "trace.md": "b1dec723f12f6dd6a62ddc7aaaf440f6e131aef04e3a8f2008c07e1c5dce206d"
+  }
+}

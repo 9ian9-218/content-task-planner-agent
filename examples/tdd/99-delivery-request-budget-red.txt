@@ -1,0 +1,86 @@
+test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) ... 
+  test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='live', sent=10, remaining=15) ... FAIL
+  test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='live', sent=True, remaining=23) ... FAIL
+  test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='adversarial', sent=25, remaining=0) ... FAIL
+  test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='adversarial', sent=10, remaining=15) ... FAIL
+  test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='adversarial', sent=True, remaining=23) ... FAIL
+  test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='replanning', sent=25, remaining=0) ... FAIL
+  test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='replanning', sent=10, remaining=15) ... FAIL
+  test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='replanning', sent=True, remaining=23) ... FAIL
+
+======================================================================
+FAIL: test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='live', sent=10, remaining=15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 41, in test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets
+    self.assertFalse(audit['reports'][label]['passed'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='live', sent=True, remaining=23)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 41, in test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets
+    self.assertFalse(audit['reports'][label]['passed'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='adversarial', sent=25, remaining=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 41, in test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets
+    self.assertFalse(audit['reports'][label]['passed'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='adversarial', sent=10, remaining=15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 41, in test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets
+    self.assertFalse(audit['reports'][label]['passed'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='adversarial', sent=True, remaining=23)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 41, in test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets
+    self.assertFalse(audit['reports'][label]['passed'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='replanning', sent=25, remaining=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 41, in test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets
+    self.assertFalse(audit['reports'][label]['passed'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='replanning', sent=10, remaining=15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 41, in test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets
+    self.assertFalse(audit['reports'][label]['passed'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) (report='replanning', sent=True, remaining=23)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 41, in test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets
+    self.assertFalse(audit['reports'][label]['passed'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 12.294s
+
+FAILED (failures=8)

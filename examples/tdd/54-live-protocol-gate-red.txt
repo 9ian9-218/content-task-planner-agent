@@ -1,0 +1,14 @@
+test_report_rejects_a_protocol_failure_even_after_an_actual_save_failure (tests.test_live_evaluation.LiveEvaluationTests) ... FAIL
+
+======================================================================
+FAIL: test_report_rejects_a_protocol_failure_even_after_an_actual_save_failure (tests.test_live_evaluation.LiveEvaluationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_live_evaluation.py", line 46, in test_report_rejects_a_protocol_failure_even_after_an_actual_save_failure
+    self.assertFalse(all(checks.values()))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.084s
+
+FAILED (failures=1)

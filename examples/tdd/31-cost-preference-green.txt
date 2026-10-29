@@ -1,0 +1,6 @@
+test_cost_first_preference_can_finish_before_the_standard_deadline (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.071s
+
+OK

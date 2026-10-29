@@ -1,0 +1,6 @@
+test_invalid_tool_arguments_are_not_advertised_as_transient_retries (tests.test_hardening.HardeningTests.test_invalid_tool_arguments_are_not_advertised_as_transient_retries) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.165s
+
+OK

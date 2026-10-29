@@ -1,0 +1,17 @@
+test_empty_materials_request_more_information_without_generating (tests.test_acceptance.AcceptanceTests) ... FAIL
+
+======================================================================
+FAIL: test_empty_materials_request_more_information_without_generating (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 150, in test_empty_materials_request_more_information_without_generating
+    self.assertEqual(result["status"], "needs_input")
+AssertionError: 'completed' != 'needs_input'
+- completed
++ needs_input
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.076s
+
+FAILED (failures=1)

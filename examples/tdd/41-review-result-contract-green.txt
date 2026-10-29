@@ -1,0 +1,6 @@
+test_error_results_preserve_identity_and_a_consistent_public_shape (tests.test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.320s
+
+OK

@@ -1,0 +1,6 @@
+test_material_permutations_reuse_one_paid_script (tests.test_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.076s
+
+OK

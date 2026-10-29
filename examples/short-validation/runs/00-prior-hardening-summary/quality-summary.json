@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-10-28T14:21:50.821900+00:00",
+  "source_sha256": "e67aefae347f6b9cc797fe09981ddf16b161782b46b5fa384bbe39150f94ef25",
+  "scope": "Single-host Linux CLI, one state database and local synthetic business tools; not production certification",
+  "production_ready": false,
+  "tests": {
+    "run": 89,
+    "passed": 89,
+    "skipped": 0,
+    "inputs_unchanged": true,
+    "evidence": "../test-summary.json"
+  },
+  "offline_acceptance": {
+    "passed": 18,
+    "total": 18,
+    "evidence": "../evaluation-summary.json"
+  },
+  "same_source_live_smoke": {
+    "passed": 3,
+    "total": 3,
+    "requests": 16,
+    "request_cap": 24,
+    "reported_tokens": 66496,
+    "evidence": "../live-evaluation-summary.json"
+  },
+  "process_contention": {
+    "rounds": 20,
+    "clients_per_round": 16,
+    "client_runs": 320,
+    "rounds_passed": 20,
+    "evidence": "concurrency.json"
+  },
+  "crash_recovery": {
+    "positions": 8,
+    "rounds_per_position": 10,
+    "passed": 80,
+    "total": 80,
+    "model_mode": "controlled_model_fixture",
+    "real_requests": 0,
+    "evidence": "recovery/summary.json"
+  },
+  "tdd": {
+    "paired_slices": 84,
+    "actual_commands": 175,
+    "note": "Includes one actual multi-process integration red/green pair recorded after execution; remaining ledger entries are actual unittest commands."
+  },
+  "remaining_release_gaps": [
+    "Full 18+2 live matrix has historical proof, not a rerun on this revision",
+    "Independent held-out 50 demand groups / 30 live groups x 3 repeats",
+    "24-hour / 10000-task soak and resource trend measurements",
+    "Remote paid-operation reconciliation and validated billing prices",
+    "Full context/policy versioning and failed-migration rollback injection",
+    "Production-scale restore, scheduled backups, permissions and deployment transport proof",
+    "GitHub-hosted CI execution, final repository URL / commit SHA and candidate contribution log"
+  ],
+  "failure_evidence": [
+    "concurrency-before-fix.json",
+    "paused-writer-lock-failure/test-summary.json",
+    "../tdd/84-cancellation-admission-race-red.txt",
+    "../live/runs/04-hardening-cap-red-blocked/evaluation-summary.json"
+  ],
+  "runtime": "runtime-check.json",
+  "test_files_sha256": "efe5bbf890940c3da0698cb2fcc6fb1a947af3446f25a5a06e88d8395ffb4628",
+  "verification_tools_sha256": "c6571a809c2ff354ce141b857121b9414b88a6623bd413bafa6793353e4d95b9",
+  "workflow_sha256": "374db78f1eba654cf95daba81e898630f03bca8074c6a4cab516b563606c1fd7",
+  "runtime_lock_sha256": "ef68ffdade9a2d74f943655c440e94cbb9e478f3f4e451d3e5bf29443e36fc18",
+  "fingerprint_scheme": "SHA256 of canonical UTF-8 JSON mapping sorted relative Python file paths to file content. Historical TDD ledger uses its separate concatenated-path-and-bytes scheme.",
+  "credential_check": {
+    "evidence": "../credential-check.json",
+    "actual_key_matches": 0,
+    "scope": "Configured-key matching only, not full DLP or deployment security audit."
+  },
+  "final_document_check": {
+    "markdown_missing_local_links": 0,
+    "valid_json_documents": 728,
+    "invalid_json_documents": 0,
+    "git_head_present": false
+  }
+}

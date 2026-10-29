@@ -1,0 +1,36 @@
+test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests (tests.test_hardening.HardeningTests.test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests) ... 
+  test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests (tests.test_hardening.HardeningTests.test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests) (size=1000132) ... FAIL
+  test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests (tests.test_hardening.HardeningTests.test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests) (size=4001) ... FAIL
+  test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests (tests.test_hardening.HardeningTests.test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests) (size=253) ... FAIL
+
+======================================================================
+FAIL: test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests (tests.test_hardening.HardeningTests.test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests) (size=1000132)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 511, in test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests
+    self.assertFalse(database.exists())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests (tests.test_hardening.HardeningTests.test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests) (size=4001)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 511, in test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests
+    self.assertFalse(database.exists())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests (tests.test_hardening.HardeningTests.test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests) (size=253)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 508, in test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests
+    self.assertEqual(code, 2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: 3 != 2
+
+----------------------------------------------------------------------
+Ran 1 test in 0.256s
+
+FAILED (failures=3)

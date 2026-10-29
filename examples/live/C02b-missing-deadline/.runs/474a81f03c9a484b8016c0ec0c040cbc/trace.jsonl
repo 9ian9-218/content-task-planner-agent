@@ -1,0 +1,1 @@
+{"event_type": "terminal_without_tool", "action_source": "runtime", "tool": null, "status": "needs_input", "reason_code": "MISSING_INFORMATION", "missing_fields": ["deadline"], "note": "本次未执行业务工具，该事件是程序终态记录。"}

@@ -1,0 +1,40 @@
+{
+  "executed_at": "2026-10-28T14:57:49.360465+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C02a-missing-budget",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "d71fd47da17cc1f4bb90d17686f3a452090c95f6771b92f9067239d9454a7872",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "claude-opus-4-6-thinking",
+  "model_endpoint": "http://100.73.185.103:8045/v1",
+  "action_source": "remote_model",
+  "actual_result_mode": "live",
+  "model_requests_sent": 0,
+  "data_versions": null,
+  "prompt_sha256": null,
+  "token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "reported_responses": 0,
+    "accepted_responses": 0,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [],
+  "export_id": "e71f289a240b4adcbaaa9f46b4836f8b",
+  "artifacts_sha256": {
+    "decisions.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.json": "887f183c9a7574636609f5fee467cb7e8c72da5f5f0cfe95dd4a93fb0c235acd",
+    "output.json": "5106b66ed9e190bd3618c2a3a336f77b3286391d33b190a933b3c5f4da3bf97b",
+    "trace.jsonl": "d2f3a8459b0b0873b937713ae0eab7f4b38422248d7c071210810530438fcee3",
+    "trace.md": "abd1e1a3f99730548b3800b58d86a295e2533c88a14d154202e210bdcceb794d"
+  }
+}

@@ -1,0 +1,6 @@
+test_heartbeat_prevents_takeover_and_killed_worker_can_resume_confirmed_work (tests.test_hardening.HardeningTests.test_heartbeat_prevents_takeover_and_killed_worker_can_resume_confirmed_work) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.039s
+
+OK

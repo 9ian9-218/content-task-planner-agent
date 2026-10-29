@@ -1,0 +1,6 @@
+test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests (tests.test_hardening.HardeningTests.test_cli_rejects_oversized_or_deep_json_before_opening_state_or_sending_requests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.185s
+
+OK

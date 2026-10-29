@@ -1,0 +1,20 @@
+test_runtime_installer_rejects_unverified_bytes_before_creating_destination (tests.test_hardening.HardeningTests) ... ERROR
+
+======================================================================
+ERROR: test_runtime_installer_rejects_unverified_bytes_before_creating_destination (tests.test_hardening.HardeningTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 49, in test_runtime_installer_rejects_unverified_bytes_before_creating_destination
+    self.assertEqual(json.loads(process.stdout)["reason_code"], "RUNTIME_CHECKSUM_MISMATCH")
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.099s
+
+FAILED (errors=1)

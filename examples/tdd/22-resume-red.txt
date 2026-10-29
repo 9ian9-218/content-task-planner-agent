@@ -1,0 +1,14 @@
+test_explicit_resume_reuses_script_after_save_failure (tests.test_acceptance.AcceptanceTests) ... ERROR
+
+======================================================================
+ERROR: test_explicit_resume_reuses_script_after_save_failure (tests.test_acceptance.AcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 61, in test_explicit_resume_reuses_script_after_save_failure
+    resumed = planner.run(BRIEF, model=MockModel(), resume=True)
+TypeError: Planner.run() got an unexpected keyword argument 'resume'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.075s
+
+FAILED (errors=1)

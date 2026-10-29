@@ -1,0 +1,6 @@
+test_in_progress_request_is_not_executed_by_a_second_runner (tests.test_guards.GuardTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.074s
+
+OK

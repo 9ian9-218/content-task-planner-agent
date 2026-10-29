@@ -1,0 +1,245 @@
+{
+  "generated_at": "2026-10-28T16:06:18.972851+00:00",
+  "scope": "All retained runs; model probes listed separately; blocked socket attempts are not successful API calls.",
+  "runs": [
+    {
+      "run": "00-sandbox-blocked",
+      "path": "examples/live/runs/00-sandbox-blocked/evaluation-summary.json",
+      "case_count": 3,
+      "recorded_pass_count": 0,
+      "request_attempts": 3,
+      "source_sha256": "857c04eecaf154b61d360754a3fd5a761a0662c52f6ad530349d12192718bf30"
+    },
+    {
+      "run": "01-gateway-503",
+      "path": "examples/live/runs/01-gateway-503/evaluation-summary.json",
+      "case_count": 3,
+      "recorded_pass_count": 0,
+      "request_attempts": 3,
+      "source_sha256": "857c04eecaf154b61d360754a3fd5a761a0662c52f6ad530349d12192718bf30"
+    },
+    {
+      "run": "02-first-opus-executions",
+      "path": "examples/live/runs/02-first-opus-executions/evaluation-summary.json",
+      "case_count": 3,
+      "recorded_pass_count": 3,
+      "request_attempts": 16,
+      "source_sha256": "7620870acf9e671183a8522ad9c4aebcc3b3c354d101592528539fd0a39d1217"
+    },
+    {
+      "run": "03-first-full-matrix",
+      "path": "examples/live/runs/03-first-full-matrix/evaluation-summary.json",
+      "case_count": 18,
+      "recorded_pass_count": 14,
+      "request_attempts": 70,
+      "source_sha256": "07626ea699d913154adc9b7080789a49130b219e53d261e367ce507608f2ece3"
+    },
+    {
+      "run": "final-full-matrix",
+      "path": "examples/hardening/pre-change/live-evaluation-summary.json",
+      "case_count": 18,
+      "recorded_pass_count": 18,
+      "request_attempts": 68,
+      "source_sha256": "42fff7eb6c739b91750b5433b2a3337d5dba7d692886f417bc6f645156be57eb"
+    },
+    {
+      "run": "final-adversarial",
+      "path": "examples/hardening/pre-change/adversarial-summary.json",
+      "case_count": 2,
+      "recorded_pass_count": 2,
+      "request_attempts": 11,
+      "source_sha256": "42fff7eb6c739b91750b5433b2a3337d5dba7d692886f417bc6f645156be57eb"
+    },
+    {
+      "run": "04-hardening-cap-red-blocked",
+      "path": "examples/live/runs/04-hardening-cap-red-blocked/evaluation-summary.json",
+      "case_count": 3,
+      "recorded_pass_count": 0,
+      "request_attempts": 3,
+      "source_sha256": "244773ca66163cb5d4ff6299a6c9091ddd92fe20a50c5e9f1112d4e85def72cf",
+      "token_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "reported_responses": 0,
+        "accepted_responses": 0,
+        "unreported_request_attempts": 3
+      },
+      "request_cap": null
+    },
+    {
+      "run": "05-single-host-hardening-smoke",
+      "path": "examples/live/runs/05-single-host-hardening-smoke/evaluation-summary.json",
+      "case_count": 3,
+      "recorded_pass_count": 3,
+      "request_attempts": 16,
+      "source_sha256": "eb4d51b7219425021439794e00a7fb1976bbec1b54a10cec21d6ec709345364b",
+      "token_usage": {
+        "prompt_tokens": 62167,
+        "completion_tokens": 3934,
+        "total_tokens": 66101,
+        "reported_responses": 16,
+        "accepted_responses": 16,
+        "unreported_request_attempts": 0
+      },
+      "request_cap": 24
+    },
+    {
+      "run": "06-cancellation-guard-final",
+      "path": "examples/live/runs/06-cancellation-guard-final/evaluation-summary.json",
+      "case_count": 3,
+      "recorded_pass_count": 3,
+      "request_attempts": 16,
+      "source_sha256": "e67aefae347f6b9cc797fe09981ddf16b161782b46b5fa384bbe39150f94ef25",
+      "token_usage": {
+        "prompt_tokens": 62501,
+        "completion_tokens": 3995,
+        "total_tokens": 66496,
+        "reported_responses": 16,
+        "accepted_responses": 16,
+        "unreported_request_attempts": 0
+      },
+      "request_cap": 24
+    },
+    {
+      "run": "short-opus-initial",
+      "path": "examples/short-validation/runs/01-first-short-profile/live-evaluation-summary.json",
+      "case_count": 18,
+      "recorded_pass_count": 14,
+      "request_attempts": 52,
+      "source_sha256": "e67aefae347f6b9cc797fe09981ddf16b161782b46b5fa384bbe39150f94ef25",
+      "request_cap": 100
+    },
+    {
+      "run": "short-opus-cooldown",
+      "path": "examples/short-validation/runs/02-rollback-contention-and-cooldown/live-evaluation-summary.json",
+      "case_count": 18,
+      "recorded_pass_count": 4,
+      "request_attempts": 16,
+      "source_sha256": "d71fd47da17cc1f4bb90d17686f3a452090c95f6771b92f9067239d9454a7872",
+      "request_cap": 100
+    },
+    {
+      "run": "hy3-core-smoke",
+      "path": "examples/short-validation/runs/07-hy3-core-smoke/evaluation-summary.json",
+      "case_count": 3,
+      "recorded_pass_count": 3,
+      "request_attempts": 16,
+      "source_sha256": "909349a1fc35ff6dc2ef8a7534e98e05a9649e9e88bebb951d9c6266261fd10e",
+      "request_cap": 24
+    },
+    {
+      "run": "hy3-current-full",
+      "path": "examples/live-evaluation-summary.json",
+      "case_count": 18,
+      "recorded_pass_count": 18,
+      "request_attempts": 68,
+      "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+      "request_cap": 100
+    },
+    {
+      "run": "hy3-current-adversarial",
+      "path": "examples/live/adversarial-summary.json",
+      "case_count": 2,
+      "recorded_pass_count": 2,
+      "request_attempts": 10,
+      "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+      "request_cap": 24
+    },
+    {
+      "run": "hy3-current-replanning",
+      "path": "examples/short-validation/replanning/summary.json",
+      "case_count": 3,
+      "recorded_pass_count": 3,
+      "request_attempts": 15,
+      "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+      "request_cap": 20
+    }
+  ],
+  "additional_completion_probes": [
+    {
+      "path": "examples/live/gateway-diagnostics.json",
+      "completion_request_attempts": 1,
+      "http_status": 503
+    },
+    {
+      "path": "examples/live/listed-model-probe.json",
+      "completion_request_attempts": 1,
+      "http_status": 200
+    },
+    {
+      "path": "examples/live/terminal-response-probe.json",
+      "completion_request_attempts": 1,
+      "http_status": 200
+    },
+    {
+      "path": "examples/short-validation/gateway-completion-probe.json",
+      "completion_request_attempts": 1,
+      "http_status": 503
+    },
+    {
+      "path": "examples/short-validation/gateway-completion-probe-2.json",
+      "completion_request_attempts": 1,
+      "http_status": 503
+    }
+  ],
+  "notes": [
+    "All source/model stages remain separately labeled; old successes and failures are not counted as current-source validation.",
+    "Initial Opus reports and strict-protocol corrections remain in historical archives.",
+    "No accepted response/usage does not prove zero execution or zero billing.",
+    "Current release totals refer only to wb/hy3 final 18+2+3 batches; the initial hy3 smoke is separately recorded."
+  ],
+  "pre_hardening_total_completion_request_attempts_including_blocked_sockets": 174,
+  "pre_hardening_locally_blocked_socket_attempts": 3,
+  "pre_hardening_network_completion_request_attempts": 171,
+  "pre_hardening_latest_final_scenarios": 20,
+  "pre_hardening_latest_final_scenarios_passed": 20,
+  "pre_hardening_latest_final_request_attempts": 79,
+  "pre_hardening_latest_final_reported_token_usage": {
+    "prompt_tokens": 300938,
+    "completion_tokens": 20594,
+    "total_tokens": 321532,
+    "reported_responses": 79,
+    "accepted_responses": 79,
+    "unreported_request_attempts": 0
+  },
+  "current_source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "total_completion_request_attempts_including_unconfirmed": 388,
+  "hardening_request_attempts": 35,
+  "hardening_reported_requests": 32,
+  "hardening_unconfirmed_attempts": 3,
+  "pre_hardening_verification_tools_sha256": "3ef188c64d8414a02583074b314b020f53b3da4b2b8d320274b46661d2aa3e08",
+  "verification_tools_sha256": "c6571a809c2ff354ce141b857121b9414b88a6623bd413bafa6793353e4d95b9",
+  "pre_short_profile_latest_final_scenarios": 3,
+  "pre_short_profile_latest_final_scenarios_passed": 3,
+  "pre_short_profile_latest_final_request_attempts": 16,
+  "pre_short_profile_latest_final_reported_token_usage": {
+    "prompt_tokens": 62501,
+    "completion_tokens": 3995,
+    "total_tokens": 66496,
+    "reported_responses": 16,
+    "accepted_responses": 16,
+    "unreported_request_attempts": 0
+  },
+  "current_release": {
+    "requested_model": "wb/hy3",
+    "response_models": [
+      "wb/hy3"
+    ],
+    "endpoint": "http://127.0.0.1:4000/v1",
+    "request_cap_sum": 144,
+    "requests": 93,
+    "reported_usage": {
+      "prompt_tokens": 161866,
+      "completion_tokens": 16623,
+      "total_tokens": 178489,
+      "reported_responses": 93,
+      "accepted_responses": 93,
+      "unreported_request_attempts": 0
+    },
+    "note": "Final current-source 18+2+3 batches only; excludes initial smoke, old providers and failed runs.",
+    "acceptance_cases": 18,
+    "adversarial_cases": 2,
+    "replanning_repeats": 3
+  }
+}

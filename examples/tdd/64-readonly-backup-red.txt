@@ -1,0 +1,14 @@
+test_backing_up_a_legacy_database_does_not_migrate_or_modify_its_source (tests.test_hardening.HardeningTests) ... FAIL
+
+======================================================================
+FAIL: test_backing_up_a_legacy_database_does_not_migrate_or_modify_its_source (tests.test_hardening.HardeningTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 125, in test_backing_up_a_legacy_database_does_not_migrate_or_modify_its_source
+    self.assertEqual(receipt['schema_version'], 0)
+AssertionError: 1 != 0
+
+----------------------------------------------------------------------
+Ran 1 test in 0.176s
+
+FAILED (failures=1)

@@ -1,0 +1,18 @@
+test_real_storage_failure_preserves_success_and_never_reports_saved (tests.test_guards.GuardTests) ... ERROR
+
+======================================================================
+ERROR: test_real_storage_failure_preserves_success_and_never_reports_saved (tests.test_guards.GuardTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 209, in test_real_storage_failure_preserves_success_and_never_reports_saved
+    result = planner.run(BRIEF, model=ReadOnlyBeforeSave())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 186, in run
+    self.store.persist(context, context["saved_plan"] if name == "save_plan" and result["ok"] else None)
+  File "/mnt/d/xy/src/content_planner/state.py", line 39, in persist
+    self.connection.execute(
+sqlite3.OperationalError: attempt to write a readonly database
+
+----------------------------------------------------------------------
+Ran 1 test in 0.095s
+
+FAILED (errors=1)

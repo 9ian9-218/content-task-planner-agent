@@ -1,0 +1,1458 @@
+{
+  "started_at": "2026-10-28T15:18:48.830139+00:00",
+  "finished_at": "2026-10-28T15:20:31.203367+00:00",
+  "mode": "controlled_model_fixture",
+  "remote_requests": 0,
+  "python": "3.14.10",
+  "sqlite": "3.53.1",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "source_sha256": "909349a1fc35ff6dc2ef8a7534e98e05a9649e9e88bebb951d9c6266261fd10e",
+  "fault_positions": 8,
+  "rounds_per_position": 10,
+  "checks_total": 80,
+  "checks_passed": 78,
+  "passed": false,
+  "scope": "Real subprocess SIGKILL on native local temporary filesystem; four committed model decisions and four uncommitted local tool results. This does not prove remote side-effect reconciliation or power-loss durability.",
+  "results": [
+    {
+      "stage": "model_decision_committed",
+      "tool": "search_materials",
+      "round": 1,
+      "seconds": 1.821998,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-search_materials-01.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "search_materials",
+      "round": 2,
+      "seconds": 1.565667,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-search_materials-02.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "search_materials",
+      "round": 3,
+      "seconds": 1.193497,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-search_materials-03.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "search_materials",
+      "round": 4,
+      "seconds": 1.292808,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-search_materials-04.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "search_materials",
+      "round": 5,
+      "seconds": 1.308094,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-search_materials-05.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "search_materials",
+      "round": 6,
+      "seconds": 1.907565,
+      "checks": {
+        "recoverable": true,
+        "completed": false,
+        "one_saved_plan": false,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": false,
+      "evidence": "model_decision_committed-search_materials-06.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "search_materials",
+      "round": 7,
+      "seconds": 1.748331,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-search_materials-07.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "search_materials",
+      "round": 8,
+      "seconds": 1.623558,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-search_materials-08.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "search_materials",
+      "round": 9,
+      "seconds": 1.572936,
+      "checks": {
+        "recoverable": true,
+        "completed": false,
+        "one_saved_plan": false,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": false,
+      "evidence": "model_decision_committed-search_materials-09.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "search_materials",
+      "round": 10,
+      "seconds": 1.542025,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-search_materials-10.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "estimate_cost",
+      "round": 1,
+      "seconds": 1.471399,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-estimate_cost-01.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "estimate_cost",
+      "round": 2,
+      "seconds": 1.636988,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-estimate_cost-02.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "estimate_cost",
+      "round": 3,
+      "seconds": 1.846983,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-estimate_cost-03.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "estimate_cost",
+      "round": 4,
+      "seconds": 1.614915,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-estimate_cost-04.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "estimate_cost",
+      "round": 5,
+      "seconds": 1.486328,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-estimate_cost-05.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "estimate_cost",
+      "round": 6,
+      "seconds": 1.596958,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-estimate_cost-06.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "estimate_cost",
+      "round": 7,
+      "seconds": 1.487994,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-estimate_cost-07.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "estimate_cost",
+      "round": 8,
+      "seconds": 1.338669,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-estimate_cost-08.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "estimate_cost",
+      "round": 9,
+      "seconds": 1.346377,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-estimate_cost-09.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "estimate_cost",
+      "round": 10,
+      "seconds": 1.418714,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-estimate_cost-10.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "generate_script",
+      "round": 1,
+      "seconds": 1.452473,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-generate_script-01.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "generate_script",
+      "round": 2,
+      "seconds": 1.545437,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-generate_script-02.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "generate_script",
+      "round": 3,
+      "seconds": 1.234135,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-generate_script-03.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "generate_script",
+      "round": 4,
+      "seconds": 1.174968,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-generate_script-04.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "generate_script",
+      "round": 5,
+      "seconds": 1.28362,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-generate_script-05.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "generate_script",
+      "round": 6,
+      "seconds": 1.204516,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-generate_script-06.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "generate_script",
+      "round": 7,
+      "seconds": 1.265706,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-generate_script-07.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "generate_script",
+      "round": 8,
+      "seconds": 1.189056,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-generate_script-08.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "generate_script",
+      "round": 9,
+      "seconds": 1.250416,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-generate_script-09.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "generate_script",
+      "round": 10,
+      "seconds": 1.234966,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-generate_script-10.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "save_plan",
+      "round": 1,
+      "seconds": 1.155764,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-save_plan-01.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "save_plan",
+      "round": 2,
+      "seconds": 1.216009,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-save_plan-02.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "save_plan",
+      "round": 3,
+      "seconds": 1.314954,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-save_plan-03.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "save_plan",
+      "round": 4,
+      "seconds": 1.144492,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-save_plan-04.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "save_plan",
+      "round": 5,
+      "seconds": 1.146777,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-save_plan-05.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "save_plan",
+      "round": 6,
+      "seconds": 1.190955,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-save_plan-06.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "save_plan",
+      "round": 7,
+      "seconds": 1.124268,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-save_plan-07.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "save_plan",
+      "round": 8,
+      "seconds": 1.113666,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-save_plan-08.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "save_plan",
+      "round": 9,
+      "seconds": 1.054313,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-save_plan-09.json"
+    },
+    {
+      "stage": "model_decision_committed",
+      "tool": "save_plan",
+      "round": 10,
+      "seconds": 1.041857,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "model_decision_committed-save_plan-10.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "search_materials",
+      "round": 1,
+      "seconds": 1.077388,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-search_materials-01.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "search_materials",
+      "round": 2,
+      "seconds": 1.105461,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-search_materials-02.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "search_materials",
+      "round": 3,
+      "seconds": 1.078068,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-search_materials-03.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "search_materials",
+      "round": 4,
+      "seconds": 1.071277,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-search_materials-04.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "search_materials",
+      "round": 5,
+      "seconds": 1.176174,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-search_materials-05.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "search_materials",
+      "round": 6,
+      "seconds": 1.20604,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-search_materials-06.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "search_materials",
+      "round": 7,
+      "seconds": 1.409338,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-search_materials-07.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "search_materials",
+      "round": 8,
+      "seconds": 1.166133,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-search_materials-08.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "search_materials",
+      "round": 9,
+      "seconds": 1.171469,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-search_materials-09.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "search_materials",
+      "round": 10,
+      "seconds": 1.338873,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-search_materials-10.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "estimate_cost",
+      "round": 1,
+      "seconds": 1.242314,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-estimate_cost-01.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "estimate_cost",
+      "round": 2,
+      "seconds": 1.156104,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-estimate_cost-02.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "estimate_cost",
+      "round": 3,
+      "seconds": 1.175201,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-estimate_cost-03.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "estimate_cost",
+      "round": 4,
+      "seconds": 1.118402,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-estimate_cost-04.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "estimate_cost",
+      "round": 5,
+      "seconds": 1.122644,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-estimate_cost-05.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "estimate_cost",
+      "round": 6,
+      "seconds": 1.114773,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-estimate_cost-06.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "estimate_cost",
+      "round": 7,
+      "seconds": 1.112803,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-estimate_cost-07.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "estimate_cost",
+      "round": 8,
+      "seconds": 1.093493,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-estimate_cost-08.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "estimate_cost",
+      "round": 9,
+      "seconds": 1.103992,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-estimate_cost-09.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "estimate_cost",
+      "round": 10,
+      "seconds": 1.112633,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-estimate_cost-10.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "generate_script",
+      "round": 1,
+      "seconds": 1.168619,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-generate_script-01.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "generate_script",
+      "round": 2,
+      "seconds": 1.246039,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-generate_script-02.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "generate_script",
+      "round": 3,
+      "seconds": 1.192826,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-generate_script-03.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "generate_script",
+      "round": 4,
+      "seconds": 1.209093,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-generate_script-04.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "generate_script",
+      "round": 5,
+      "seconds": 1.171096,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-generate_script-05.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "generate_script",
+      "round": 6,
+      "seconds": 1.144683,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-generate_script-06.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "generate_script",
+      "round": 7,
+      "seconds": 1.162133,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-generate_script-07.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "generate_script",
+      "round": 8,
+      "seconds": 1.184579,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-generate_script-08.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "generate_script",
+      "round": 9,
+      "seconds": 1.188066,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-generate_script-09.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "generate_script",
+      "round": 10,
+      "seconds": 1.223563,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-generate_script-10.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "save_plan",
+      "round": 1,
+      "seconds": 1.276617,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-save_plan-01.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "save_plan",
+      "round": 2,
+      "seconds": 1.225747,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-save_plan-02.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "save_plan",
+      "round": 3,
+      "seconds": 1.133178,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-save_plan-03.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "save_plan",
+      "round": 4,
+      "seconds": 1.165395,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-save_plan-04.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "save_plan",
+      "round": 5,
+      "seconds": 1.118567,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-save_plan-05.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "save_plan",
+      "round": 6,
+      "seconds": 1.124734,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-save_plan-06.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "save_plan",
+      "round": 7,
+      "seconds": 1.100066,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-save_plan-07.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "save_plan",
+      "round": 8,
+      "seconds": 1.200671,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-save_plan-08.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "save_plan",
+      "round": 9,
+      "seconds": 1.435035,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-save_plan-09.json"
+    },
+    {
+      "stage": "tool_result_uncommitted",
+      "tool": "save_plan",
+      "round": 10,
+      "seconds": 1.320806,
+      "checks": {
+        "recoverable": true,
+        "completed": true,
+        "one_saved_plan": true,
+        "single_charge": true,
+        "decision_reused": true,
+        "four_model_attempts": true,
+        "tool_budget_preserved": true,
+        "only_four_committed_steps": true
+      },
+      "passed": true,
+      "evidence": "tool_result_uncommitted-save_plan-10.json"
+    }
+  ]
+}

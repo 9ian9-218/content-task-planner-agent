@@ -1,0 +1,19 @@
+test_repeated_successful_script_operation_is_reused_without_charging (tests.test_guards.GuardTests) ... FAIL
+
+======================================================================
+FAIL: test_repeated_successful_script_operation_is_reused_without_charging (tests.test_guards.GuardTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_guards.py", line 87, in test_repeated_successful_script_operation_is_reused_without_charging
+    self.assertEqual(result["status"], "completed")
+AssertionError: 'incomplete' != 'completed'
+- incomplete
+? --
++ completed
+?         +
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.076s
+
+FAILED (failures=1)

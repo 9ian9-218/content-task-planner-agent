@@ -1,0 +1,6 @@
+test_repeated_execution_after_reopening_reuses_the_saved_result (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.089s
+
+OK

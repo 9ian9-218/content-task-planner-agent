@@ -1,0 +1,22 @@
+test_runtime_install_preserves_safe_relative_links_and_rejects_escaping_links (tests.test_hardening.HardeningTests) ... ERROR
+
+======================================================================
+ERROR: test_runtime_install_preserves_safe_relative_links_and_rejects_escaping_links (tests.test_hardening.HardeningTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 92, in test_runtime_install_preserves_safe_relative_links_and_rejects_escaping_links
+    code, receipt = invoke("backup", "--db", str(original), "--output", str(backup))
+NameError: name 'original' is not defined
+
+======================================================================
+FAIL: test_runtime_install_preserves_safe_relative_links_and_rejects_escaping_links (tests.test_hardening.HardeningTests) (link='../lib/python3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 88, in test_runtime_install_preserves_safe_relative_links_and_rejects_escaping_links
+    self.assertEqual(code, 0 if valid else 2)
+AssertionError: 2 != 0
+
+----------------------------------------------------------------------
+Ran 1 test in 0.045s
+
+FAILED (failures=1, errors=1)

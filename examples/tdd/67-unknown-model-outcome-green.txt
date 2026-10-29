@@ -1,0 +1,6 @@
+test_interrupted_external_model_call_is_visible_and_not_blindly_retried (tests.test_hardening.HardeningTests.test_interrupted_external_model_call_is_visible_and_not_blindly_retried) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.153s
+
+OK

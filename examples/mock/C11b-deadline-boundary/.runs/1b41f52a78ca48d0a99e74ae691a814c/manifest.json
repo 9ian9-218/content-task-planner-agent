@@ -1,0 +1,46 @@
+{
+  "executed_at": "2026-10-28T15:32:09.286501+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "mock"
+  ],
+  "case_id": "C11b-deadline-boundary",
+  "mode": "mock",
+  "python": "3.14.10",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "deterministic_mock",
+  "model_endpoint": "",
+  "action_source": "mock_policy",
+  "actual_result_mode": "mock",
+  "model_requests_sent": 0,
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "reported_responses": 0,
+    "accepted_responses": 0,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [],
+  "export_id": "1b41f52a78ca48d0a99e74ae691a814c",
+  "artifacts_sha256": {
+    "decisions.jsonl": "d20499c7463e1c42f99ada465a3d9b680a5170b4314fcc8d18f88c92975c3671",
+    "input.json": "9c42622d4e4f532933483a350dd89be545d678f313f3ae69a3d949704e9d1978",
+    "output.json": "9f12c2657467a902a7de41cd79e85b1577578497a12202c56f883e1e39ba1ef4",
+    "plan.md": "ed53dbe9c0a4c9599daf8a39c9591a63335035da91dda457cce5c4b25a322da3",
+    "trace.jsonl": "ac6f85ec83552e2ad66d787a481b29213a1a5932ada03c8a652d200fcdec81d3",
+    "trace.md": "003c7590d182f2e0e41125a545431c7fba435ef6e7e0b6ab8b846e56aa1bc916"
+  }
+}

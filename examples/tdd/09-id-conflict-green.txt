@@ -1,0 +1,6 @@
+test_same_request_id_with_changed_budget_is_a_conflict (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.073s
+
+OK

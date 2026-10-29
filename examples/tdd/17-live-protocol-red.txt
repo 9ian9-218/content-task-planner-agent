@@ -1,0 +1,16 @@
+test_live_adapter_round_trips_actual_tool_observations_over_http (tests.test_model.ModelTests) ... ERROR
+
+======================================================================
+ERROR: test_live_adapter_round_trips_actual_tool_observations_over_http (tests.test_model.ModelTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_model.py", line 38, in test_live_adapter_round_trips_actual_tool_observations_over_http
+    decision = model.decide(messages, [], timeout=2)
+  File "/mnt/d/xy/src/content_planner/model.py", line 23, in decide
+    raise ModelError("MODEL_UNAVAILABLE", "尚未完成真实模型传输。")
+content_planner.model.ModelError: 尚未完成真实模型传输。
+
+----------------------------------------------------------------------
+Ran 1 test in 0.036s
+
+FAILED (errors=1)

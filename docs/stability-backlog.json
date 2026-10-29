@@ -1,0 +1,669 @@
+{
+  "version": 4,
+  "created_at": "2026-10-28T10:27:07.623607+00:00",
+  "status": "local_short_validation_passed_formal_repository_and_actual_time_pending",
+  "target": "Single-host CLI and multiple processes first; shared HTTP service later",
+  "user_confirmed_target": "先强化单机 CLI／多进程运行，再扩展共享服务（推荐）",
+  "baseline": "../examples/hardening/baseline.json",
+  "strategy": "Use Matt Pocock tdd and codebase-design; one public-interface behavior per red/green slice; prefer stdlib and preserve existing CLI.",
+  "proposed_defaults": {
+    "lease_seconds": 60,
+    "heartbeat_seconds": 10,
+    "max_model_requests_per_task": 12,
+    "max_tool_attempts_per_task": 12,
+    "max_retries_per_logical_operation": 2,
+    "note": "Defaults are implemented for the declared single-host deployment; per-run retry scope and remaining checks are recorded below.",
+    "max_active_tasks_per_state_database": 2,
+    "retry_scope": "At most three transient executions with identical normalized parameters per run; explicit resume starts a new per-run retry scope but never resets the persisted task attempt limit."
+  },
+  "release_runtime_target": {
+    "python": "Checksum-pinned Python 3.14.10; native Linux install verified",
+    "sqlite": "SQLite 3.53.1 verified in the pinned runtime",
+    "wal_policy": "Default rollback; explicit WAL requires a verified fix level and a native local filesystem; current short workload and burst/recovery checks are recorded separately."
+  },
+  "items": [
+    {
+      "id": "STAB-00",
+      "priority": "P0",
+      "title": "基线与受支持运行时",
+      "depends_on": [],
+      "status": "verified_native_runtime_mounted_install_limit_documented",
+      "scope": [
+        "固定解释器/SQLite诊断通过；未知数据库版本拒绝写入；原生Linux安装可复制；挂载盘安装限制保留"
+      ],
+      "acceptance": [
+        "固定解释器/SQLite诊断通过；未知数据库版本拒绝写入；原生Linux安装可复制；挂载盘安装限制保留"
+      ],
+      "test_seams": [
+        "CLI doctor / 公开配置入口"
+      ],
+      "evidence": [
+        "../examples/hardening/runtime-check.json",
+        "../examples/hardening/runtime-installation.json"
+      ],
+      "remaining": [
+        "Mounted-project default runtime install failed; native Linux destination verified. Persistent deployment installation remains to be qualified."
+      ],
+      "required_for_exam_delivery": true,
+      "future_production_acceptance": [
+        "启动诊断报告 Python/SQLite 版本和存储模式；发布配置拒绝不受支持的运行时；当前文件哈希和旧验证证据能对应"
+      ],
+      "future_production_scope": [
+        "记录源码/数据/工具哈希、旧真实结果与运行时；部署 Python 使用支持中的补丁版；WAL 只有修复证明与并发验证后才启用"
+      ],
+      "future_production_effort_estimate": "1–3h"
+    },
+    {
+      "id": "STAB-01",
+      "priority": "P0",
+      "title": "版本化存储、迁移与一致备份",
+      "depends_on": [
+        "STAB-00"
+      ],
+      "status": "implemented_core_partial_validation",
+      "scope": [
+        "公开CLI备份/恢复在小型合成库中通过；不覆盖目标；旧库兼容与未知新版本拒绝；失败迁移注入留作后续"
+      ],
+      "acceptance": [
+        "公开CLI备份/恢复在小型合成库中通过；不覆盖目标；旧库兼容与未知新版本拒绝；失败迁移注入留作后续"
+      ],
+      "test_seams": [
+        "CLI backup/restore/status",
+        "Planner.get_plan/list_plans"
+      ],
+      "evidence": [
+        "../examples/test-summary.json"
+      ],
+      "remaining": [
+        "Context/policy schema versioning and explicit failed-migration rollback injection remain incomplete."
+      ],
+      "required_for_exam_delivery": true,
+      "future_production_acceptance": [
+        "迁移成功、失败回滚、重复迁移、旧 running 无所有者的处理有明确结果；备份可在新文件恢复并通过公开查询核验"
+      ],
+      "future_production_scope": [
+        "增加 schema/context/policy 版本；事务迁移；使用 SQLite backup 接口；未知新版本拒绝写入"
+      ],
+      "future_production_effort_estimate": "4–8h"
+    },
+    {
+      "id": "STAB-02",
+      "priority": "P0",
+      "title": "任务租约、心跳与执行代次隔离",
+      "depends_on": [
+        "STAB-01"
+      ],
+      "status": "verified_local_capacity_heartbeat_fencing_and_backpressure",
+      "scope": [
+        "60秒租约/10秒心跳、同库最多2活跃任务；16×20竞争和8×10强杀检查；旧代次拒写与容量/忙锁结果明确"
+      ],
+      "acceptance": [
+        "60秒租约/10秒心跳、同库最多2活跃任务；16×20竞争和8×10强杀检查；旧代次拒写与容量/忙锁结果明确"
+      ],
+      "test_seams": [
+        "Planner.run/resume",
+        "CLI run/status/recover"
+      ],
+      "evidence": [
+        "../examples/hardening/concurrency.json",
+        "../examples/test-results.txt"
+      ],
+      "remaining": [
+        "A SIGSTOP-frozen SQLite writer cannot be displaced by leases; operator must release or terminate that known process. No cross-host or mixed-version writers supported."
+      ],
+      "required_for_exam_delivery": true,
+      "future_production_acceptance": [
+        "16 个进程同请求竞争，连续 20 轮只产生一份方案；暂停旧进程再恢复不能覆盖新结果；活跃任务不会因慢模型被误接管"
+      ],
+      "future_production_scope": [
+        "任务领取原子化；所有者 token 与 generation；心跳使用独立连接；旧代次禁止继续派发和写回"
+      ],
+      "future_production_effort_estimate": "6–10h"
+    },
+    {
+      "id": "STAB-03",
+      "priority": "P0",
+      "title": "操作意图、结果不确定与对账",
+      "depends_on": [
+        "STAB-02"
+      ],
+      "status": "verified_8_by_10_local_recovery_remote_uncertainty_blocks",
+      "scope": [
+        "已确认决定和工具游标可恢复；合成本地费用/保存同事务；外部在途结果未知时阻断重发"
+      ],
+      "acceptance": [
+        "已确认决定和工具游标可恢复；合成本地费用/保存同事务；外部在途结果未知时阻断重发"
+      ],
+      "test_seams": [
+        "Planner.run/resume",
+        "外部工具/HTTP seam"
+      ],
+      "evidence": [
+        "../examples/hardening/recovery/summary.json",
+        "../examples/test-results.txt"
+      ],
+      "remaining": [
+        "Unknown external outcomes are blocked, not automatically reconciled; no remote idempotency/query contract exists. No power-loss or damaged-media proof."
+      ],
+      "required_for_exam_delivery": true,
+      "future_production_acceptance": [
+        "8 个故障位置各 10 轮进程终止；已提交结果不丢、不重复计业务费用；模拟远端成功但响应丢失时不盲目重做"
+      ],
+      "future_production_scope": [
+        "先记执行意图，再调用，再保存回执；稳定逻辑操作键；已确认结果复用；外部未知结果阻断并查询/对账"
+      ],
+      "future_production_effort_estimate": "6–10h"
+    },
+    {
+      "id": "STAB-04",
+      "priority": "P0",
+      "title": "任务累计限额、取消与预算保留",
+      "depends_on": [
+        "STAB-03"
+      ],
+      "status": "verified_local_limits_cancellation_and_spent_cost_preservation",
+      "scope": [
+        "任务模型/工具累计限额跨续跑保留；单次执行墙钟上限；取消与动作准入事务裁决；保存回执保持真实"
+      ],
+      "acceptance": [
+        "任务模型/工具累计限额跨续跑保留；单次执行墙钟上限；取消与动作准入事务裁决；保存回执保持真实"
+      ],
+      "test_seams": [
+        "Planner.run/resume",
+        "CLI cancel/status",
+        "模型 HTTP seam"
+      ],
+      "evidence": [
+        "../examples/test-results.txt"
+      ],
+      "remaining": [
+        "Cumulative active-time and validated currency reserve policies remain incomplete; unknown model attempts are retained and block repeat dispatch."
+      ],
+      "required_for_exam_delivery": true,
+      "future_production_acceptance": [
+        "反复续跑不能越过任务上限；取消后不启动新动作；已提交保存保持事实；未验证计价不能被显示为已保证货币预算"
+      ],
+      "future_production_scope": [
+        "持久化任务级模型/工具次数；续跑不提高限额；取消状态；未知付费尝试保守预留；区分模拟单位/Token/货币"
+      ],
+      "future_production_effort_estimate": "4–7h"
+    },
+    {
+      "id": "STAB-05",
+      "priority": "P0",
+      "title": "错误分类与有界重试",
+      "depends_on": [
+        "STAB-03",
+        "STAB-04"
+      ],
+      "status": "verified_bounded_tool_retry_typed_busy_and_stop_on_provider_error",
+      "scope": [
+        "本地瞬态失败最多3次同参执行/每运行；提供商错误分类和批次停止；未知结果不自动重试"
+      ],
+      "acceptance": [
+        "本地瞬态失败最多3次同参执行/每运行；提供商错误分类和批次停止；未知结果不自动重试"
+      ],
+      "test_seams": [
+        "LiveModel.decide",
+        "业务工具返回",
+        "Planner.run"
+      ],
+      "evidence": [
+        "../examples/test-results.txt"
+      ],
+      "remaining": [
+        "HTTP retries stop safely; Retry-After is retained but no automatic bounded backoff scheduler is implemented."
+      ],
+      "required_for_exam_delivery": true,
+      "future_production_acceptance": [
+        "401/403/参数错误不原样重试；429/503 受控等待；未知结果不自动重试；重试耗尽保留成果和明确失败"
+      ],
+      "future_production_scope": [
+        "永久、瞬态和结果未知分开；重试次数、Retry-After 与剩余时间共同约束；每次网络尝试计预算"
+      ],
+      "future_production_effort_estimate": "3–5h"
+    },
+    {
+      "id": "STAB-06",
+      "priority": "P0",
+      "title": "输入、配置及产物完整性",
+      "depends_on": [
+        "STAB-01"
+      ],
+      "status": "verified_declared_input_export_and_package_boundaries",
+      "scope": [
+        "CLI JSON 1MB/32层限制与费用/时间输入验证；current.json指向不可变导出代次；包内文件摘要和私有文件排除"
+      ],
+      "acceptance": [
+        "CLI JSON 1MB/32层限制与费用/时间输入验证；current.json指向不可变导出代次；包内文件摘要和私有文件排除"
+      ],
+      "test_seams": [
+        "CLI run/export",
+        "Planner.run"
+      ],
+      "evidence": [
+        "../examples/test-results.txt"
+      ],
+      "remaining": [
+        "CLI JSON size/depth and versioned export are verified; a complete API field/context schema and power-loss directory durability proof remain incomplete."
+      ],
+      "required_for_exam_delivery": true,
+      "future_production_acceptance": [
+        "无效输入不产生模型调用或残留运行状态；导出中断不将旧方案误当本轮结果；保留路径碰撞保护和真实 JSON/Trace"
+      ],
+      "future_production_scope": [
+        "限制输入和响应大小、深度及字段；生产配置校验；提纲换行规范；按 run_id 写临时产物并原子发布索引"
+      ],
+      "future_production_effort_estimate": "3–5h"
+    },
+    {
+      "id": "STAB-07",
+      "priority": "P1",
+      "title": "可观测性与敏感信息控制",
+      "depends_on": [
+        "STAB-02",
+        "STAB-03",
+        "STAB-04"
+      ],
+      "status": "partial_status_trace_and_redaction",
+      "scope": [
+        "公开Trace、status和在途动作可定位；真实已配置密钥扫描无匹配；模型内部思维字段不保存"
+      ],
+      "acceptance": [
+        "公开Trace、status和在途动作可定位；真实已配置密钥扫描无匹配；模型内部思维字段不保存"
+      ],
+      "test_seams": [
+        "CLI status/doctor/metrics",
+        "导出与日志 seam"
+      ],
+      "evidence": [
+        "../examples/test-results.txt"
+      ],
+      "remaining": [
+        "No persistent metrics/alerts, log retention scheduler or production permission audit."
+      ],
+      "required_for_exam_delivery": true,
+      "future_production_acceptance": [
+        "领取/调用/保存/失败/取消/接管/未知结果均能定位；密钥和合成敏感哨兵不出现在公开日志；模型内部思维字段不保存"
+      ],
+      "future_production_scope": [
+        "关键生命周期事件、用量和长期 running 指标；JSONL 保留结构化 ID；日志脱敏与保留策略；本机诊断和处置说明"
+      ],
+      "future_production_effort_estimate": "3–5h"
+    },
+    {
+      "id": "STAB-08",
+      "priority": "P1",
+      "title": "恢复演练与本机运行保护",
+      "depends_on": [
+        "STAB-01",
+        "STAB-07"
+      ],
+      "status": "partial_small_backup_restore_verified",
+      "scope": [
+        "小型合成库备份到新文件再恢复校验；目标碰撞拒绝；强杀已提交状态/费用可恢复；不承诺生产RPO/RTO"
+      ],
+      "acceptance": [
+        "小型合成库备份到新文件再恢复校验；目标碰撞拒绝；强杀已提交状态/费用可恢复；不承诺生产RPO/RTO"
+      ],
+      "test_seams": [
+        "CLI backup/restore/doctor",
+        "Planner 公开查询"
+      ],
+      "evidence": [
+        "../examples/test-results.txt",
+        "14-operations.md"
+      ],
+      "remaining": [
+        "No production-scale restore measurement, scheduled 24h backups or platform ACL verification."
+      ],
+      "required_for_exam_delivery": true,
+      "future_production_acceptance": [
+        "在声明数据规模下恢复演练目标 <=10min；备份目标 RPO<=24h；进程强杀已提交记录不丢；不覆盖原库和保护文件"
+      ],
+      "future_production_scope": [
+        "恢复到新目录再校验；平台文件权限；本机存储范围；备份保留；升级与回滚流程"
+      ],
+      "future_production_effort_estimate": "2–4h"
+    },
+    {
+      "id": "STAB-09",
+      "priority": "P1",
+      "title": "独立模型评估与费用边界",
+      "depends_on": [
+        "STAB-04",
+        "STAB-05",
+        "STAB-06"
+      ],
+      "status": "verified_current_18_live_2_adversarial_3_replanning_repeats",
+      "scope": [
+        "当前业务源码真实矩阵18/18、对抗2/2、重规划重复3/3；显式批次上限和实际请求/usage；不宣称独立留出泛化"
+      ],
+      "acceptance": [
+        "当前业务源码真实矩阵18/18、对抗2/2、重规划重复3/3；显式批次上限和实际请求/usage；不宣称独立留出泛化"
+      ],
+      "test_seams": [
+        "公开评估命令",
+        "人工业务核验"
+      ],
+      "evidence": [
+        "../examples/live-evaluation-summary.json",
+        "../examples/live/adversarial-summary.json",
+        "../examples/short-validation/replanning/summary.json"
+      ],
+      "remaining": [
+        "No independent held-out 50-group / 30x3 evaluation, validated currency pricing or token threshold controller; these remain future production scope."
+      ],
+      "required_for_exam_delivery": true,
+      "current_scope_note": "Development acceptance and repeatability only; independent 50-group/30x3 study deferred, not claimed.",
+      "future_production_acceptance": [
+        "至少 50 个需求组，其中至少 30 个真实模型组各重复 3 轮；固定集匹配目标 >=95%、各类>=90%、硬约束违规0；不足预算标记未完成而非跳过成功"
+      ],
+      "future_production_scope": [
+        "开发集与留出集分离；独立验收人封存需求组；重复试验按需求组统计；显式请求硬上限和 Token 派发阈值"
+      ],
+      "future_production_effort_estimate": "4–8h + 预算内在线等待"
+    },
+    {
+      "id": "STAB-10",
+      "priority": "P1",
+      "title": "并发压力与持续运行验证",
+      "depends_on": [
+        "STAB-02",
+        "STAB-04",
+        "STAB-05",
+        "STAB-07",
+        "STAB-08"
+      ],
+      "status": "verified_300_second_8_client_1200_case_paced_profile_and_separate_burst",
+      "scope": [
+        "300秒8进程、每进程2秒新需求、同库2活跃任务：至少300场景、意外结果0；RSS/FD/线程记录；另有16×20突发"
+      ],
+      "acceptance": [
+        "300秒8进程、每进程2秒新需求、同库2活跃任务：至少300场景、意外结果0；RSS/FD/线程记录；另有16×20突发"
+      ],
+      "test_seams": [
+        "CLI 多进程",
+        "外部 HTTP/工具 seam"
+      ],
+      "evidence": [
+        "../examples/short-validation/load/summary.json",
+        "../examples/hardening/concurrency.json",
+        "../examples/hardening/recovery/summary.json"
+      ],
+      "remaining": [
+        "No 24-hour / 10000-task soak or production capacity/SLA; the declared 300-second steady workload includes measured resource trends."
+      ],
+      "required_for_exam_delivery": true,
+      "current_scope_note": "8 clients, each submits at most one new demand per 2 seconds; no long-term SLA inferred.",
+      "future_production_acceptance": [
+        "完成/失败/拒绝状态均可解释；无丢记录和重复方案；无持续增长的连接/线程/队列；报告接纳率、延迟、锁等待和明确环境"
+      ],
+      "future_production_scope": [
+        "先用外部模型/工具替身测执行器，不向网关压测；8 个 CLI 客户端、默认最多 2 个活动任务；24h 1万任务持续测试"
+      ],
+      "future_production_effort_estimate": "4–8h + 24h观测"
+    },
+    {
+      "id": "STAB-11",
+      "priority": "P1",
+      "title": "自动回归与版本化发布",
+      "depends_on": [
+        "STAB-00",
+        "STAB-01",
+        "STAB-06"
+      ],
+      "status": "local_materials_verified_remote_submission_pending",
+      "scope": [
+        "离线复现、全部题面材料和AI披露齐备；正式提交还需实际GitHub URL/SHA/可见性及据实人工工时"
+      ],
+      "acceptance": [
+        "离线复现、全部题面材料和AI披露齐备；正式提交还需实际GitHub URL/SHA/可见性及据实人工工时"
+      ],
+      "test_seams": [
+        "公开安装/CLI/评估命令",
+        "CI与提交材料"
+      ],
+      "evidence": [
+        "../.github/workflows/quality.yml",
+        "14-operations.md"
+      ],
+      "remaining": [
+        "GitHub-hosted CI not run; repository URL/final remote SHA/visibility and actual human hours remain pending. Recorded human decisions and AI execution are disclosed."
+      ],
+      "required_for_exam_delivery": true,
+      "future_production_acceptance": [
+        "新环境可复制运行；关键测试不跳过；旧验收点全部通过；运行版本与产物一致；GitHub URL/最终SHA/个人贡献齐备"
+      ],
+      "future_production_scope": [
+        "确定性回归进入 CI；在线测试独立显式触发；固定运行时与工作流依赖；源码版本、数据/模型/策略指纹写入产物"
+      ],
+      "future_production_effort_estimate": "2–4h + 仓库准备"
+    },
+    {
+      "id": "STAB-12",
+      "priority": "P2",
+      "title": "真实业务适配与受控试运行",
+      "depends_on": [
+        "STAB-02",
+        "STAB-03",
+        "STAB-04",
+        "STAB-05",
+        "STAB-07",
+        "STAB-08",
+        "STAB-09",
+        "STAB-10",
+        "STAB-11"
+      ],
+      "status": "future_production_scope_not_current_delivery_requirement",
+      "effort_estimate": "另估 + 至少7天受控试运行",
+      "scope": [
+        "先接一个允许测试的真实业务工具；确认幂等/查询/失败扣费和权限；运营审核；按真实环境验证日志、备份与预算"
+      ],
+      "acceptance": [
+        "业务费用与回执可对账；未知结果有处理人；内容和规则经实际运营验收；未达到门槛不得宣称生产放行"
+      ],
+      "test_seams": [
+        "真实业务 Adapter",
+        "运维与人工验收"
+      ],
+      "required_for_exam_delivery": false
+    },
+    {
+      "id": "STAB-13",
+      "priority": "later",
+      "title": "团队共享 HTTP 服务",
+      "depends_on": [
+        "STAB-12"
+      ],
+      "status": "future_production_scope_not_current_delivery_requirement",
+      "effort_estimate": "另估",
+      "scope": [
+        "基于可信身份做权限/数据隔离、限流和传输保护，再暴露 HTTP；独立租户安全评估"
+      ],
+      "acceptance": [
+        "多用户越权、任务/方案ID碰撞、跨用户读取、敏感日志及服务容量均单独验收"
+      ],
+      "test_seams": [
+        "未来 HTTP Interface"
+      ],
+      "required_for_exam_delivery": false
+    }
+  ],
+  "quality_gates": [
+    {
+      "id": "G-BASELINE",
+      "name": "既有功能不退化",
+      "requirement": "103/103 regression, 18/18 offline, 18/18 current live with matching source",
+      "status": "passed_current_scope",
+      "evidence": [
+        "../examples/test-summary.json",
+        "../examples/evaluation-summary.json",
+        "../examples/live-evaluation-summary.json"
+      ],
+      "note": "Current full 18+2 live cases and three repeat replans match the current business source. Regression count and test hash are read from examples/test-summary.json.",
+      "production_requirement": "当前63个测试方法与原18+2验收点作为回归基线；关键平台测试不得以skip通过",
+      "current_delivery_plan": "15-short-validation-and-delivery.md"
+    },
+    {
+      "id": "G-RECOVERY",
+      "name": "故障与状态一致性",
+      "requirement": "16x20 contention and 8x10 process-kill recovery; explicit unknown result blocking",
+      "status": "passed_local_scope",
+      "evidence": [
+        "../examples/hardening/concurrency.json",
+        "../examples/hardening/recovery/summary.json"
+      ],
+      "note": "16x20 contention and eight crash positions x10 pass; external result querying, power loss and frozen-writer takeover are outside the proved scope.",
+      "production_requirement": "8个故障位置各10轮；16进程同请求20轮；无重复方案/业务计费，未知外部结果明确阻断",
+      "current_delivery_plan": "15-short-validation-and-delivery.md"
+    },
+    {
+      "id": "G-LIMITS",
+      "name": "累计限额和取消",
+      "requirement": "Frozen task limits, cancellation/admission order and saved receipts verified",
+      "status": "passed_local_scope",
+      "evidence": [
+        "../examples/test-results.txt"
+      ],
+      "note": "Frozen task caps, cancellation ordering and saved-receipt preservation pass; no currency budget guarantee.",
+      "production_requirement": "模型和工具任务级上限跨续跑有效；取消后无新动作；迟到提交保持实际回执",
+      "current_delivery_plan": "15-short-validation-and-delivery.md"
+    },
+    {
+      "id": "G-RETRY",
+      "name": "失败正确处置",
+      "requirement": "No blind unknown-result replay; local bounded retry; explicit busy; batch stops on provider errors",
+      "status": "passed_declared_safe_stop_scope",
+      "evidence": [
+        "../examples/test-results.txt"
+      ],
+      "note": "Permanent errors classified, unknown outcomes blocked, transient local tool cap tested; automatic HTTP backoff not implemented.",
+      "production_requirement": "永久错误不原样重试；瞬态错误有界；结果未知先查询或对账",
+      "current_delivery_plan": "15-short-validation-and-delivery.md"
+    },
+    {
+      "id": "G-DATA",
+      "name": "存储和产物",
+      "requirement": "Version rejection, small backup/restore, atomic export index and clean packaging checked",
+      "status": "passed_declared_local_scope",
+      "evidence": [
+        "../examples/test-results.txt"
+      ],
+      "note": "Small backup/restore, future version rejection and export interruption pass; migration rollback injection and production-scale restore pending.",
+      "production_requirement": "迁移回滚、备份恢复与导出中断均有公开接口证据；未知版本拒绝修改",
+      "current_delivery_plan": "15-short-validation-and-delivery.md"
+    },
+    {
+      "id": "G-PRIVACY",
+      "name": "权限与信息保护",
+      "requirement": "Configured keys absent from public artifacts and package; private env/DB/cache/link exclusion",
+      "status": "passed_configured_credential_scan_package_exclusion_verified",
+      "evidence": [
+        "../examples/credential-check.json"
+      ],
+      "note": "Actual-key scan is recorded separately; production ACL and transport proof remain pending.",
+      "production_requirement": "本机文件和配置检查通过；公开日志密钥/敏感哨兵0泄漏；生产传输保护有实际证明",
+      "current_delivery_plan": "15-short-validation-and-delivery.md"
+    },
+    {
+      "id": "G-EVAL",
+      "name": "独立效果",
+      "requirement": "At least two real model paths, current full 18+2 cases and 3 repeated replans; no held-out generalization claim",
+      "status": "passed_declared_development_scope",
+      "evidence": [
+        "../examples/live-evaluation-summary.json"
+      ],
+      "note": "18 acceptance cases, two adversarial cases and three repetitions are development evidence; they do not establish independent held-out generalization.",
+      "production_requirement": "至少50需求组、至少30真实模型组x3轮；目标匹配>=95%、分类>=90%、硬约束违规0；按需求组报告稳定性与不确定性",
+      "current_delivery_plan": "15-short-validation-and-delivery.md"
+    },
+    {
+      "id": "G-BUDGET",
+      "name": "评估开销",
+      "requirement": "Explicit request caps, actual requests and reported usage for each batch; no monetary claim",
+      "status": "passed_request_budget_scope",
+      "evidence": [
+        "../examples/live-evaluation-summary.json",
+        "../examples/test-results.txt"
+      ],
+      "note": "Shared per-batch request cap verified; token threshold, currency pricing and uncertain billing reconciliation remain incomplete.",
+      "production_requirement": "在线批次必须配置请求硬上限；Token阈值仅停止新派发；货币预算依赖经验证的计价与计量，未知扣费不当0",
+      "current_delivery_plan": "15-short-validation-and-delivery.md"
+    },
+    {
+      "id": "G-SOAK",
+      "name": "短期稳态与突发负载",
+      "requirement": "300 seconds, 8 clients, 4 new demands/s upper bound, >=300 checked cases; resources/queues and a separate burst matrix",
+      "status": "passed_short_profile_only",
+      "evidence": [
+        "../examples/short-validation/load/summary.json"
+      ],
+      "note": "300-second native-local-WAL paced profile: 1200 checked cases, zero unexpected results, resources measured; no long-term SLA.",
+      "production_requirement": "8个CLI客户端、最多2活动任务、24h/1万离线任务；结果完整、资源无持续增长，环境和原始测量齐全",
+      "current_delivery_plan": "15-short-validation-and-delivery.md"
+    },
+    {
+      "id": "G-RELEASE",
+      "name": "发布与责任",
+      "requirement": "Reproducible local materials/package, readable GitHub URL and final commit, truthful time and AI disclosure",
+      "status": "local_verified_formal_fields_pending",
+      "evidence": [
+        "../.github/workflows/quality.yml",
+        "14-operations.md"
+      ],
+      "note": "Clean-room execution and pinned runtime are verified locally. Hosted CI, actual remote URL/SHA/visibility and truthful actual human hours remain pending.",
+      "production_requirement": "受支持运行时、新环境命令、CI、备份/回滚和处置说明齐备；实际业务与候选人验证均有责任人和记录",
+      "current_delivery_plan": "15-short-validation-and-delivery.md"
+    }
+  ],
+  "online_evaluation": {
+    "current_model": "wb/hy3",
+    "current_endpoint": "http://127.0.0.1:4000/v1",
+    "current_scope_live_checks": "18 acceptance + 2 adversarial + 3 repeats",
+    "final_current_source_requests": 93,
+    "final_current_source_tokens": 178489,
+    "current_batch_caps": [
+      100,
+      24,
+      20
+    ],
+    "execution_requires_configured_request_cap": true,
+    "token_threshold_is_hard_bill_cap": false,
+    "currency_pricing_verified": false,
+    "existing_gateway_access_authorization_retained": true,
+    "note": "Current-source final three batches only; historical smoke and failed gateway attempts remain separate. Release audit checks each cap, actual count and remaining quota for consistency."
+  },
+  "completion_rule": "A ticket is complete only with code, actual verification evidence, updated limits and relevant regression; a written plan does not raise the industrial score or certify quality.",
+  "guarantee_scope": "One host and one explicitly configured state database; independent --db files do not share admission limits or local idempotency.",
+  "estimated_effort_hours": {
+    "P0": [
+      27,
+      48
+    ],
+    "P1": [
+      15,
+      29
+    ],
+    "total": [
+      42,
+      77
+    ],
+    "note": "Historical future-production engineering estimate, not actual human work or a current exam-delivery commitment; long soak/pilot is deferred."
+  },
+  "updated_at": "2026-10-29T01:34:58.171337+00:00",
+  "current_evidence": "../examples/short-validation/final-summary.json",
+  "active_delivery_scope": "Problem 2 campus CLI, bounded short validation; user explicitly excludes long online testing",
+  "active_plan": "15-short-validation-and-delivery.md",
+  "production_scope_deferred_by_user": true,
+  "scope_rule": "acceptance and quality_gates.requirement describe the current campus/short-test gate; future_production_* preserves larger historical targets and is not represented as completed.",
+  "historical_online_evaluation": {
+    "planning_turn_new_requests": 0,
+    "hardening_successfully_reported_requests": 32,
+    "hardening_unconfirmed_attempts": 3,
+    "final_same_source_smoke_requests": 16,
+    "final_same_source_smoke_request_cap": 24,
+    "final_same_source_reported_tokens": 66496,
+    "note": "Two bounded smoke batches of 24 allowed requests each; 16 sent in each. Three earlier red-stage attempts produced no accepted response and have no billing proof."
+  }
+}

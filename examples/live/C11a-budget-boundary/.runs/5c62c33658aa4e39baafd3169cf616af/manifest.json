@@ -1,0 +1,48 @@
+{
+  "executed_at": "2026-10-28T14:48:38.600040+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C11a-budget-boundary",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "e67aefae347f6b9cc797fe09981ddf16b161782b46b5fa384bbe39150f94ef25",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "claude-opus-4-6-thinking",
+  "model_endpoint": "http://100.73.185.103:8045/v1",
+  "action_source": "remote_model",
+  "actual_result_mode": "live",
+  "model_requests_sent": 4,
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "token_usage": {
+    "prompt_tokens": 14462,
+    "completion_tokens": 1108,
+    "total_tokens": 15570,
+    "reported_responses": 4,
+    "accepted_responses": 4,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [
+    "claude-opus-4-6-thinking"
+  ],
+  "export_id": "5c62c33658aa4e39baafd3169cf616af",
+  "artifacts_sha256": {
+    "decisions.jsonl": "5c90e43183f5da57e37d547cb46d9521619ba7f61d4a37188ff7888c045be4d8",
+    "input.json": "67386e47686c73eb7968d7b5706741a12766fac46d3b228b34dcfbcd0c4adaf8",
+    "output.json": "23d569fbcf70cf66460eae1d31f5cc47a3607905791e83b66aa84c562fc95b14",
+    "plan.md": "157c1599d35864163c5c8a1e9eadda03297d83d0ee1fed3cca1937ab9e8f1365",
+    "trace.jsonl": "4bfa9c6f769f54e0983dd42500cee27c753cfadbb8599a3ffebb4604d8cc330b",
+    "trace.md": "edf1e78756420e8c099d899c0a0e941cbcc8f206c62f821fa3390bb17b0406e6"
+  }
+}

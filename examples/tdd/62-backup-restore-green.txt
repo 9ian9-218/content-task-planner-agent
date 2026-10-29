@@ -1,0 +1,6 @@
+test_verified_backup_can_restore_saved_results_without_reexecuting_the_task (tests.test_hardening.HardeningTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.081s
+
+OK

@@ -1,0 +1,6 @@
+test_legacy_text_finish_obeys_the_same_state_and_reason_contract (tests.test_gateway.GatewayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.006s
+
+OK

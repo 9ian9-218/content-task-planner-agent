@@ -1,0 +1,14 @@
+test_live_report_records_gateway_and_actual_response_models (tests.test_live_evaluation.LiveEvaluationTests) ... ERROR
+
+======================================================================
+ERROR: test_live_report_records_gateway_and_actual_response_models (tests.test_live_evaluation.LiveEvaluationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_live_evaluation.py", line 25, in test_live_report_records_gateway_and_actual_response_models
+    self.assertEqual(manifest["model_name"], "fixture-request")
+KeyError: 'model_name'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.225s
+
+FAILED (errors=1)

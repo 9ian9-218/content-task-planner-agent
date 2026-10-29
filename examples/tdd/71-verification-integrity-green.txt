@@ -1,0 +1,6 @@
+test_verifier_rejects_code_that_changes_during_the_test_run (tests.test_hardening.HardeningTests.test_verifier_rejects_code_that_changes_during_the_test_run) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.403s
+
+OK

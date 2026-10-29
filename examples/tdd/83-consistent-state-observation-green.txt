@@ -1,0 +1,38 @@
+{"round": 1, "passed": true, "seconds": 1.730832}
+{"round": 2, "passed": true, "seconds": 1.651876}
+{"round": 3, "passed": true, "seconds": 1.643193}
+{"round": 4, "passed": true, "seconds": 1.735475}
+{"round": 5, "passed": true, "seconds": 1.423179}
+{"round": 6, "passed": true, "seconds": 1.439653}
+{"round": 7, "passed": true, "seconds": 1.714319}
+{"round": 8, "passed": true, "seconds": 1.573592}
+{"round": 9, "passed": true, "seconds": 1.786533}
+{"round": 10, "passed": true, "seconds": 1.323653}
+{"round": 11, "passed": true, "seconds": 1.543056}
+{"round": 12, "passed": true, "seconds": 1.270329}
+{"round": 13, "passed": true, "seconds": 2.103318}
+{"round": 14, "passed": true, "seconds": 1.965597}
+{"round": 15, "passed": true, "seconds": 1.781649}
+{"round": 16, "passed": true, "seconds": 1.613718}
+{"round": 17, "passed": true, "seconds": 1.410549}
+{"round": 18, "passed": true, "seconds": 1.671651}
+{"round": 19, "passed": true, "seconds": 1.628884}
+{"round": 20, "passed": true, "seconds": 1.728216}
+{
+  "started_at": "2026-10-28T14:03:29.582996+00:00",
+  "finished_at": "2026-10-28T14:04:02.413293+00:00",
+  "python": "3.14.10",
+  "sqlite": "3.53.1",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "source_sha256": "eb4d51b7219425021439794e00a7fb1976bbec1b54a10cec21d6ec709345364b",
+  "mode": "mock",
+  "remote_model_requests": 0,
+  "scope": "Single host; one SQLite file on the native temporary filesystem. Each round submits one identical brief from independent CLI processes. Not a 24-hour soak or distinct-task load test.",
+  "rounds": 20,
+  "clients_per_round": 16,
+  "client_runs": 320,
+  "rounds_passed": 20,
+  "median_round_seconds": 1.6475345,
+  "max_round_seconds": 2.103318,
+  "passed": true
+}

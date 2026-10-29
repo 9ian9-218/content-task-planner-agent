@@ -1,0 +1,6 @@
+test_excessively_nested_model_json_cannot_crash_or_poison_the_request (tests.test_gateway.GatewayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.115s
+
+OK

@@ -1,0 +1,6 @@
+test_cancel_wins_when_accepted_between_last_check_and_durable_action_admission (tests.test_hardening.HardeningTests.test_cancel_wins_when_accepted_between_last_check_and_durable_action_admission) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.122s
+
+OK

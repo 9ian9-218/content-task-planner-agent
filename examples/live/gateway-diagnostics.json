@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-10-28T08:34:59.955597+00:00",
+  "probes": [
+    {
+      "probe": "list_models",
+      "at": "2026-10-28T08:34:53.645546+00:00",
+      "model_requested": "claude-opus-4.6",
+      "http_status": 200,
+      "available_model_count": 17,
+      "requested_alias_listed": false,
+      "related_claude_models": [
+        "claude",
+        "claude-opus-4-6-thinking",
+        "claude-sonnet-4-6"
+      ]
+    },
+    {
+      "probe": "minimal_completion",
+      "at": "2026-10-28T08:34:53.677135+00:00",
+      "model_requested": "claude-opus-4.6",
+      "http_status": 503,
+      "retry_after": "26",
+      "error": {
+        "message": "【网关调度受限】 网关诊断: 网关本地账号池当前暂无可用账号或全部可用账号处于限流冷却中。调度详情: All accounts limited. Wait 26s. 建议: 请等待冷却结束（参考等待秒数），或在网关中添加更多正常账号。",
+        "type": "rate_limit_error",
+        "param": null,
+        "code": "all_accounts_limited",
+        "gateway_error": {
+          "error_code": "all_accounts_limited",
+          "model": "claude-opus-4.6",
+          "diagnosis": "网关本地账号池当前暂无可用账号或全部可用账号处于限流冷却中。调度详情: All accounts limited. Wait 26s.",
+          "suggestion": "请等待冷却结束（参考等待秒数），或在网关中添加更多正常账号。",
+          "readable_summary": "【网关调度受限】 网关诊断: 网关本地账号池当前暂无可用账号或全部可用账号处于限流冷却中。调度详情: All accounts limited. Wait 26s. 建议: 请等待冷却结束（参考等待秒数），或在网关中添加更多正常账号。"
+        },
+        "upstream_error": {
+          "status": 503,
+          "response": {
+            "raw": "All accounts limited. Wait 26s."
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+test_delivery_audit_rejects_claimed_completion_without_a_saved_plan (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_claimed_completion_without_a_saved_plan) ... FAIL
+
+======================================================================
+FAIL: test_delivery_audit_rejects_claimed_completion_without_a_saved_plan (tests.test_short_validation.ShortValidationTests.test_delivery_audit_rejects_claimed_completion_without_a_saved_plan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 75, in test_delivery_audit_rejects_claimed_completion_without_a_saved_plan
+    self.assertEqual(process.returncode, 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1
+
+----------------------------------------------------------------------
+Ran 1 test in 0.251s
+
+FAILED (failures=1)

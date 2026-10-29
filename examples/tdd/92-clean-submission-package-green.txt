@@ -1,0 +1,6 @@
+test_package_command_excludes_credentials_databases_caches_and_links (tests.test_short_validation.ShortValidationTests.test_package_command_excludes_credentials_databases_caches_and_links) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.671s
+
+OK

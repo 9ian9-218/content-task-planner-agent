@@ -1,0 +1,6 @@
+test_decision_limit_returns_incomplete_without_saving (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.054s
+
+OK

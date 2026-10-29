@@ -1,0 +1,6 @@
+test_gateway_failure_retains_http_status_retry_hint_and_paid_results_without_secrets (tests.test_gateway.GatewayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.259s
+
+OK

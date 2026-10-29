@@ -1,0 +1,53 @@
+{
+  "phases": [
+    {
+      "phase": "full-matrix",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "tools/evaluate.py",
+        "--mode",
+        "live",
+        "--all-cases",
+        "--max-model-requests",
+        "100",
+        "--model-timeout",
+        "60"
+      ],
+      "started_at": "2026-10-28T15:32:10.528647+00:00",
+      "elapsed_seconds": 531.944,
+      "exit_code": 0
+    },
+    {
+      "phase": "adversarial",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "tools/evaluate_adversarial.py",
+        "--max-model-requests",
+        "24",
+        "--model-timeout",
+        "60"
+      ],
+      "started_at": "2026-10-28T15:41:03.386295+00:00",
+      "elapsed_seconds": 120.736,
+      "exit_code": 0
+    },
+    {
+      "phase": "replanning-repeat",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "tools/evaluate_replanning.py",
+        "--rounds",
+        "3",
+        "--max-model-requests",
+        "20",
+        "--model-timeout",
+        "60"
+      ],
+      "started_at": "2026-10-28T15:43:04.127348+00:00",
+      "elapsed_seconds": 106.702,
+      "exit_code": 0
+    }
+  ],
+  "all_completed": true,
+  "passed": true
+}

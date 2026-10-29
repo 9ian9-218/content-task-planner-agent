@@ -1,0 +1,15 @@
+test_transport_timeout_is_recorded_as_unknown_and_resume_cannot_purchase_it_again (tests.test_hardening.HardeningTests.test_transport_timeout_is_recorded_as_unknown_and_resume_cannot_purchase_it_again) ... ERROR
+
+======================================================================
+ERROR: test_transport_timeout_is_recorded_as_unknown_and_resume_cannot_purchase_it_again (tests.test_hardening.HardeningTests.test_transport_timeout_is_recorded_as_unknown_and_resume_cannot_purchase_it_again)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 486, in test_transport_timeout_is_recorded_as_unknown_and_resume_cannot_purchase_it_again
+    self.assertTrue(result['model_error']['outcome_unknown'])
+                    ~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'model_error'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.060s
+
+FAILED (errors=1)

@@ -1,0 +1,1026 @@
+{
+  "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+  "request_id": "evaluation-001",
+  "brief": {
+    "request_id": "evaluation-001",
+    "topic": "P01 字幕功能介绍",
+    "budget_units": 10,
+    "deadline": "2026-11-01T11:00:00+08:00",
+    "preference": "quality_first"
+  },
+  "input_fingerprint": "a69a6a71cf717e2feb917becc6b64f52a2fa2b6eb812b23af6b8ef6198fde1a0",
+  "as_of": "2026-11-01T10:00:00+08:00",
+  "operations": [
+    {
+      "operation_id": "17a155a10523467b8e665325b6d45350",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "17a155a10523467b8e665325b6d45350"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "2c3d0dbc467a46318947d258a1ddec3b",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "2c3d0dbc467a46318947d258a1ddec3b"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "24de6edea320429f85c2bc5a633f55bc",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool": "generate_script",
+      "parameters": {
+        "quote_id": "q-639812bb6e3e92a9",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "generate_script",
+        "data": {
+          "script_id": "s-639812bb6e3e92a9",
+          "quote_id": "q-639812bb6e3e92a9",
+          "profile": "standard",
+          "source_ids": [
+            "P01"
+          ],
+          "title": "P01 字幕功能介绍",
+          "text": "今天介绍以下已核验功能：支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。 建议使用前核对素材，并按需修改脚本。",
+          "generator": "local_template",
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 8,
+        "elapsed_business_minutes": 40,
+        "operation_id": "24de6edea320429f85c2bc5a633f55bc"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "63780a632f2044ec9aa85d22b6cf1bce",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool": "save_plan",
+      "parameters": {
+        "quote_id": "q-639812bb6e3e92a9",
+        "script_id": "s-639812bb6e3e92a9",
+        "outline": "1. 开场：介绍 P01 字幕功能主题；2. 事实说明：支持为视频添加字幕、字幕内容可以编辑；3. 操作建议：使用前核对素材，按需修改脚本；4. 结尾：欢迎根据实际需要编辑内容。"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "save_plan",
+        "data": {
+          "plan_id": "plan-1d91998c96104d038d115bd8650ad4e7",
+          "request_id": "evaluation-001",
+          "goal": "P01 字幕功能介绍",
+          "outline": "1. 开场：介绍 P01 字幕功能主题；2. 事实说明：支持为视频添加字幕、字幕内容可以编辑；3. 操作建议：使用前核对素材，按需修改脚本；4. 结尾：欢迎根据实际需要编辑内容。",
+          "script": {
+            "script_id": "s-639812bb6e3e92a9",
+            "quote_id": "q-639812bb6e3e92a9",
+            "profile": "standard",
+            "source_ids": [
+              "P01"
+            ],
+            "title": "P01 字幕功能介绍",
+            "text": "今天介绍以下已核验功能：支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。 建议使用前核对素材，并按需修改脚本。",
+            "generator": "local_template",
+            "selected": true
+          },
+          "source_ids": [
+            "P01"
+          ],
+          "cost_units": 8,
+          "saved_at": "2026-11-01T10:43:00+08:00",
+          "tasks": [
+            {
+              "task": "search_materials",
+              "depends_on": [],
+              "status": "succeeded"
+            },
+            {
+              "task": "estimate_cost",
+              "depends_on": [
+                "search_materials"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "generate_script",
+              "depends_on": [
+                "estimate_cost"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "save_plan",
+              "depends_on": [
+                "generate_script"
+              ],
+              "status": "succeeded"
+            }
+          ]
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "63780a632f2044ec9aa85d22b6cf1bce"
+      },
+      "selected": true
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "model_mode": "live",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool_call_id": "chatcmpl-tool-a4aaecd5b62f5c9c",
+      "decision_index": 1,
+      "decision_run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "recorded_at": "2026-10-28T15:34:39.036869+00:00",
+      "action_source": "remote_model",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍",
+        "decision_summary": "根据 quality_first 偏好，先检索 P01 字幕功能相关素材以支撑后续方案规划。"
+      },
+      "decision_summary": "根据 quality_first 偏好，先检索 P01 字幕功能相关素材以支撑后续方案规划。",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "17a155a10523467b8e665325b6d45350"
+      },
+      "observed_after_step": null
+    },
+    {
+      "step": 2,
+      "model_mode": "live",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool_call_id": "chatcmpl-tool-9cfbe3ebab85ac16",
+      "decision_index": 2,
+      "decision_run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "recorded_at": "2026-10-28T15:34:40.678696+00:00",
+      "action_source": "remote_model",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard",
+        "decision_summary": "quality_first 偏好优先询价 standard 档位，使用已检索到的 P01 素材。"
+      },
+      "decision_summary": "quality_first 偏好优先询价 standard 档位，使用已检索到的 P01 素材。",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "2c3d0dbc467a46318947d258a1ddec3b"
+      },
+      "observed_after_step": 1
+    },
+    {
+      "step": 3,
+      "model_mode": "live",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool_call_id": "chatcmpl-tool-9ffec196d272670c",
+      "decision_index": 3,
+      "decision_run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "recorded_at": "2026-10-28T15:34:43.266827+00:00",
+      "action_source": "remote_model",
+      "tool": "generate_script",
+      "parameters": {
+        "quote_id": "q-639812bb6e3e92a9",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard",
+        "decision_summary": "standard 档位报价可行（8/10 预算、截止前完成），使用其有效报价生成脚本草稿。"
+      },
+      "decision_summary": "standard 档位报价可行（8/10 预算、截止前完成），使用其有效报价生成脚本草稿。",
+      "result": {
+        "ok": true,
+        "tool_name": "generate_script",
+        "data": {
+          "script_id": "s-639812bb6e3e92a9",
+          "quote_id": "q-639812bb6e3e92a9",
+          "profile": "standard",
+          "source_ids": [
+            "P01"
+          ],
+          "title": "P01 字幕功能介绍",
+          "text": "今天介绍以下已核验功能：支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。 建议使用前核对素材，并按需修改脚本。",
+          "generator": "local_template",
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 8,
+        "elapsed_business_minutes": 40,
+        "operation_id": "24de6edea320429f85c2bc5a633f55bc"
+      },
+      "observed_after_step": 2
+    },
+    {
+      "step": 4,
+      "model_mode": "live",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool_call_id": "chatcmpl-tool-b6d5c149fcccdc46",
+      "decision_index": 4,
+      "decision_run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "recorded_at": "2026-10-28T15:34:45.389936+00:00",
+      "action_source": "remote_model",
+      "tool": "save_plan",
+      "parameters": {
+        "quote_id": "q-639812bb6e3e92a9",
+        "script_id": "s-639812bb6e3e92a9",
+        "outline": "1. 开场：介绍 P01 字幕功能主题；2. 事实说明：支持为视频添加字幕、字幕内容可以编辑；3. 操作建议：使用前核对素材，按需修改脚本；4. 结尾：欢迎根据实际需要编辑内容。",
+        "decision_summary": "脚本已生成，使用其报价与脚本进行方案核验保存，完成规划。"
+      },
+      "decision_summary": "脚本已生成，使用其报价与脚本进行方案核验保存，完成规划。",
+      "result": {
+        "ok": true,
+        "tool_name": "save_plan",
+        "data": {
+          "plan_id": "plan-1d91998c96104d038d115bd8650ad4e7",
+          "request_id": "evaluation-001",
+          "goal": "P01 字幕功能介绍",
+          "outline": "1. 开场：介绍 P01 字幕功能主题；2. 事实说明：支持为视频添加字幕、字幕内容可以编辑；3. 操作建议：使用前核对素材，按需修改脚本；4. 结尾：欢迎根据实际需要编辑内容。",
+          "script": {
+            "script_id": "s-639812bb6e3e92a9",
+            "quote_id": "q-639812bb6e3e92a9",
+            "profile": "standard",
+            "source_ids": [
+              "P01"
+            ],
+            "title": "P01 字幕功能介绍",
+            "text": "今天介绍以下已核验功能：支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。 建议使用前核对素材，并按需修改脚本。",
+            "generator": "local_template",
+            "selected": true
+          },
+          "source_ids": [
+            "P01"
+          ],
+          "cost_units": 8,
+          "saved_at": "2026-11-01T10:43:00+08:00",
+          "tasks": [
+            {
+              "task": "search_materials",
+              "depends_on": [],
+              "status": "succeeded"
+            },
+            {
+              "task": "estimate_cost",
+              "depends_on": [
+                "search_materials"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "generate_script",
+              "depends_on": [
+                "estimate_cost"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "save_plan",
+              "depends_on": [
+                "generate_script"
+              ],
+              "status": "succeeded"
+            }
+          ]
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "63780a632f2044ec9aa85d22b6cf1bce"
+      },
+      "observed_after_step": 3
+    }
+  ],
+  "materials": [
+    {
+      "id": "P01",
+      "title": "合成产品 P01 字幕功能",
+      "keywords": [
+        "P01",
+        "字幕",
+        "短视频",
+        "新手"
+      ],
+      "facts": [
+        "支持为视频添加字幕",
+        "字幕内容可以编辑"
+      ]
+    }
+  ],
+  "quotes": {
+    "q-639812bb6e3e92a9": {
+      "quote_id": "q-639812bb6e3e92a9",
+      "material_ids": [
+        "P01"
+      ],
+      "profile": "standard",
+      "remaining_units": 8,
+      "projected_total_units": 8,
+      "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+      "budget_gap_units": 0,
+      "deadline_gap_minutes": 0,
+      "feasible": true,
+      "selected": true
+    }
+  },
+  "scripts": {
+    "s-639812bb6e3e92a9": {
+      "script_id": "s-639812bb6e3e92a9",
+      "quote_id": "q-639812bb6e3e92a9",
+      "profile": "standard",
+      "source_ids": [
+        "P01"
+      ],
+      "title": "P01 字幕功能介绍",
+      "text": "今天介绍以下已核验功能：支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。 建议使用前核对素材，并按需修改脚本。",
+      "generator": "local_template",
+      "selected": true
+    }
+  },
+  "plan_id": "plan-1d91998c96104d038d115bd8650ad4e7",
+  "saved_plan": {
+    "plan_id": "plan-1d91998c96104d038d115bd8650ad4e7",
+    "request_id": "evaluation-001",
+    "goal": "P01 字幕功能介绍",
+    "outline": "1. 开场：介绍 P01 字幕功能主题；2. 事实说明：支持为视频添加字幕、字幕内容可以编辑；3. 操作建议：使用前核对素材，按需修改脚本；4. 结尾：欢迎根据实际需要编辑内容。",
+    "script": {
+      "script_id": "s-639812bb6e3e92a9",
+      "quote_id": "q-639812bb6e3e92a9",
+      "profile": "standard",
+      "source_ids": [
+        "P01"
+      ],
+      "title": "P01 字幕功能介绍",
+      "text": "今天介绍以下已核验功能：支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。 建议使用前核对素材，并按需修改脚本。",
+      "generator": "local_template",
+      "selected": true
+    },
+    "source_ids": [
+      "P01"
+    ],
+    "cost_units": 8,
+    "saved_at": "2026-11-01T10:43:00+08:00",
+    "tasks": [
+      {
+        "task": "search_materials",
+        "depends_on": [],
+        "status": "succeeded"
+      },
+      {
+        "task": "estimate_cost",
+        "depends_on": [
+          "search_materials"
+        ],
+        "status": "succeeded"
+      },
+      {
+        "task": "generate_script",
+        "depends_on": [
+          "estimate_cost"
+        ],
+        "status": "succeeded"
+      },
+      {
+        "task": "save_plan",
+        "depends_on": [
+          "generate_script"
+        ],
+        "status": "succeeded"
+      }
+    ]
+  },
+  "status": "completed",
+  "reason_code": null,
+  "model_mode": "live",
+  "model_decisions": 0,
+  "errors": [],
+  "cached": true,
+  "replayed_decisions": 0,
+  "task_limits": {
+    "max_model_attempts": 12,
+    "max_tool_attempts": 12
+  },
+  "task_counters": {
+    "model_attempts": 4,
+    "tool_attempts": 4
+  },
+  "missing_fields": [],
+  "invalid_fields": [],
+  "decisions": [
+    {
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "decision_index": 1,
+      "recorded_at": "2026-10-28T15:34:39.011864+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": null,
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\"query\": \"P01 字幕功能介绍\", \"decision_summary\": \"根据 quality_first 偏好，先检索 P01 字幕功能相关素材以支撑后续方案规划。\"}",
+            "name": "search_materials"
+          },
+          "id": "chatcmpl-tool-a4aaecd5b62f5c9c",
+          "type": "function"
+        }
+      ],
+      "finish": null,
+      "response_model": "wb/hy3",
+      "usage": {
+        "completion_tokens": 185,
+        "prompt_tokens": 1260,
+        "total_tokens": 1445,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 127,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "cache_creation_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 236,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 127,
+        "credit": 0,
+        "cached_tokens": 0
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "decision_index": 2,
+      "recorded_at": "2026-10-28T15:34:40.649332+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 1,
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\"material_ids\": [\"P01\"], \"profile\": \"standard\", \"decision_summary\": \"quality_first 偏好优先询价 standard 档位，使用已检索到的 P01 素材。\"}",
+            "name": "estimate_cost"
+          },
+          "id": "chatcmpl-tool-9cfbe3ebab85ac16",
+          "type": "function"
+        }
+      ],
+      "finish": null,
+      "response_model": "wb/hy3",
+      "usage": {
+        "completion_tokens": 93,
+        "prompt_tokens": 1505,
+        "total_tokens": 1598,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 31,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "cache_creation_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 481,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 31,
+        "credit": 0,
+        "cached_tokens": 0
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "decision_index": 3,
+      "recorded_at": "2026-10-28T15:34:43.247277+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 2,
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\"quote_id\": \"q-639812bb6e3e92a9\", \"material_ids\": [\"P01\"], \"profile\": \"standard\", \"decision_summary\": \"standard 档位报价可行（8/10 预算、截止前完成），使用其有效报价生成脚本草稿。\"}",
+            "name": "generate_script"
+          },
+          "id": "chatcmpl-tool-9ffec196d272670c",
+          "type": "function"
+        }
+      ],
+      "finish": null,
+      "response_model": "wb/hy3",
+      "usage": {
+        "completion_tokens": 147,
+        "prompt_tokens": 1749,
+        "total_tokens": 1896,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 61,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "cache_creation_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1749,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 61,
+        "credit": 0,
+        "cached_tokens": 0
+      },
+      "system_fingerprint": null
+    },
+    {
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "decision_index": 4,
+      "recorded_at": "2026-10-28T15:34:45.376169+00:00",
+      "model_mode": "live",
+      "action_source": "remote_model",
+      "observed_after_step": 3,
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\"quote_id\": \"q-639812bb6e3e92a9\", \"script_id\": \"s-639812bb6e3e92a9\", \"outline\": \"1. 开场：介绍 P01 字幕功能主题；2. 事实说明：支持为视频添加字幕、字幕内容可以编辑；3. 操作建议：使用前核对素材，按需修改脚本；4. 结尾：欢迎根据实际需要编辑内容。\", \"decision_summary\": \"脚本已生成，使用其报价与脚本进行方案核验保存，完成规划。\"}",
+            "name": "save_plan"
+          },
+          "id": "chatcmpl-tool-b6d5c149fcccdc46",
+          "type": "function"
+        }
+      ],
+      "finish": null,
+      "response_model": "wb/hy3",
+      "usage": {
+        "completion_tokens": 144,
+        "prompt_tokens": 2025,
+        "total_tokens": 2169,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "cached_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "cache_creation_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 2025,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "prompt_cache_write_tokens": 0,
+        "completion_thinking_tokens": 0,
+        "credit": 0,
+        "cached_tokens": 0
+      },
+      "system_fingerprint": null
+    }
+  ],
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "executed_at": "2026-10-28T15:34:07.134358+00:00",
+  "catalog_snapshot": {
+    "version": "synthetic-tools-v1",
+    "free_tool_minutes": 1,
+    "failure_units": 0,
+    "failure_minutes": 1,
+    "profiles": {
+      "standard": {
+        "units": 8,
+        "minutes": 40,
+        "description": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价"
+      },
+      "economy": {
+        "units": 8,
+        "minutes": 20,
+        "description": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+      }
+    }
+  },
+  "materials_snapshot": {
+    "version": "synthetic-materials-v1",
+    "materials": [
+      {
+        "id": "P01",
+        "title": "合成产品 P01 字幕功能",
+        "keywords": [
+          "P01",
+          "字幕",
+          "短视频",
+          "新手"
+        ],
+        "facts": [
+          "支持为视频添加字幕",
+          "字幕内容可以编辑"
+        ]
+      },
+      {
+        "id": "P02",
+        "title": "合成产品 P02 模板功能",
+        "keywords": [
+          "P02",
+          "模板",
+          "旅行"
+        ],
+        "facts": [
+          "提供旅行主题视频模板",
+          "支持替换模板内的图片"
+        ]
+      }
+    ]
+  },
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "lease_generation": 1,
+  "model_inflight": null,
+  "pending_decision": null,
+  "tool_inflight": null,
+  "elapsed_seconds": 0.000543,
+  "runtime_limit_seconds": 180,
+  "model_timeout_seconds": 60.0,
+  "runtime_limit_exceeded": false,
+  "finished_at": "2026-10-28T15:34:45.396558+00:00",
+  "model_requests_sent": 0,
+  "tool_attempts": 0,
+  "cost": {
+    "spent_units": 8,
+    "remaining_units": 0,
+    "projected_total_units": 8,
+    "budget_units": 10,
+    "budget_gap_units": 0
+  },
+  "business_now": "2026-11-01T10:43:00+08:00",
+  "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+  "steps": [
+    {
+      "operation_id": "17a155a10523467b8e665325b6d45350",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool": "search_materials",
+      "parameters": {
+        "query": "P01 字幕功能介绍"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "search_materials",
+        "data": {
+          "materials": [
+            {
+              "id": "P01",
+              "title": "合成产品 P01 字幕功能",
+              "keywords": [
+                "P01",
+                "字幕",
+                "短视频",
+                "新手"
+              ],
+              "facts": [
+                "支持为视频添加字幕",
+                "字幕内容可以编辑"
+              ]
+            }
+          ],
+          "profiles": {
+            "standard": "完整的开场、事实说明、操作建议和结尾结构；最终费用须询价",
+            "economy": "精简的事实说明和结尾结构，满足核心交付；最终费用须询价"
+          }
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "17a155a10523467b8e665325b6d45350"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "2c3d0dbc467a46318947d258a1ddec3b",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool": "estimate_cost",
+      "parameters": {
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "estimate_cost",
+        "data": {
+          "quote_id": "q-639812bb6e3e92a9",
+          "material_ids": [
+            "P01"
+          ],
+          "profile": "standard",
+          "remaining_units": 8,
+          "projected_total_units": 8,
+          "estimated_finish_at": "2026-11-01T10:43:00+08:00",
+          "budget_gap_units": 0,
+          "deadline_gap_minutes": 0,
+          "feasible": true,
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "2c3d0dbc467a46318947d258a1ddec3b"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "24de6edea320429f85c2bc5a633f55bc",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool": "generate_script",
+      "parameters": {
+        "quote_id": "q-639812bb6e3e92a9",
+        "material_ids": [
+          "P01"
+        ],
+        "profile": "standard"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "generate_script",
+        "data": {
+          "script_id": "s-639812bb6e3e92a9",
+          "quote_id": "q-639812bb6e3e92a9",
+          "profile": "standard",
+          "source_ids": [
+            "P01"
+          ],
+          "title": "P01 字幕功能介绍",
+          "text": "今天介绍以下已核验功能：支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。 建议使用前核对素材，并按需修改脚本。",
+          "generator": "local_template",
+          "selected": true
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 8,
+        "elapsed_business_minutes": 40,
+        "operation_id": "24de6edea320429f85c2bc5a633f55bc"
+      },
+      "selected": true
+    },
+    {
+      "operation_id": "63780a632f2044ec9aa85d22b6cf1bce",
+      "run_id": "b3b5d4b576f6468a87987e8e0e693ebb",
+      "tool": "save_plan",
+      "parameters": {
+        "quote_id": "q-639812bb6e3e92a9",
+        "script_id": "s-639812bb6e3e92a9",
+        "outline": "1. 开场：介绍 P01 字幕功能主题；2. 事实说明：支持为视频添加字幕、字幕内容可以编辑；3. 操作建议：使用前核对素材，按需修改脚本；4. 结尾：欢迎根据实际需要编辑内容。"
+      },
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "tool_name": "save_plan",
+        "data": {
+          "plan_id": "plan-1d91998c96104d038d115bd8650ad4e7",
+          "request_id": "evaluation-001",
+          "goal": "P01 字幕功能介绍",
+          "outline": "1. 开场：介绍 P01 字幕功能主题；2. 事实说明：支持为视频添加字幕、字幕内容可以编辑；3. 操作建议：使用前核对素材，按需修改脚本；4. 结尾：欢迎根据实际需要编辑内容。",
+          "script": {
+            "script_id": "s-639812bb6e3e92a9",
+            "quote_id": "q-639812bb6e3e92a9",
+            "profile": "standard",
+            "source_ids": [
+              "P01"
+            ],
+            "title": "P01 字幕功能介绍",
+            "text": "今天介绍以下已核验功能：支持为视频添加字幕；字幕内容可以编辑。欢迎根据实际需要编辑内容。 建议使用前核对素材，并按需修改脚本。",
+            "generator": "local_template",
+            "selected": true
+          },
+          "source_ids": [
+            "P01"
+          ],
+          "cost_units": 8,
+          "saved_at": "2026-11-01T10:43:00+08:00",
+          "tasks": [
+            {
+              "task": "search_materials",
+              "depends_on": [],
+              "status": "succeeded"
+            },
+            {
+              "task": "estimate_cost",
+              "depends_on": [
+                "search_materials"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "generate_script",
+              "depends_on": [
+                "estimate_cost"
+              ],
+              "status": "succeeded"
+            },
+            {
+              "task": "save_plan",
+              "depends_on": [
+                "generate_script"
+              ],
+              "status": "succeeded"
+            }
+          ]
+        },
+        "error_code": null,
+        "retryable": false,
+        "charged_units": 0,
+        "elapsed_business_minutes": 1,
+        "operation_id": "63780a632f2044ec9aa85d22b6cf1bce"
+      },
+      "selected": true
+    }
+  ],
+  "task_plan": [
+    {
+      "task": "search_materials",
+      "depends_on": [],
+      "status": "succeeded"
+    },
+    {
+      "task": "estimate_cost",
+      "depends_on": [
+        "search_materials"
+      ],
+      "status": "succeeded"
+    },
+    {
+      "task": "generate_script",
+      "depends_on": [
+        "estimate_cost"
+      ],
+      "status": "succeeded"
+    },
+    {
+      "task": "save_plan",
+      "depends_on": [
+        "generate_script"
+      ],
+      "status": "succeeded"
+    }
+  ],
+  "save_status": "saved",
+  "original_model_decisions": 4,
+  "original_model_requests_sent": 4,
+  "cache_note": "返回持久化历史结果；trace 是原运行记录，本次没有模型或业务工具执行。"
+}

@@ -1,0 +1,45 @@
+{"elapsed_seconds": 15.0, "target_seconds": 300.0}
+{"elapsed_seconds": 30.1, "target_seconds": 300.0}
+{"elapsed_seconds": 45.1, "target_seconds": 300.0}
+{"elapsed_seconds": 60.1, "target_seconds": 300.0}
+{"elapsed_seconds": 75.2, "target_seconds": 300.0}
+{"elapsed_seconds": 90.2, "target_seconds": 300.0}
+{"elapsed_seconds": 105.2, "target_seconds": 300.0}
+{"elapsed_seconds": 120.3, "target_seconds": 300.0}
+{"elapsed_seconds": 135.3, "target_seconds": 300.0}
+{"elapsed_seconds": 150.4, "target_seconds": 300.0}
+{"elapsed_seconds": 165.4, "target_seconds": 300.0}
+{"elapsed_seconds": 180.4, "target_seconds": 300.0}
+{"elapsed_seconds": 195.4, "target_seconds": 300.0}
+{"elapsed_seconds": 210.5, "target_seconds": 300.0}
+{"elapsed_seconds": 225.5, "target_seconds": 300.0}
+{"elapsed_seconds": 240.6, "target_seconds": 300.0}
+{"elapsed_seconds": 255.6, "target_seconds": 300.0}
+{"elapsed_seconds": 270.6, "target_seconds": 300.0}
+{"elapsed_seconds": 285.6, "target_seconds": 300.0}
+{"elapsed_seconds": 300.6, "target_seconds": 300.0}
+Traceback (most recent call last):
+  File "/mnt/d/xy/tools/check_short_run.py", line 240, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/mnt/d/xy/tools/check_short_run.py", line 184, in main
+    raise RuntimeError(f"worker {index} failed: " + error[-1000:])
+RuntimeError: worker 0 failed: ule>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/mnt/d/xy/tools/check_short_run.py", line 138, in main
+    worker(*sys.argv[2:])
+    ~~~~~~^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/tools/check_short_run.py", line 75, in worker
+    planner = Planner(shared / "state.sqlite3", as_of=AS_OF, scenario=scenario)
+  File "/mnt/d/xy/src/content_planner/agent.py", line 55, in __init__
+    self.store = Store(db_path, lease_seconds, heartbeat_interval, max_active_tasks, read_only)
+                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/src/content_planner/state.py", line 90, in __init__
+    if _schema_version(self.connection) == SCHEMA_VERSION:
+       ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/src/content_planner/state.py", line 23, in _schema_version
+    version = connection.execute("PRAGMA user_version").fetchone()[0]
+              ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+

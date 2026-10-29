@@ -1,0 +1,15 @@
+test_interrupted_external_model_call_is_visible_and_not_blindly_retried (tests.test_hardening.HardeningTests.test_interrupted_external_model_call_is_visible_and_not_blindly_retried) ... ERROR
+
+======================================================================
+ERROR: test_interrupted_external_model_call_is_visible_and_not_blindly_retried (tests.test_hardening.HardeningTests.test_interrupted_external_model_call_is_visible_and_not_blindly_retried)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 241, in test_interrupted_external_model_call_is_visible_and_not_blindly_retried
+    report = planner.status(BRIEF['request_id'])
+             ^^^^^^^^^^^^^^
+AttributeError: 'Planner' object has no attribute 'status'
+
+----------------------------------------------------------------------
+Ran 1 test in 1.096s
+
+FAILED (errors=1)

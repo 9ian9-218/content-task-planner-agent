@@ -1,0 +1,13 @@
+test_runtime_install_preserves_safe_relative_links_and_rejects_escaping_links (tests.test_hardening.HardeningTests) ... 
+======================================================================
+FAIL: test_runtime_install_preserves_safe_relative_links_and_rejects_escaping_links (tests.test_hardening.HardeningTests) (link='../lib/python3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 105, in test_runtime_install_preserves_safe_relative_links_and_rejects_escaping_links
+    self.assertEqual(code, 0 if valid else 2)
+AssertionError: 2 != 0
+
+----------------------------------------------------------------------
+Ran 1 test in 0.032s
+
+FAILED (failures=1)

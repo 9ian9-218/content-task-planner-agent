@@ -1,0 +1,15 @@
+test_export_index_cannot_overwrite_input_even_after_a_successful_task (tests.test_hardening.HardeningTests.test_export_index_cannot_overwrite_input_even_after_a_successful_task) ... FAIL
+
+======================================================================
+FAIL: test_export_index_cannot_overwrite_input_even_after_a_successful_task (tests.test_hardening.HardeningTests.test_export_index_cannot_overwrite_input_even_after_a_successful_task)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 563, in test_export_index_cannot_overwrite_input_even_after_a_successful_task
+    self.assertEqual(code, 2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 1 test in 0.287s
+
+FAILED (failures=1)

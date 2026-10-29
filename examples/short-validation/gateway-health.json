@@ -1,0 +1,9 @@
+{
+  "key_configured": true,
+  "model_name": "claude-opus-4-6-thinking",
+  "proxy_environment_present": true,
+  "tcp": "connected",
+  "models_http_status": 200,
+  "approved_model_listed": true,
+  "seconds": 0.089
+}

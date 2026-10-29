@@ -1,0 +1,29 @@
+test_error_results_preserve_identity_and_a_consistent_public_shape (tests.test_review.ReviewTests) ... 
+======================================================================
+ERROR: test_error_results_preserve_identity_and_a_consistent_public_shape (tests.test_review.ReviewTests) (index=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 208, in test_error_results_preserve_identity_and_a_consistent_public_shape
+    self.assertEqual(result["request_id"], BRIEF["request_id"])
+KeyError: 'request_id'
+
+======================================================================
+ERROR: test_error_results_preserve_identity_and_a_consistent_public_shape (tests.test_review.ReviewTests) (index=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 208, in test_error_results_preserve_identity_and_a_consistent_public_shape
+    self.assertEqual(result["request_id"], BRIEF["request_id"])
+KeyError: 'request_id'
+
+======================================================================
+FAIL: test_error_results_preserve_identity_and_a_consistent_public_shape (tests.test_review.ReviewTests) (index=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 209, in test_error_results_preserve_identity_and_a_consistent_public_shape
+    self.assertTrue(required <= set(result), required - set(result))
+AssertionError: False is not true : {'invalid_fields', 'missing_fields'}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.215s
+
+FAILED (failures=1, errors=2)

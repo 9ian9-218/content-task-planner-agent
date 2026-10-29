@@ -1,0 +1,14 @@
+test_replanning_repeat_command_records_each_actual_observation_and_a_shared_cap (tests.test_short_validation.ShortValidationTests.test_replanning_repeat_command_records_each_actual_observation_and_a_shared_cap) ... ERROR
+
+======================================================================
+ERROR: test_replanning_repeat_command_records_each_actual_observation_and_a_shared_cap (tests.test_short_validation.ShortValidationTests.test_replanning_repeat_command_records_each_actual_observation_and_a_shared_cap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 43, in test_replanning_repeat_command_records_each_actual_observation_and_a_shared_cap
+    from tools import evaluate_replanning
+ImportError: cannot import name 'evaluate_replanning' from 'tools' (unknown location)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.097s
+
+FAILED (errors=1)

@@ -1,0 +1,6 @@
+test_approved_gateway_is_the_default_and_uses_chat_completions_tools (tests.test_gateway.GatewayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK

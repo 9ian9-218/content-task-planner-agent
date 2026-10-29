@@ -1,0 +1,6 @@
+test_real_storage_failure_preserves_success_and_never_reports_saved (tests.test_guards.GuardTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.053s
+
+OK

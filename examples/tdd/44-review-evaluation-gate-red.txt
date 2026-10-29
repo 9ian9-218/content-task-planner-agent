@@ -1,0 +1,14 @@
+test_evaluation_gate_rejects_budget_violations_and_inconsistent_ledgers (tests.test_review.ReviewTests) ... ERROR
+
+======================================================================
+ERROR: test_evaluation_gate_rejects_budget_violations_and_inconsistent_ledgers (tests.test_review.ReviewTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 247, in test_evaluation_gate_rejects_budget_violations_and_inconsistent_ledgers
+    from tools.evaluate import validate_result
+ImportError: cannot import name 'validate_result' from 'tools.evaluate' (/mnt/d/xy/tools/evaluate.py)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.066s
+
+FAILED (errors=1)

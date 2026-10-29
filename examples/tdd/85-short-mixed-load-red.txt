@@ -1,0 +1,16 @@
+test_short_load_command_verifies_mixed_results_and_resource_cleanup (tests.test_short_validation.ShortValidationTests.test_short_load_command_verifies_mixed_results_and_resource_cleanup) ... FAIL
+
+======================================================================
+FAIL: test_short_load_command_verifies_mixed_results_and_resource_cleanup (tests.test_short_validation.ShortValidationTests.test_short_load_command_verifies_mixed_results_and_resource_cleanup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 20, in test_short_load_command_verifies_mixed_results_and_resource_cleanup
+    self.assertEqual(process.returncode, 0, process.stderr + process.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /tmp/content-planner-runtime-70_9y6wx/python/bin/python3: can't open file '/mnt/d/xy/tools/check_short_run.py': [Errno 2] No such file or directory
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.057s
+
+FAILED (failures=1)

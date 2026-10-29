@@ -1,0 +1,168 @@
+{
+  "started_at": "2026-10-29T01:39:00.112376+00:00",
+  "finished_at": "2026-10-29T01:39:56.465901+00:00",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "tests_sha256": "72aece05207290cddf33262d30d55f7e0a6681e3e4fd9948b923eca18dc85bb5",
+  "files_verified_before_execution": 3254,
+  "archive_sha256": "81371a40f6d710be6c2daf6b2e0a326cb4d18fa46bc8ae4ee943d0c1d577cd86",
+  "archive_extracted_before_execution": true,
+  "private_env_absent": true,
+  "model_credentials_removed_from_environment": true,
+  "business_model_mode": "mock",
+  "remote_model_gateway_requests": 0,
+  "execution_network_scope": "Default restricted sandbox; external model calls are not authorized in this validation. HTTP protocol fixtures are controlled tests.",
+  "tests_passed": 103,
+  "tests_skipped": 0,
+  "source_and_tests_unchanged": true,
+  "technical_materials_ready": true,
+  "steps": [
+    {
+      "name": "doctor",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "-m",
+        "content_planner",
+        "doctor",
+        "--production"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "seconds": 0.549
+    },
+    {
+      "name": "normal",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "-m",
+        "content_planner",
+        "run",
+        "--input",
+        "examples/cases/C01-normal/input.json",
+        "--mode",
+        "mock",
+        "--as-of",
+        "2026-11-01T10:00:00+08:00",
+        "--db",
+        "/tmp/planner-clean-state-0z0or2g9/normal.sqlite3",
+        "--output-dir",
+        "/tmp/planner-clean-state-0z0or2g9/first"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "seconds": 0.742
+    },
+    {
+      "name": "repeat",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "-m",
+        "content_planner",
+        "run",
+        "--input",
+        "examples/cases/C01-normal/input.json",
+        "--mode",
+        "mock",
+        "--as-of",
+        "2026-11-01T10:00:00+08:00",
+        "--db",
+        "/tmp/planner-clean-state-0z0or2g9/normal.sqlite3",
+        "--output-dir",
+        "/tmp/planner-clean-state-0z0or2g9/second"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "seconds": 0.437
+    },
+    {
+      "name": "missing",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "-m",
+        "content_planner",
+        "run",
+        "--input",
+        "examples/cases/C02a-missing-budget/input.json",
+        "--db",
+        "/tmp/planner-clean-state-0z0or2g9/missing.sqlite3"
+      ],
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "passed": true,
+      "seconds": 0.307
+    },
+    {
+      "name": "save-failed",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "-m",
+        "content_planner",
+        "run",
+        "--input",
+        "examples/cases/C03-save-failure/input.json",
+        "--mode",
+        "mock",
+        "--as-of",
+        "2026-11-01T10:00:00+08:00",
+        "--db",
+        "/tmp/planner-clean-state-0z0or2g9/resume.sqlite3",
+        "--scenario",
+        "data/scenarios/save-failure.json"
+      ],
+      "expected_exit": 3,
+      "actual_exit": 3,
+      "passed": true,
+      "seconds": 0.547
+    },
+    {
+      "name": "resumed",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "-m",
+        "content_planner",
+        "run",
+        "--input",
+        "examples/cases/C03-save-failure/input.json",
+        "--mode",
+        "mock",
+        "--as-of",
+        "2026-11-01T10:00:00+08:00",
+        "--db",
+        "/tmp/planner-clean-state-0z0or2g9/resume.sqlite3",
+        "--resume"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "seconds": 0.36
+    },
+    {
+      "name": "tests",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "tools/verify.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "seconds": 53.15
+    },
+    {
+      "name": "audit",
+      "command": [
+        "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+        "tools/check_delivery.py",
+        "--output",
+        ".local/clean-audit.json"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "seconds": 0.252
+    }
+  ],
+  "passed": true,
+  "note": "Verification regenerates report files in the disposable copy; source/test bytes remain identical. No original .env.local, local DB/runtime or git metadata was copied."
+}

@@ -1,0 +1,6 @@
+test_explicit_wal_database_preserves_cached_reads_during_an_exclusive_writer (tests.test_short_validation.ShortValidationTests.test_explicit_wal_database_preserves_cached_reads_during_an_exclusive_writer) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.388s
+
+OK

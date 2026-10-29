@@ -1,0 +1,32 @@
+{
+  "executed_at": "2026-10-28T08:52:14.378527+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C14-resume",
+  "mode": "live",
+  "python": "3.10.12",
+  "source_sha256": "07626ea699d913154adc9b7080789a49130b219e53d261e367ce507608f2ece3",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {
+    "failures": {
+      "save_plan": "always"
+    }
+  },
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "claude-opus-4-6-thinking",
+  "model_endpoint": "http://100.73.185.103:8045/v1",
+  "action_source": "remote_model",
+  "model_requests_sent": 7,
+  "token_usage": {
+    "prompt_tokens": 26376,
+    "completion_tokens": 2110,
+    "total_tokens": 28486,
+    "reported_responses": 7,
+    "accepted_responses": 7,
+    "unreported_request_attempts": 0
+  }
+}

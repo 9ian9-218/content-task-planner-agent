@@ -1,0 +1,37 @@
+{
+  "executed_at": "2026-10-28T15:37:01.876211+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C13-id-conflict",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "wb/hy3",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "action_source": "remote_model",
+  "model_requests_sent": 4,
+  "token_usage": {
+    "prompt_tokens": 6496,
+    "completion_tokens": 498,
+    "total_tokens": 6994,
+    "reported_responses": 4,
+    "accepted_responses": 4,
+    "unreported_request_attempts": 0
+  },
+  "export_id": "a111f4a17d734c1386b8399cc690df11",
+  "artifacts_sha256": {
+    "decisions.jsonl": "7ad07a171cd2f611f4b67799233f04a5a85712084c19044d87d8a075dd33ee8d",
+    "input.json": "889123ebd81e4f56e844c1bb796ee6822d9a9747262dc2684c6ac44f7cc01b26",
+    "output.json": "2a80b95f5b9c7ff475f5a5b7cbae3bd5decbe05ce55610f54eb6888e21d8b650",
+    "plan.md": "7f8682505d17b468fc6c6a6088f787046ec6c25cf3a28c0426226e65b39e4eb1",
+    "trace.jsonl": "d5e4a855b64c1115ad9de275e3ec3d562e4caf8e66e1bffe733efe7be20ecc48",
+    "trace.md": "f3909708bbe2ee08a38d75c1f8b9517fd5e7cca51fd57e07bb3641a050df65a9"
+  }
+}

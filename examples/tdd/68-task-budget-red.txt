@@ -1,0 +1,36 @@
+test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget (tests.test_hardening.HardeningTests.test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget) ... 
+  test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget (tests.test_hardening.HardeningTests.test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget) (limit=2) ... FAIL
+  test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget (tests.test_hardening.HardeningTests.test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget) (limit=3) ... FAIL
+
+======================================================================
+FAIL: test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget (tests.test_hardening.HardeningTests.test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget) (limit=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 277, in test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget
+    self.assertEqual(result['status'], 'incomplete')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'completed' != 'incomplete'
+- completed
+?         -
++ incomplete
+? ++
+
+
+======================================================================
+FAIL: test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget (tests.test_hardening.HardeningTests.test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget) (limit=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 277, in test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget
+    self.assertEqual(result['status'], 'incomplete')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'completed' != 'incomplete'
+- completed
+?         -
++ incomplete
+? ++
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.586s
+
+FAILED (failures=2)

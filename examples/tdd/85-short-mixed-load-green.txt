@@ -1,0 +1,6 @@
+test_short_load_command_verifies_mixed_results_and_resource_cleanup (tests.test_short_validation.ShortValidationTests.test_short_load_command_verifies_mixed_results_and_resource_cleanup) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.364s
+
+OK

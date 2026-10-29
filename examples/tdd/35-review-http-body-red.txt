@@ -1,0 +1,24 @@
+test_incomplete_http_body_is_a_model_error_and_preserves_progress (tests.test_review.ReviewTests) ... ERROR
+
+======================================================================
+ERROR: test_incomplete_http_body_is_a_model_error_and_preserves_progress (tests.test_review.ReviewTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 66, in test_incomplete_http_body_is_a_model_error_and_preserves_progress
+    result = planner.run(BRIEF, model=LiveModel(api_key="test-only-key"))
+  File "/mnt/d/xy/src/content_planner/agent.py", line 144, in run
+    decision = model.decide(messages, definitions(), timeout=min(30, remaining_seconds))
+  File "/mnt/d/xy/src/content_planner/model.py", line 35, in decide
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+  File "/usr/lib/python3.10/unittest/mock.py", line 1114, in __call__
+    return self._mock_call(*args, **kwargs)
+  File "/usr/lib/python3.10/unittest/mock.py", line 1118, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+  File "/usr/lib/python3.10/unittest/mock.py", line 1173, in _execute_mock_call
+    raise effect
+http.client.IncompleteRead: IncompleteRead(11 bytes read, 100 more expected)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.049s
+
+FAILED (errors=1)

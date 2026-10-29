@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-10-28T14:03:30.916815+00:00",
+  "finished_at": "2026-10-28T14:04:24.051115+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "PYTHONPATH": "src",
+  "python": "3.14.10",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "exit_code": 0,
+  "test_command_exit_code": 0,
+  "inputs_unchanged": true,
+  "tests_run": 88,
+  "skipped": 0,
+  "passed": 88,
+  "wall_seconds": 53.040359,
+  "source_sha256": "eb4d51b7219425021439794e00a7fb1976bbec1b54a10cec21d6ec709345364b",
+  "tests_sha256": "1e6e9655eb36084b8d2b6426791448e81fd7ce50038a816f7e1b6721ec6fc3aa",
+  "source_after_sha256": "eb4d51b7219425021439794e00a7fb1976bbec1b54a10cec21d6ec709345364b",
+  "tests_after_sha256": "1e6e9655eb36084b8d2b6426791448e81fd7ce50038a816f7e1b6721ec6fc3aa"
+}

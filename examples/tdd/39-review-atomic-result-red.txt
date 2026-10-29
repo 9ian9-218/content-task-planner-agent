@@ -1,0 +1,14 @@
+test_saved_plan_remains_complete_when_the_final_snapshot_write_fails (tests.test_review.ReviewTests) ... ERROR
+
+======================================================================
+ERROR: test_saved_plan_remains_complete_when_the_final_snapshot_write_fails (tests.test_review.ReviewTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_review.py", line 173, in test_saved_plan_remains_complete_when_the_final_snapshot_write_fails
+    self.assertEqual(cached["cost"]["spent_units"], 8)
+KeyError: 'cost'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.062s
+
+FAILED (errors=1)

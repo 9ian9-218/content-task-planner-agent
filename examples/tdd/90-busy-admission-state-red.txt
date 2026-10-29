@@ -1,0 +1,23 @@
+test_busy_task_admission_returns_retryable_state_without_dispatching_model (tests.test_short_validation.ShortValidationTests.test_busy_task_admission_returns_retryable_state_without_dispatching_model) ... ERROR
+
+======================================================================
+ERROR: test_busy_task_admission_returns_retryable_state_without_dispatching_model (tests.test_short_validation.ShortValidationTests.test_busy_task_admission_returns_retryable_state_without_dispatching_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_short_validation.py", line 118, in test_busy_task_admission_returns_retryable_state_without_dispatching_model
+    result = planner.run(BRIEF, NoModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 107, in run
+    return self._run(brief, model, resume)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/src/content_planner/agent.py", line 223, in _run
+    if not self.store.claim(context, resume=bool(existing)):
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/xy/src/content_planner/state.py", line 220, in claim
+    self.connection.execute("BEGIN IMMEDIATE")
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+----------------------------------------------------------------------
+Ran 1 test in 5.201s
+
+FAILED (errors=1)

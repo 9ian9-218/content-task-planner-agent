@@ -1,0 +1,54 @@
+{
+  "executed_at": "2026-10-28T14:46:20.873751+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C04-replan-budget",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "e67aefae347f6b9cc797fe09981ddf16b161782b46b5fa384bbe39150f94ef25",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {
+    "profiles": {
+      "standard": {
+        "units": 12
+      }
+    }
+  },
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "claude-opus-4-6-thinking",
+  "model_endpoint": "http://100.73.185.103:8045/v1",
+  "action_source": "remote_model",
+  "actual_result_mode": "live",
+  "model_requests_sent": 5,
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "01540cb2dffd50f45681cb41453a8e67530d2610a8739dc2259159e75df25dd7",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "token_usage": {
+    "prompt_tokens": 18854,
+    "completion_tokens": 1261,
+    "total_tokens": 20115,
+    "reported_responses": 5,
+    "accepted_responses": 5,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [
+    "claude-opus-4-6-thinking"
+  ],
+  "export_id": "e41cd0c70e674d8dac0c420283f1cd10",
+  "artifacts_sha256": {
+    "decisions.jsonl": "248b3fcf816ed411200734918668abd64264162f6bee5242581bade526930069",
+    "input.json": "889123ebd81e4f56e844c1bb796ee6822d9a9747262dc2684c6ac44f7cc01b26",
+    "output.json": "5684f0cd3feaecd1af48b35e36fdef453c8357a05a1e65132d24742de66a4e84",
+    "plan.md": "7c20ae7d1100ca369ad91aef3e559a5bcfbe80241c1e7c825fd464232f4367aa",
+    "trace.jsonl": "808e0f2a256bb595dbf2afbad30673bbb26ddb3060cf6351862b3d231419eb57",
+    "trace.md": "5ff9d809b98cbdd0d205b7e412a80e0c597bc303f2ec0fbe75c03eac626dac2f"
+  }
+}

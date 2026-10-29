@@ -1,0 +1,15 @@
+test_shared_evaluation_budget_stops_network_dispatch_across_model_instances (tests.test_hardening.HardeningTests.test_shared_evaluation_budget_stops_network_dispatch_across_model_instances) ... ERROR
+
+======================================================================
+ERROR: test_shared_evaluation_budget_stops_network_dispatch_across_model_instances (tests.test_hardening.HardeningTests.test_shared_evaluation_budget_stops_network_dispatch_across_model_instances)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_hardening.py", line 619, in test_shared_evaluation_budget_stops_network_dispatch_across_model_instances
+    first = planner.run(BRIEF, LiveModel(api_key='fixture', request_budget=budget))
+                               ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: LiveModel.__init__() got an unexpected keyword argument 'request_budget'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.021s
+
+FAILED (errors=1)

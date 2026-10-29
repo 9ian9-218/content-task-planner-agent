@@ -1,0 +1,6 @@
+test_empty_materials_request_more_information_without_generating (tests.test_acceptance.AcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.039s
+
+OK

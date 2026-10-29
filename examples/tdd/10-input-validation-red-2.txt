@@ -1,0 +1,101 @@
+test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) ... 
+======================================================================
+ERROR: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='topic', value=42)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 134, in test_invalid_input_is_rejected_before_tools
+    result = self.planner().run(dict(BRIEF, request_id=f"validation-{index}", **{field: value}), model=MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 82, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 70, in execute
+    data, charged, minutes = getattr(self, name)(**args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 110, in search_materials
+    found = [m for m in self.materials["materials"] if any(k.lower() in query.lower() for k in m["keywords"])]
+  File "/mnt/d/xy/src/content_planner/tools.py", line 110, in <listcomp>
+    found = [m for m in self.materials["materials"] if any(k.lower() in query.lower() for k in m["keywords"])]
+  File "/mnt/d/xy/src/content_planner/tools.py", line 110, in <genexpr>
+    found = [m for m in self.materials["materials"] if any(k.lower() in query.lower() for k in m["keywords"])]
+AttributeError: 'int' object has no attribute 'lower'
+
+======================================================================
+ERROR: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='deadline', value='tomorrow')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 134, in test_invalid_input_is_rejected_before_tools
+    result = self.planner().run(dict(BRIEF, request_id=f"validation-{index}", **{field: value}), model=MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 82, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 70, in execute
+    data, charged, minutes = getattr(self, name)(**args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 116, in estimate_cost
+    "profile": profile, **self.projection(material_ids, profile, 1)}
+  File "/mnt/d/xy/src/content_planner/tools.py", line 107, in projection
+    "deadline_gap_minutes": max(0, (finish - parse_time(self.context["brief"]["deadline"])).total_seconds() / 60)}
+  File "/mnt/d/xy/src/content_planner/tools.py", line 23, in parse_time
+    return datetime.fromisoformat(value.replace("Z", "+00:00"))
+ValueError: Invalid isoformat string: 'tomorrow'
+
+======================================================================
+ERROR: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='deadline', value='2026-11-01T11:00:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 134, in test_invalid_input_is_rejected_before_tools
+    result = self.planner().run(dict(BRIEF, request_id=f"validation-{index}", **{field: value}), model=MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 82, in run
+    result = tools.execute(name, args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 70, in execute
+    data, charged, minutes = getattr(self, name)(**args)
+  File "/mnt/d/xy/src/content_planner/tools.py", line 116, in estimate_cost
+    "profile": profile, **self.projection(material_ids, profile, 1)}
+  File "/mnt/d/xy/src/content_planner/tools.py", line 107, in projection
+    "deadline_gap_minutes": max(0, (finish - parse_time(self.context["brief"]["deadline"])).total_seconds() / 60)}
+TypeError: can't subtract offset-naive and offset-aware datetimes
+
+======================================================================
+FAIL: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='budget_units', value=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 135, in test_invalid_input_is_rejected_before_tools
+    self.assertEqual(result["status"], status)
+AssertionError: 'incomplete' != 'invalid_request'
+- incomplete
++ invalid_request
+
+
+======================================================================
+FAIL: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='budget_units', value=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 135, in test_invalid_input_is_rejected_before_tools
+    self.assertEqual(result["status"], status)
+AssertionError: 'incomplete' != 'invalid_request'
+- incomplete
++ invalid_request
+
+
+======================================================================
+FAIL: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='budget_units', value=1.5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 135, in test_invalid_input_is_rejected_before_tools
+    self.assertEqual(result["status"], status)
+AssertionError: 'incomplete' != 'invalid_request'
+- incomplete
++ invalid_request
+
+
+======================================================================
+FAIL: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='topic', value='   ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 135, in test_invalid_input_is_rejected_before_tools
+    self.assertEqual(result["status"], status)
+AssertionError: 'completed' != 'needs_input'
+- completed
++ needs_input
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.266s
+
+FAILED (failures=4, errors=3)

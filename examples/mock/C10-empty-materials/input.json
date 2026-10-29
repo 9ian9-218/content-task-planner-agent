@@ -1,0 +1,7 @@
+{
+  "request_id": "evaluation-001",
+  "topic": "不存在的合成产品 Z99",
+  "budget_units": 10,
+  "deadline": "2026-11-01T11:00:00+08:00",
+  "preference": "quality_first"
+}

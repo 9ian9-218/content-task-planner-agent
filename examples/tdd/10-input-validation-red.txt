@@ -1,0 +1,38 @@
+test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) ... 
+======================================================================
+FAIL: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='budget_units', value=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 135, in test_invalid_input_is_rejected_before_tools
+    self.assertEqual(result["status"], status)
+AssertionError: 'incomplete' != 'invalid_request'
+- incomplete
++ invalid_request
+
+
+======================================================================
+FAIL: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='topic', value='   ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 135, in test_invalid_input_is_rejected_before_tools
+    self.assertEqual(result["status"], status)
+AssertionError: 'invalid_request' != 'needs_input'
+- invalid_request
++ needs_input
+
+
+======================================================================
+FAIL: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='deadline', value='2026-11-01T11:00:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 135, in test_invalid_input_is_rejected_before_tools
+    self.assertEqual(result["status"], status)
+AssertionError: 'invalid_request' != 'needs_input'
+- invalid_request
++ needs_input
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.073s
+
+FAILED (failures=3)

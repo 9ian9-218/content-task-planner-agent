@@ -1,0 +1,51 @@
+{
+  "executed_at": "2026-10-28T15:32:26.773254+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "live"
+  ],
+  "case_id": "C03-save-failure",
+  "mode": "live",
+  "python": "3.14.10",
+  "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {
+    "failures": {
+      "save_plan": "always"
+    }
+  },
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "wb/hy3",
+  "model_endpoint": "http://127.0.0.1:4000/v1",
+  "action_source": "remote_model",
+  "actual_result_mode": "live",
+  "model_requests_sent": 7,
+  "data_versions": {
+    "materials": "synthetic-materials-v1",
+    "catalog": "synthetic-tools-v1",
+    "catalog_sha256": "c3cca9160ff0391e9cf44ab0a235e30d6a10f0b48fbea88e7eb1ee71f65dbb69",
+    "materials_sha256": "4b139efe05aa8d0e4258b26643c7e7952d5da1e4ad2d0d0ce0ad144c8ab8929f"
+  },
+  "prompt_sha256": "7510a5ed6fdbbf1d4972d21071c923cb868b0d2ad9da6fc4e3cf28c4757dfb5f",
+  "token_usage": {
+    "prompt_tokens": 13753,
+    "completion_tokens": 1064,
+    "total_tokens": 14817,
+    "reported_responses": 7,
+    "accepted_responses": 7,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [
+    "wb/hy3"
+  ],
+  "export_id": "690416dc33fb429fad283daaf022aeed",
+  "artifacts_sha256": {
+    "decisions.jsonl": "a52bff21dfc32ea1c945536c650c4bee425b89d6a493c909569b435cbe432519",
+    "input.json": "889123ebd81e4f56e844c1bb796ee6822d9a9747262dc2684c6ac44f7cc01b26",
+    "output.json": "89c367fdb97871c752c7c31d621e7e1e71fa6a2d763df5ce6d004ad4b8cad9f4",
+    "trace.jsonl": "204f8d88a5037cec783eb9009aca14f2fd984361d2f9762edc515d6127e83198",
+    "trace.md": "9b07a9f8061a5e63ef3646b76443d662d328b08aff0342969da686c36c3b6f56"
+  }
+}

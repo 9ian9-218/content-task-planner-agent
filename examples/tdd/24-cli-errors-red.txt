@@ -1,0 +1,30 @@
+test_cli_reports_invalid_input_and_unwritable_storage_as_json (tests.test_cli.CLITests) ... FAIL
+
+======================================================================
+FAIL: test_cli_reports_invalid_input_and_unwritable_storage_as_json (tests.test_cli.CLITests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_cli.py", line 47, in test_cli_reports_invalid_input_and_unwritable_storage_as_json
+    self.assertEqual(result.returncode, code, result.stderr)
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 88, in <module>
+    raise SystemExit(main())
+  File "/mnt/d/xy/src/content_planner/__main__.py", line 68, in main
+    original_input = json.loads(Path(args.input).read_text(encoding="utf-8"))
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.394s
+
+FAILED (failures=1)

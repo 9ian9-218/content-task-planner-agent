@@ -1,0 +1,3520 @@
+{
+  "started_at": "2026-10-28T14:03:29.582996+00:00",
+  "finished_at": "2026-10-28T14:04:02.413293+00:00",
+  "python": "3.14.10",
+  "sqlite": "3.53.1",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "source_sha256": "eb4d51b7219425021439794e00a7fb1976bbec1b54a10cec21d6ec709345364b",
+  "mode": "mock",
+  "remote_model_requests": 0,
+  "scope": "Single host; one SQLite file on the native temporary filesystem. Each round submits one identical brief from independent CLI processes. Not a 24-hour soak or distinct-task load test.",
+  "rounds": 20,
+  "clients_per_round": 16,
+  "client_runs": 320,
+  "rounds_passed": 20,
+  "median_round_seconds": 1.6475345,
+  "max_round_seconds": 2.103318,
+  "passed": true,
+  "results": [
+    {
+      "round": 1,
+      "seconds": 1.730832,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-71c002f1bb2f4b8cac4049a5c0fe9abb",
+          "spent_units": 8
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 2,
+      "seconds": 1.651876,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-9ce09622727747fa8ce13c9947294087",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 3,
+      "seconds": 1.643193,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-13699031d6574482bfaa6bd62e8aab0a",
+          "spent_units": 8
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 4,
+      "seconds": 1.735475,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-4b957300865244488a1cc81bbe9189c8",
+          "spent_units": 8
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 5,
+      "seconds": 1.423179,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-5fc0f36085e24b31901164c30dfb11d3",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-5fc0f36085e24b31901164c30dfb11d3",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-5fc0f36085e24b31901164c30dfb11d3",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-5fc0f36085e24b31901164c30dfb11d3",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-5fc0f36085e24b31901164c30dfb11d3",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 6,
+      "seconds": 1.439653,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-634abd5770cd4ed6b97da92489e11f71",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-634abd5770cd4ed6b97da92489e11f71",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-634abd5770cd4ed6b97da92489e11f71",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-634abd5770cd4ed6b97da92489e11f71",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-634abd5770cd4ed6b97da92489e11f71",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-634abd5770cd4ed6b97da92489e11f71",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-634abd5770cd4ed6b97da92489e11f71",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-634abd5770cd4ed6b97da92489e11f71",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 7,
+      "seconds": 1.714319,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-90d12574bd004902a2cbd2b7f97c6820",
+          "spent_units": 8
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 8,
+      "seconds": 1.573592,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7c0dbda2e5bf4fd2a961d0687d24a30d",
+          "spent_units": 8
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 9,
+      "seconds": 1.786533,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-025e1537a1e24d398a87fe634854e482",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-025e1537a1e24d398a87fe634854e482",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-025e1537a1e24d398a87fe634854e482",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-025e1537a1e24d398a87fe634854e482",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-025e1537a1e24d398a87fe634854e482",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-025e1537a1e24d398a87fe634854e482",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-025e1537a1e24d398a87fe634854e482",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-025e1537a1e24d398a87fe634854e482",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-025e1537a1e24d398a87fe634854e482",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 10,
+      "seconds": 1.323653,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7238f5984df84be0be92b6e6603665ab",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7238f5984df84be0be92b6e6603665ab",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7238f5984df84be0be92b6e6603665ab",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7238f5984df84be0be92b6e6603665ab",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-7238f5984df84be0be92b6e6603665ab",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7238f5984df84be0be92b6e6603665ab",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7238f5984df84be0be92b6e6603665ab",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 11,
+      "seconds": 1.543056,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b1b839d61c8145858d28ba8b1aaea7b7",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 12,
+      "seconds": 1.270329,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b8f056b43295472e9e30b06854067e8a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b8f056b43295472e9e30b06854067e8a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b8f056b43295472e9e30b06854067e8a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b8f056b43295472e9e30b06854067e8a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b8f056b43295472e9e30b06854067e8a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-b8f056b43295472e9e30b06854067e8a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b8f056b43295472e9e30b06854067e8a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b8f056b43295472e9e30b06854067e8a",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-b8f056b43295472e9e30b06854067e8a",
+          "spent_units": 8
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 13,
+      "seconds": 2.103318,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-a5a0bc6418884616a3d64a7c55fb3eac",
+          "spent_units": 8
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 14,
+      "seconds": 1.965597,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-aba5c04ae7384772b2d17c3dee0ee5e0",
+          "spent_units": 8
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 15,
+      "seconds": 1.781649,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-7b9c847a30024517b7f9096e3e407d48",
+          "spent_units": 8
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 16,
+      "seconds": 1.613718,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-95b7e2a670404c189b1e773e6c3a3680",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-95b7e2a670404c189b1e773e6c3a3680",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-95b7e2a670404c189b1e773e6c3a3680",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-95b7e2a670404c189b1e773e6c3a3680",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-95b7e2a670404c189b1e773e6c3a3680",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-95b7e2a670404c189b1e773e6c3a3680",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 17,
+      "seconds": 1.410549,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-5af0a1487a2c4dc6be79fc8640809cde",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-5af0a1487a2c4dc6be79fc8640809cde",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 18,
+      "seconds": 1.671651,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-672f8298add94239ba3cfb346283c604",
+          "spent_units": 8
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 19,
+      "seconds": 1.628884,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-0431dacbcbb547999220df7bdc3332c6",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-0431dacbcbb547999220df7bdc3332c6",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-0431dacbcbb547999220df7bdc3332c6",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-0431dacbcbb547999220df7bdc3332c6",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-0431dacbcbb547999220df7bdc3332c6",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-0431dacbcbb547999220df7bdc3332c6",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-0431dacbcbb547999220df7bdc3332c6",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    },
+    {
+      "round": 20,
+      "seconds": 1.728216,
+      "checks": {
+        "one_plan": true,
+        "one_execution": true,
+        "known_client_outcomes": true,
+        "single_charge": true,
+        "same_saved_id": true
+      },
+      "clients": [
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": false,
+          "model_decisions": 4,
+          "tool_attempts": 4,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 0,
+          "status": "completed",
+          "reason_code": null,
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": "plan-8197c238eae0410bac3d0858d2cb37eb",
+          "spent_units": 8
+        },
+        {
+          "exit_code": 3,
+          "status": "incomplete",
+          "reason_code": "REQUEST_IN_PROGRESS",
+          "cached": true,
+          "model_decisions": 0,
+          "tool_attempts": 0,
+          "plan_id": null,
+          "spent_units": 0
+        }
+      ],
+      "saved_plan_count": 1,
+      "passed": true
+    }
+  ]
+}

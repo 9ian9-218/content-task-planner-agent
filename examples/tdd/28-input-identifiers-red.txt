@@ -1,0 +1,39 @@
+test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) ... 
+======================================================================
+ERROR: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='request_id', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 158, in test_invalid_input_is_rejected_before_tools
+    result = self.planner().run(case, model=MockModel())
+  File "/mnt/d/xy/src/content_planner/agent.py", line 178, in run
+    self.store.persist(context, context["saved_plan"] if name == "save_plan" and result["ok"] else None)
+  File "/mnt/d/xy/src/content_planner/state.py", line 46, in persist
+    self.connection.execute("INSERT INTO plans VALUES (?, ?, ?)",
+sqlite3.IntegrityError: NOT NULL constraint failed: plans.request_id
+
+======================================================================
+FAIL: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='request_id', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 159, in test_invalid_input_is_rejected_before_tools
+    self.assertEqual(result["status"], status)
+AssertionError: 'completed' != 'invalid_request'
+- completed
++ invalid_request
+
+
+======================================================================
+FAIL: test_invalid_input_is_rejected_before_tools (tests.test_acceptance.AcceptanceTests) (field='preference', value='always_spend')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/tests/test_acceptance.py", line 159, in test_invalid_input_is_rejected_before_tools
+    self.assertEqual(result["status"], status)
+AssertionError: 'completed' != 'invalid_request'
+- completed
++ invalid_request
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.170s
+
+FAILED (failures=2, errors=1)

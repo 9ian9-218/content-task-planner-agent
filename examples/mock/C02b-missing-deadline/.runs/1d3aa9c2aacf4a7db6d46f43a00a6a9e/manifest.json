@@ -1,0 +1,40 @@
+{
+  "executed_at": "2026-10-28T15:18:51.178268+00:00",
+  "command": [
+    "/tmp/content-planner-runtime-70_9y6wx/python/bin/python3",
+    "tools/evaluate.py",
+    "--mode",
+    "mock"
+  ],
+  "case_id": "C02b-missing-deadline",
+  "mode": "mock",
+  "python": "3.14.10",
+  "source_sha256": "909349a1fc35ff6dc2ef8a7534e98e05a9649e9e88bebb951d9c6266261fd10e",
+  "business_as_of": "2026-11-01T10:00:00+08:00",
+  "scenario": {},
+  "state_isolation": "one temporary SQLite file per case; first/repeat or failure/resume share that case's file",
+  "model_name": "deterministic_mock",
+  "model_endpoint": "",
+  "action_source": "mock_policy",
+  "actual_result_mode": "mock",
+  "model_requests_sent": 0,
+  "data_versions": null,
+  "prompt_sha256": null,
+  "token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "reported_responses": 0,
+    "accepted_responses": 0,
+    "unreported_request_attempts": 0
+  },
+  "response_models": [],
+  "export_id": "1d3aa9c2aacf4a7db6d46f43a00a6a9e",
+  "artifacts_sha256": {
+    "decisions.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.json": "78c1777621fef3a2990d297e3f8daf6f745e147d5f71ead818f94f7473b7e4fb",
+    "output.json": "c6f0b5cae359a8f63c53e86191311227b7113a6b162e807c98a8bcecb0e33cb3",
+    "trace.jsonl": "893dbef4714dce706302436aba9d10f0cb2135e27085ad8542ceaa2f31b3c2fd",
+    "trace.md": "c6c352b238f90f75bc83a6d2d2cad9e3a00c89698f0b599b277d9253ed77c6ca"
+  }
+}

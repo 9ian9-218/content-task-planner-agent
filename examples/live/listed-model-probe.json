@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-28T08:36:43.782454+00:00",
+  "probe": "listed_opus_alias",
+  "model_requested": "claude-opus-4-6-thinking",
+  "model_configuration_changed": false,
+  "status": "response_received",
+  "response": {
+    "model": "claude-opus-4-6-thinking",
+    "usage": {
+      "prompt_tokens": 580,
+      "completion_tokens": 58,
+      "total_tokens": 638
+    },
+    "system_fingerprint": null,
+    "tool_calls": [
+      {
+        "id": "toolu_vrtx_01XUsM9gsCd3xTaz8fbLyB1R",
+        "type": "function",
+        "function": {
+          "name": "ping",
+          "arguments": "{}"
+        }
+      }
+    ]
+  },
+  "requests_sent": 1
+}

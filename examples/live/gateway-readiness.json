@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-28T09:09:17.736770+00:00",
+  "status": "live_evaluated",
+  "key_configured": true,
+  "model_endpoint": "http://100.73.185.103:8045/v1",
+  "model_name": "claude-opus-4-6-thinking",
+  "requests_sent": 79,
+  "request_scope": "Final 18 acceptance scenarios plus 2 adversarial scenarios only; excludes archived runs and probes.",
+  "success_rate": null,
+  "cases_passed": 20,
+  "cases_total": 20,
+  "note": "Case expectation matching is not an unrestricted model task success rate. No credentials are included.",
+  "source_sha256": "42fff7eb6c739b91750b5433b2a3337d5dba7d692886f417bc6f645156be57eb",
+  "tests_passed": 63,
+  "gateway_connectivity": "verified",
+  "gateway_authentication": "verified",
+  "gateway_model_availability": "verified",
+  "original_authorized_alias": "claude-opus-4.6",
+  "actual_gateway_model_id": "claude-opus-4-6-thinking",
+  "base_url": "http://100.73.185.103:8045/v1"
+}
