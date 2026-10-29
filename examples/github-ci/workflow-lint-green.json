@@ -1,0 +1,17 @@
+{
+  "executed_at": "2026-10-29T02:11:26.755133+00:00",
+  "phase": "green",
+  "command": [
+    "/tmp/planner-actionlint-jkx1quqv/actionlint",
+    "-shellcheck=",
+    "-pyflakes=",
+    ".github/workflows/quality.yml"
+  ],
+  "exit_code": 0,
+  "actionlint_version": "1.7.12",
+  "output": "workflow-lint-green.txt",
+  "fix": "Initialize PLANNER_RUNTIME in the install step via GITHUB_ENV; job-level env cannot use runner context.",
+  "business_source_changed": false,
+  "source_tests_unchanged": true,
+  "hosted_ci_status": "Pending the actual new GitHub run; static success is not hosted CI success."
+}

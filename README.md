@@ -81,3 +81,5 @@ PYTHONPATH=src "$PLANNER_PY" -m content_planner run --input examples/cases/C03-s
 [PRD](docs/01-requirements.md)、[方案](docs/02-solution.md)、[评估](docs/03-evaluation.md)、[AI使用](docs/04-ai-usage.md)、[复盘](docs/05-retrospective.md)、[逐条验收](docs/16-acceptance-and-submission.md)、[设计解释](docs/18-design-review.md)与依赖/示例齐备。TDD账本保留99个实际red/green配对和206条命令，包含独立的进程/负载检查，不能把所有red都称为业务缺陷。
 
 本地技术验证已完成；目标公开仓库为[9ian9-218/content-task-planner-agent](https://github.com/9ian9-218/content-task-planner-agent)。最终提交SHA取远程main最新HEAD，推送与托管CI状态分别核验。个人实际投入与独立复现尚未据实登记；[一天半/12小时参与计划](docs/17-candidate-participation.md)不冒充已经发生的工时。最终提交状态见[submission.json](submission.json)与[交付检查](examples/delivery-check.json)。
+
+工作流曾在首次托管运行中因任务级env使用runner上下文而被拒绝，已由actionlint 1.7.12实际复现并修复。[失败与修复记录](examples/github-ci/workflow-lint-red.json)、[静态通过记录](examples/github-ci/workflow-lint-green.json)和[GitHub Actions](https://github.com/9ian9-218/content-task-planner-agent/actions)分别保留；静态检查通过不代表托管测试已通过。

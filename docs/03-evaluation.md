@@ -46,3 +46,5 @@ TDD现有99个实际配对、206条命令，含进程/负载集成配对。所�
 可复制命令见[README](../README.md)与[运行手册](14-operations.md)。数据、源码与报告版本一致；交付材料、链接与结果一致性由`tools/check_delivery.py`检查，白名单交付包由`tools/package_submission.py`生成。GitHub URL/最终提交与真实个人工时仍需据实补齐。
 
 清洁ZIP解压后再次通过103/103（0跳过）及正常/重复/缺信息/保存失败/续跑复现；源码和测试字节与本次回归一致。[独立复现记录](../examples/short-validation/clean-room-check.json)包含所测ZIP摘要；最终包仅更新材料，另做文件摘要与入口检查。
+
+托管CI补测：首次推送的[运行](https://github.com/9ian9-218/content-task-planner-agent/actions/runs/40804384555)立即失败且未生成任务。actionlint 1.7.12复现了任务级env不能使用runner上下文的错误；将解释器路径移至安装步骤通过GITHUB_ENV设置，随后静态校验退出0。[red](../examples/github-ci/workflow-lint-red.txt)、[green](../examples/github-ci/workflow-lint-green.json)。本次仅修复工作流，业务源码和103项测试保持不变；托管CI成功与否另以实际运行结论为准。

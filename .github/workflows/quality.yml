@@ -19,13 +19,14 @@ jobs:
     env:
       PYTHONPATH: src
       MODEL_API_KEY: ""
-      PLANNER_RUNTIME: ${{ runner.temp }}/content-planner-runtime/python/bin/python3
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
       - name: Install checksum-pinned Python runtime
-        run: python3 tools/bootstrap_runtime.py --destination "$RUNNER_TEMP/content-planner-runtime/python"
+        run: |
+          python3 tools/bootstrap_runtime.py --destination "$RUNNER_TEMP/content-planner-runtime/python"
+          printf 'PLANNER_RUNTIME=%s\n' "$RUNNER_TEMP/content-planner-runtime/python/bin/python3" >> "$GITHUB_ENV"
       - name: Enforce runtime prerequisites
         run: '"$PLANNER_RUNTIME" -m content_planner doctor --production'
       - name: Regression suite

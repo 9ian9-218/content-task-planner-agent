@@ -1,0 +1,19 @@
+{
+  "executed_at": "2026-10-29T02:11:14.107138+00:00",
+  "phase": "red",
+  "command": [
+    "/tmp/planner-actionlint-jkx1quqv/actionlint",
+    "-shellcheck=",
+    "-pyflakes=",
+    ".github/workflows/quality.yml"
+  ],
+  "exit_code": 1,
+  "actionlint_version": "1.7.12",
+  "actionlint_archive_sha256": "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8",
+  "actionlint_release_url": "https://github.com/rhysd/actionlint/releases/tag/v1.7.12",
+  "failed_github_run": "https://github.com/9ian9-218/content-task-planner-agent/actions/runs/40804384555",
+  "failed_commit": "a03720d0dcb6eb4a6863eaf6c187446cd4bcd267",
+  "observed_github_jobs": 0,
+  "output": "workflow-lint-red.txt",
+  "reference": "https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#context-availability"
+}

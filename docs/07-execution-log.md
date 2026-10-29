@@ -83,3 +83,8 @@
 ## GitHub提交准备
 
 2026-10-29T01:59:30.728357+00:00：用户提供git remote/push指令，授权向https://github.com/9ian9-218/content-task-planner-agent的main分支推送。连接元数据核实仓库为公开、空仓库且有写权限；Git远程读取为空、认证dry-run成功。本次仅更新提交材料，业务源码/测试与已通过的103项回归和真实模型证据保持一致。推送和托管CI另行核验，不预写成功；个人实际人工时仍未提供。
+
+
+## 首次托管CI与工作流修复
+
+2026-10-29T02:12:51.964484+00:00：main已成功推送，GitHub API确认远程提交a03720d0dcb6eb4a6863eaf6c187446cd4bcd267及公开submission.json。第一次Actions运行40804384555立即失败且零任务；actionlint 1.7.12对原文件返回1，指出job env不允许runner上下文。将PLANNER_RUNTIME通过安装步骤的GITHUB_ENV设置后，原命令返回0。失败与实际red/green文件保留于examples/github-ci；静态通过不冒称托管全套通过。业务源码/测试未修改，不额外派发模型请求。
