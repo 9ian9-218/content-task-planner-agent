@@ -39,7 +39,7 @@ python3 tools/verify.py
 ## 提交信息
 
 - 题号：2。
-- GitHub URL：等待用户提供，记录于[submission.json](submission.json)。
+- GitHub URL：[https://github.com/9ian9-218/content-task-planner-agent](https://github.com/9ian9-218/content-task-planner-agent)，已核实为公开仓库；元数据见[submission.json](submission.json)。
 - 最终commit SHA：在实际提交仓库运行`git rev-parse HEAD`后填入考核平台，不使用源码摘要代替。
 - 个人实际工时：待据实登记；一天半/12小时为计划，不冒充实际投入。
 - 已知未完成与验证受限项：以最新[交付检查](examples/delivery-check.json)为准。

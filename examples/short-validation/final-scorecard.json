@@ -82,7 +82,7 @@
       "score": 72,
       "weighted_points": 2.88,
       "evidence_basis": "固定运行时、清洁ZIP复现流程、逐条题面对照、文件摘要和额度审计",
-      "remaining_gap": "GitHub未提供/托管CI未运行；实际人工时未登记；挂载盘安装限制未定位"
+      "remaining_gap": "公开仓库已确认；托管CI以Actions为准；实际人工时未登记；挂载盘安装限制未定位"
     }
   ],
   "industrial_weights_total": 100,
@@ -126,7 +126,7 @@
     }
   ],
   "formal_submission_complete": false,
-  "formal_gate_note": "An artifact score cannot override missing repository URL/final remote commit/visibility and actual human-time facts.",
+  "formal_gate_note": "Remote final HEAD must be verified after push; actual human hours remain unreported. The artifact score cannot override required actual-time disclosure.",
   "new_remote_requests_for_this_assessment": 0,
   "evidence": {
     "test": "../test-summary.json",
@@ -138,5 +138,11 @@
     "clean_room": "clean-room-check.json",
     "delivery": "../delivery-check.json"
   },
-  "method": "sum(weight*score/100); rubric and scores are reviewer judgment rather than externally calibrated measurements. No industrial points awarded merely for reducing the delivery scope."
+  "method": "sum(weight*score/100); rubric and scores are reviewer judgment rather than externally calibrated measurements. No industrial points awarded merely for reducing the delivery scope.",
+  "repository_update": {
+    "repository_url": "https://github.com/9ian9-218/content-task-planner-agent",
+    "visibility": "public",
+    "verified_at": "2026-10-29T01:59:30.728357+00:00",
+    "scores_unchanged": "Repository availability alone does not certify production readiness or candidate ability."
+  }
 }

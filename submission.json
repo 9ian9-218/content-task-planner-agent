@@ -1,9 +1,9 @@
 {
   "problem_number": 2,
   "project_name": "content-task-planner-agent",
-  "github_url": null,
-  "visibility": null,
-  "reviewer_access_confirmed": null,
+  "github_url": "https://github.com/9ian9-218/content-task-planner-agent",
+  "visibility": "public",
+  "reviewer_access_confirmed": true,
   "final_commit_source": "git rev-parse HEAD in the final submitted repository; do not embed a self-referential SHA in this file",
   "candidate": {
     "planned_work_days": 1.5,
@@ -32,5 +32,7 @@
     "disclosure": "docs/04-ai-usage.md",
     "mock_boundary": "Synthetic business tools and offline decisions do not prove real model decisions"
   },
-  "delivery_scope": "Exam problem 2 CLI submission with bounded local validation; not a production SLA"
+  "delivery_scope": "Exam problem 2 CLI submission with bounded local validation; not a production SLA",
+  "repository_verified_at": "2026-10-29T01:59:30.728357+00:00",
+  "repository_verification": "GitHub connector metadata: public, push permission true; authenticated git dry-run: empty main target is writable"
 }

@@ -80,4 +80,4 @@ PYTHONPATH=src "$PLANNER_PY" -m content_planner run --input examples/cases/C03-s
 
 [PRD](docs/01-requirements.md)、[方案](docs/02-solution.md)、[评估](docs/03-evaluation.md)、[AI使用](docs/04-ai-usage.md)、[复盘](docs/05-retrospective.md)、[逐条验收](docs/16-acceptance-and-submission.md)、[设计解释](docs/18-design-review.md)与依赖/示例齐备。TDD账本保留99个实际red/green配对和206条命令，包含独立的进程/负载检查，不能把所有red都称为业务缺陷。
 
-本地技术验证已完成；GitHub URL、可见性/评审权限和最终远程commit SHA仍待用户提供的仓库确认。个人实际投入与独立复现尚未据实登记；[一天半/12小时参与计划](docs/17-candidate-participation.md)不冒充已经发生的工时。最终提交状态见[submission.json](submission.json)与[交付检查](examples/delivery-check.json)。
+本地技术验证已完成；目标公开仓库为[9ian9-218/content-task-planner-agent](https://github.com/9ian9-218/content-task-planner-agent)。最终提交SHA取远程main最新HEAD，推送与托管CI状态分别核验。个人实际投入与独立复现尚未据实登记；[一天半/12小时参与计划](docs/17-candidate-participation.md)不冒充已经发生的工时。最终提交状态见[submission.json](submission.json)与[交付检查](examples/delivery-check.json)。

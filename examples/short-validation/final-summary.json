@@ -132,5 +132,13 @@
     "official_grade": false,
     "production_ready": false,
     "evidence": "final-scorecard.json"
+  },
+  "github_submission": {
+    "repository_url": "https://github.com/9ian9-218/content-task-planner-agent",
+    "visibility": "public",
+    "metadata_verified_at": "2026-10-29T01:59:30.728357+00:00",
+    "commit_source": "git rev-parse HEAD; verify origin/main after push",
+    "hosting_status": "Configured and dry-run verified; actual publication and CI reported separately",
+    "actual_personal_hours_recorded": false
   }
 }

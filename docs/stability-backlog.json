@@ -1,7 +1,7 @@
 {
   "version": 4,
   "created_at": "2026-10-28T10:27:07.623607+00:00",
-  "status": "local_short_validation_passed_formal_repository_and_actual_time_pending",
+  "status": "public_repository_configured_remote_commit_verification_and_actual_time_pending",
   "target": "Single-host CLI and multiple processes first; shared HTTP service later",
   "user_confirmed_target": "先强化单机 CLI／多进程运行，再扩展共享服务（推荐）",
   "baseline": "../examples/hardening/baseline.json",
@@ -413,7 +413,7 @@
         "STAB-01",
         "STAB-06"
       ],
-      "status": "local_materials_verified_remote_submission_pending",
+      "status": "local_materials_verified_public_repository_configured",
       "scope": [
         "离线复现、全部题面材料和AI披露齐备；正式提交还需实际GitHub URL/SHA/可见性及据实人工工时"
       ],
@@ -429,7 +429,7 @@
         "14-operations.md"
       ],
       "remaining": [
-        "GitHub-hosted CI not run; repository URL/final remote SHA/visibility and actual human hours remain pending. Recorded human decisions and AI execution are disclosed."
+        "Actual remote main SHA and hosted CI must be verified after push; actual human hours remain unreported. Public repository metadata and authenticated git dry-run passed."
       ],
       "required_for_exam_delivery": true,
       "future_production_acceptance": [
@@ -612,7 +612,7 @@
         "../.github/workflows/quality.yml",
         "14-operations.md"
       ],
-      "note": "Clean-room execution and pinned runtime are verified locally. Hosted CI, actual remote URL/SHA/visibility and truthful actual human hours remain pending.",
+      "note": "Clean-room execution and pinned runtime verified; public GitHub repository configured with authenticated dry-run. Remote final SHA, actual Actions result and truthful actual human hours remain separate verification items.",
       "production_requirement": "受支持运行时、新环境命令、CI、备份/回滚和处置说明齐备；实际业务与候选人验证均有责任人和记录",
       "current_delivery_plan": "15-short-validation-and-delivery.md"
     }
@@ -651,7 +651,7 @@
     ],
     "note": "Historical future-production engineering estimate, not actual human work or a current exam-delivery commitment; long soak/pilot is deferred."
   },
-  "updated_at": "2026-10-29T01:34:58.171337+00:00",
+  "updated_at": "2026-10-29T01:59:30.728357+00:00",
   "current_evidence": "../examples/short-validation/final-summary.json",
   "active_delivery_scope": "Problem 2 campus CLI, bounded short validation; user explicitly excludes long online testing",
   "active_plan": "15-short-validation-and-delivery.md",
@@ -665,5 +665,11 @@
     "final_same_source_smoke_request_cap": 24,
     "final_same_source_reported_tokens": 66496,
     "note": "Two bounded smoke batches of 24 allowed requests each; 16 sent in each. Three earlier red-stage attempts produced no accepted response and have no billing proof."
+  },
+  "repository": {
+    "url": "https://github.com/9ian9-218/content-task-planner-agent",
+    "visibility": "public",
+    "verified_at": "2026-10-29T01:59:30.728357+00:00",
+    "final_commit_source": "remote main HEAD after push"
   }
 }

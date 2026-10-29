@@ -61,4 +61,4 @@
 2. 在`submission.json`补入实际GitHub URL、可见性；私有仓库确认评审权限。
 3. 如实登记个人参与、AI执行的验证范围和真实人工用时；题目允许AI辅助，不额外要求所有代码或测试必须手工完成。一天半/12小时是建议计划，未经实际确认不得当作已发生工时。
 4. 提交全部材料到同一仓库；在最终提交后运行`git rev-parse HEAD`，将返回值填入考核平台。SHA不写回自身所在提交，避免自引用。
-5. 按“第2题 / GitHub URL / 最终commit SHA”提交。当前用户尚在准备远程地址；地址和权限未确认时不写已发布。
+5. 按“第2题 / GitHub URL / 最终commit SHA”提交。目标仓库[https://github.com/9ian9-218/content-task-planner-agent](https://github.com/9ian9-218/content-task-planner-agent)已核实为公开、可推送。以远程main的最终HEAD填写SHA，未核实推送或CI结果时不写已通过。
