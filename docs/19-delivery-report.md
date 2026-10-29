@@ -1,12 +1,12 @@
 # 最终本地交付报告
 
-更新：2026-10-29T01:41:38.888411+00:00。题号2，内容任务规划Agent。业务源码`0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27`。本地技术验证已完成；目标[公开仓库](https://github.com/9ian9-218/content-task-planner-agent)和推送权限已核实。发布与CI结果分别核验，个人实际用时仍待据实登记。
+更新：2026-10-29T01:41:38.888411+00:00。题号2，内容任务规划Agent。业务源码`0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27`。本地技术验证已完成；目标[公开仓库](https://github.com/9ian9-218/content-task-planner-agent)和推送权限已核实。远程main与托管CI已核验；候选人确认实际用时约一天半。
 
 ## 题面与交付
 
 [逐项验收矩阵](16-acceptance-and-submission.md)覆盖全部必须验收及续跑加分项；[提交入口](../SUBMISSION.md)提供评审顺序、离线命令和文件导航。README、src、tests、examples、data、docs/01—05、依赖和.env.example齐备。界面、部署、共享服务与长期运行不属于本次承诺。
 
-当前结果：103/103自动测试、18/18离线、18/18真实、2/2对抗、3/3重规划重复；5分钟1200个场景符合预期；16×20并发、8×10强杀恢复均通过。详见[机器汇总](../examples/short-validation/final-summary.json)。
+当前结果：104/104自动测试、18/18离线、18/18真实、2/2对抗、3/3重规划重复；5分钟1200个场景符合预期；16×20并发、8×10强杀恢复均通过。详见[机器汇总](../examples/short-validation/final-summary.json)。
 
 最终wb/hy3三批实际93次请求、178,489个已报告Token；不是93个独立用户需求。历史Opus和早期失败另行保留。没有将失败步骤写为成功、将Mock标为真实模型，或隐藏饱和运行与夹具失败。
 
@@ -14,13 +14,13 @@
 
 交付检查器核对题面文件、版本、费用/保存证据、两条真实动态路径、各层测试及文档链接。打包器白名单排除.env.local、数据库、缓存、符号链接和Git元数据，检查已配置密钥，并为每个文件生成摘要。包内PACKAGE-MANIFEST不包含自身摘要，避免自引用。
 
-清洁ZIP解压副本再次通过103/103测试，正常/重复/缺信息/保存失败/续跑均符合预期；未带入私有配置、原库或运行时缓存。[实际清洁验证](../examples/short-validation/clean-room-check.json)保存命令和结果。本地Git快照记录在交付目录的回执；正式远程SHA以实际仓库最终HEAD为准，不用源码摘要替代。GitHub CI定义已准备，本地验证不冒称GitHub托管执行成功。
+此前清洁ZIP解压副本通过103/103测试；本次新增用时口径测试，业务源码保持一致，正常/重复/缺信息/保存失败/续跑均符合预期；未带入私有配置、原库或运行时缓存。[实际清洁验证](../examples/short-validation/clean-room-check.json)保存命令和结果。本地Git快照记录在交付目录的回执；正式远程SHA以实际仓库最终HEAD为准，不用源码摘要替代。GitHub CI定义已准备，本地验证不冒称GitHub托管执行成功。
 
 ## 个人贡献与时间
 
 可核实的人类工作是题目选择、需求/验收要求、AI工作方式和质量标准、模型网关配置、单机与短测方向。主体实现、测试和材料由AI协助完成并由工具执行。具体说明见[AI使用](04-ai-usage.md)。
 
-用户偏好的一天半已整理为12小时[参与与复现计划](17-candidate-participation.md)和[设计解释](18-design-review.md)；尚无事实支持把计划填为实际人工工时，也没有倒填提交时间或虚构本人手工修改。正式提交前由候选人补入亲自复现与真实用时。
+候选人确认实际用时约一天半（10月28日至29日），具体活跃小时数未单独统计。[参与与复现计划](17-candidate-participation.md)和[设计解释](18-design-review.md)保留为建议；个人手工修改与独立复现仍以实际记录为准。
 
 ## 保留边界
 
@@ -29,3 +29,5 @@
 当前多维度评分及工业放行边界见[最终质量评估](20-current-quality-assessment.md)。业务源码未改，本轮优化集中在材料审计；没有为了重复检查而新增模型调用。
 
 GitHub已确认公开main推送和仓库元数据。首次托管工作流因环境变量上下文错误而未生成任务，已实际复现并修复；[CI失败与修复证据](../examples/github-ci/workflow-lint-red.json)保留。后续托管结果以[Actions](https://github.com/9ian9-218/content-task-planner-agent/actions)为准，静态校验不代替真实测试。
+
+此前提交[d7c11a7的GitHub Actions](https://github.com/9ian9-218/content-task-planner-agent/actions/runs/40805308941)已通过全部步骤，包含103项测试；本次新增的用时单位检查已在本地完成104项回归，最终提交的托管结果以Actions为准。

@@ -1,5 +1,5 @@
 {
-  "assessed_at": "2026-10-29T01:38:58.184609+00:00",
+  "assessed_at": "2026-10-29T03:09:58.008808+00:00",
   "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
   "assessment_type": "Evidence-based engineering self-assessment; not official grades, certification or independent candidate-ability measurement",
   "industrial_target": "Unchanged from historical assessment: long-term shared use with possible real paid tools",
@@ -41,7 +41,7 @@
       "weight": 14,
       "score": 86,
       "weighted_points": 12.04,
-      "evidence_basis": "103项回归、完整18+2真实、3次重复、并发与强杀原始证据",
+      "evidence_basis": "104项回归、完整18+2真实、3次重复、并发与强杀原始证据",
       "remaining_gap": "没有独立留出用户需求或人工业务效果实验；无覆盖率测量"
     },
     {
@@ -79,16 +79,16 @@
     {
       "dimension": "发布与交付",
       "weight": 4,
-      "score": 72,
-      "weighted_points": 2.88,
-      "evidence_basis": "固定运行时、清洁ZIP复现流程、逐条题面对照、文件摘要和额度审计",
-      "remaining_gap": "公开仓库已确认；托管CI以Actions为准；实际人工时未登记；挂载盘安装限制未定位"
+      "score": 80,
+      "weighted_points": 3.2,
+      "evidence_basis": "公开仓库、托管CI和用户确认的一天半用时均有记录",
+      "remaining_gap": "最后提交的远程HEAD须核对；挂载盘安装限制未定位"
     }
   ],
   "industrial_weights_total": 100,
-  "industrial_weighted_score": 75.16,
+  "industrial_weighted_score": 75.48,
   "industrial_display_score": 75,
-  "historical_industrial_score": 72.26,
+  "historical_industrial_score": 75.16,
   "production_ready": false,
   "current_delivery_target": "Exam problem 2, single-host CLI with bounded short validation",
   "campus_technical_weighted_score": 93.8,
@@ -125,8 +125,7 @@
       "score": 90
     }
   ],
-  "formal_submission_complete": false,
-  "formal_gate_note": "Remote final HEAD must be verified after push; actual human hours remain unreported. The artifact score cannot override required actual-time disclosure.",
+  "formal_gate_note": "Candidate reported 1.5 days; exact active hours are not reported. Verify the final remote HEAD after pushing; actual platform submission is not recorded.",
   "new_remote_requests_for_this_assessment": 0,
   "evidence": {
     "test": "../test-summary.json",

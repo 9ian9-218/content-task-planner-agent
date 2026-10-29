@@ -1,0 +1,16 @@
+test_delivery_audit_accepts_reported_days_without_inventing_hours (tests.test_short_validation.ShortValidationTests.test_delivery_audit_accepts_reported_days_without_inventing_hours) ... 
+  test_delivery_audit_accepts_reported_days_without_inventing_hours (tests.test_short_validation.ShortValidationTests.test_delivery_audit_accepts_reported_days_without_inventing_hours) (days=1.5) ... FAIL
+
+======================================================================
+FAIL: test_delivery_audit_accepts_reported_days_without_inventing_hours (tests.test_short_validation.ShortValidationTests.test_delivery_audit_accepts_reported_days_without_inventing_hours) (days=1.5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/xy/delivery/content-task-planner-agent-final-20261029/repository/tests/test_short_validation.py", line 31, in test_delivery_audit_accepts_reported_days_without_inventing_hours
+    self.assertEqual('ACTUAL_PERSONAL_TIME_UNRECORDED' not in audit['formal_blockers'], accepted)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False != True
+
+----------------------------------------------------------------------
+Ran 1 test in 2.904s
+
+FAILED (failures=1)

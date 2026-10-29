@@ -6,7 +6,7 @@
 
 | 项目 | 预期 | 实际与证据 |
 | --- | --- | --- |
-| 自动回归 | 全通过、关键平台测试不跳过、执行期间版本不变 | 103/103，0跳过；87.581058秒；[完整输出](../examples/test-results.txt)、[指纹汇总](../examples/test-summary.json) |
+| 自动回归 | 全通过、关键平台测试不跳过、执行期间版本不变 | 104/104，0跳过；77.046801秒；[完整输出](../examples/test-results.txt)、[指纹汇总](../examples/test-summary.json) |
 | 题面离线矩阵 | 正常、缺预算/截止、工具失败、预算超限、重复及续跑状态正确 | 18/18；[逐项断言](../examples/evaluation-summary.json) |
 | 当前真实矩阵 | 至少两条模型依工具观察改变动作的路径，并核对全矩阵 | wb/hy3 18/18；68次请求，129,357 Token；[汇总](../examples/live-evaluation-summary.json) |
 | 对抗 | 不允许模型改硬预算或虚报保存 | 2/2；10次请求；[实际结果](../examples/live/adversarial-summary.json) |
@@ -35,7 +35,7 @@ Mock单次运行基准样本n=20，原始样本见离线汇总；该批与其他
 
 负载器最初没有为续跑重新等待容量；已修复并限定尾部5秒排空。恢复与容量夹具原先把恢复拥有者也设为400/600毫秒租约，在并行负载下产生时序失败；现在仅对被杀拥有者加速过期，恢复/容量控制使用真实60秒租约，保留全部正确性断言。测试准备错误和夹具修正不冒充产品缺陷。
 
-TDD现有99个实际配对、206条命令，含进程/负载集成配对。所有失败仍可查；测试方法数不是行覆盖率。受控模型/HTTP替身不证明真实推理效果。
+TDD现有100个实际配对、208条命令，含进程/负载集成配对。所有失败仍可查；测试方法数不是行覆盖率。受控模型/HTTP替身不证明真实推理效果。
 
 交付门槛补测：对真实、对抗、重复三个批次分别注入超上限、剩余额度矛盾和布尔计数；先复现8项误放行，再修复为严格核对。业务源码不变，本轮未新增真实模型请求。[red](../examples/tdd/99-delivery-request-budget-red.txt)、[green](../examples/tdd/99-delivery-request-budget-green.txt)。
 
@@ -45,6 +45,6 @@ TDD现有99个实际配对、206条命令，含进程/负载集成配对。所�
 
 可复制命令见[README](../README.md)与[运行手册](14-operations.md)。数据、源码与报告版本一致；交付材料、链接与结果一致性由`tools/check_delivery.py`检查，白名单交付包由`tools/package_submission.py`生成。GitHub URL/最终提交与真实个人工时仍需据实补齐。
 
-清洁ZIP解压后再次通过103/103（0跳过）及正常/重复/缺信息/保存失败/续跑复现；源码和测试字节与本次回归一致。[独立复现记录](../examples/short-validation/clean-room-check.json)包含所测ZIP摘要；最终包仅更新材料，另做文件摘要与入口检查。
+清洁ZIP解压后再次通过103/103（0跳过）及正常/重复/缺信息/保存失败/续跑复现；业务源码与本次回归一致，测试版本早于本次新增用时口径检查。[独立复现记录](../examples/short-validation/clean-room-check.json)包含所测ZIP摘要；最终包仅更新材料，另做文件摘要与入口检查。
 
 托管CI补测：首次推送的[运行](https://github.com/9ian9-218/content-task-planner-agent/actions/runs/40804384555)立即失败且未生成任务。actionlint 1.7.12复现了任务级env不能使用runner上下文的错误；将解释器路径移至安装步骤通过GITHUB_ENV设置，随后静态校验退出0。[red](../examples/github-ci/workflow-lint-red.txt)、[green](../examples/github-ci/workflow-lint-green.json)。本次仅修复工作流，业务源码和103项测试保持不变；托管CI成功与否另以实际运行结论为准。

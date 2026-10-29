@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-29T01:41:38.888411+00:00",
+  "generated_at": "2026-10-29T03:09:58.008808+00:00",
   "source_sha256": "0bec91ee99c15d6542982ff68d8dcdeff126c9f32f5a80c89d6a6699a37e9a27",
-  "tests_sha256": "72aece05207290cddf33262d30d55f7e0a6681e3e4fd9948b923eca18dc85bb5",
+  "tests_sha256": "32fa72f2d11b7a087ecaa73787eff32bdfdcbebdc6581d9e2437fffbc49b1eb2",
   "scope": "Problem 2 campus CLI submission and bounded short-term robustness, not a production SLA",
   "local_validation_passed": true,
-  "formal_submission_ready": false,
+  "formal_submission_ready": true,
   "tests": {
-    "passed": 103,
-    "total": 103,
+    "passed": 104,
+    "total": 104,
     "skipped": 0,
-    "seconds": 87.581058,
+    "seconds": 77.046801,
     "evidence": "../test-summary.json"
   },
   "offline": {
@@ -96,8 +96,8 @@
     "evidence": "../hardening/recovery/summary.json"
   },
   "tdd": {
-    "paired_slices": 99,
-    "command_records": 206,
+    "paired_slices": 100,
+    "command_records": 208,
     "note": "Includes three real process/load integration pairs; red setup errors and reruns remain visible."
   },
   "known_limits": [
@@ -114,8 +114,9 @@
     "tests_skipped": 0,
     "private_env_absent": true,
     "archive_extracted_before_execution": true,
-    "current_test_revision_verified": true,
-    "evidence": "clean-room-check.json"
+    "current_test_revision_verified": false,
+    "evidence": "clean-room-check.json",
+    "note": "103-test clean ZIP was an earlier test revision with identical business source; current 104-test revision is verified separately."
   },
   "release_audit_hardening": {
     "scope": "Delivery tools and tests only; business src unchanged",
@@ -128,7 +129,7 @@
   },
   "quality_assessment": {
     "campus_technical_reference_score": 93.8,
-    "industrial_same_target_weighted_score": 75.16,
+    "industrial_same_target_weighted_score": 75.48,
     "official_grade": false,
     "production_ready": false,
     "evidence": "final-scorecard.json"
@@ -138,7 +139,9 @@
     "visibility": "public",
     "metadata_verified_at": "2026-10-29T01:59:30.728357+00:00",
     "commit_source": "git rev-parse HEAD; verify origin/main after push",
-    "hosting_status": "Configured and dry-run verified; actual publication and CI reported separately",
-    "actual_personal_hours_recorded": false
-  }
+    "hosting_status": "Prior commit d7c11a7 passed GitHub Actions; verify final commit separately.",
+    "actual_personal_hours_recorded": false,
+    "actual_personal_days_reported": 1.5
+  },
+  "formal_submission_note": "All required fields recorded and local audit passed; verify the final remote HEAD after push. Platform submission itself is not recorded."
 }

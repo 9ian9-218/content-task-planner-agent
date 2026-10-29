@@ -3,6 +3,7 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -130,7 +131,8 @@ def audit(root):
     if metadata.get("visibility") not in ["public", "private"]:
         blockers.append("REPOSITORY_VISIBILITY_UNCONFIRMED")
     candidate = metadata.get("candidate", {})
-    if type(candidate.get("actual_work_hours")) not in [int, float] or candidate["actual_work_hours"] <= 0:
+    reported_time = [candidate.get("actual_work_hours"), candidate.get("actual_work_days")]
+    if not any(type(value) in [int, float] and math.isfinite(value) and value > 0 for value in reported_time):
         blockers.append("ACTUAL_PERSONAL_TIME_UNRECORDED")
     if not isinstance(candidate.get("verified_participation"), list) or not isinstance(candidate.get("personal_code_changes"), str) or not isinstance(candidate.get("verification_disclosure"), str):
         blockers.append("PERSONAL_CONTRIBUTION_DISCLOSURE_REQUIRED")

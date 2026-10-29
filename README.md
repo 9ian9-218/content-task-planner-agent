@@ -10,7 +10,7 @@
 
 | 检查 | 实际结果 |
 | --- | --- |
-| 自动回归 | 103/103，0跳过；清洁ZIP解压副本再次103/103，代码与测试指纹一致 |
+| 自动回归 | 104/104，0跳过；此前清洁ZIP复现103/103，业务源码指纹一致，本次新增用时口径测试 |
 | 离线验收 | 18/18，覆盖正常、缺信息、失败、预算、重复、续跑与边界 |
 | 当前真实模型完整矩阵 | wb/hy3：18/18；68次请求，129,357个已报告Token |
 | 真实对抗检查 | 2/2；诱导修改预算与虚报保存均未越过约束 |
@@ -78,8 +78,8 @@ PYTHONPATH=src "$PLANNER_PY" -m content_planner run --input examples/cases/C03-s
 
 ## 材料与提交状态
 
-[PRD](docs/01-requirements.md)、[方案](docs/02-solution.md)、[评估](docs/03-evaluation.md)、[AI使用](docs/04-ai-usage.md)、[复盘](docs/05-retrospective.md)、[逐条验收](docs/16-acceptance-and-submission.md)、[设计解释](docs/18-design-review.md)与依赖/示例齐备。TDD账本保留99个实际red/green配对和206条命令，包含独立的进程/负载检查，不能把所有red都称为业务缺陷。
+[PRD](docs/01-requirements.md)、[方案](docs/02-solution.md)、[评估](docs/03-evaluation.md)、[AI使用](docs/04-ai-usage.md)、[复盘](docs/05-retrospective.md)、[逐条验收](docs/16-acceptance-and-submission.md)、[设计解释](docs/18-design-review.md)与依赖/示例齐备。TDD账本保留100个实际red/green配对和208条命令，包含独立的进程/负载检查，不能把所有red都称为业务缺陷。
 
-本地技术验证已完成；目标公开仓库为[9ian9-218/content-task-planner-agent](https://github.com/9ian9-218/content-task-planner-agent)。最终提交SHA取远程main最新HEAD，推送与托管CI状态分别核验。个人实际投入与独立复现尚未据实登记；[一天半/12小时参与计划](docs/17-candidate-participation.md)不冒充已经发生的工时。最终提交状态见[submission.json](submission.json)与[交付检查](examples/delivery-check.json)。
+本地技术验证已完成；目标公开仓库为[9ian9-218/content-task-planner-agent](https://github.com/9ian9-218/content-task-planner-agent)。最终提交SHA取远程main最新HEAD，推送与托管CI状态分别核验。候选人确认实际用时约一天半，具体活跃小时数未单独统计；独立复现仍按[个人参与记录](docs/17-candidate-participation.md)如实登记。最终提交状态见[submission.json](submission.json)与[交付检查](examples/delivery-check.json)。
 
 工作流曾在首次托管运行中因任务级env使用runner上下文而被拒绝，已由actionlint 1.7.12实际复现并修复。[失败与修复记录](examples/github-ci/workflow-lint-red.json)、[静态通过记录](examples/github-ci/workflow-lint-green.json)和[GitHub Actions](https://github.com/9ian9-218/content-task-planner-agent/actions)分别保留；静态检查通过不代表托管测试已通过。

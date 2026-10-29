@@ -1,0 +1,6 @@
+test_delivery_audit_accepts_reported_days_without_inventing_hours (tests.test_short_validation.ShortValidationTests.test_delivery_audit_accepts_reported_days_without_inventing_hours) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.405s
+
+OK

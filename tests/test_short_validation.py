@@ -11,6 +11,25 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ShortValidationTests(unittest.TestCase):
+    def test_delivery_audit_accepts_reported_days_without_inventing_hours(self):
+        import shutil
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shutil.copytree(ROOT / 'src', root / 'src', ignore=shutil.ignore_patterns('__pycache__'))
+            metadata = {'github_url': 'https://github.com/example/project', 'visibility': 'public',
+                        'candidate': {'actual_work_days': 1.5, 'actual_work_hours': None,
+                                      'verified_participation': [], 'personal_code_changes': 'not recorded',
+                                      'verification_disclosure': 'AI tools executed tests'}}
+            output = root / 'audit.json'
+            for days, accepted in [(1.5, True), (0, False), (True, False), (float('inf'), False)]:
+                with self.subTest(days=days):
+                    metadata['candidate']['actual_work_days'] = days
+                    (root / 'submission.json').write_text(json.dumps(metadata))
+                    subprocess.run([sys.executable, 'tools/check_delivery.py', '--root', str(root), '--output', str(output)],
+                                   cwd=ROOT, env=dict(os.environ, MODEL_API_KEY=''), capture_output=True, text=True, timeout=20)
+                    audit = json.loads(output.read_text())
+                    self.assertEqual('ACTUAL_PERSONAL_TIME_UNRECORDED' not in audit['formal_blockers'], accepted)
+
     def test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets(self):
         import shutil
         reports = {

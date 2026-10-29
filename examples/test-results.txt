@@ -1,6 +1,6 @@
 Command: /tmp/content-planner-runtime-70_9y6wx/python/bin/python3 -m unittest discover -s tests -v
 PYTHONPATH=src
-Started: 2026-10-29T01:32:50.042574+00:00
+Started: 2026-10-29T03:07:49.595901+00:00
 
 test_cost_first_preference_can_finish_before_the_standard_deadline (test_acceptance.AcceptanceTests.test_cost_first_preference_can_finish_before_the_standard_deadline) ... ok
 test_decision_limit_returns_incomplete_without_saving (test_acceptance.AcceptanceTests.test_decision_limit_returns_incomplete_without_saving) ... ok
@@ -66,8 +66,8 @@ test_resuming_with_larger_cli_limits_cannot_reset_the_original_task_budget (test
 test_runtime_install_preserves_safe_relative_links_and_rejects_escaping_links (test_hardening.HardeningTests.test_runtime_install_preserves_safe_relative_links_and_rejects_escaping_links) ... ok
 test_runtime_installer_rejects_unverified_bytes_before_creating_destination (test_hardening.HardeningTests.test_runtime_installer_rejects_unverified_bytes_before_creating_destination) ... ok
 test_shared_evaluation_budget_stops_network_dispatch_across_model_instances (test_hardening.HardeningTests.test_shared_evaluation_budget_stops_network_dispatch_across_model_instances) ... ok
-test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume (test_hardening.HardeningTests.test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume) ... /mnt/d/xy/src/content_planner/tools.py:40: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0ec4ab1210>
-  "parameters": {"type": "object", "properties": dict(properties, decision_summary={"type": "string", "description": "一句话说明依据，无需内部思维过程"}),
+test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume (test_hardening.HardeningTests.test_transient_tool_retry_limit_preserves_successes_and_allows_explicit_resume) ... /tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/copy.py:226: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x73b3850ad030>
+  memo[id(memo)]=[x]
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 ok
 test_transport_timeout_is_recorded_as_unknown_and_resume_cannot_purchase_it_again (test_hardening.HardeningTests.test_transport_timeout_is_recorded_as_unknown_and_resume_cannot_purchase_it_again) ... ok
@@ -103,25 +103,26 @@ test_truncated_or_invalid_tool_call_responses_never_execute (test_review.ReviewT
 test_adversarial_evaluation_requires_a_request_cap_before_configuration_or_network (test_short_validation.ShortValidationTests.test_adversarial_evaluation_requires_a_request_cap_before_configuration_or_network) ... ok
 test_busy_task_admission_returns_retryable_state_without_dispatching_model (test_short_validation.ShortValidationTests.test_busy_task_admission_returns_retryable_state_without_dispatching_model) ... ok
 test_cli_reports_busy_initialization_as_retryable_without_model_requests (test_short_validation.ShortValidationTests.test_cli_reports_busy_initialization_as_retryable_without_model_requests) ... ok
+test_delivery_audit_accepts_reported_days_without_inventing_hours (test_short_validation.ShortValidationTests.test_delivery_audit_accepts_reported_days_without_inventing_hours) ... ok
 test_delivery_audit_rejects_claimed_completion_without_a_saved_plan (test_short_validation.ShortValidationTests.test_delivery_audit_rejects_claimed_completion_without_a_saved_plan) ... ok
 test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets (test_short_validation.ShortValidationTests.test_delivery_audit_rejects_exceeded_or_inconsistent_model_request_budgets) ... ok
 test_explicit_wal_database_preserves_cached_reads_during_an_exclusive_writer (test_short_validation.ShortValidationTests.test_explicit_wal_database_preserves_cached_reads_during_an_exclusive_writer) ... ok
 test_full_capacity_refusal_does_not_compete_for_the_database_writer_lock (test_short_validation.ShortValidationTests.test_full_capacity_refusal_does_not_compete_for_the_database_writer_lock) ... ok
 test_initialized_database_cached_read_does_not_need_the_writer_lock (test_short_validation.ShortValidationTests.test_initialized_database_cached_read_does_not_need_the_writer_lock) ... ok
 test_live_batch_stops_dispatching_after_provider_cooldown_instead_of_repeating_requests (test_short_validation.ShortValidationTests.test_live_batch_stops_dispatching_after_provider_cooldown_instead_of_repeating_requests) ... ok
-test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline (test_short_validation.ShortValidationTests.test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline) ... /tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py:346: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0ec4ab34c0>
+test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline (test_short_validation.ShortValidationTests.test_model_timeout_can_be_configured_while_remaining_inside_the_task_deadline) ... /tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py:346: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x73b3850af010>
   end = _w(s, end).end()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
-/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py:346: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0ec4ab2890>
+/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py:346: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x73b3850ad300>
   end = _w(s, end).end()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
-/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py:346: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0ec4ab1f30>
+/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py:346: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x73b3850add50>
   end = _w(s, end).end()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
-/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py:346: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0ec4ab3880>
+/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py:346: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x73b3850af2e0>
   end = _w(s, end).end()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
-/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py:346: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f0ec4ab36a0>
+/tmp/content-planner-runtime-70_9y6wx/python/lib/python3.14/json/decoder.py:346: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x73b3850af1f0>
   end = _w(s, end).end()
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 ok
@@ -131,6 +132,6 @@ test_short_load_command_verifies_mixed_results_and_resource_cleanup (test_short_
 test_wal_is_rejected_on_unverified_sqlite_before_any_database_is_created (test_short_validation.ShortValidationTests.test_wal_is_rejected_on_unverified_sqlite_before_any_database_is_created) ... ok
 
 ----------------------------------------------------------------------
-Ran 103 tests in 86.646s
+Ran 104 tests in 76.092s
 
 OK

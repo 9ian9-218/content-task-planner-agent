@@ -9,7 +9,7 @@
     "planned_work_days": 1.5,
     "planned_work_hours": 12,
     "actual_work_hours": null,
-    "actual_time_status": "not_yet_reported; planned duration is not a verified actual duration",
+    "actual_time_status": "Candidate reported approximately one and a half days, from 2026-10-28 to 2026-10-29; precise active hours were not reported.",
     "personal_verification_recorded": false,
     "verification_disclosure": "Tests and live evaluations were executed by AI tools; candidate-independent manual execution has not been recorded. This is a disclosure, not a claim of personal execution.",
     "verified_participation": [
@@ -25,7 +25,9 @@
       "recorded_until": "2026-10-29T00:08:22.017497+08:00",
       "elapsed_wall_hours": 11.914,
       "scope": "Recorded automation and waiting span, not personal work hours; earlier research was not reliably timed."
-    }
+    },
+    "actual_work_days": 1.5,
+    "actual_time_confirmed_at": "2026-10-29T03:08:18.355154+00:00"
   },
   "ai_assistance": {
     "scope": "AI-assisted source, tests, synthetic data, evaluation scripts and documentation; AI tool-executed validation",
